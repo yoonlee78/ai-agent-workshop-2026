@@ -70,20 +70,43 @@ npm install -g @openai/codex
 
 [github.com/stablyai/orca](https://github.com/stablyai/orca) Releases에서 내 운영체제용 설치 파일을 받아 주세요. Orca는 위에서 로그인한 Claude Code·Codex 계정을 그대로 사용해요.
 
-### 3. 도구 설치
+### 3. 나머지는 에이전트에게 맡기기
 
-Claude Code 또는 Codex 창에 아래 내용을 붙여 넣으면, 필요한 도구를 대신 확인하고 설치해 줘요.
+Claude Code 또는 Codex 창에 아래 내용을 통째로 붙여 넣어 주세요. 에이전트가 4~8번을 한 단계씩 설명하고 확인받으면서 대신 진행해 줘요. 직접 해야 하는 일(GitHub 로그인, 이름·이메일 입력, 설치 허락)은 에이전트가 물어볼 때 답해 주시면 돼요.
 
 ```text
-나는 터미널이 처음인 초보자야. git, gh(GitHub CLI), Node.js(v22 이상), uv가 설치되어 있는지 확인하고,
-없는 것만 내 운영체제에 맞게 하나씩 설명하고 허락받은 뒤 설치해줘.
-macOS는 brew가 있으면 brew로, git이 없으면 xcode-select --install. Windows는 winget으로.
-brew가 없으면 Homebrew 설치 방법을 알려 주고, 관리자 권한이 없어서 안 되면 brew 없이 설치하는 방법으로 해줘.
+워크숍 수업 전 준비를 도와줘. 나는 터미널이 처음인 초보자야.
+순서대로, 한 단계씩 나에게 설명하고 확인받으면서 해줘. 에러가 나면 원인을 쉬운 말로 설명하고 고쳐줘.
+
+1) 도구 점검·설치: git, gh(GitHub CLI), Node.js(v22 이상), uv가 있는지 확인하고, 없는 것만 허락받고 설치해.
+   macOS: git이 없으면 xcode-select --install. 나머지는 brew로. brew가 없으면 Homebrew 설치를 안내하고,
+   설치 끝의 Next steps 명령까지 실행하게 해. 관리자 권한이 없어 brew가 안 되면 brew 없이 설치하는 방법으로 해.
+   Windows: winget으로 설치해. 명령은 &&로 잇지 말고 한 줄씩 실행해.
+   새로 설치한 도구를 못 찾으면, 내가 새 터미널에서 너를 다시 열고 이 프롬프트를 다시 붙여 넣을게.
+2) GitHub 로그인: gh auth status 로 확인해. 로그인이 안 되어 있거나 Token scopes에 repo가 없으면 네가 대신 하지 말고,
+   내가 새 터미널 창에서 직접 실행할
+   gh auth login --hostname github.com --git-protocol https --web
+   명령과 화면에서 할 일을 알려줘. 토큰은 만들지 않을 거야. 내가 "로그인했어"라고 하면 다시 확인하고 gh auth setup-git 을 실행해.
+3) git 이름·이메일: git config --global user.name / user.email 이 비어 있으면 나에게 물어보고 설정해.
+4) 실습 저장소 받기: gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
+   접근이 안 되면 로그인한 아이디를 보여 주고, 초대 메일을 수락했는지 확인하라고 알려줘.
+5) push 테스트: 홈 폴더에 gh-test 폴더를 만들고 README.md 하나를 커밋한 뒤
+   gh repo create gh-test --private --source . --push 로 올려. 같은 이름이 있으면 gh-test2 처럼 바꿔.
+   성공하면 저장소 주소를 보여 주고, GitHub에서 지우는 방법(Settings → Delete this repository)을 알려 준 뒤 내 컴퓨터의 gh-test 폴더는 지워.
+6) 마지막 점검: git --version, node --version, gh --version, uvx --version, claude --version, codex --version,
+   gh auth status, git config user.name, git config user.email 을 실행하고 항목별 통과/실패 표로 보여줘.
+   claude와 codex는 하나만 있어도 통과야. 내 GitHub에 lab-handbook 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
 ```
 
-설치가 끝나면 Claude Code(또는 Codex)를 닫고 새 터미널을 열어 주세요.
+**확인**: 에이전트가 마지막에 보여 준 표가 모두 통과면 준비 끝이에요.
 
-### 4. 터미널과 GitHub 연결
+아래 4~8번은 에이전트가 하는 일을 직접 하고 싶거나, 중간에 막혔을 때 참고하는 수동 안내예요.
+
+### 4. (수동) 도구 설치
+
+3번 프롬프트 없이 직접 설치하려면 8번 점검표의 "실패하면" 칸 명령을 하나씩 실행해 주세요. 설치가 끝나면 새 터미널을 열어 주세요.
+
+### 5. (수동) 터미널과 GitHub 연결
 
 GitHub 계정이 이미 있어도 터미널에서 따로 연결해야 수업 중에 저장소를 만들고 올릴 수 있어요.
 
@@ -104,7 +127,7 @@ git config --global user.name "내 이름"
 git config --global user.email "GitHub 가입 이메일"
 ```
 
-### 5. 실습 저장소 받기
+### 6. (수동) 실습 저장소 받기
 
 초대 메일을 받으셨다면 먼저 수락해 주세요.
 
@@ -114,7 +137,7 @@ gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
 
 `Could not resolve to a Repository`가 나오면 아직 초대가 수락되지 않은 상태예요. 수락한 뒤에도 안 되면 강사에게 GitHub 아이디를 알려 주세요.
 
-### 6. 저장소 만들고 올리기 테스트
+### 7. (수동) 저장소 만들고 올리기 테스트
 
 수업 중에 하는 "저장소 만들기 → 커밋 → GitHub에 올리기"를 미리 한 번 해 봐요. 한 줄씩 붙여 넣어 주세요 (macOS·Windows 공통).
 
@@ -136,7 +159,7 @@ gh repo create gh-test --private --source . --push
 - GitHub: 브라우저에서 `gh-test` 저장소 → **Settings** → 맨 아래 **Delete this repository**
 - 내 컴퓨터: `cd ~` 후 macOS `rm -rf gh-test`, Windows `Remove-Item -Recurse -Force gh-test`
 
-### 7. 환경 점검
+### 8. (수동) 환경 점검
 
 새 터미널에 붙여 넣어 주세요.
 
@@ -151,8 +174,8 @@ git --version; node --version; gh --version; uvx --version; claude --version; co
 | GitHub CLI | `gh version 2.x` | macOS `brew install gh`, Windows `winget install --id GitHub.cli -e` |
 | uv | `uvx 0.x` | macOS `curl -LsSf https://astral.sh/uv/install.sh \| sh`, Windows `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 \| iex"` |
 | Claude Code / Codex | `2.x (Claude Code)` 또는 `codex-cli 0.x` (쓰는 것 하나 이상) | 2번 설치 명령 |
-| GitHub 로그인 | `Logged in to github.com account <아이디>`, `Token scopes`에 `'repo'` 포함 | 4번 다시 |
-| git 이름·이메일 | 마지막 두 줄에 이름과 이메일이 나옴 | 4번의 `git config` 두 줄 |
+| GitHub 로그인 | `Logged in to github.com account <아이디>`, `Token scopes`에 `'repo'` 포함 | 5번 다시 |
+| git 이름·이메일 | 마지막 두 줄에 이름과 이메일이 나옴 | 5번의 `git config` 두 줄 |
 
 쓰지 않는 도구(예: Codex)는 `not found`가 나와도 괜찮아요.
 
@@ -160,7 +183,7 @@ git --version; node --version; gh --version; uvx --version; claude --version; co
 
 - [ ] 점검 항목이 모두 통과했나요? (Claude Code·Codex는 쓰는 것만)
 - [ ] `~/ai-agent-workshop-2026` 폴더가 있나요?
-- [ ] 6번 테스트 저장소가 GitHub에 올라갔나요? (확인 후 지워 주세요)
+- [ ] 7번 테스트 저장소가 GitHub에 올라갔나요? (확인 후 지워 주세요)
 - [ ] 내 GitHub에 `lab-handbook` 저장소가 **아직 없나요?** (수업 중에 만들어요)
 
 ## 자주 묻는 질문 (Q&A)
@@ -212,10 +235,10 @@ A. 브라우저에서 [github.com/login/device](https://github.com/login/device)
 A. 터미널 창을 한 번 클릭하고 Enter를 눌러 주세요. 그래도 그대로면 `Ctrl` + `C`로 멈추고 `gh auth login ...`부터 다시 해 주세요.
 
 **Q. `gh auth status`에 `You are not logged into any GitHub hosts`가 나와요.**
-A. 4번의 `gh auth login` 명령을 다시 실행해 주세요.
+A. 5번의 `gh auth login` 명령을 다시 실행해 주세요.
 
 **Q. 다른 GitHub 계정으로 로그인되어 있어요.**
-A. `gh auth logout`으로 로그아웃한 뒤 4번을 다시 해 주세요.
+A. `gh auth logout`으로 로그아웃한 뒤 5번을 다시 해 주세요.
 
 **Q. `Token scopes`에 `'repo'`가 없어요.**
 A. `gh auth refresh -s repo`를 실행하고 브라우저에서 다시 승인해 주세요.
@@ -229,14 +252,14 @@ A. 예전에 다른 계정 정보가 컴퓨터에 저장되어 있는 경우가 
 - Windows: **자격 증명 관리자** → Windows 자격 증명 → `git:https://github.com` 삭제
 
 **Q. `Permission denied (publickey)`가 나와요.**
-A. SSH 방식으로 연결되어 있는 경우예요. 아래를 실행한 뒤 4번을 다시 해 주세요.
+A. SSH 방식으로 연결되어 있는 경우예요. 아래를 실행한 뒤 5번을 다시 해 주세요.
 
 ```bash
 gh config set git_protocol https
 ```
 
 **Q. `Please tell me who you are`가 나와요.**
-A. git에 이름과 이메일이 없어서 그래요. 4번의 `git config` 두 줄을 실행해 주세요.
+A. git에 이름과 이메일이 없어서 그래요. 5번의 `git config` 두 줄을 실행해 주세요.
 
 **Q. push할 때 `GH007: Your push would publish a private email address`가 나와요.**
 A. GitHub에서 이메일 비공개 설정을 켜 둔 경우예요. GitHub **Settings → Emails**에 나온 `숫자+아이디@users.noreply.github.com` 주소를 복사해서 아래처럼 바꾼 뒤, 커밋을 다시 만들어 주세요.
@@ -247,7 +270,7 @@ git commit --amend --reset-author --no-edit
 ```
 
 **Q. 저장소를 만들 때 `Name already exists on this account`가 나와요.**
-A. 같은 이름의 저장소가 이미 있어요. 6번 테스트라면 `gh-test2`처럼 다른 이름을 쓰면 돼요.
+A. 같은 이름의 저장소가 이미 있어요. 7번 테스트라면 `gh-test2`처럼 다른 이름을 쓰면 돼요.
 
 **Q. 저장소를 받을 때 `Could not resolve to a Repository`가 나와요.**
 A. 실습 저장소 초대를 아직 수락하지 않은 경우예요. 메일이나 [github.com/notifications](https://github.com/notifications)에서 초대를 수락해 주세요. 수락했는데도 안 되면 `gh auth status`로 로그인한 아이디가 강사에게 알려 준 아이디와 같은지 확인해 주세요.
