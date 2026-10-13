@@ -8,7 +8,21 @@ Hands-on workshop: build your own research assistant with Claude Code (skills, M
 
 강의와 실습은 주로 **Claude Code**와 **[Orca](https://github.com/stablyai/orca)**(여러 코딩 에이전트를 한 화면에서 쓰는 데스크톱 앱)로 진행합니다. 튜토리얼은 Codex 등 다른 모델로도 따라 할 수 있게 만들어 두었어요.
 
-### 준비물 (3가지 모두 필수)
+### 🗺️ 한눈에 보기
+
+| 단계 | 할 일 | 누가 |
+| :---: | --- | --- |
+| 📦 | [준비물](#-준비물-3가지-모두-필수) 챙기기: GitHub 계정, AI 코딩 도구 구독 | 나 |
+| **1** | [터미널 열기](#1-터미널-열기) | 나 |
+| **2** | [AI 코딩 도구 설치·로그인](#2-ai-코딩-도구-설치로그인) | 나 |
+| **3** | [나머지는 에이전트에게 맡기기](#3-나머지는-에이전트에게-맡기기) | 🤖 에이전트 |
+| ✅ | [설치 실습 준비 완료!](#-여기까지-했다면-설치-실습-준비-완료) | |
+
+막히면 → [❓ 자주 묻는 질문](#-자주-묻는-질문-qa)
+
+---
+
+### 📦 준비물 (3가지 모두 필수)
 
 **① GitHub 계정**
 
@@ -23,9 +37,12 @@ Hands-on workshop: build your own research assistant with Claude Code (skills, M
 | Claude Code | Claude **Pro 이상** 구독 (Pro로 충분해요) |
 | Codex | **서울대 계정** (무료) |
 
-> ⚠️ 무료 플랜은 안 돼요. Claude 무료 플랜은 Claude Code에 로그인이 안 되고, 다른 개인 무료 플랜은 실습 도중 사용량 한도에 걸려 멈춰요.
+> [!WARNING]
+> **무료 플랜은 안 돼요.** Claude 무료 플랜은 Claude Code에 로그인이 안 되고, 다른 개인 무료 플랜은 실습 도중 사용량 한도에 걸려 멈춰요.
 
 **③ 내 노트북** (macOS 또는 Windows)
+
+---
 
 ### 1. 터미널 열기
 
@@ -39,15 +56,19 @@ Hands-on workshop: build your own research assistant with Claude Code (skills, M
 <img src="assets/terminal-windows.svg" width="380" alt="Windows PowerShell 예시">
 </p>
 
-> 💡 **꼭 기억할 두 가지**
+> [!TIP]
+> **꼭 기억할 두 가지**
 > 1. 무언가를 설치한 뒤에는 터미널을 **완전히 닫고 새로 열기**
 > 2. 실행 중인 명령을 멈추려면 `Ctrl` + `C`
+
+---
 
 ### 2. AI 코딩 도구 설치·로그인
 
 Claude Code와 Codex 중 **쓸 것 하나 이상**을 설치해 주세요. 둘 다 설치해도 괜찮아요.
 
-> 📋 아래의 명령은 모두 **1번에서 연 터미널**(macOS 터미널 / Windows PowerShell)에 복사해 붙여 넣고 `Enter`를 눌러 실행해요.
+> [!NOTE]
+> 아래의 명령은 모두 **1번에서 연 터미널**(macOS 터미널 / Windows PowerShell)에 복사해 붙여 넣고 `Enter`를 눌러 실행해요.
 
 #### 2-0. Git 설치 (🪟 Windows만)
 
@@ -56,6 +77,8 @@ Windows의 Claude Code는 Git이 있어야 동작해요. macOS는 이 단계를 
 ```powershell
 winget install --id Git.Git -e
 ```
+
+<br>
 
 #### 2-1. Claude Code
 
@@ -80,6 +103,8 @@ irm https://claude.ai/install.ps1 | iex
 3. "Do you trust the files in this folder?" → **Yes**
 4. "API 키를 쓸까요?" → **거절** (API 요금이 따로 나가요)
 
+<br>
+
 #### 2-2. Codex
 
 **① 설치**: 터미널에 내 운영체제 쪽 명령을 붙여 넣고 `Enter`
@@ -102,10 +127,14 @@ npm install -g @openai/codex
 2. **Sign in with ChatGPT** 선택
 3. 서울대 계정으로 로그인
 
+<br>
+
 #### 2-3. 확인
 
 - `안녕`이라고 입력해서 답이 오면 성공 ✅
 - 나가기: Claude Code는 `/exit`, Codex는 `/quit`
+
+<br>
 
 #### 2-4. Orca (선택)
 
@@ -119,7 +148,8 @@ npm install -g @openai/codex
 | 🍎 Mac, Intel 칩 | [orca-macos-x64.dmg](https://github.com/stablyai/orca/releases/latest/download/orca-macos-x64.dmg) |
 | 🪟 Windows | [orca-windows-setup.exe](https://github.com/stablyai/orca/releases/latest/download/orca-windows-setup.exe) |
 
-> Mac 칩 확인: 화면 왼쪽 위  → **이 Mac에 관하여** → "칩"에 Apple M…이면 Apple 칩, "프로세서"에 Intel이면 Intel 칩
+> [!TIP]
+> **Mac 칩 확인**: 화면 왼쪽 위  → **이 Mac에 관하여** → "칩"에 Apple M…이면 Apple 칩, "프로세서"에 Intel이면 Intel 칩
 
 **② 설치**
 
@@ -127,6 +157,8 @@ npm install -g @openai/codex
 - 🪟 Windows: 받은 `.exe`를 실행. "Windows의 PC 보호" 창이 뜨면 **추가 정보** → **실행**
 
 **③ 실행**: Orca를 열면 2-1·2-2에서 로그인한 Claude Code·Codex 계정을 그대로 써요. 따로 가입할 필요는 없어요.
+
+---
 
 ### 3. 나머지는 에이전트에게 맡기기
 
@@ -156,20 +188,41 @@ Claude Code 또는 Codex 창에 아래 내용을 통째로 붙여 넣어 주세�
    claude와 codex는 하나만 있어도 통과야. 내 GitHub에 lab-handbook 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
 ```
 
-**확인**: 에이전트가 마지막에 보여 준 표가 모두 통과면 **준비 끝이에요** 🎉
+> [!IMPORTANT]
+> **확인**: 에이전트가 마지막에 보여 준 표가 모두 통과했나요?
+
+<br>
+
+<div align="center">
+
+# ✅ 여기까지 했다면 설치 실습 준비 완료!
+
+수업 날 만나요 🎉
+
+</div>
+
+<br>
 
 ---
+---
 
-## 참고: 직접 설치하기
+<br>
 
-> ✋ **3번까지 했다면 이 부분은 하지 않아도 돼요.** 에이전트가 아래 A~E를 대신 해 줬어요.
+## 🛠️ 참고: 직접 설치하기
+
+> [!NOTE]
+> **3번까지 했다면 이 부분은 하지 않아도 돼요.** 에이전트가 아래 A~E를 대신 해 줬어요.
 > 에이전트 없이 직접 하고 싶거나, 에이전트가 중간에 막혔을 때만 찾아보세요.
 
-### A. 도구 설치
+<details>
+<summary><b>A. 도구 설치</b></summary>
 
 3번 프롬프트 없이 직접 설치하려면 E 점검표의 "실패하면" 칸 명령을 하나씩 실행해 주세요. 설치가 끝나면 새 터미널을 열어 주세요.
 
-### B. 터미널과 GitHub 연결
+</details>
+
+<details>
+<summary><b>B. 터미널과 GitHub 연결</b></summary>
 
 GitHub 계정이 이미 있어도 터미널에서 따로 연결해야 수업 중에 저장소를 만들고 올릴 수 있어요.
 
@@ -190,7 +243,10 @@ git config --global user.name "내 이름"
 git config --global user.email "GitHub 가입 이메일"
 ```
 
-### C. 실습 저장소 받기
+</details>
+
+<details>
+<summary><b>C. 실습 저장소 받기</b></summary>
 
 초대 메일을 받으셨다면 먼저 수락해 주세요.
 
@@ -200,7 +256,10 @@ gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
 
 `Could not resolve to a Repository`가 나오면 아직 초대가 수락되지 않은 상태예요. 수락한 뒤에도 안 되면 강사에게 GitHub 아이디를 알려 주세요.
 
-### D. 저장소 만들고 올리기 테스트
+</details>
+
+<details>
+<summary><b>D. 저장소 만들고 올리기 테스트</b></summary>
 
 수업 중에 하는 "저장소 만들기 → 커밋 → GitHub에 올리기"를 미리 한 번 해 봐요. 한 줄씩 붙여 넣어 주세요 (macOS·Windows 공통).
 
@@ -222,7 +281,10 @@ gh repo create gh-test --private --source . --push
 - GitHub: 브라우저에서 `gh-test` 저장소 → **Settings** → 맨 아래 **Delete this repository**
 - 내 컴퓨터: `cd ~` 후 macOS `rm -rf gh-test`, Windows `Remove-Item -Recurse -Force gh-test`
 
-### E. 환경 점검
+</details>
+
+<details>
+<summary><b>E. 환경 점검</b></summary>
 
 새 터미널에 붙여 넣어 주세요.
 
@@ -249,7 +311,11 @@ git --version; node --version; gh --version; uvx --version; claude --version; co
 - [ ] D 테스트 저장소가 GitHub에 올라갔나요? (확인 후 지워 주세요)
 - [ ] 내 GitHub에 `lab-handbook` 저장소가 **아직 없나요?** (수업 중에 만들어요)
 
-## 자주 묻는 질문 (Q&A)
+</details>
+
+---
+
+## ❓ 자주 묻는 질문 (Q&A)
 
 에러가 나면 먼저 여기를 찾아보세요. 없으면 에러 문구를 통째로 Claude Code나 Codex에 붙여 넣고 "초보자인데 어떻게 해?"라고 물어보세요. 그래도 해결되지 않으면 강사·조교에게 편하게 연락 주세요.
 
@@ -263,6 +329,8 @@ A. 정상이에요. 컴퓨터 로그인 비밀번호를 입력하고 Enter를 �
 
 **Q. 설치가 중간에 멈춰 있어요.**
 A. 학교 와이파이에서 자주 생겨요. `Ctrl` + `C`로 멈추고 휴대폰 핫스팟으로 바꿔서 다시 해 보세요.
+
+---
 
 ### Claude Code · Codex
 
@@ -285,6 +353,8 @@ source ~/.zshrc
 
 **Q. 실습 중에 "usage limit" / 사용량 한도 메시지가 나와요.**
 A. 무료 플랜이거나 한도를 다 쓴 경우예요. 안내된 시간이 지나면 다시 쓸 수 있어요. 수업 중이라면 다른 도구(Claude Code ↔ Codex)로 바꿔서 이어 가세요.
+
+---
 
 ### GitHub 연결
 
@@ -338,6 +408,8 @@ A. 같은 이름의 저장소가 이미 있어요. D 테스트라면 `gh-test2`�
 **Q. 저장소를 받을 때 `Could not resolve to a Repository`가 나와요.**
 A. 실습 저장소 초대를 아직 수락하지 않은 경우예요. 메일이나 [github.com/notifications](https://github.com/notifications)에서 초대를 수락해 주세요. 수락했는데도 안 되면 `gh auth status`로 로그인한 아이디가 강사에게 알려 준 아이디와 같은지 확인해 주세요.
 
+---
+
 ### macOS (Homebrew 등)
 
 **Q. `brew: command not found`가 나와요.**
@@ -365,6 +437,8 @@ A. macOS를 업데이트한 뒤 자주 나와요. `xcode-select --install`을 �
 
 **Q. `xcode-select --install`에서 "이미 설치되어 있다"고 나와요.**
 A. 이미 준비된 상태예요. 다음 단계로 넘어가세요.
+
+---
 
 ### Windows
 
