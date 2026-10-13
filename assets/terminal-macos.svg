@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="250" viewBox="0 0 420 250" font-family="-apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+  <rect x="0" y="0" width="420" height="250" rx="12" fill="#f6f7f9"/>
+  <text x="20" y="30" font-size="14" font-weight="700" fill="#333">macOS</text>
+  <rect x="20" y="42" width="380" height="34" rx="8" fill="#fff" stroke="#d0d4da"/>
+  <text x="34" y="64" font-size="14" fill="#333">🔍 터미널</text>
+  <text x="386" y="64" font-size="11" fill="#888" text-anchor="end">Cmd + Space 후 입력</text>
+  <rect x="20" y="90" width="380" height="120" rx="8" fill="#1e1e1e"/>
+  <rect x="20" y="90" width="380" height="24" rx="8" fill="#3a3a3a"/>
+  <rect x="20" y="104" width="380" height="10" fill="#3a3a3a"/>
+  <circle cx="36" cy="102" r="5" fill="#ff5f57"/><circle cx="52" cy="102" r="5" fill="#febc2e"/><circle cx="68" cy="102" r="5" fill="#28c840"/>
+  <text x="210" y="106" font-size="11" fill="#bbb" text-anchor="middle">이름 — -zsh</text>
+  <text x="34" y="140" font-size="13" fill="#ccc" font-family="Menlo, Consolas, monospace">Last login: Mon Oct 19 13:58 on console</text>
+  <text x="34" y="164" font-size="13" fill="#7ee787" font-family="Menlo, Consolas, monospace">이름@MacBook ~ % <tspan fill="#ddd">▌</tspan></text>
+  <text x="20" y="236" font-size="13" fill="#1a7f37">✓ 맨 끝에 % 가 보이면 성공</text>
+</svg>
