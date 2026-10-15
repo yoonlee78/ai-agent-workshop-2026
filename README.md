@@ -2,6 +2,8 @@
 
 Hands-on workshop: build your own research assistant with Claude Code (skills, MCP, subagents)
 
+수업 당일 실습 안내서: [GUIDE.md](GUIDE.md)
+
 ## 수업 전 준비 · 15~30분
 
 워크숍 당일 바로 실습할 수 있도록, 수업 전에 설치와 환경 점검을 마쳐 주세요. git·Homebrew·GitHub 계정이 이미 있으면 15분, 처음부터 설치하면 30분 정도 걸려요.
@@ -28,7 +30,6 @@ Hands-on workshop: build your own research assistant with Claude Code (skills, M
 
 1. 없으면 [github.com/signup](https://github.com/signup)에서 만들기
 2. 이메일 인증까지 마치기
-3. GitHub 아이디를 강사에게 알리기 (실습 저장소 초대에 필요해요)
 
 **② AI 코딩 도구 (둘 중 하나 이상)**
 
@@ -179,13 +180,13 @@ Claude Code 또는 Codex 창에 아래 내용을 통째로 붙여 넣어 주세�
    명령과 화면에서 할 일을 알려줘. 토큰은 만들지 않을 거야. 내가 "로그인했어"라고 하면 다시 확인하고 gh auth setup-git 을 실행해.
 3) git 이름·이메일: git config --global user.name / user.email 이 비어 있으면 나에게 물어보고 설정해.
 4) 실습 저장소 받기: gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
-   접근이 안 되면 로그인한 아이디를 보여 주고, 초대 메일을 수락했는지 확인하라고 알려줘.
+   안 되면 원인을 쉬운 말로 알려 주고, 인터넷 연결과 gh auth status 를 다시 확인해.
 5) push 테스트: 홈 폴더에 gh-test 폴더를 만들고 README.md 하나를 커밋한 뒤
    gh repo create gh-test --private --source . --push 로 올려. 같은 이름이 있으면 gh-test2 처럼 바꿔.
    성공하면 저장소 주소를 보여 주고, GitHub에서 지우는 방법(Settings → Delete this repository)을 알려 준 뒤 내 컴퓨터의 gh-test 폴더는 지워.
 6) 마지막 점검: git --version, node --version, gh --version, uvx --version, claude --version, codex --version,
    gh auth status, git config user.name, git config user.email 을 실행하고 항목별 통과/실패 표로 보여줘.
-   claude와 codex는 하나만 있어도 통과야. 내 GitHub에 lab-handbook 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
+   claude와 codex는 하나만 있어도 통과야. gh repo view ai-agent-workshop-2026 으로 내 계정에 같은 이름 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
 ```
 
 > [!IMPORTANT]
@@ -248,13 +249,11 @@ git config --global user.email "GitHub 가입 이메일"
 <details>
 <summary><b>C. 실습 저장소 받기</b></summary>
 
-초대 메일을 받으셨다면 먼저 수락해 주세요.
-
 ```bash
 gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
 ```
 
-`Could not resolve to a Repository`가 나오면 아직 초대가 수락되지 않은 상태예요. 수락한 뒤에도 안 되면 강사에게 GitHub 아이디를 알려 주세요.
+`Could not resolve to a Repository`가 나오면 주소에 오타가 없는지 확인해 주세요. 그래도 안 되면 강사·조교에게 알려 주세요.
 
 </details>
 
@@ -309,7 +308,7 @@ git --version; node --version; gh --version; uvx --version; claude --version; co
 - [ ] 점검 항목이 모두 통과했나요? (Claude Code·Codex는 쓰는 것만)
 - [ ] `~/ai-agent-workshop-2026` 폴더가 있나요?
 - [ ] D 테스트 저장소가 GitHub에 올라갔나요? (확인 후 지워 주세요)
-- [ ] 내 GitHub에 `lab-handbook` 저장소가 **아직 없나요?** (수업 중에 만들어요)
+- [ ] 내 GitHub 계정에 `ai-agent-workshop-2026` 저장소가 **아직 없나요?** (수업 중에 만들어요)
 
 </details>
 
@@ -359,7 +358,7 @@ A. 무료 플랜이거나 한도를 다 쓴 경우예요. 안내된 시간이 �
 ### GitHub 연결
 
 **Q. GitHub 계정이 없어요.**
-A. [github.com/signup](https://github.com/signup)에서 만들고 이메일 인증까지 마쳐 주세요. 만든 뒤 아이디를 강사에게 알려 주세요.
+A. [github.com/signup](https://github.com/signup)에서 만들고 이메일 인증까지 마쳐 주세요.
 
 **Q. `gh auth login`을 했는데 브라우저가 안 열려요.**
 A. 브라우저에서 [github.com/login/device](https://github.com/login/device)를 직접 열고 터미널에 나온 8자리 코드를 입력해 주세요.
@@ -406,7 +405,7 @@ git commit --amend --reset-author --no-edit
 A. 같은 이름의 저장소가 이미 있어요. D 테스트라면 `gh-test2`처럼 다른 이름을 쓰면 돼요.
 
 **Q. 저장소를 받을 때 `Could not resolve to a Repository`가 나와요.**
-A. 실습 저장소 초대를 아직 수락하지 않은 경우예요. 메일이나 [github.com/notifications](https://github.com/notifications)에서 초대를 수락해 주세요. 수락했는데도 안 되면 `gh auth status`로 로그인한 아이디가 강사에게 알려 준 아이디와 같은지 확인해 주세요.
+A. 저장소 주소에 오타가 있거나 GitHub 로그인이 안 된 경우예요. `gh auth status`로 로그인을 확인하고, C의 명령을 복사 버튼으로 다시 붙여 넣어 주세요.
 
 ---
 
