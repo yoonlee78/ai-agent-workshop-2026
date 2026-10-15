@@ -192,6 +192,8 @@ Claude Code 또는 Codex 창에 아래 내용을 통째로 붙여 넣어 주세�
 > [!IMPORTANT]
 > **확인**: 에이전트가 마지막에 보여 준 표가 모두 통과했나요?
 
+<img src="assets/check-table-example.svg" width="720" alt="점검 표 예시: 항목별 통과, 마지막 줄은 아직 없음">
+
 <br>
 
 <div align="center">
