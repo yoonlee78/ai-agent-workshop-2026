@@ -270,7 +270,7 @@ git config --global user.email "GitHub 가입 이메일"
 gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
 ```
 
-`Could not resolve to a Repository`가 나오면 주소에 오타가 없는지 확인해 주세요. 그래도 안 되면 강사·현장 조교에게 알려 주세요.
+`Could not resolve to a Repository`가 나오면 주소에 오타가 없는지 확인해 주세요. 그래도 안 되면 강사·실습 조교에게 알려 주세요.
 
 </details>
 
@@ -340,7 +340,7 @@ uv run --with pandas --with matplotlib python -c "import pandas, matplotlib.pypl
 
 ## ❓ 자주 묻는 질문 (Q&A)
 
-에러가 나면 먼저 여기를 찾아보세요. 없으면 에러 문구를 통째로 Claude Code나 Codex에 붙여 넣고 "초보자인데 어떻게 해?"라고 물어보세요. 그래도 해결되지 않으면 강사·현장 조교에게 편하게 연락 주세요.
+에러가 나면 먼저 여기를 찾아보세요. 없으면 에러 문구를 통째로 Claude Code나 Codex에 붙여 넣고 "초보자인데 어떻게 해?"라고 물어보세요. 그래도 해결되지 않으면 강사·실습 조교에게 편하게 연락 주세요.
 
 ### 공통
 
@@ -488,4 +488,4 @@ A. Node.js가 없는 경우예요. `winget install --id OpenJS.NodeJS.LTS -e`로
 A. Windows PowerShell은 `&&`를 지원하지 않아요. 명령을 한 줄씩 나눠서 붙여 넣어 주세요.
 
 **Q. Windows 사용자 이름이 한글이에요 (예: `C:\Users\홍길동`).**
-A. 대부분 문제없지만, 일부 도구가 한글 경로에서 에러를 낼 수 있어요. 설명하기 어려운 에러가 나면 사용자 이름이 한글이라는 점과 함께 강사·현장 조교에게 알려 주세요.
+A. 대부분 문제없지만, 일부 도구가 한글 경로에서 에러를 낼 수 있어요. 설명하기 어려운 에러가 나면 사용자 이름이 한글이라는 점과 함께 강사·실습 조교에게 알려 주세요.
