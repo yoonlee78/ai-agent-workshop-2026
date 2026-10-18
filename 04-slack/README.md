@@ -1,10 +1,10 @@
 # 4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택
 
-> 이 파일은 [실습 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#4-slack) 4장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#4-slack)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#4-slack-연결-채널-대화-정리와-저장소-반영--선택)
+> 이 파일은 [워크숍 실습 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#4-slack) 4장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#4-slack)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#4-slack-연결-채널-대화-정리와-저장소-반영--선택)
 
 ![Slack에서 @Claude에 작업 위임](../assets/figures/slack-flow.svg)
 
-*그림: Slack에서 @Claude에 작업 위임 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-slack-flow)*
+*그림: Slack에서 @Claude에 작업 위임 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-slack-flow)*
 
 **목표**: Slack 채널 메모의 정리와 저장소 반영(PR) 위임[^slackwhy]
 

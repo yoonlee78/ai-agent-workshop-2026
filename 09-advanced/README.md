@@ -1,6 +1,6 @@
 # 9. 심화 예시: 위키 · 영상 · 로봇
 
-> 이 파일은 [실습 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#9) 9장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#9)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#9-심화-예시-위키--영상--로봇)
+> 이 파일은 [워크숍 실습 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#9) 9장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#9)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#9-심화-예시-위키--영상--로봇)
 
 **목표**: 스킬·서브에이전트·MCP의 연구실 업무 확장 적용(자료: `09-advanced/`)
 
@@ -26,7 +26,7 @@
 
 ![LLM 위키 · 미팅 메모의 위키 페이지화와 GitHub 반영](../assets/figures/ws-wiki.svg)
 
-*그림: LLM 위키 · 미팅 메모의 위키 페이지화와 GitHub 반영 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-ws-wiki)*
+*그림: LLM 위키 · 미팅 메모의 위키 페이지화와 GitHub 반영 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-ws-wiki)*
 
 **OKF 형식**
 
@@ -183,7 +183,7 @@ okf_version: "0.2"
 
 ![영상 전사의 데이터 처리 흐름 · 로컬 처리와 AI 서버 처리의 경계](../assets/figures/ws-video.svg)
 
-*그림: 영상 전사의 데이터 처리 흐름 · 로컬 처리와 AI 서버 처리의 경계 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-ws-video)*
+*그림: 영상 전사의 데이터 처리 흐름 · 로컬 처리와 AI 서버 처리의 경계 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-ws-video)*
 
 `/exit`로 나가서 **터미널**에 붙여 넣는다.
 
@@ -241,7 +241,7 @@ interview-transcriber에게 09-advanced/video/lesley-ott.mp4 를 맡겨줘. 이�
 
 ![기기 제어 · 기기 설명 → driver(read·write, 안전 한계) → MCP · 명령줄 · 절차 파일 → 사람 승인](../assets/figures/hardware-mhs.svg)
 
-*그림: 기기 제어 · 기기 설명 → driver(read·write, 안전 한계) → MCP · 명령줄 · 절차 파일 → 사람 승인 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-hardware-mhs)*
+*그림: 기기 제어 · 기기 설명 → driver(read·write, 안전 한계) → MCP · 명령줄 · 절차 파일 → 사람 승인 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-hardware-mhs)*
 
 | MHS 구성 요소 | 기능 | 예시 구현 |
 | --- | --- | --- |
@@ -263,15 +263,15 @@ interview-transcriber에게 09-advanced/video/lesley-ott.mp4 를 맡겨줘. 이�
 
 ![자연어 장비 제어 · 설명서 확인 → 사람 승인 → driver 검증 → 인큐베이터 온도 변경](../assets/figures/device-chat.svg)
 
-*그림: 자연어 장비 제어 · 설명서 확인 → 사람 승인 → driver 검증 → 인큐베이터 온도 변경 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-device-chat)*
+*그림: 자연어 장비 제어 · 설명서 확인 → 사람 승인 → driver 검증 → 인큐베이터 온도 변경 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-device-chat)*
 
 ![로봇 팔 절차 · 절차 파일 12단계에 따른 시료판 이송](../assets/figures/robot-arm.svg)
 
-*그림: 로봇 팔 절차 · 절차 파일 12단계에 따른 시료판 이송 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-robot-arm)*
+*그림: 로봇 팔 절차 · 절차 파일 12단계에 따른 시료판 이송 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-robot-arm)*
 
 ![로봇 행동 계획 · 계획 → simulator → 사람 승인 → 실행](../assets/figures/ws-robot.svg)
 
-*그림: 로봇 행동 계획 · 계획 → simulator → 사람 승인 → 실행 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-ws-robot)*
+*그림: 로봇 행동 계획 · 계획 → simulator → 사람 승인 → 실행 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-ws-robot)*
 
 선택: 직접 실행. **터미널**에서 MCP를 등록하고, write와 절차 실행에 매번 승인을 요구하도록 `.claude/settings.json`을 만든다(기존 파일이 있으면 `permissions.ask`에 두 줄 추가).[^9-3]
 

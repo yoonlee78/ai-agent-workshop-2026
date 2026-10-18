@@ -1,4 +1,4 @@
-<!doctype html><html lang="ko" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>실습 안내서</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"><style>/* Claude 에이전트 팀 만들기 튜토리얼 · 연구 노트(모눈종이) 스타일 */
+<!doctype html><html lang="ko" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>워크숍 실습 가이드북</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"><style>/* Claude 에이전트 팀 만들기 튜토리얼 · 연구 노트(모눈종이) 스타일 */
 :root {
   --paper: #f5f7fb;
   --panel: #ffffff;
@@ -351,7 +351,7 @@ sup[id^="fnref"] + sup[id^="fnref"]::before { content:","; }
 /* 한 페이지에 개념 하나: 장 이름 표시 */
 .crumb { margin:0 0 6px; font-size:12.5px; } .crumb a { color:var(--muted); text-decoration:none; } .crumb a::before { content:"↑ "; } .crumb a:hover { color:var(--accent); }
 section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; font-size:1.35em; }
-</style></head><body><main class="content"><div class="wrap"><aside class="side"><div class="side-in"><div class="side-head"><b>목차</b><button type="button" class="toc-x" title="목차 접기">⟨ 접기</button></div><ul class="toc-ul"><li><a href="#_2">워크숍 소개</a></li><li><a href="#_3">실습 개요</a></li><li><a href="#_6">에이전트 소개</a></li><li><a href="#0">0. 사전 준비</a><ul class="toc-sub"><li><a href="#0-1"><b>0-1</b> 터미널 열기</a></li><li><a href="#0-2-ai"><b>0-2</b> AI 코딩 도구 설치</a></li><li><a href="#0-3"><b>0-3</b> 에이전트를 통한 나머지 설치</a></li></ul></li><li><a href="#1">1. 스킬 만들기: 미팅 노트</a><ul class="toc-sub"><li><a href="#1-1"><b>1-1</b> 내 저장소 연결하기</a></li><li><a href="#1-2-meeting-notes"><b>1-2</b> 미팅 노트 스킬 meeting-notes</a></li><li><a href="#1-3"><b>1-3</b> 스킬 호출과 수정</a></li></ul></li><li><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a><ul class="toc-sub"><li><a href="#2-1-arxiv-mcp"><b>2-1</b> arXiv MCP 연결하기</a></li><li><a href="#2-2"><b>2-2</b> 논문 검색</a></li><li><a href="#2-3"><b>2-3</b> 커넥터 활용</a></li></ul></li><li><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a><ul class="toc-sub"><li><a href="#3-1-meeting-scribe"><b>3-1</b> 미팅 노트 담당 meeting-scribe</a></li><li><a href="#3-2-onboarding-buddy"><b>3-2</b> 온보딩 버디 onboarding-buddy</a></li><li><a href="#3-3-study-maker"><b>3-3</b> 학습자료 담당 study-maker</a></li></ul></li><li><a href="#4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</a></li><li><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a><ul class="toc-sub"><li><a href="#5-1"><b>5-1</b> 로그 확인</a></li><li><a href="#5-2-question-report"><b>5-2</b> 리포트 스킬 question-report</a></li><li><a href="#5-3-report-format"><b>5-3</b> 양식 스킬 report-format</a></li><li><a href="#5-4-ethics-checker"><b>5-4</b> 연구윤리 점검 서브에이전트 ethics-checker</a></li></ul></li><li><a href="#6">6. 정리</a></li><li><a href="#7">7. 추가 실습</a></li><li><a href="#8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</a><ul class="toc-sub"><li><a href="#8-1"><b>8-1</b> 실습과 연구 개념의 연결</a></li><li><a href="#8-2-coala"><b>8-2</b> 논문 소개: CoALA</a></li><li><a href="#8-3-harness"><b>8-3</b> Harness: 권고, 확인, 차단</a></li><li><a href="#8-4-prompt-injection-least-privilege"><b>8-4</b> Prompt injection과 least privilege</a></li><li><a href="#8-5-benchmark-alignment-auditing"><b>8-5</b> 평가: benchmark와 alignment auditing</a></li><li><a href="#8-6-alignment"><b>8-6</b> Alignment: 지시와 의도의 불일치</a></li><li><a href="#8-7"><b>8-7</b> 자기 개선 에이전트와 통제 지점</a></li><li><a href="#8-8-llm"><b>8-8</b> 연구 대상으로서의 LLM</a></li><li><a href="#8-9"><b>8-9</b> 업무 분담: 스크립트</a></li></ul></li><li><a href="#9">9. 심화 예시: 위키 · 영상 · 로봇</a><ul class="toc-sub"><li><a href="#9-1-llm"><b>9-1</b> LLM 위키: 분산된 메모의 지식 구조화</a></li><li><a href="#9-2"><b>9-2</b> 멀티모달: 인터뷰 영상 전사</a></li><li><a href="#9-3"><b>9-3</b> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</a></li></ul></li><li><a href="#a">부록 A · 완성본과 주요 명령</a></li><li><a href="#b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</a></li></ul><div class="modesw"><b>모드</b><label><input type="radio" name="md" value="direct" checked> 직접</label><label><input type="radio" name="md" value="tutor"> 자동 진행</label><label><input type="radio" name="md" value="both"> 둘 다(비교)</label></div><label class="all"><input type="checkbox" id="showall"> 한 페이지로 모두 보기</label><div class="prog"><span id="progtxt"></span> <button id="progreset" type="button">진행 초기화</button></div><p class="upd" style="font-size:11px;color:var(--muted);margin:8px 0 0">마지막 업데이트 10월 18일 21:13</p></div></aside><button type="button" class="toc-open" title="목차 펴기">☰ 목차</button><div class="main"><div class="intro"><h1 id="_1">나만의 연구 조교 만들기: 실습 안내서</h1>
+</style></head><body><main class="content"><div class="wrap"><aside class="side"><div class="side-in"><div class="side-head"><b>목차</b><button type="button" class="toc-x" title="목차 접기">⟨ 접기</button></div><ul class="toc-ul"><li><a href="#_2">워크숍 소개</a></li><li><a href="#_3">실습 개요</a></li><li><a href="#_6">에이전트 소개</a></li><li><a href="#0">0. 사전 준비</a><ul class="toc-sub"><li><a href="#0-1"><b>0-1</b> 터미널 열기</a></li><li><a href="#0-2-ai"><b>0-2</b> AI 코딩 도구 설치</a></li><li><a href="#0-3"><b>0-3</b> 에이전트를 통한 나머지 설치</a></li></ul></li><li><a href="#1">1. 스킬 만들기: 미팅 노트</a><ul class="toc-sub"><li><a href="#1-1"><b>1-1</b> 내 저장소 연결하기</a></li><li><a href="#1-2-meeting-notes"><b>1-2</b> 미팅 노트 스킬 meeting-notes</a></li><li><a href="#1-3"><b>1-3</b> 스킬 호출과 수정</a></li></ul></li><li><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a><ul class="toc-sub"><li><a href="#2-1-arxiv-mcp"><b>2-1</b> arXiv MCP 연결하기</a></li><li><a href="#2-2"><b>2-2</b> 논문 검색</a></li><li><a href="#2-3"><b>2-3</b> 커넥터 활용</a></li></ul></li><li><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a><ul class="toc-sub"><li><a href="#3-1-meeting-scribe"><b>3-1</b> 미팅 노트 담당 meeting-scribe</a></li><li><a href="#3-2-onboarding-buddy"><b>3-2</b> 온보딩 버디 onboarding-buddy</a></li><li><a href="#3-3-study-maker"><b>3-3</b> 학습자료 담당 study-maker</a></li></ul></li><li><a href="#4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</a></li><li><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a><ul class="toc-sub"><li><a href="#5-1"><b>5-1</b> 로그 확인</a></li><li><a href="#5-2-question-report"><b>5-2</b> 리포트 스킬 question-report</a></li><li><a href="#5-3-report-format"><b>5-3</b> 양식 스킬 report-format</a></li><li><a href="#5-4-ethics-checker"><b>5-4</b> 연구윤리 점검 서브에이전트 ethics-checker</a></li></ul></li><li><a href="#6">6. 정리</a></li><li><a href="#7">7. 추가 실습</a></li><li><a href="#8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</a><ul class="toc-sub"><li><a href="#8-1"><b>8-1</b> 실습과 연구 개념의 연결</a></li><li><a href="#8-2-coala"><b>8-2</b> 논문 소개: CoALA</a></li><li><a href="#8-3-harness"><b>8-3</b> Harness: 권고, 확인, 차단</a></li><li><a href="#8-4-prompt-injection-least-privilege"><b>8-4</b> Prompt injection과 least privilege</a></li><li><a href="#8-5-benchmark-alignment-auditing"><b>8-5</b> 평가: benchmark와 alignment auditing</a></li><li><a href="#8-6-alignment"><b>8-6</b> Alignment: 지시와 의도의 불일치</a></li><li><a href="#8-7"><b>8-7</b> 자기 개선 에이전트와 통제 지점</a></li><li><a href="#8-8-llm"><b>8-8</b> 연구 대상으로서의 LLM</a></li><li><a href="#8-9"><b>8-9</b> 업무 분담: 스크립트</a></li></ul></li><li><a href="#9">9. 심화 예시: 위키 · 영상 · 로봇</a><ul class="toc-sub"><li><a href="#9-1-llm"><b>9-1</b> LLM 위키: 분산된 메모의 지식 구조화</a></li><li><a href="#9-2"><b>9-2</b> 멀티모달: 인터뷰 영상 전사</a></li><li><a href="#9-3"><b>9-3</b> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</a></li></ul></li><li><a href="#a">부록 A · 완성본과 주요 명령</a></li><li><a href="#b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</a></li></ul><div class="modesw"><b>모드</b><label><input type="radio" name="md" value="direct" checked> 직접</label><label><input type="radio" name="md" value="tutor"> 자동 진행</label><label><input type="radio" name="md" value="both"> 둘 다(비교)</label></div><label class="all"><input type="checkbox" id="showall"> 한 페이지로 모두 보기</label><div class="prog"><span id="progtxt"></span> <button id="progreset" type="button">진행 초기화</button></div><p class="upd" style="font-size:11px;color:var(--muted);margin:8px 0 0">마지막 업데이트 10월 18일 22:07</p></div></aside><button type="button" class="toc-open" title="목차 펴기">☰ 목차</button><div class="main"><div class="intro"><h1 id="_1">워크숍 실습 가이드북</h1>
 <hr />
 </div><section class="chap" data-id="_2" data-ch="_2" data-title="워크숍 소개"><h2 id="_2">워크숍 소개</h2>
 <ul>
@@ -490,7 +490,7 @@ section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; fo
 <div class="mcards"><div class="mcard" data-v="direct"><b>✍️ 직접 모드 <i>추천</i></b><span>상자를 내가 복사해 붙여 넣는다.</span><button type="button" data-v="direct">직접 모드로 보기</button></div><div class="mcard" data-v="tutor"><b>⏩ 자동 진행 모드</b><span>에이전트가 한 단계씩 설명하고 대신 진행한다. 나는 확인하고 승인한다.</span><button type="button" data-v="tutor">자동 진행 모드로 보기</button></div></div>
 <p class="mnote">왼쪽 목차 아래에서 언제든 바꿀 수 있다.</p>
 
-<h3 id="_5">안내서 구성</h3>
+<h3 id="_5">가이드북 구성</h3>
 <p class="legend"><span class="run req">필수 실행</span> 수업에서 꼭 실행 · <span class="run opt">선택</span> 대안·추가·막힐 때</p><div class="legend2"><span class="lg-paste">흰 바탕 · 파란 테두리 = 붙여 넣는 상자</span><span class="lg-scr">🖼 보라 점선 창 = 예시 화면 (붙여 넣지 않음)</span></div>
 
 <ul>
@@ -537,7 +537,7 @@ section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; fo
 <figure class="fig" id="fig-ecosystem" data-fig="ecosystem"><figcaption><b>그림 3. 조교 팀 구성</b> · 호스트 1개, 스킬 4, MCP 1, 서브에이전트 4</figcaption></figure>
 
 <p>실습을 마치면 내 저장소 <code>ai-agent-workshop-2026</code>은 이렇게 된다. "미리 들어 있음"이 붙은 것은 받아 둔 자료이고, 나머지는 실습에서 만든다.</p>
-<details class="scr-t"><summary>🖼 폴더 예시 · 실습을 마친 뒤 내 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>실습을 마친 뒤 내 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서 (미리 들어 있음)<br>├── CLAUDE.md                          ← 저장소 규칙 (매번 자동으로 읽힘)<br>├── .mcp.json                          ← 2. arXiv 논문 검색 MCP<br>├── .claude/<br>│   ├── skills/workshop-tutor/         ← 자동 진행 모드 (미리 들어 있음)<br>│   ├── skills/meeting-notes/SKILL.md  ← 1. 미팅 노트 스킬<br>│   ├── skills/question-report/        ← 5. 질문 로그 리포트 스킬<br>│   ├── skills/report-format/          ← 5. 리포트 양식 스킬<br>│   └── agents/<br>│       ├── meeting-scribe.md          ← 3-1. 미팅 노트 담당<br>│       ├── onboarding-buddy.md        ← 3-2. 온보딩 버디<br>│       ├── study-maker.md             ← 3-3. 학습자료 담당<br>│       └── ethics-checker.md          ← 5. 연구윤리 점검 담당<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내<br>├── 03-subagents/<br>│   ├── materials/                     ← 미팅 메모 2개 (미리 들어 있음)<br>│   ├── handbook/                      ← 연구실 핸드북 01~04장 (미리 들어 있음) + 목차<br>│   ├── meetings/                      ← 미팅 노트가 쌓이는 곳<br>│   └── study/                         ← 학습자료<br>├── 05-report/<br>│   ├── data/lab-help-2026-09.log      ← 질문방 로그 (가상 자료, 미리 들어 있음)<br>│   ├── data/questions.csv             ← 정리한 질문<br>│   ├── scripts/                       ← 그래프 스크립트<br>│   ├── report/                        ← 리포트 초안·최종본·그래프<br>│   └── reviews/                       ← 점검 피드백<br>├── 07-more/                           ← 7. 추가 실습 자료 (미리 들어 있음)<br>└── 09-advanced/                       ← 9. 심화 예시: 위키 · 영상 · 로봇 (미리 들어 있음)</span></div></div></details>
+<details class="scr-t"><summary>🖼 폴더 예시 · 실습을 마친 뒤 내 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>실습을 마친 뒤 내 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 가이드북 (미리 들어 있음)<br>├── CLAUDE.md                          ← 저장소 규칙 (매번 자동으로 읽힘)<br>├── .mcp.json                          ← 2. arXiv 논문 검색 MCP<br>├── .claude/<br>│   ├── skills/workshop-tutor/         ← 자동 진행 모드 (미리 들어 있음)<br>│   ├── skills/meeting-notes/SKILL.md  ← 1. 미팅 노트 스킬<br>│   ├── skills/question-report/        ← 5. 질문 로그 리포트 스킬<br>│   ├── skills/report-format/          ← 5. 리포트 양식 스킬<br>│   └── agents/<br>│       ├── meeting-scribe.md          ← 3-1. 미팅 노트 담당<br>│       ├── onboarding-buddy.md        ← 3-2. 온보딩 버디<br>│       ├── study-maker.md             ← 3-3. 학습자료 담당<br>│       └── ethics-checker.md          ← 5. 연구윤리 점검 담당<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내<br>├── 03-subagents/<br>│   ├── materials/                     ← 미팅 메모 2개 (미리 들어 있음)<br>│   ├── handbook/                      ← 연구실 핸드북 01~04장 (미리 들어 있음) + 목차<br>│   ├── meetings/                      ← 미팅 노트가 쌓이는 곳<br>│   └── study/                         ← 학습자료<br>├── 05-report/<br>│   ├── data/lab-help-2026-09.log      ← 질문방 로그 (가상 자료, 미리 들어 있음)<br>│   ├── data/questions.csv             ← 정리한 질문<br>│   ├── scripts/                       ← 그래프 스크립트<br>│   ├── report/                        ← 리포트 초안·최종본·그래프<br>│   └── reviews/                       ← 점검 피드백<br>├── 07-more/                           ← 7. 추가 실습 자료 (미리 들어 있음)<br>└── 09-advanced/                       ← 9. 심화 예시: 위키 · 영상 · 로봇 (미리 들어 있음)</span></div></div></details>
 
 <hr />
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 4 / 46</p></section><section class="chap" data-id="0" data-ch="0" data-title="0. 사전 준비"><h2 id="0">0. 사전 준비</h2>
@@ -644,7 +644,7 @@ npm install -g @openai/codex
 <pre class="paste opt"><code class="language-bash">gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
 </code></pre>
 <p>받아 둔 <code>~/ai-agent-workshop-2026</code>는 이렇게 생겼다. 실습을 마친 모습은 앞의 에이전트 소개에 있다.</p>
-<details class="scr-t"><summary>🖼 폴더 예시 · 수업 전: 받아 둔 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>수업 전: 받아 둔 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서<br>├── assets/                            ← 안내서 그림<br>├── .claude/<br>│   └── skills/workshop-tutor/         ← 자동 진행 모드<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내 (README만)<br>├── 03-subagents/<br>│   ├── materials/                     ← 미팅 메모 2개<br>│   └── handbook/                      ← 연구실 핸드북 01~04장<br>├── 05-report/<br>│   └── data/lab-help-2026-09.log      ← 연구실 질문방 로그 한 달치 (가상 자료)<br>├── 07-more/                           ← 7. 추가 실습 자료<br>└── 09-advanced/                       ← 9. 심화 예시 자료</span></div></div></details>
+<details class="scr-t"><summary>🖼 폴더 예시 · 수업 전: 받아 둔 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>수업 전: 받아 둔 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 가이드북<br>├── assets/                            ← 가이드북 그림<br>├── .claude/<br>│   └── skills/workshop-tutor/         ← 자동 진행 모드<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내 (README만)<br>├── 03-subagents/<br>│   ├── materials/                     ← 미팅 메모 2개<br>│   └── handbook/                      ← 연구실 핸드북 01~04장<br>├── 05-report/<br>│   └── data/lab-help-2026-09.log      ← 연구실 질문방 로그 한 달치 (가상 자료)<br>├── 07-more/                           ← 7. 추가 실습 자료<br>└── 09-advanced/                       ← 9. 심화 예시 자료</span></div></div></details>
 
 <p><strong>문제 해결</strong></p>
 <ul>
@@ -657,7 +657,7 @@ npm install -g @openai/codex
 <div class="table-wrap"><table>
 <thead>
 <tr>
-<th>안내서 (Claude Code)</th>
+<th>가이드북 (Claude Code)</th>
 <th>Codex에서</th>
 </tr>
 </thead>
@@ -781,7 +781,7 @@ claude
 <summary>🖼 파일 예시 · 이때 생기는 파일: CLAUDE.md</summary>
 <div class="win sc-file">
 <div class="bar"><i></i><i></i><i></i><span>이때 생기는 파일: CLAUDE.md</span></div>
-<div class="scr"># ai-agent-workshop-2026<br>워크숍 실습 저장소. 장마다 폴더가 있고(01-skill ~ 05-report), 스킬과 서브에이전트는 루트 .claude/ 에 만든다.<br>- 연구실 핸드북은 03-subagents/handbook/ 에 있다. 독자는 이번 학기에 들어온 신입이다. 전문용어는 처음 나올 때 한 줄로 풀어 쓴다.<br>- 사실이 확인되지 않은 내용(계정 담당자, 장비 위치 등)은 &quot;TODO: 팀장 확인&quot;으로 남긴다.<br>- 미팅이 끝나면 meeting-notes 양식으로 03-subagents/meetings/YYYY-MM-DD.md 에 저장한다. 같은 날 두 번째 미팅은 YYYY-MM-DD-2.md.<br>- 새 멤버의 질문은 onboarding-buddy 서브에이전트에게 맡긴다.<br>- 루트의 README.md, GUIDE.md 는 워크숍 안내서다. 핸드북 질문의 근거로 쓰지 않는다.</div>
+<div class="scr"># ai-agent-workshop-2026<br>워크숍 실습 저장소. 장마다 폴더가 있고(01-skill ~ 05-report), 스킬과 서브에이전트는 루트 .claude/ 에 만든다.<br>- 연구실 핸드북은 03-subagents/handbook/ 에 있다. 독자는 이번 학기에 들어온 신입이다. 전문용어는 처음 나올 때 한 줄로 풀어 쓴다.<br>- 사실이 확인되지 않은 내용(계정 담당자, 장비 위치 등)은 &quot;TODO: 팀장 확인&quot;으로 남긴다.<br>- 미팅이 끝나면 meeting-notes 양식으로 03-subagents/meetings/YYYY-MM-DD.md 에 저장한다. 같은 날 두 번째 미팅은 YYYY-MM-DD-2.md.<br>- 새 멤버의 질문은 onboarding-buddy 서브에이전트에게 맡긴다.<br>- 루트의 README.md, GUIDE.md 는 워크숍 가이드북이다. 핸드북 질문의 근거로 쓰지 않는다.</div>
 </div>
 </details>
 </div>
@@ -807,7 +807,7 @@ claude
 - 사실이 확인되지 않은 내용(계정 담당자, 장비 위치 등)은 &quot;TODO: 팀장 확인&quot;으로 남긴다.
 - 미팅이 끝나면 meeting-notes 양식으로 03-subagents/meetings/YYYY-MM-DD.md 에 저장한다. 같은 날 두 번째 미팅은 YYYY-MM-DD-2.md.
 - 새 멤버의 질문은 onboarding-buddy 서브에이전트에게 맡긴다.
-- 루트의 README.md, GUIDE.md 는 워크숍 안내서다. 핸드북 질문의 근거로 쓰지 않는다.
+- 루트의 README.md, GUIDE.md 는 워크숍 가이드북이다. 핸드북 질문의 근거로 쓰지 않는다.
 </code></pre>
 </div>
 <div class="mode m-tutor">
@@ -1134,7 +1134,7 @@ codex mcp list
 <pre><code class="language-text">아래 Claude Code 서브에이전트를 Codex 형식으로 바꿔서 .codex/agents/&lt;이름&gt;.toml 로 만들어줘.
 name, description은 그대로, 본문은 developer_instructions에 넣어. tools·model 줄은 빼고,
 skills 줄이 있으면 &quot;&lt;스킬 이름&gt; 스킬 양식을 따른다&quot;를 developer_instructions 첫 줄에 넣어.
-(여기에 안내서 상자 내용을 붙여 넣는다)
+(여기에 가이드북 상자 내용을 붙여 넣는다)
 </code></pre>
 <figure class="fig" id="fig-agents-folder" data-fig="agents-folder"><figcaption><b>그림 10. 서브에이전트 파일 위치</b> · 3장을 마친 뒤의 .claude/ 폴더</figcaption></figure>
 
@@ -1228,7 +1228,7 @@ model: sonnet
 ---
 
 너는 이 팀의 친절한 온보딩 버디다. 질문을 받으면:
-1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 안내서라 근거로 쓰지 않는다.
+1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 가이드북이라 근거로 쓰지 않는다.
 2. 문서에 근거가 있는 내용만 답하고, 끝에 근거를 `파일:줄` 형식으로 적는다(예: `03-subagents/handbook/README.md:3`).
 3. 문서에 없으면 지어내지 말고 &quot;문서에 없음, 팀장 확인 필요&quot;라고 쓰고, 문서에 추가할 문장을 제안한다.
 4. 처음 온 사람이 이해할 쉬운 말로 5줄 이내로 답한다(근거 줄 제외).
@@ -1241,7 +1241,7 @@ name = &quot;onboarding-buddy&quot;
 description = &quot;새 멤버의 질문(계정, 장비, 미팅, 규칙, 첫 주에 할 일)에 연구실 핸드북을 근거로 답한다. 신입·온보딩 질문에 사용.&quot;
 developer_instructions = &quot;&quot;&quot;
 너는 이 팀의 친절한 온보딩 버디다. 파일을 만들거나 고치지 않는다. 질문을 받으면:
-1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 안내서라 근거로 쓰지 않는다.
+1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 가이드북이라 근거로 쓰지 않는다.
 2. 문서에 근거가 있는 내용만 답하고, 끝에 근거를 `파일:줄` 형식으로 적는다(예: `03-subagents/handbook/README.md:3`).
 3. 문서에 없으면 지어내지 말고 &quot;문서에 없음, 팀장 확인 필요&quot;라고 쓰고, 문서에 추가할 문장을 제안한다.
 4. 처음 온 사람이 이해할 쉬운 말로 5줄 이내로 답한다(근거 줄 제외).
@@ -2376,7 +2376,7 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 <p>참고: <a href="https://www.anthropic.com/news/model-hardware-standard-research-preview">Anthropic (2026). Model Hardware Standard research preview</a> · <a href="https://docs.ros.org">ROS 2 Documentation</a></p>
 <hr />
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 43 / 46</p></section><section class="chap" data-id="a" data-ch="a" data-title="부록 A · 완성본과 주요 명령"><h2 id="a">부록 A · 완성본과 주요 명령</h2>
-<p>오류가 나면 이 안내서의 상자 내용과 <code>.claude/</code>에 만든 파일을 나란히 놓고 비교한다.</p>
+<p>오류가 나면 이 가이드북의 상자 내용과 <code>.claude/</code>에 만든 파일을 나란히 놓고 비교한다.</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -2418,7 +2418,7 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 <hr />
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 44 / 46</p></section><section class="chap" data-id="b-claude-codex-openrouter" data-ch="b-claude-codex-openrouter" data-title="부록 B · Claude 구독 없이 하기: Codex · OpenRouter"><h2 id="b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</h2>
 <h3 id="codex">Codex 사용 시 (서울대 계정)</h3>
-<p>명령·파일 대응은 안내서 앞부분의 <strong>Claude Code · Codex 대응</strong> 표를 따른다.</p>
+<p>명령·파일 대응은 가이드북 앞부분의 <strong>Claude Code · Codex 대응</strong> 표를 따른다.</p>
 <p><strong>장별 차이</strong></p>
 <div class="table-wrap"><table>
 <thead>
@@ -2482,7 +2482,7 @@ export ANTHROPIC_API_KEY=&quot;&quot;
 <pre><code class="language-powershell">$env:ANTHROPIC_BASE_URL = &quot;https://openrouter.ai/api&quot;
 $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
 </code></pre>
-<p><code>claude</code>를 열고 <code>/status</code>에 <code>https://openrouter.ai/api</code>가 보이면 성공이다. 그 뒤는 안내서 그대로 한다.<sup id="fnref:or"><a class="footnote-ref" href="#fn:or">1</a></sup></p>
+<p><code>claude</code>를 열고 <code>/status</code>에 <code>https://openrouter.ai/api</code>가 보이면 성공이다. 그 뒤는 가이드북 그대로 한다.<sup id="fnref:or"><a class="footnote-ref" href="#fn:or">1</a></sup></p>
 <ul>
 <li>전에 Claude 계정으로 로그인한 적이 있으면 <code>/logout</code> 후 다시 연다.</li>
 <li>요금은 OpenRouter 크레딧에서 나간다. <strong>Activity</strong>에서 쓴 금액을 본다.</li>

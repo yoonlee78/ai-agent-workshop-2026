@@ -1,6 +1,6 @@
 # 7. 추가 실습
 
-> 이 파일은 [실습 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#7) 7장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#7)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#7-추가-실습)
+> 이 파일은 [워크숍 실습 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#7) 7장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#7)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#7-추가-실습)
 
 **목표**: 실습 결과의 검증과 개인 연구 업무 적용
 

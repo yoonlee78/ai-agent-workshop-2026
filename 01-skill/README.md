@@ -1,6 +1,6 @@
 # 1. 스킬 만들기: 미팅 노트
 
-> 이 파일은 [실습 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#1) 1장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#1)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#1-스킬-만들기-미팅-노트)
+> 이 파일은 [워크숍 실습 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#1) 1장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#1)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#1-스킬-만들기-미팅-노트)
 
 ## 스킬이란
 
@@ -16,7 +16,7 @@
 
 ![스킬 로딩 3단계](../assets/figures/skill.svg)
 
-*그림: 스킬 로딩 3단계 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-skill)*
+*그림: 스킬 로딩 3단계 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-skill)*
 
 **호출과 수정**
 
@@ -92,7 +92,7 @@ Codex 사용자는 마지막 줄 `claude` 대신 `codex`를 입력한다. 아래
 - 사실이 확인되지 않은 내용(계정 담당자, 장비 위치 등)은 "TODO: 팀장 확인"으로 남긴다.
 - 미팅이 끝나면 meeting-notes 양식으로 03-subagents/meetings/YYYY-MM-DD.md 에 저장한다. 같은 날 두 번째 미팅은 YYYY-MM-DD-2.md.
 - 새 멤버의 질문은 onboarding-buddy 서브에이전트에게 맡긴다.
-- 루트의 README.md, GUIDE.md 는 워크숍 안내서다. 핸드북 질문의 근거로 쓰지 않는다.
+- 루트의 README.md, GUIDE.md 는 워크숍 가이드북이다. 핸드북 질문의 근거로 쓰지 않는다.
 ````
 
 **확인**

@@ -1,6 +1,6 @@
 # 3. 서브에이전트 3개: 신입 온보딩
 
-> 이 파일은 [실습 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#3-3) 3장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#3-3)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#3-서브에이전트-3개-신입-온보딩)
+> 이 파일은 [워크숍 실습 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#3-3) 3장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#3-3)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#3-서브에이전트-3개-신입-온보딩)
 
 **서브에이전트**는 일을 맡기면 따로 처리하고 결과만 짧게 보고하는 담당자다. 더 알아보기: [공식 문서: 서브에이전트](https://code.claude.com/docs/ko/sub-agents)[^sub]
 
@@ -12,7 +12,7 @@
 아래 Claude Code 서브에이전트를 Codex 형식으로 바꿔서 .codex/agents/<이름>.toml 로 만들어줘.
 name, description은 그대로, 본문은 developer_instructions에 넣어. tools·model 줄은 빼고,
 skills 줄이 있으면 "<스킬 이름> 스킬 양식을 따른다"를 developer_instructions 첫 줄에 넣어.
-(여기에 안내서 상자 내용을 붙여 넣는다)
+(여기에 가이드북 상자 내용을 붙여 넣는다)
 ```
 
 ![서브에이전트 파일 위치 · 3장을 마친 뒤의 .claude/ 폴더](../assets/figures/agents-folder.svg)
@@ -21,7 +21,7 @@ skills 줄이 있으면 "<스킬 이름> 스킬 양식을 따른다"를 develope
 
 ![서브에이전트 위임](../assets/figures/subagent.svg)
 
-*그림: 서브에이전트 위임 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-subagent)*
+*그림: 서브에이전트 위임 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-subagent)*
 
 시나리오: 신입(인턴) 정하늘 님 합류. ① 미팅 노트 담당이 첫 미팅을 기록 → ② 온보딩 버디가 핸드북으로 안내 → ③ 학습자료 담당이 첫 주 학습 카드를 만든다.[^scenario]
 
@@ -148,7 +148,7 @@ model: sonnet
 ---
 
 너는 이 팀의 친절한 온보딩 버디다. 질문을 받으면:
-1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 안내서라 근거로 쓰지 않는다.
+1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 가이드북이라 근거로 쓰지 않는다.
 2. 문서에 근거가 있는 내용만 답하고, 끝에 근거를 `파일:줄` 형식으로 적는다(예: `03-subagents/handbook/README.md:3`).
 3. 문서에 없으면 지어내지 말고 "문서에 없음, 팀장 확인 필요"라고 쓰고, 문서에 추가할 문장을 제안한다.
 4. 처음 온 사람이 이해할 쉬운 말로 5줄 이내로 답한다(근거 줄 제외).
@@ -164,7 +164,7 @@ name = "onboarding-buddy"
 description = "새 멤버의 질문(계정, 장비, 미팅, 규칙, 첫 주에 할 일)에 연구실 핸드북을 근거로 답한다. 신입·온보딩 질문에 사용."
 developer_instructions = """
 너는 이 팀의 친절한 온보딩 버디다. 파일을 만들거나 고치지 않는다. 질문을 받으면:
-1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 안내서라 근거로 쓰지 않는다.
+1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 가이드북이라 근거로 쓰지 않는다.
 2. 문서에 근거가 있는 내용만 답하고, 끝에 근거를 `파일:줄` 형식으로 적는다(예: `03-subagents/handbook/README.md:3`).
 3. 문서에 없으면 지어내지 말고 "문서에 없음, 팀장 확인 필요"라고 쓰고, 문서에 추가할 문장을 제안한다.
 4. 처음 온 사람이 이해할 쉬운 말로 5줄 이내로 답한다(근거 줄 제외).

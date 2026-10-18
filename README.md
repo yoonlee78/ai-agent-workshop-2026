@@ -2,13 +2,13 @@
 
 Hands-on workshop: build your own research assistant with Claude Code (skills, MCP, subagents)
 
-**📘 실습 안내서**
+**📘 워크숍 실습 가이드북**
 
 - 웹 (GitHub Pages): https://yoonlee78.github.io/ai-agent-workshop-2026/
 - 웹 (Claude 아티팩트): https://claude.ai/artifact/CfSokAX6ddWyTPduiry3bv
 - 저장소 파일: [GUIDE.md](GUIDE.md) · 장별 내용은 각 장 폴더의 README
 
-받은 저장소에서 에이전트 대화창(Claude Code·Codex)에 아래를 붙여 넣으면 안내서가 브라우저로 열려요.
+받은 저장소에서 에이전트 대화창(Claude Code·Codex)에 아래를 붙여 넣으면 가이드북이 브라우저로 열려요.
 
 ```text
 GUIDE.html을 브라우저로 열어줘

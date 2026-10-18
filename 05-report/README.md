@@ -1,6 +1,6 @@
 # 5. 질문 로그 리포트 + 연구윤리 점검
 
-> 이 파일은 [실습 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#5) 5장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#5)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#5-질문-로그-리포트--연구윤리-점검)
+> 이 파일은 [워크숍 실습 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#5) 5장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#5)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#5-질문-로그-리포트--연구윤리-점검)
 
 **목표**: 질문 로그의 리포트 작성, 양식 적용, 연구윤리 점검과 사람의 최종 판단
 

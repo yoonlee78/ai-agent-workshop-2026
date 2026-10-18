@@ -1,4 +1,4 @@
-# 나만의 연구 조교 만들기: 실습 안내서
+# 워크숍 실습 가이드북
 
 ---
 
@@ -43,7 +43,7 @@
 
 <!-- modecards -->
 
-### 안내서 구성
+### 가이드북 구성
 
 <!-- legend -->
 
@@ -81,7 +81,7 @@
 
 <!-- screen:tree | 실습을 마친 뒤 내 저장소
 ai-agent-workshop-2026/
-├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서 (미리 들어 있음)
+├── README.md · GUIDE.md               ← 수업 전 준비 · 이 가이드북 (미리 들어 있음)
 ├── CLAUDE.md                          ← 저장소 규칙 (매번 자동으로 읽힘)
 ├── .mcp.json                          ← 2. arXiv 논문 검색 MCP
 ├── .claude/
@@ -236,8 +236,8 @@ gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
 
 <!-- screen:tree | 수업 전: 받아 둔 저장소
 ai-agent-workshop-2026/
-├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서
-├── assets/                            ← 안내서 그림
+├── README.md · GUIDE.md               ← 수업 전 준비 · 이 가이드북
+├── assets/                            ← 가이드북 그림
 ├── .claude/
 │   └── skills/workshop-tutor/         ← 자동 진행 모드
 ├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내 (README만)
@@ -260,7 +260,7 @@ ai-agent-workshop-2026/
 
 Codex 사용 시 상자 내용은 그대로 쓰고 아래 항목만 바꿔 읽는다. 파일을 만드는 상자는 맨 앞에 **"Codex 형식으로 바꿔서"** 한 줄을 붙이면 Codex가 위치와 형식을 맞춘다. 장별 차이와 OpenRouter 사용법은 [부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter).
 
-| 안내서 (Claude Code) | Codex에서 |
+| 가이드북 (Claude Code) | Codex에서 |
 | --- | --- |
 | `claude` / `claude --continue` | `codex` / `codex resume --last` |
 | `/exit` | `/quit` |
@@ -376,7 +376,7 @@ claude
 - 사실이 확인되지 않은 내용(계정 담당자, 장비 위치 등)은 "TODO: 팀장 확인"으로 남긴다.
 - 미팅이 끝나면 meeting-notes 양식으로 03-subagents/meetings/YYYY-MM-DD.md 에 저장한다. 같은 날 두 번째 미팅은 YYYY-MM-DD-2.md.
 - 새 멤버의 질문은 onboarding-buddy 서브에이전트에게 맡긴다.
-- 루트의 README.md, GUIDE.md 는 워크숍 안내서다. 핸드북 질문의 근거로 쓰지 않는다.
+- 루트의 README.md, GUIDE.md 는 워크숍 가이드북이다. 핸드북 질문의 근거로 쓰지 않는다.
 -->
 
 <!-- /mode -->
@@ -417,7 +417,7 @@ Codex 사용자는 마지막 줄 `claude` 대신 `codex`를 입력한다. 아래
 - 사실이 확인되지 않은 내용(계정 담당자, 장비 위치 등)은 "TODO: 팀장 확인"으로 남긴다.
 - 미팅이 끝나면 meeting-notes 양식으로 03-subagents/meetings/YYYY-MM-DD.md 에 저장한다. 같은 날 두 번째 미팅은 YYYY-MM-DD-2.md.
 - 새 멤버의 질문은 onboarding-buddy 서브에이전트에게 맡긴다.
-- 루트의 README.md, GUIDE.md 는 워크숍 안내서다. 핸드북 질문의 근거로 쓰지 않는다.
+- 루트의 README.md, GUIDE.md 는 워크숍 가이드북이다. 핸드북 질문의 근거로 쓰지 않는다.
 ````
 
 <!-- /mode -->
@@ -883,7 +883,7 @@ Slack #<테스트 채널> 의 가장 최근 질문을 읽고 onboarding-buddy에
 아래 Claude Code 서브에이전트를 Codex 형식으로 바꿔서 .codex/agents/<이름>.toml 로 만들어줘.
 name, description은 그대로, 본문은 developer_instructions에 넣어. tools·model 줄은 빼고,
 skills 줄이 있으면 "<스킬 이름> 스킬 양식을 따른다"를 developer_instructions 첫 줄에 넣어.
-(여기에 안내서 상자 내용을 붙여 넣는다)
+(여기에 가이드북 상자 내용을 붙여 넣는다)
 ```
 
 <!-- figure:agents-folder | 서브에이전트 파일 위치 · 3장을 마친 뒤의 .claude/ 폴더 -->
@@ -1035,7 +1035,7 @@ model: sonnet
 ---
 
 너는 이 팀의 친절한 온보딩 버디다. 질문을 받으면:
-1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 안내서라 근거로 쓰지 않는다.
+1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 가이드북이라 근거로 쓰지 않는다.
 2. 문서에 근거가 있는 내용만 답하고, 끝에 근거를 `파일:줄` 형식으로 적는다(예: `03-subagents/handbook/README.md:3`).
 3. 문서에 없으면 지어내지 말고 "문서에 없음, 팀장 확인 필요"라고 쓰고, 문서에 추가할 문장을 제안한다.
 4. 처음 온 사람이 이해할 쉬운 말로 5줄 이내로 답한다(근거 줄 제외).
@@ -1051,7 +1051,7 @@ name = "onboarding-buddy"
 description = "새 멤버의 질문(계정, 장비, 미팅, 규칙, 첫 주에 할 일)에 연구실 핸드북을 근거로 답한다. 신입·온보딩 질문에 사용."
 developer_instructions = """
 너는 이 팀의 친절한 온보딩 버디다. 파일을 만들거나 고치지 않는다. 질문을 받으면:
-1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 안내서라 근거로 쓰지 않는다.
+1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 의 미팅 노트만 찾아 읽는다. 루트의 README.md, GUIDE.md 는 워크숍 가이드북이라 근거로 쓰지 않는다.
 2. 문서에 근거가 있는 내용만 답하고, 끝에 근거를 `파일:줄` 형식으로 적는다(예: `03-subagents/handbook/README.md:3`).
 3. 문서에 없으면 지어내지 말고 "문서에 없음, 팀장 확인 필요"라고 쓰고, 문서에 추가할 문장을 제안한다.
 4. 처음 온 사람이 이해할 쉬운 말로 5줄 이내로 답한다(근거 줄 제외).
@@ -2124,7 +2124,7 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 
 ## 부록 A · 완성본과 주요 명령
 
-오류가 나면 이 안내서의 상자 내용과 `.claude/`에 만든 파일을 나란히 놓고 비교한다.
+오류가 나면 이 가이드북의 상자 내용과 `.claude/`에 만든 파일을 나란히 놓고 비교한다.
 
 | 기능 | 명령 |
 | --- | --- |
@@ -2142,7 +2142,7 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 
 ### Codex 사용 시 (서울대 계정)
 
-명령·파일 대응은 안내서 앞부분의 **Claude Code · Codex 대응** 표를 따른다.
+명령·파일 대응은 가이드북 앞부분의 **Claude Code · Codex 대응** 표를 따른다.
 
 **장별 차이**
 
@@ -2180,7 +2180,7 @@ $env:ANTHROPIC_BASE_URL = "https://openrouter.ai/api"
 $env:ANTHROPIC_AUTH_TOKEN = "sk-or-..."
 ```
 
-`claude`를 열고 `/status`에 `https://openrouter.ai/api`가 보이면 성공이다. 그 뒤는 안내서 그대로 한다.[^or]
+`claude`를 열고 `/status`에 `https://openrouter.ai/api`가 보이면 성공이다. 그 뒤는 가이드북 그대로 한다.[^or]
 
 - 전에 Claude 계정으로 로그인한 적이 있으면 `/logout` 후 다시 연다.
 - 요금은 OpenRouter 크레딧에서 나간다. **Activity**에서 쓴 금액을 본다.

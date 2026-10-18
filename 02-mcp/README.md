@@ -1,6 +1,6 @@
 # 2. MCP 연결: arXiv 논문 검색
 
-> 이 파일은 [실습 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#2-mcp-arxiv) 2장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 안내서](https://yoonlee78.github.io/ai-agent-workshop-2026/#2-mcp-arxiv)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#2-mcp-연결-arxiv-논문-검색)
+> 이 파일은 [워크숍 실습 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#2-mcp-arxiv) 2장과 같은 내용이다. 애니메이션과 최신 화면은 [웹 가이드북](https://yoonlee78.github.io/ai-agent-workshop-2026/#2-mcp-arxiv)에서 볼 수 있다. 원본: [GUIDE.md](../GUIDE.md#2-mcp-연결-arxiv-논문-검색)
 
 ## MCP란
 
@@ -35,7 +35,7 @@ MCP를 붙이는 것은 그 서비스에 대한 권한을 에이전트에게 주
 *그림: MCP 구조 · 질의와 응답의 경로*
 ![MCP 호출 한 번](../assets/figures/mcp.svg)
 
-*그림: MCP 호출 한 번 · [애니메이션은 웹 안내서에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-mcp)*
+*그림: MCP 호출 한 번 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-mcp)*
 
 ## 2-1. arXiv MCP 연결하기
 
