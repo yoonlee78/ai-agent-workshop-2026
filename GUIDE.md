@@ -4,7 +4,7 @@
 
 ## 워크숍 소개
 
-- **강사**: 이윤경(Yoon Kyung Lee), Ph.D. · [yoonkyunglee.com](https://yoonkyunglee.com)<br>Vanderbilt University, Connected Computing 박사후연구원 (2026.11 예정)<br>서울대학교 조형연구소 선임연구원 (2025–2026)<br>가천대학교 객원교수 (2025–2026)
+- **강사**: 이윤경(Yoon Kyung Lee), Ph.D. · [yoonkyunglee.com](https://yoonkyunglee.com)<br>Vanderbilt University, Connected Computing 박사후연구원 (2026.11 예정)<br>서울대학교 선임연구원 (2024–2026)<br>가천대학교 객원교수 (2025–2026)
 - **주최**: 서울대학교 심리학과 (이노에듀사업단 운영위원회)
 - **운영진**: 차지욱, 이윤경, 이은지
 - **실습 조교**: 안선우, 이성현, 이충현, 권혜수, 이재형
