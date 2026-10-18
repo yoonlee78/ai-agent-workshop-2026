@@ -351,9 +351,68 @@ sup[id^="fnref"] + sup[id^="fnref"]::before { content:","; }
 /* 한 페이지에 개념 하나: 장 이름 표시 */
 .crumb { margin:0 0 6px; font-size:12.5px; } .crumb a { color:var(--muted); text-decoration:none; } .crumb a::before { content:"↑ "; } .crumb a:hover { color:var(--accent); }
 section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; font-size:1.35em; }
-</style></head><body><main class="content"><div class="wrap"><aside class="side"><div class="side-in"><div class="side-head"><b>목차</b><button type="button" class="toc-x" title="목차 접기">⟨ 접기</button></div><ul class="toc-ul"><li><a href="#_2">실습 개요</a></li><li><a href="#0">0. 사전 준비</a><ul class="toc-sub"><li><a href="#0-1"><b>0-1</b> 터미널 열기</a></li><li><a href="#0-2-ai"><b>0-2</b> AI 코딩 도구 설치</a></li><li><a href="#0-3"><b>0-3</b> 에이전트를 통한 나머지 설치</a></li></ul></li><li><a href="#_5">워크숍 소개</a></li><li><a href="#_6">에이전트 소개</a></li><li><a href="#1">1. 스킬 만들기: 미팅 노트</a><ul class="toc-sub"><li><a href="#1-1"><b>1-1</b> 내 저장소 연결하기</a></li><li><a href="#1-2-meeting-notes"><b>1-2</b> 미팅 노트 스킬 meeting-notes</a></li><li><a href="#1-3"><b>1-3</b> 스킬 호출과 수정</a></li></ul></li><li><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a><ul class="toc-sub"><li><a href="#2-1-arxiv-mcp"><b>2-1</b> arXiv MCP 연결하기</a></li><li><a href="#2-2"><b>2-2</b> 논문 검색</a></li><li><a href="#2-3"><b>2-3</b> 커넥터 활용</a></li></ul></li><li><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a><ul class="toc-sub"><li><a href="#3-1-meeting-scribe"><b>3-1</b> 미팅 노트 담당 meeting-scribe</a></li><li><a href="#3-2-onboarding-buddy"><b>3-2</b> 온보딩 버디 onboarding-buddy</a></li><li><a href="#3-3-study-maker"><b>3-3</b> 학습자료 담당 study-maker</a></li></ul></li><li><a href="#4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</a></li><li><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a><ul class="toc-sub"><li><a href="#5-1"><b>5-1</b> 로그 확인</a></li><li><a href="#5-2-question-report"><b>5-2</b> 리포트 스킬 question-report</a></li><li><a href="#5-3-report-format"><b>5-3</b> 양식 스킬 report-format</a></li><li><a href="#5-4-ethics-checker"><b>5-4</b> 연구윤리 점검 서브에이전트 ethics-checker</a></li></ul></li><li><a href="#6">6. 정리</a></li><li><a href="#7">7. 추가 실습</a></li><li><a href="#8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</a><ul class="toc-sub"><li><a href="#8-1"><b>8-1</b> 실습과 연구 개념의 연결</a></li><li><a href="#8-2-coala"><b>8-2</b> 논문 소개: CoALA</a></li><li><a href="#8-3-harness"><b>8-3</b> Harness: 권고, 확인, 차단</a></li><li><a href="#8-4-prompt-injection-least-privilege"><b>8-4</b> Prompt injection과 least privilege</a></li><li><a href="#8-5-benchmark-alignment-auditing"><b>8-5</b> 평가: benchmark와 alignment auditing</a></li><li><a href="#8-6-alignment"><b>8-6</b> Alignment: 지시와 의도의 불일치</a></li><li><a href="#8-7"><b>8-7</b> 자기 개선 에이전트와 통제 지점</a></li><li><a href="#8-8-llm"><b>8-8</b> 연구 대상으로서의 LLM</a></li><li><a href="#8-9"><b>8-9</b> 업무 분담: 스크립트</a></li></ul></li><li><a href="#9">9. 심화 예시: 위키 · 영상 · 로봇</a><ul class="toc-sub"><li><a href="#9-1-llm"><b>9-1</b> LLM 위키: 분산된 메모의 지식 구조화</a></li><li><a href="#9-2"><b>9-2</b> 멀티모달: 인터뷰 영상 전사</a></li><li><a href="#9-3"><b>9-3</b> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</a></li></ul></li><li><a href="#a">부록 A · 완성본과 주요 명령</a></li><li><a href="#b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</a></li></ul><div class="modesw"><b>모드</b><label><input type="radio" name="md" value="direct" checked> 직접</label><label><input type="radio" name="md" value="tutor"> 자동 진행</label><label><input type="radio" name="md" value="both"> 둘 다(비교)</label></div><label class="all"><input type="checkbox" id="showall"> 한 페이지로 모두 보기</label><div class="prog"><span id="progtxt"></span> <button id="progreset" type="button">진행 초기화</button></div><p class="upd" style="font-size:11px;color:var(--muted);margin:8px 0 0">마지막 업데이트 10월 18일 20:00</p></div></aside><button type="button" class="toc-open" title="목차 펴기">☰ 목차</button><div class="main"><div class="intro"><h1 id="_1">나만의 연구 조교 만들기: 실습 안내서</h1>
+</style></head><body><main class="content"><div class="wrap"><aside class="side"><div class="side-in"><div class="side-head"><b>목차</b><button type="button" class="toc-x" title="목차 접기">⟨ 접기</button></div><ul class="toc-ul"><li><a href="#_2">워크숍 소개</a></li><li><a href="#_3">실습 개요</a></li><li><a href="#_6">에이전트 소개</a></li><li><a href="#0">0. 사전 준비</a><ul class="toc-sub"><li><a href="#0-1"><b>0-1</b> 터미널 열기</a></li><li><a href="#0-2-ai"><b>0-2</b> AI 코딩 도구 설치</a></li><li><a href="#0-3"><b>0-3</b> 에이전트를 통한 나머지 설치</a></li></ul></li><li><a href="#1">1. 스킬 만들기: 미팅 노트</a><ul class="toc-sub"><li><a href="#1-1"><b>1-1</b> 내 저장소 연결하기</a></li><li><a href="#1-2-meeting-notes"><b>1-2</b> 미팅 노트 스킬 meeting-notes</a></li><li><a href="#1-3"><b>1-3</b> 스킬 호출과 수정</a></li></ul></li><li><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a><ul class="toc-sub"><li><a href="#2-1-arxiv-mcp"><b>2-1</b> arXiv MCP 연결하기</a></li><li><a href="#2-2"><b>2-2</b> 논문 검색</a></li><li><a href="#2-3"><b>2-3</b> 커넥터 활용</a></li></ul></li><li><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a><ul class="toc-sub"><li><a href="#3-1-meeting-scribe"><b>3-1</b> 미팅 노트 담당 meeting-scribe</a></li><li><a href="#3-2-onboarding-buddy"><b>3-2</b> 온보딩 버디 onboarding-buddy</a></li><li><a href="#3-3-study-maker"><b>3-3</b> 학습자료 담당 study-maker</a></li></ul></li><li><a href="#4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</a></li><li><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a><ul class="toc-sub"><li><a href="#5-1"><b>5-1</b> 로그 확인</a></li><li><a href="#5-2-question-report"><b>5-2</b> 리포트 스킬 question-report</a></li><li><a href="#5-3-report-format"><b>5-3</b> 양식 스킬 report-format</a></li><li><a href="#5-4-ethics-checker"><b>5-4</b> 연구윤리 점검 서브에이전트 ethics-checker</a></li></ul></li><li><a href="#6">6. 정리</a></li><li><a href="#7">7. 추가 실습</a></li><li><a href="#8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</a><ul class="toc-sub"><li><a href="#8-1"><b>8-1</b> 실습과 연구 개념의 연결</a></li><li><a href="#8-2-coala"><b>8-2</b> 논문 소개: CoALA</a></li><li><a href="#8-3-harness"><b>8-3</b> Harness: 권고, 확인, 차단</a></li><li><a href="#8-4-prompt-injection-least-privilege"><b>8-4</b> Prompt injection과 least privilege</a></li><li><a href="#8-5-benchmark-alignment-auditing"><b>8-5</b> 평가: benchmark와 alignment auditing</a></li><li><a href="#8-6-alignment"><b>8-6</b> Alignment: 지시와 의도의 불일치</a></li><li><a href="#8-7"><b>8-7</b> 자기 개선 에이전트와 통제 지점</a></li><li><a href="#8-8-llm"><b>8-8</b> 연구 대상으로서의 LLM</a></li><li><a href="#8-9"><b>8-9</b> 업무 분담: 스크립트</a></li></ul></li><li><a href="#9">9. 심화 예시: 위키 · 영상 · 로봇</a><ul class="toc-sub"><li><a href="#9-1-llm"><b>9-1</b> LLM 위키: 분산된 메모의 지식 구조화</a></li><li><a href="#9-2"><b>9-2</b> 멀티모달: 인터뷰 영상 전사</a></li><li><a href="#9-3"><b>9-3</b> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</a></li></ul></li><li><a href="#a">부록 A · 완성본과 주요 명령</a></li><li><a href="#b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</a></li></ul><div class="modesw"><b>모드</b><label><input type="radio" name="md" value="direct" checked> 직접</label><label><input type="radio" name="md" value="tutor"> 자동 진행</label><label><input type="radio" name="md" value="both"> 둘 다(비교)</label></div><label class="all"><input type="checkbox" id="showall"> 한 페이지로 모두 보기</label><div class="prog"><span id="progtxt"></span> <button id="progreset" type="button">진행 초기화</button></div><p class="upd" style="font-size:11px;color:var(--muted);margin:8px 0 0">마지막 업데이트 10월 18일 20:04</p></div></aside><button type="button" class="toc-open" title="목차 펴기">☰ 목차</button><div class="main"><div class="intro"><h1 id="_1">나만의 연구 조교 만들기: 실습 안내서</h1>
 <hr />
-</div><section class="chap" data-id="_2" data-ch="_2" data-title="실습 개요"><h2 id="_2">실습 개요</h2>
+</div><section class="chap" data-id="_2" data-ch="_2" data-title="워크숍 소개"><h2 id="_2">워크숍 소개</h2>
+<ul>
+<li><strong>주최</strong>: 서울대학교 심리학과 (이노에듀사업단 운영위원회)</li>
+<li><strong>강사</strong>: 이윤경(Yoon Kyung Lee), Ph.D. · <a href="https://yoonkyunglee.com">yoonkyunglee.com</a></li>
+<li><strong>운영진</strong>: 차지욱, 이윤경, 이은지, 안선우, 이성현, 이충현, 권혜수, 이재형</li>
+</ul>
+<p><strong>워크숍·강의 이력</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>연도</th>
+<th>제목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2019</td>
+<td><a href="https://github.com/yoonlee78/pythonbootcamp">Introduction to Python</a></td>
+<td>서울대 공과대학 SPLIT 프로그램 학생 · Python 기초</td>
+</tr>
+<tr>
+<td>2019</td>
+<td><a href="https://github.com/yoonlee78/lab_workshop">Python for Psychologists: NLP</a></td>
+<td>연구실 구성원 · Python 데이터 분석, 텍스트 분석, 딥러닝 자연어 처리</td>
+</tr>
+<tr>
+<td>2020</td>
+<td><a href="https://github.com/yoonlee78/2020_Spring_Workshop">2020 Spring Workshop</a></td>
+<td>연구실 구성원 · 자연어 처리, 마음 이론과 AI, 인간-로봇 상호작용 논문 읽기</td>
+</tr>
+<tr>
+<td>2023</td>
+<td><a href="https://github.com/yoonlee78/llm_workshop_2023">Prompt Engineering 101</a></td>
+<td>프롬프트 엔지니어링, LangChain</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://github.com/yoonlee78/2025_SNUIPS_AI_Workshop">SNUIPS AI Workshop</a></td>
+<td>심리학과 대학원생 · LLM 프롬프팅과 추론, 텍스트 의미 분석, 특성 선택, 앱 프로토타이핑</td>
+</tr>
+<tr>
+<td>2025</td>
+<td><a href="https://yoonlee78.github.io/ai4psych-course/">AI 기반 심리과학 연구방법론</a></td>
+<td>대학원생 · LLM으로 측정·실험·실습, 연구용 AI 에이전트, 과학적 글쓰기 (차지욱 교수 강의 공동 진행)</td>
+</tr>
+<tr>
+<td>2026</td>
+<td><a href="https://github.com/yoonlee78/2026_SNUIPS_AI_Workshop">Build your own AI Co-Scientist</a></td>
+<td>AI 에이전트, RAG, Claude Code</td>
+</tr>
+<tr>
+<td>2026</td>
+<td>나만의 연구 조교 만들기 (오늘)</td>
+<td>심리학과 구성원 · 스킬, MCP, 서브에이전트</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 1 / 46</p></section><section class="chap" data-id="_3" data-ch="_3" data-title="실습 개요"><h2 id="_3">실습 개요</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -426,19 +485,173 @@ section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; fo
 </tr>
 </tbody>
 </table></div>
-<h3 id="_3">진행 방식 선택</h3>
+<h3 id="_4">진행 방식 선택</h3>
 <div class="mcards"><div class="mcard" data-v="direct"><b>✍️ 직접 모드 <i>추천</i></b><span>상자를 내가 복사해 붙여 넣는다.</span><button type="button" data-v="direct">직접 모드로 보기</button></div><div class="mcard" data-v="tutor"><b>⏩ 자동 진행 모드</b><span>에이전트가 한 단계씩 설명하고 대신 진행한다. 나는 확인하고 승인한다.</span><button type="button" data-v="tutor">자동 진행 모드로 보기</button></div></div>
 <p class="mnote">왼쪽 목차 아래에서 언제든 바꿀 수 있다.</p>
 
-<h3 id="_4">안내서 구성</h3>
+<h3 id="_5">안내서 구성</h3>
 <p class="legend"><span class="run req">필수 실행</span> 수업에서 꼭 실행 · <span class="run opt">선택</span> 대안·추가·막힐 때</p><div class="legend2"><span class="lg-paste">흰 바탕 · 파란 테두리 = 붙여 넣는 상자</span><span class="lg-scr">🖼 보라 점선 창 = 예시 화면 (붙여 넣지 않음)</span></div>
 
 <ul>
 <li>단계마다 <strong>목표 → 상자 → 확인</strong> 순서다. 상자 내용은 전체를 붙여 넣는다.<sup id="fnref:paste"><a class="footnote-ref" href="#fn:paste">1</a></sup></li>
 <li>오류가 나면 각주(작은 숫자)를 참고한다.</li>
-<li>Codex 사용자는 아래 대응표, OpenRouter 사용자는 <a href="#b-claude-codex-openrouter">부록 B</a>를 참고한다.</li>
+<li>Codex 사용자는 0장 끝의 Claude Code · Codex 대응표, OpenRouter 사용자는 <a href="#b-claude-codex-openrouter">부록 B</a>를 참고한다.</li>
 </ul>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 1 / 46</p></section><section class="chap" data-id="claude-code-codex" data-ch="_2" data-title="Claude Code"><p class="crumb"><a href="#_2">실습 개요</a></p><h3 id="claude-code-codex">Claude Code · Codex 대응</h3>
+<hr />
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 2 / 46</p></section><section class="chap" data-id="_6" data-ch="_6" data-title="에이전트 소개"><h2 id="_6">에이전트 소개</h2>
+<p class="goal"><strong>🎯 목표</strong>: 연구 조교 팀의 전체 구조와 에이전트 루프 이해</p>
+<h3 id="_7">에이전트란</h3>
+<p><strong>에이전트 = 모델 + 도구 + 지시</strong>. 목표를 주면 스스로 생각하고, 도구를 쓰고, 결과를 보고, 다시 생각하기를 반복한다. 연구 개념(context window, memory, harness, 평가와 alignment)은 <a href="#8-llm">8장</a>에 모았다.</p>
+<figure class="fig" id="fig-loop" data-fig="loop"><figcaption><b>그림 1. 에이전트 루프</b></figcaption></figure>
+
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 3 / 46</p></section><section class="chap" data-id="_8" data-ch="_6" data-title="조교 팀 구성"><p class="crumb"><a href="#_6">에이전트 소개</a></p><h3 id="_8">조교 팀 구성</h3>
+<figure class="fig" id="fig-concepts-rel" data-fig="concepts-rel"><figcaption><b>그림 2. 핵심 개념의 관계</b> · 스킬, MCP, 서브에이전트</figcaption></figure>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>구성 요소</th>
+<th>정의</th>
+<th>연구실 비유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>스킬</td>
+<td>반복 업무용 매뉴얼 파일 하나</td>
+<td>실험 SOP 문서</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td>외부 도구를 꽂는 표준 플러그</td>
+<td>실험실에 새 장비 연결</td>
+</tr>
+<tr>
+<td>서브에이전트</td>
+<td>일을 따로 맡는 담당자</td>
+<td>RA에게 일 맡기기</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="fig" id="fig-ecosystem" data-fig="ecosystem"><figcaption><b>그림 3. 조교 팀 구성</b> · 호스트 1개, 스킬 4, MCP 1, 서브에이전트 4</figcaption></figure>
+
+<p>실습을 마치면 내 저장소 <code>ai-agent-workshop-2026</code>은 이렇게 된다. "미리 들어 있음"이 붙은 것은 받아 둔 자료이고, 나머지는 실습에서 만든다.</p>
+<details class="scr-t"><summary>🖼 폴더 예시 · 실습을 마친 뒤 내 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>실습을 마친 뒤 내 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서 (미리 들어 있음)<br>├── CLAUDE.md                          ← 저장소 규칙 (매번 자동으로 읽힘)<br>├── .mcp.json                          ← 2. arXiv 논문 검색 MCP<br>├── .claude/<br>│   ├── skills/workshop-tutor/         ← 자동 진행 모드 (미리 들어 있음)<br>│   ├── skills/meeting-notes/SKILL.md  ← 1. 미팅 노트 스킬<br>│   ├── skills/question-report/        ← 5. 질문 로그 리포트 스킬<br>│   ├── skills/report-format/          ← 5. 리포트 양식 스킬<br>│   └── agents/<br>│       ├── meeting-scribe.md          ← 3-1. 미팅 노트 담당<br>│       ├── onboarding-buddy.md        ← 3-2. 온보딩 버디<br>│       ├── study-maker.md             ← 3-3. 학습자료 담당<br>│       └── ethics-checker.md          ← 5. 연구윤리 점검 담당<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내<br>├── 03-subagents/<br>│   ├── materials/                     ← 미팅 메모 2개 (미리 들어 있음)<br>│   ├── handbook/                      ← 연구실 핸드북 01~04장 (미리 들어 있음) + 목차<br>│   ├── meetings/                      ← 미팅 노트가 쌓이는 곳<br>│   └── study/                         ← 학습자료<br>├── 05-report/<br>│   ├── data/lab-help-2026-09.log      ← 질문방 로그 (가상 자료, 미리 들어 있음)<br>│   ├── data/questions.csv             ← 정리한 질문<br>│   ├── scripts/                       ← 그래프 스크립트<br>│   ├── report/                        ← 리포트 초안·최종본·그래프<br>│   └── reviews/                       ← 점검 피드백<br>├── 07-more/                           ← 7. 추가 실습 자료 (미리 들어 있음)<br>└── 09-advanced/                       ← 9. 심화 예시: 위키 · 영상 · 로봇 (미리 들어 있음)</span></div></div></details>
+
+<hr />
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 4 / 46</p></section><section class="chap" data-id="0" data-ch="0" data-title="0. 사전 준비"><h2 id="0">0. 사전 준비</h2>
+<p class="goal"><strong>🎯 목표</strong>: 실습 환경 설치와 실습 저장소 준비</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>준비물</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub 계정</td>
+<td>없으면 <a href="https://github.com/signup">github.com/signup</a>, 이메일 인증까지</td>
+</tr>
+<tr>
+<td>AI 코딩 도구 (하나 이상)</td>
+<td>Claude Code: Claude <strong>Pro 이상</strong> · Codex: <strong>서울대 계정</strong>(무료) · OpenRouter: 쓴 만큼 결제(<a href="#b-claude-codex-openrouter">부록 B</a>)</td>
+</tr>
+<tr>
+<td>노트북</td>
+<td>macOS 또는 Windows</td>
+</tr>
+</tbody>
+</table></div>
+<p>Claude 무료 플랜은 Claude Code를 지원하지 않는다.</p>
+<h3 id="0-1"><span class="stepid">0-1</span> 터미널 열기</h3>
+<ul>
+<li class="osli" data-os="mac"><span class="osb mac" data-os="mac">🍎 macOS</span> <code>Cmd</code> + <code>Space</code> → <strong>터미널</strong>. <code>이름@컴퓨터 ~ %</code>가 보이면 된다.</li>
+<li class="osli" data-os="win"><span class="osb win" data-os="win">🪟 Windows</span> 시작 → <strong>powershell</strong> → <strong>Windows PowerShell</strong>. 앞에 <code>PS</code>가 보여야 한다.</li>
+</ul>
+<p>설치한 뒤에는 터미널을 완전히 닫고 새로 연다. 실행 중인 명령은 <code>Ctrl</code> + <code>C</code>로 멈춘다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 5 / 46</p></section><section class="chap" data-id="0-2-ai" data-ch="0" data-title="0-2 AI 코딩 도구 설치·로그인"><p class="crumb"><a href="#0">0. 사전 준비</a></p><h3 id="0-2-ai"><span class="stepid">0-2</span> AI 코딩 도구 설치·로그인</h3>
+<p>쓸 것 하나 이상만 설치한다.</p>
+<p><strong>Claude Code</strong> · 🍎 macOS</p>
+<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
+<pre class="paste opt"><code class="language-bash">curl -fsSL https://claude.ai/install.sh | bash
+</code></pre>
+<p><strong>Claude Code</strong> · 🪟 Windows (Git부터)</p>
+<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
+<pre class="paste opt"><code class="language-powershell">winget install --id Git.Git -e
+irm https://claude.ai/install.ps1 | iex
+</code></pre>
+<p><strong>Claude Code 로그인</strong></p>
+<ol>
+<li>새 터미널에서 <code>claude</code>를 입력한다.</li>
+<li>브라우저가 열리면 claude.ai에 로그인하고 <strong>승인</strong>을 누른다.</li>
+<li>"Do you trust the files in this folder?" → <strong>Yes</strong></li>
+<li>"API 키를 쓸까요?" → <strong>거절</strong> (요금이 따로 나간다)</li>
+</ol>
+<p><strong>Codex</strong> · 🍎 macOS (Homebrew가 없으면 <a href="https://github.com/yoonlee78/ai-agent-workshop-2026#macos-homebrew-등">자주 묻는 질문</a>)</p>
+<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
+<pre class="paste opt"><code class="language-bash">brew install --cask codex
+</code></pre>
+<p><strong>Codex</strong> · 🪟 Windows (Node.js부터, 설치 후 새 창)</p>
+<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
+<pre class="paste opt"><code class="language-powershell">winget install --id OpenJS.NodeJS.LTS -e
+npm install -g @openai/codex
+</code></pre>
+<p><strong>Codex 로그인</strong></p>
+<ol>
+<li>새 터미널에서 <code>codex</code>를 입력한다.</li>
+<li><strong>Sign in with ChatGPT</strong>를 고른다.</li>
+<li>서울대 계정으로 로그인한다.</li>
+</ol>
+<p class="chk"><strong>✅ 확인</strong>: <code>안녕</code>을 쳐서 답이 오면 성공. 나가기는 Claude Code <code>/exit</code>, Codex <code>/quit</code>.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 6 / 46</p></section><section class="chap" data-id="0-3" data-ch="0" data-title="0-3 에이전트를 통한 나머지 설치"><p class="crumb"><a href="#0">0. 사전 준비</a></p><h3 id="0-3"><span class="stepid">0-3</span> 에이전트를 통한 나머지 설치</h3>
+<p>Claude Code나 Codex 창에 전체를 붙여 넣는다. GitHub 로그인, 이름·이메일, 설치 허락은 물어볼 때 답한다.</p>
+<p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
+<pre class="paste req"><code class="language-text">워크숍 수업 전 준비를 도와줘. 나는 터미널이 처음인 초보자야.
+순서대로, 한 단계씩 나에게 설명하고 확인받으면서 해줘. 에러가 나면 원인을 쉬운 말로 설명하고 고쳐줘.
+
+1) 도구 점검·설치: git, gh(GitHub CLI), Node.js(v22 이상), uv가 있는지 확인하고, 없는 것만 허락받고 설치해.
+   macOS: git이 없으면 xcode-select --install. 나머지는 brew로. brew가 없으면 Homebrew 설치를 안내하고,
+   설치 끝의 Next steps 명령까지 실행하게 해. 관리자 권한이 없어 brew가 안 되면 brew 없이 설치하는 방법으로 해.
+   Windows: winget으로 설치해. 명령은 &amp;&amp;로 잇지 말고 한 줄씩 실행해.
+   새로 설치한 도구를 못 찾으면, 내가 새 터미널에서 너를 다시 열고 이 프롬프트를 다시 붙여 넣을게.
+2) GitHub 로그인: gh auth status 로 확인해. 로그인이 안 되어 있거나 Token scopes에 repo가 없으면 네가 대신 하지 말고,
+   내가 새 터미널 창에서 직접 실행할
+   gh auth login --hostname github.com --git-protocol https --web
+   명령과 화면에서 할 일을 알려줘. 토큰은 만들지 않을 거야. 내가 &quot;로그인했어&quot;라고 하면 다시 확인하고 gh auth setup-git 을 실행해.
+3) git 이름·이메일: git config --global user.name / user.email 이 비어 있으면 나에게 물어보고 설정해.
+4) 실습 저장소 받기: gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
+   안 되면 원인을 쉬운 말로 알려 주고, 인터넷 연결과 gh auth status 를 다시 확인해.
+5) push 테스트: 홈 폴더에 gh-test 폴더를 만들고 README.md 하나를 커밋한 뒤
+   gh repo create gh-test --private --source . --push 로 올려. 같은 이름이 있으면 gh-test2 처럼 바꿔.
+   성공하면 저장소 주소를 보여 주고, GitHub에서 지우는 방법(Settings → Delete this repository)을 알려 준 뒤 내 컴퓨터의 gh-test 폴더는 지워.
+6) 그래프 도구 미리 받기: 수업 5장에서 그래프를 그릴 때 기다리지 않도록 아래를 한 번 실행해. 마지막에 ok가 나오면 돼.
+   uv run --with pandas --with matplotlib python -c &quot;import pandas, matplotlib.pyplot; print('ok')&quot;
+7) 마지막 점검: git --version, node --version, gh --version, uvx --version, claude --version, codex --version,
+   gh auth status, git config user.name, git config user.email 을 실행하고 항목별 통과/실패 표로 보여줘.
+   6번에서 ok가 나왔는지도 표에 넣어. claude와 codex는 하나만 있어도 통과야. gh repo view ai-agent-workshop-2026 으로 내 계정에 같은 이름 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
+</code></pre>
+<p class="chk"><strong>✅ 확인</strong>: 에이전트가 마지막에 이런 점검 표를 보여 준다.</p>
+<p><img alt="점검 표 예시: 항목별 통과, 마지막 줄은 아직 없음" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MjAiIGhlaWdodD0iNDQyIiB2aWV3Qm94PSIwIDAgNzIwIDQ0MiIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sICdBcHBsZSBTRCBHb3RoaWMgTmVvJywgJ01hbGd1biBHb3RoaWMnLCBzYW5zLXNlcmlmIj4KPHJlY3Qgd2lkdGg9IjcyMCIgaGVpZ2h0PSI0NDIiIHJ4PSIxMiIgZmlsbD0iI2Y2ZjdmOSIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMzMzMiPuyYiOyLnDog7JeQ7J207KCE7Yq46rCAIOuniOyngOunieyXkCDrs7Tsl6wg7KO864qUIOygkOqygCDtkZw8L3RleHQ+Cjx0ZXh0IHg9IjI2IiB5PSI1MCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2I0NTQwYSI+7ZWt66qpPC90ZXh0Pgo8dGV4dCB4PSIyNTYiIHk9IjUwIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjYjQ1NDBhIj7qsrDqs7w8L3RleHQ+Cjx0ZXh0IHg9IjM1NiIgeT0iNTAiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNiNDU0MGEiPu2ZleyduCDrgrTsmqk8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSI1OCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzMCIgcng9IjUiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2UxZTRlOCIvPgo8dGV4dCB4PSIzMCIgeT0iNzgiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMyZjZmMWYiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+Z2l0IC0tdmVyc2lvbjwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSI3OCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhN2YzNyI+4pyTIO2GteqzvDwvdGV4dD4KPHRleHQgeD0iMzU2IiB5PSI3OCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naXQgdmVyc2lvbiAyLjU0LjA8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSI5MiIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzMCIgcng9IjUiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2UxZTRlOCIvPgo8dGV4dCB4PSIzMCIgeT0iMTEyIiBmb250LXNpemU9IjEyIiBmaWxsPSIjMmY2ZjFmIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPm5vZGUgLS12ZXJzaW9uPC90ZXh0Pgo8dGV4dCB4PSIyNTYiIHk9IjExMiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhN2YzNyI+4pyTIO2GteqzvDwvdGV4dD4KPHRleHQgeD0iMzU2IiB5PSIxMTIiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+djI0LjIxLjA8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIxMjYiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjE0NiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naCAtLXZlcnNpb248L3RleHQ+Cjx0ZXh0IHg9IjI1NiIgeT0iMTQ2IiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMWE3ZjM3Ij7inJMg7Ya16rO8PC90ZXh0Pgo8dGV4dCB4PSIzNTYiIHk9IjE0NiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naCB2ZXJzaW9uIDIuMTAyLjA8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIxNjAiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjE4MCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj51dnggLS12ZXJzaW9uPC90ZXh0Pgo8dGV4dCB4PSIyNTYiIHk9IjE4MCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhN2YzNyI+4pyTIO2GteqzvDwvdGV4dD4KPHRleHQgeD0iMzU2IiB5PSIxODAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+dXZ4IDAuMTMuMDwvdGV4dD4KPHJlY3QgeD0iMjAiIHk9IjE5NCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzMCIgcng9IjUiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2UxZTRlOCIvPgo8dGV4dCB4PSIzMCIgeT0iMjE0IiBmb250LXNpemU9IjEyIiBmaWxsPSIjMmY2ZjFmIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPkNsYXVkZSDrmJDripQgQ29kZXg8L3RleHQ+Cjx0ZXh0IHg9IjI1NiIgeT0iMjE0IiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMWE3ZjM3Ij7inJMg7Ya16rO8PC90ZXh0Pgo8dGV4dCB4PSIzNTYiIHk9IjIxNCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5jbGF1ZGXripQg7JeG7J2MLCBjb2RleC1jbGkgMC4xNjIuMeydgCDsnojsnYw8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIyMjgiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjI0OCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naCBhdXRoIHN0YXR1czwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSIyNDgiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxYTdmMzciPuKckyDthrXqs7w8L3RleHQ+Cjx0ZXh0IHg9IjM1NiIgeT0iMjQ4IiBmb250LXNpemU9IjEyIiBmaWxsPSIjMzMzIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPiZsdDvslYTsnbTrlJQmZ3Q7IOqzhOyglSDroZzqt7jsnbjrkKg8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIyNjIiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjI4MiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naXQgY29uZmlnIHVzZXIubmFtZTwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSIyODIiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxYTdmMzciPuKckyDthrXqs7w8L3RleHQ+Cjx0ZXh0IHg9IjM1NiIgeT0iMjgyIiBmb250LXNpemU9IjEyIiBmaWxsPSIjMzMzIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPiZsdDvsnbTrpoQmZ3Q7PC90ZXh0Pgo8cmVjdCB4PSIyMCIgeT0iMjk2IiB3aWR0aD0iNjgwIiBoZWlnaHQ9IjMwIiByeD0iNSIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZTFlNGU4Ii8+Cjx0ZXh0IHg9IjMwIiB5PSIzMTYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMyZjZmMWYiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+Z2l0IGNvbmZpZyB1c2VyLmVtYWlsPC90ZXh0Pgo8dGV4dCB4PSIyNTYiIHk9IjMxNiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhN2YzNyI+4pyTIO2GteqzvDwvdGV4dD4KPHRleHQgeD0iMzU2IiB5PSIzMTYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+Jmx0O+ydtOuplOydvCZndDs8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIzMzAiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjM1MCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj7qt7jrnpjtlIQg64+E6rWsICg267KIKTwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSIzNTAiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxYTdmMzciPuKckyDthrXqs7w8L3RleHQ+Cjx0ZXh0IHg9IjM1NiIgeT0iMzUwIiBmb250LXNpemU9IjEyIiBmaWxsPSIjMzMzIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPm9rPC90ZXh0Pgo8cmVjdCB4PSIyMCIgeT0iMzY0IiB3aWR0aD0iNjgwIiBoZWlnaHQ9IjMwIiByeD0iNSIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZTFlNGU4Ii8+Cjx0ZXh0IHg9IjMwIiB5PSIzODQiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMyZjZmMWYiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+YWktYWdlbnQtd29ya3Nob3AtMjAyNiDsoIDsnqXshow8L3RleHQ+Cjx0ZXh0IHg9IjI1NiIgeT0iMzg0IiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNmI3MjgwIj7slYTsp4Eg7JeG7J2MPC90ZXh0Pgo8dGV4dCB4PSIzNTYiIHk9IjM4NCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj4mbHQ77JWE7J2065SUJmd0Oy9haS1hZ2VudC13b3Jrc2hvcC0yMDI2IOywvuyngCDrqrvtlaggKOygleyDgSk8L3RleHQ+Cjx0ZXh0IHg9IjIwIiB5PSI0MjYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMxYTdmMzciPuKckyDrqqjrkZAg7Ya16rO8LCDrp4jsp4Drp4kg7KSE7J2AICLslYTsp4Eg7JeG7J2MIuydtOuptCDspIDruYQg64GdIChDbGF1ZGXCt0NvZGV464qUIO2VmOuCmOunjCDsnojslrTrj4Qg7Ya16rO8KTwvdGV4dD4KPC9zdmc+" /></p>
+<ul>
+<li>[ ] 점검 표가 모두 통과했다 (Claude Code·Codex는 쓰는 것만)</li>
+<li>[ ] <code>~/ai-agent-workshop-2026</code> 폴더가 있다</li>
+<li>[ ] 내 GitHub 계정에 <code>ai-agent-workshop-2026</code> 저장소가 <strong>아직 없다</strong> (1-1에서 만든다)</li>
+</ul>
+<p><code>~/ai-agent-workshop-2026</code> 폴더가 없으면 터미널에서 직접 받는다. 같은 이름의 폴더가 이미 있으면 이름을 바꿔 두고 받는다.</p>
+<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
+<pre class="paste opt"><code class="language-bash">gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
+</code></pre>
+<p>받아 둔 <code>~/ai-agent-workshop-2026</code>는 이렇게 생겼다. 실습을 마친 모습은 앞의 에이전트 소개에 있다.</p>
+<details class="scr-t"><summary>🖼 폴더 예시 · 수업 전: 받아 둔 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>수업 전: 받아 둔 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서<br>├── assets/                            ← 안내서 그림<br>├── .claude/<br>│   └── skills/workshop-tutor/         ← 자동 진행 모드<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내 (README만)<br>├── 03-subagents/<br>│   ├── materials/                     ← 미팅 메모 2개<br>│   └── handbook/                      ← 연구실 핸드북 01~04장<br>├── 05-report/<br>│   └── data/lab-help-2026-09.log      ← 연구실 질문방 로그 한 달치 (가상 자료)<br>└── 07-more/                           ← 7. 추가 실습 자료</span></div></div></details>
+
+<p><strong>문제 해결</strong></p>
+<ul>
+<li>에러가 나면: <a href="https://github.com/yoonlee78/ai-agent-workshop-2026#-자주-묻는-질문-qa">README의 자주 묻는 질문</a></li>
+<li>에이전트 없이 직접 설치하려면: 같은 README의 "참고: 직접 설치하기"</li>
+<li>Orca(선택): 여러 AI 코딩 도구를 한 화면에서 쓰는 앱. 강의 화면에서 보게 된다. 설치는 <a href="https://github.com/yoonlee78/ai-agent-workshop-2026#2-4-orca-선택">README 2-4</a></li>
+</ul>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 7 / 46</p></section><section class="chap" data-id="claude-code-codex" data-ch="0" data-title="Claude Code"><p class="crumb"><a href="#0">0. 사전 준비</a></p><h3 id="claude-code-codex">Claude Code · Codex 대응</h3>
 <p>Codex 사용 시 상자 내용은 그대로 쓰고 아래 항목만 바꿔 읽는다. 파일을 만드는 상자는 맨 앞에 <strong>"Codex 형식으로 바꿔서"</strong> 한 줄을 붙이면 Codex가 위치와 형식을 맞춘다. 장별 차이와 OpenRouter 사용법은 <a href="#b-claude-codex-openrouter">부록 B</a>.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -495,219 +708,8 @@ section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; fo
 </tbody>
 </table></div>
 <hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 2 / 46</p></section><section class="chap" data-id="0" data-ch="0" data-title="0. 사전 준비"><h2 id="0">0. 사전 준비</h2>
-<p class="goal"><strong>🎯 목표</strong>: 실습 환경 설치와 실습 저장소 준비</p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>준비물</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GitHub 계정</td>
-<td>없으면 <a href="https://github.com/signup">github.com/signup</a>, 이메일 인증까지</td>
-</tr>
-<tr>
-<td>AI 코딩 도구 (하나 이상)</td>
-<td>Claude Code: Claude <strong>Pro 이상</strong> · Codex: <strong>서울대 계정</strong>(무료) · OpenRouter: 쓴 만큼 결제(<a href="#b-claude-codex-openrouter">부록 B</a>)</td>
-</tr>
-<tr>
-<td>노트북</td>
-<td>macOS 또는 Windows</td>
-</tr>
-</tbody>
-</table></div>
-<p>Claude 무료 플랜은 Claude Code를 지원하지 않는다.</p>
-<h3 id="0-1"><span class="stepid">0-1</span> 터미널 열기</h3>
-<ul>
-<li class="osli" data-os="mac"><span class="osb mac" data-os="mac">🍎 macOS</span> <code>Cmd</code> + <code>Space</code> → <strong>터미널</strong>. <code>이름@컴퓨터 ~ %</code>가 보이면 된다.</li>
-<li class="osli" data-os="win"><span class="osb win" data-os="win">🪟 Windows</span> 시작 → <strong>powershell</strong> → <strong>Windows PowerShell</strong>. 앞에 <code>PS</code>가 보여야 한다.</li>
-</ul>
-<p>설치한 뒤에는 터미널을 완전히 닫고 새로 연다. 실행 중인 명령은 <code>Ctrl</code> + <code>C</code>로 멈춘다.</p>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 3 / 46</p></section><section class="chap" data-id="0-2-ai" data-ch="0" data-title="0-2 AI 코딩 도구 설치·로그인"><p class="crumb"><a href="#0">0. 사전 준비</a></p><h3 id="0-2-ai"><span class="stepid">0-2</span> AI 코딩 도구 설치·로그인</h3>
-<p>쓸 것 하나 이상만 설치한다.</p>
-<p><strong>Claude Code</strong> · 🍎 macOS</p>
-<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
-<pre class="paste opt"><code class="language-bash">curl -fsSL https://claude.ai/install.sh | bash
-</code></pre>
-<p><strong>Claude Code</strong> · 🪟 Windows (Git부터)</p>
-<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
-<pre class="paste opt"><code class="language-powershell">winget install --id Git.Git -e
-irm https://claude.ai/install.ps1 | iex
-</code></pre>
-<p><strong>Claude Code 로그인</strong></p>
-<ol>
-<li>새 터미널에서 <code>claude</code>를 입력한다.</li>
-<li>브라우저가 열리면 claude.ai에 로그인하고 <strong>승인</strong>을 누른다.</li>
-<li>"Do you trust the files in this folder?" → <strong>Yes</strong></li>
-<li>"API 키를 쓸까요?" → <strong>거절</strong> (요금이 따로 나간다)</li>
-</ol>
-<p><strong>Codex</strong> · 🍎 macOS (Homebrew가 없으면 <a href="https://github.com/yoonlee78/ai-agent-workshop-2026#macos-homebrew-등">자주 묻는 질문</a>)</p>
-<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
-<pre class="paste opt"><code class="language-bash">brew install --cask codex
-</code></pre>
-<p><strong>Codex</strong> · 🪟 Windows (Node.js부터, 설치 후 새 창)</p>
-<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
-<pre class="paste opt"><code class="language-powershell">winget install --id OpenJS.NodeJS.LTS -e
-npm install -g @openai/codex
-</code></pre>
-<p><strong>Codex 로그인</strong></p>
-<ol>
-<li>새 터미널에서 <code>codex</code>를 입력한다.</li>
-<li><strong>Sign in with ChatGPT</strong>를 고른다.</li>
-<li>서울대 계정으로 로그인한다.</li>
-</ol>
-<p class="chk"><strong>✅ 확인</strong>: <code>안녕</code>을 쳐서 답이 오면 성공. 나가기는 Claude Code <code>/exit</code>, Codex <code>/quit</code>.</p>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 4 / 46</p></section><section class="chap" data-id="0-3" data-ch="0" data-title="0-3 에이전트를 통한 나머지 설치"><p class="crumb"><a href="#0">0. 사전 준비</a></p><h3 id="0-3"><span class="stepid">0-3</span> 에이전트를 통한 나머지 설치</h3>
-<p>Claude Code나 Codex 창에 전체를 붙여 넣는다. GitHub 로그인, 이름·이메일, 설치 허락은 물어볼 때 답한다.</p>
-<p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
-<pre class="paste req"><code class="language-text">워크숍 수업 전 준비를 도와줘. 나는 터미널이 처음인 초보자야.
-순서대로, 한 단계씩 나에게 설명하고 확인받으면서 해줘. 에러가 나면 원인을 쉬운 말로 설명하고 고쳐줘.
-
-1) 도구 점검·설치: git, gh(GitHub CLI), Node.js(v22 이상), uv가 있는지 확인하고, 없는 것만 허락받고 설치해.
-   macOS: git이 없으면 xcode-select --install. 나머지는 brew로. brew가 없으면 Homebrew 설치를 안내하고,
-   설치 끝의 Next steps 명령까지 실행하게 해. 관리자 권한이 없어 brew가 안 되면 brew 없이 설치하는 방법으로 해.
-   Windows: winget으로 설치해. 명령은 &amp;&amp;로 잇지 말고 한 줄씩 실행해.
-   새로 설치한 도구를 못 찾으면, 내가 새 터미널에서 너를 다시 열고 이 프롬프트를 다시 붙여 넣을게.
-2) GitHub 로그인: gh auth status 로 확인해. 로그인이 안 되어 있거나 Token scopes에 repo가 없으면 네가 대신 하지 말고,
-   내가 새 터미널 창에서 직접 실행할
-   gh auth login --hostname github.com --git-protocol https --web
-   명령과 화면에서 할 일을 알려줘. 토큰은 만들지 않을 거야. 내가 &quot;로그인했어&quot;라고 하면 다시 확인하고 gh auth setup-git 을 실행해.
-3) git 이름·이메일: git config --global user.name / user.email 이 비어 있으면 나에게 물어보고 설정해.
-4) 실습 저장소 받기: gh repo clone yoonlee78/ai-agent-workshop-2026-dev ~/ai-agent-workshop-2026
-   안 되면 원인을 쉬운 말로 알려 주고, 인터넷 연결과 gh auth status 를 다시 확인해.
-5) push 테스트: 홈 폴더에 gh-test 폴더를 만들고 README.md 하나를 커밋한 뒤
-   gh repo create gh-test --private --source . --push 로 올려. 같은 이름이 있으면 gh-test2 처럼 바꿔.
-   성공하면 저장소 주소를 보여 주고, GitHub에서 지우는 방법(Settings → Delete this repository)을 알려 준 뒤 내 컴퓨터의 gh-test 폴더는 지워.
-6) 그래프 도구 미리 받기: 수업 5장에서 그래프를 그릴 때 기다리지 않도록 아래를 한 번 실행해. 마지막에 ok가 나오면 돼.
-   uv run --with pandas --with matplotlib python -c &quot;import pandas, matplotlib.pyplot; print('ok')&quot;
-7) 마지막 점검: git --version, node --version, gh --version, uvx --version, claude --version, codex --version,
-   gh auth status, git config user.name, git config user.email 을 실행하고 항목별 통과/실패 표로 보여줘.
-   6번에서 ok가 나왔는지도 표에 넣어. claude와 codex는 하나만 있어도 통과야. gh repo view ai-agent-workshop-2026 으로 내 계정에 같은 이름 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
-</code></pre>
-<p class="chk"><strong>✅ 확인</strong>: 에이전트가 마지막에 이런 점검 표를 보여 준다.</p>
-<p><img alt="점검 표 예시: 항목별 통과, 마지막 줄은 아직 없음" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MjAiIGhlaWdodD0iNDQyIiB2aWV3Qm94PSIwIDAgNzIwIDQ0MiIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sICdBcHBsZSBTRCBHb3RoaWMgTmVvJywgJ01hbGd1biBHb3RoaWMnLCBzYW5zLXNlcmlmIj4KPHJlY3Qgd2lkdGg9IjcyMCIgaGVpZ2h0PSI0NDIiIHJ4PSIxMiIgZmlsbD0iI2Y2ZjdmOSIvPgo8dGV4dCB4PSIyMCIgeT0iMjgiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMzMzMiPuyYiOyLnDog7JeQ7J207KCE7Yq46rCAIOuniOyngOunieyXkCDrs7Tsl6wg7KO864qUIOygkOqygCDtkZw8L3RleHQ+Cjx0ZXh0IHg9IjI2IiB5PSI1MCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2I0NTQwYSI+7ZWt66qpPC90ZXh0Pgo8dGV4dCB4PSIyNTYiIHk9IjUwIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjYjQ1NDBhIj7qsrDqs7w8L3RleHQ+Cjx0ZXh0IHg9IjM1NiIgeT0iNTAiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNiNDU0MGEiPu2ZleyduCDrgrTsmqk8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSI1OCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzMCIgcng9IjUiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2UxZTRlOCIvPgo8dGV4dCB4PSIzMCIgeT0iNzgiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMyZjZmMWYiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+Z2l0IC0tdmVyc2lvbjwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSI3OCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhN2YzNyI+4pyTIO2GteqzvDwvdGV4dD4KPHRleHQgeD0iMzU2IiB5PSI3OCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naXQgdmVyc2lvbiAyLjU0LjA8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSI5MiIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzMCIgcng9IjUiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2UxZTRlOCIvPgo8dGV4dCB4PSIzMCIgeT0iMTEyIiBmb250LXNpemU9IjEyIiBmaWxsPSIjMmY2ZjFmIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPm5vZGUgLS12ZXJzaW9uPC90ZXh0Pgo8dGV4dCB4PSIyNTYiIHk9IjExMiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhN2YzNyI+4pyTIO2GteqzvDwvdGV4dD4KPHRleHQgeD0iMzU2IiB5PSIxMTIiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+djI0LjIxLjA8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIxMjYiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjE0NiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naCAtLXZlcnNpb248L3RleHQ+Cjx0ZXh0IHg9IjI1NiIgeT0iMTQ2IiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMWE3ZjM3Ij7inJMg7Ya16rO8PC90ZXh0Pgo8dGV4dCB4PSIzNTYiIHk9IjE0NiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naCB2ZXJzaW9uIDIuMTAyLjA8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIxNjAiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjE4MCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj51dnggLS12ZXJzaW9uPC90ZXh0Pgo8dGV4dCB4PSIyNTYiIHk9IjE4MCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhN2YzNyI+4pyTIO2GteqzvDwvdGV4dD4KPHRleHQgeD0iMzU2IiB5PSIxODAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+dXZ4IDAuMTMuMDwvdGV4dD4KPHJlY3QgeD0iMjAiIHk9IjE5NCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzMCIgcng9IjUiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2UxZTRlOCIvPgo8dGV4dCB4PSIzMCIgeT0iMjE0IiBmb250LXNpemU9IjEyIiBmaWxsPSIjMmY2ZjFmIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPkNsYXVkZSDrmJDripQgQ29kZXg8L3RleHQ+Cjx0ZXh0IHg9IjI1NiIgeT0iMjE0IiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMWE3ZjM3Ij7inJMg7Ya16rO8PC90ZXh0Pgo8dGV4dCB4PSIzNTYiIHk9IjIxNCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5jbGF1ZGXripQg7JeG7J2MLCBjb2RleC1jbGkgMC4xNjIuMeydgCDsnojsnYw8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIyMjgiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjI0OCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naCBhdXRoIHN0YXR1czwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSIyNDgiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxYTdmMzciPuKckyDthrXqs7w8L3RleHQ+Cjx0ZXh0IHg9IjM1NiIgeT0iMjQ4IiBmb250LXNpemU9IjEyIiBmaWxsPSIjMzMzIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPiZsdDvslYTsnbTrlJQmZ3Q7IOqzhOyglSDroZzqt7jsnbjrkKg8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIyNjIiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjI4MiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj5naXQgY29uZmlnIHVzZXIubmFtZTwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSIyODIiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxYTdmMzciPuKckyDthrXqs7w8L3RleHQ+Cjx0ZXh0IHg9IjM1NiIgeT0iMjgyIiBmb250LXNpemU9IjEyIiBmaWxsPSIjMzMzIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPiZsdDvsnbTrpoQmZ3Q7PC90ZXh0Pgo8cmVjdCB4PSIyMCIgeT0iMjk2IiB3aWR0aD0iNjgwIiBoZWlnaHQ9IjMwIiByeD0iNSIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZTFlNGU4Ii8+Cjx0ZXh0IHg9IjMwIiB5PSIzMTYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMyZjZmMWYiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+Z2l0IGNvbmZpZyB1c2VyLmVtYWlsPC90ZXh0Pgo8dGV4dCB4PSIyNTYiIHk9IjMxNiIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhN2YzNyI+4pyTIO2GteqzvDwvdGV4dD4KPHRleHQgeD0iMzU2IiB5PSIzMTYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+Jmx0O+ydtOuplOydvCZndDs8L3RleHQ+CjxyZWN0IHg9IjIwIiB5PSIzMzAiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzAiIHJ4PSI1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlMWU0ZTgiLz4KPHRleHQgeD0iMzAiIHk9IjM1MCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJmNmYxZiIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj7qt7jrnpjtlIQg64+E6rWsICg267KIKTwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSIzNTAiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxYTdmMzciPuKckyDthrXqs7w8L3RleHQ+Cjx0ZXh0IHg9IjM1NiIgeT0iMzUwIiBmb250LXNpemU9IjEyIiBmaWxsPSIjMzMzIiBmb250LWZhbWlseT0iTWVubG8sIENvbnNvbGFzLCBtb25vc3BhY2UiPm9rPC90ZXh0Pgo8cmVjdCB4PSIyMCIgeT0iMzY0IiB3aWR0aD0iNjgwIiBoZWlnaHQ9IjMwIiByeD0iNSIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZTFlNGU4Ii8+Cjx0ZXh0IHg9IjMwIiB5PSIzODQiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMyZjZmMWYiIGZvbnQtZmFtaWx5PSJNZW5sbywgQ29uc29sYXMsIG1vbm9zcGFjZSI+YWktYWdlbnQtd29ya3Nob3AtMjAyNiDsoIDsnqXshow8L3RleHQ+Cjx0ZXh0IHg9IjI1NiIgeT0iMzg0IiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjNmI3MjgwIj7slYTsp4Eg7JeG7J2MPC90ZXh0Pgo8dGV4dCB4PSIzNTYiIHk9IjM4NCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyIgZm9udC1mYW1pbHk9Ik1lbmxvLCBDb25zb2xhcywgbW9ub3NwYWNlIj4mbHQ77JWE7J2065SUJmd0Oy9haS1hZ2VudC13b3Jrc2hvcC0yMDI2IOywvuyngCDrqrvtlaggKOygleyDgSk8L3RleHQ+Cjx0ZXh0IHg9IjIwIiB5PSI0MjYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMxYTdmMzciPuKckyDrqqjrkZAg7Ya16rO8LCDrp4jsp4Drp4kg7KSE7J2AICLslYTsp4Eg7JeG7J2MIuydtOuptCDspIDruYQg64GdIChDbGF1ZGXCt0NvZGV464qUIO2VmOuCmOunjCDsnojslrTrj4Qg7Ya16rO8KTwvdGV4dD4KPC9zdmc+" /></p>
-<ul>
-<li>[ ] 점검 표가 모두 통과했다 (Claude Code·Codex는 쓰는 것만)</li>
-<li>[ ] <code>~/ai-agent-workshop-2026</code> 폴더가 있다</li>
-<li>[ ] 내 GitHub 계정에 <code>ai-agent-workshop-2026</code> 저장소가 <strong>아직 없다</strong> (1-1에서 만든다)</li>
-</ul>
-<p><code>~/ai-agent-workshop-2026</code> 폴더가 없으면 터미널에서 직접 받는다. 같은 이름의 폴더가 이미 있으면 이름을 바꿔 두고 받는다.</p>
-<p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
-<pre class="paste opt"><code class="language-bash">gh repo clone yoonlee78/ai-agent-workshop-2026-dev ~/ai-agent-workshop-2026
-</code></pre>
-<p>받아 둔 <code>~/ai-agent-workshop-2026</code>는 이렇게 생겼다. 실습을 마친 모습은 다음 페이지(에이전트 소개)에 있다.</p>
-<details class="scr-t"><summary>🖼 폴더 예시 · 수업 전: 받아 둔 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>수업 전: 받아 둔 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서<br>├── assets/                            ← 안내서 그림<br>├── .claude/<br>│   └── skills/workshop-tutor/         ← 자동 진행 모드<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내 (README만)<br>├── 03-subagents/<br>│   ├── materials/                     ← 미팅 메모 2개<br>│   └── handbook/                      ← 연구실 핸드북 01~04장<br>├── 05-report/<br>│   └── data/lab-help-2026-09.log      ← 연구실 질문방 로그 한 달치 (가상 자료)<br>└── 07-more/                           ← 7. 추가 실습 자료</span></div></div></details>
-
-<p><strong>문제 해결</strong></p>
-<ul>
-<li>에러가 나면: <a href="https://github.com/yoonlee78/ai-agent-workshop-2026#-자주-묻는-질문-qa">README의 자주 묻는 질문</a></li>
-<li>에이전트 없이 직접 설치하려면: 같은 README의 "참고: 직접 설치하기"</li>
-<li>Orca(선택): 여러 AI 코딩 도구를 한 화면에서 쓰는 앱. 강의 화면에서 보게 된다. 설치는 <a href="https://github.com/yoonlee78/ai-agent-workshop-2026#2-4-orca-선택">README 2-4</a></li>
-</ul>
-<hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 5 / 46</p></section><section class="chap" data-id="_5" data-ch="_5" data-title="워크숍 소개"><h2 id="_5">워크숍 소개</h2>
-<ul>
-<li><strong>주최</strong>: 서울대학교 심리학과 (이노에듀사업단 운영위원회)</li>
-<li><strong>강사</strong>: 이윤경(Yoon Kyung Lee), Ph.D. · <a href="https://yoonkyunglee.com">yoonkyunglee.com</a></li>
-<li><strong>운영진</strong>: 차지욱, 이윤경, 이은지, 안선우, 이성현, 이충현, 권혜수, 이재형</li>
-</ul>
-<p><strong>워크숍·강의 이력</strong></p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>연도</th>
-<th>제목</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2019</td>
-<td><a href="https://github.com/yoonlee78/pythonbootcamp">Introduction to Python</a></td>
-<td>서울대 공과대학 SPLIT 프로그램 학생 · Python 기초</td>
-</tr>
-<tr>
-<td>2019</td>
-<td><a href="https://github.com/yoonlee78/lab_workshop">Python for Psychologists: NLP</a></td>
-<td>연구실 구성원 · Python 데이터 분석, 텍스트 분석, 딥러닝 자연어 처리</td>
-</tr>
-<tr>
-<td>2020</td>
-<td><a href="https://github.com/yoonlee78/2020_Spring_Workshop">2020 Spring Workshop</a></td>
-<td>연구실 구성원 · 자연어 처리, 마음 이론과 AI, 인간-로봇 상호작용 논문 읽기</td>
-</tr>
-<tr>
-<td>2023</td>
-<td><a href="https://github.com/yoonlee78/llm_workshop_2023">Prompt Engineering 101</a></td>
-<td>프롬프트 엔지니어링, LangChain</td>
-</tr>
-<tr>
-<td>2025</td>
-<td><a href="https://github.com/yoonlee78/2025_SNUIPS_AI_Workshop">SNUIPS AI Workshop</a></td>
-<td>심리학과 대학원생 · LLM 프롬프팅과 추론, 텍스트 의미 분석, 특성 선택, 앱 프로토타이핑</td>
-</tr>
-<tr>
-<td>2025</td>
-<td><a href="https://yoonlee78.github.io/ai4psych-course/">AI 기반 심리과학 연구방법론</a></td>
-<td>대학원생 · LLM으로 측정·실험·실습, 연구용 AI 에이전트, 과학적 글쓰기 (차지욱 교수 강의 공동 진행)</td>
-</tr>
-<tr>
-<td>2026</td>
-<td><a href="https://github.com/yoonlee78/2026_SNUIPS_AI_Workshop">Build your own AI Co-Scientist</a></td>
-<td>AI 에이전트, RAG, Claude Code</td>
-</tr>
-<tr>
-<td>2026</td>
-<td>나만의 연구 조교 만들기 (오늘)</td>
-<td>심리학과 구성원 · 스킬, MCP, 서브에이전트</td>
-</tr>
-</tbody>
-</table></div>
-<hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 6 / 46</p></section><section class="chap" data-id="_6" data-ch="_6" data-title="에이전트 소개"><h2 id="_6">에이전트 소개</h2>
-<p class="goal"><strong>🎯 목표</strong>: 연구 조교 팀의 전체 구조와 에이전트 루프 이해</p>
-<h3 id="_7">에이전트란</h3>
-<p><strong>에이전트 = 모델 + 도구 + 지시</strong>. 목표를 주면 스스로 생각하고, 도구를 쓰고, 결과를 보고, 다시 생각하기를 반복한다. 연구 개념(context window, memory, harness, 평가와 alignment)은 <a href="#8-llm">8장</a>에 모았다.</p>
-<figure class="fig" id="fig-loop" data-fig="loop"><figcaption><b>그림 1. 에이전트 루프</b></figcaption></figure>
-
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 7 / 46</p></section><section class="chap" data-id="_8" data-ch="_6" data-title="조교 팀 구성"><p class="crumb"><a href="#_6">에이전트 소개</a></p><h3 id="_8">조교 팀 구성</h3>
-<figure class="fig" id="fig-concepts-rel" data-fig="concepts-rel"><figcaption><b>그림 2. 핵심 개념의 관계</b> · 스킬, MCP, 서브에이전트</figcaption></figure>
-
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>구성 요소</th>
-<th>정의</th>
-<th>연구실 비유</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>스킬</td>
-<td>반복 업무용 매뉴얼 파일 하나</td>
-<td>실험 SOP 문서</td>
-</tr>
-<tr>
-<td>MCP</td>
-<td>외부 도구를 꽂는 표준 플러그</td>
-<td>실험실에 새 장비 연결</td>
-</tr>
-<tr>
-<td>서브에이전트</td>
-<td>일을 따로 맡는 담당자</td>
-<td>RA에게 일 맡기기</td>
-</tr>
-</tbody>
-</table></div>
-<figure class="fig" id="fig-ecosystem" data-fig="ecosystem"><figcaption><b>그림 3. 조교 팀 구성</b> · 호스트 1개, 스킬 4, MCP 1, 서브에이전트 4</figcaption></figure>
-
-<p>실습을 마치면 내 저장소 <code>ai-agent-workshop-2026</code>은 이렇게 된다. "미리 들어 있음"이 붙은 것은 받아 둔 자료이고, 나머지는 실습에서 만든다.</p>
-<details class="scr-t"><summary>🖼 폴더 예시 · 실습을 마친 뒤 내 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>실습을 마친 뒤 내 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서 (미리 들어 있음)<br>├── CLAUDE.md                          ← 저장소 규칙 (매번 자동으로 읽힘)<br>├── .mcp.json                          ← 2. arXiv 논문 검색 MCP<br>├── .claude/<br>│   ├── skills/workshop-tutor/         ← 자동 진행 모드 (미리 들어 있음)<br>│   ├── skills/meeting-notes/SKILL.md  ← 1. 미팅 노트 스킬<br>│   ├── skills/question-report/        ← 5. 질문 로그 리포트 스킬<br>│   ├── skills/report-format/          ← 5. 리포트 양식 스킬<br>│   └── agents/<br>│       ├── meeting-scribe.md          ← 3-1. 미팅 노트 담당<br>│       ├── onboarding-buddy.md        ← 3-2. 온보딩 버디<br>│       ├── study-maker.md             ← 3-3. 학습자료 담당<br>│       └── ethics-checker.md          ← 5. 연구윤리 점검 담당<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내<br>├── 03-subagents/<br>│   ├── materials/                     ← 미팅 메모 2개 (미리 들어 있음)<br>│   ├── handbook/                      ← 연구실 핸드북 01~04장 (미리 들어 있음) + 목차<br>│   ├── meetings/                      ← 미팅 노트가 쌓이는 곳<br>│   └── study/                         ← 학습자료<br>├── 05-report/<br>│   ├── data/lab-help-2026-09.log      ← 질문방 로그 (가상 자료, 미리 들어 있음)<br>│   ├── data/questions.csv             ← 정리한 질문<br>│   ├── scripts/                       ← 그래프 스크립트<br>│   ├── report/                        ← 리포트 초안·최종본·그래프<br>│   └── reviews/                       ← 점검 피드백<br>├── 07-more/                           ← 7. 추가 실습 자료 (미리 들어 있음)<br>└── 09-advanced/                       ← 9. 심화 예시: 위키 · 영상 · 로봇 (미리 들어 있음)</span></div></div></details>
-
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 8 / 46</p></section><section class="chap" data-id="_9" data-ch="_6" data-title="작업 창"><p class="crumb"><a href="#_6">에이전트 소개</a></p><h3 id="_9">작업 창</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 8 / 46</p></section><section class="chap" data-id="1" data-ch="1" data-title="1. 스킬 만들기: 미팅 노트"><h2 id="1">1. 스킬 만들기: 미팅 노트</h2>
+<h3 id="_9">작업 창</h3>
 <p>모든 실습은 <strong><code>~/ai-agent-workshop-2026</code>에서 연 Claude Code 창 하나</strong>(작업 창)에서 한다.<sup id="fnref:layout"><a class="footnote-ref" href="#fn:layout">1</a></sup> 직접 모드는 1-1에서 연다.</p>
 <div class="mode m-tutor">
 <p>1-1 전에 터미널에서 작업 창을 연다.</p>
@@ -736,9 +738,7 @@ claude
 </div>
 </details>
 </div>
-<hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 9 / 46</p></section><section class="chap" data-id="1" data-ch="1" data-title="1. 스킬 만들기: 미팅 노트"><h2 id="1">1. 스킬 만들기: 미팅 노트</h2>
-<h3 id="_10">스킬이란</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 9 / 46</p></section><section class="chap" data-id="_10" data-ch="1" data-title="스킬이란"><p class="crumb"><a href="#1">1. 스킬 만들기: 미팅 노트</a></p><h3 id="_10">스킬이란</h3>
 <p><strong>스킬</strong>은 반복 업무용 매뉴얼 파일 하나다(<code>.claude/skills/&lt;이름&gt;/SKILL.md</code>). 위쪽 <code>---</code> 사이(프런트매터)에는 <strong>언제 쓰는지</strong>, 아래 본문에는 <strong>어떻게 하는지</strong>를 쓴다. 더 알아보기: <a class="doclink" href="https://code.claude.com/docs/ko/skills" target="_blank" rel="noopener">공식 문서: 스킬</a></p>
 <figure class="fig" id="fig-skill-anatomy" data-fig="skill-anatomy"><figcaption><b>그림 4. SKILL.md 해부도</b> · 프런트매터와 본문</figcaption></figure>
 
