@@ -9,20 +9,18 @@
 - **운영진**: 차지욱, 이윤경, 이은지
 - **실습 조교**: 안선우, 이성현, 이충현, 권혜수, 이재형
 
-**워크숍·강의 이력**
+**워크숍 및 관련 강의 이력**
 
 | 연도 | 제목 | 내용 |
 | --- | --- | --- |
-| 2019 | [Introduction to Python](https://github.com/yoonlee78/pythonbootcamp) | Python 기초 |
-| 2019 | [Python for Psychologists: NLP](https://github.com/yoonlee78/lab_workshop) | Python 데이터 분석, 텍스트 분석, 딥러닝 자연어 처리 |
-| 2020 | [2020 Spring Workshop](https://github.com/yoonlee78/2020_Spring_Workshop) | 자연어 처리, 마음 이론과 AI, 인간-로봇 상호작용 논문 읽기 |
-| 2023 | [Prompt Engineering 101](https://github.com/yoonlee78/llm_workshop_2023) | 프롬프트 엔지니어링, LangChain |
-| 2025 | [SNUIPS AI Workshop](https://github.com/yoonlee78/2025_SNUIPS_AI_Workshop) | LLM 프롬프팅과 추론, 텍스트 의미 분석, 특성 선택, 앱 프로토타이핑 |
-| 2025 | [AI 기반 심리과학 연구방법론](https://yoonlee78.github.io/ai4psych-course/) | LLM으로 측정·실험·실습, 연구용 AI 에이전트, 과학적 글쓰기 · 공동 진행: 차지욱 교수 |
+| 2026 | Build Your Own Research Assistant (본 워크숍) | 스킬, MCP, 서브에이전트 |
 | 2026 | [Build your own AI Co-Scientist](https://github.com/yoonlee78/2026_SNUIPS_AI_Workshop) | AI 에이전트, RAG, Claude Code |
-| 2026 | 나만의 연구 조교 만들기 (본 워크숍) | 스킬, MCP, 서브에이전트 |
-
-대상: 2024년까지 심리학과 구성원, 2025년부터 교내 구성원으로 확장
+| 2025 | [AI-Based Research Methods in Psychological Science](https://yoonlee78.github.io/ai4psych-course/) | LLM으로 측정·실험·실습, 연구용 AI 에이전트, 과학적 글쓰기 · 공동 진행: 차지욱 교수 |
+| 2025 | [SNUIPS AI Workshop](https://github.com/yoonlee78/2025_SNUIPS_AI_Workshop) | LLM 프롬프팅과 추론, 텍스트 의미 분석, 특성 선택, 앱 프로토타이핑 |
+| 2023 | [Prompt Engineering 101](https://github.com/yoonlee78/llm_workshop_2023) | 프롬프트 엔지니어링, LangChain |
+| 2020 | [2020 Spring Workshop](https://github.com/yoonlee78/2020_Spring_Workshop) | 자연어 처리, 마음 이론과 AI, 인간-로봇 상호작용 논문 읽기 |
+| 2019 | [Python for Psychologists: NLP](https://github.com/yoonlee78/lab_workshop) | Python 데이터 분석, 텍스트 분석, 딥러닝 자연어 처리 |
+| 2019 | [Introduction to Python](https://github.com/yoonlee78/pythonbootcamp) | Python 기초 |
 
 ---
 
