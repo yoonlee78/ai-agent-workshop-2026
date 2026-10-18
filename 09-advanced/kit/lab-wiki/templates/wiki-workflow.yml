@@ -1,0 +1,38 @@
+name: wiki
+
+on:
+  push:
+    branches: [main]
+    paths: ["09-advanced/wiki/**"]
+  pull_request:
+    paths: ["09-advanced/wiki/**"]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: OKF 형식 검사
+        uses: scaccogatto/okf-skills@v1
+        with:
+          bundle: 09-advanced/wiki
+          strict: "true"
+
+      - name: 그래프 도구 받기
+        uses: actions/checkout@v4
+        with:
+          repository: scaccogatto/okf-skills
+          ref: v1
+          path: .okf-tools
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: 그래프 HTML 만들기
+        run: uv run .okf-tools/skills/visualize/scripts/okf_visualize.py 09-advanced/wiki -o wiki-graph.html --title "${{ github.event.repository.name }} 위키" --link "${{ github.server_url }}/${{ github.repository }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wiki-graph
+          path: wiki-graph.html

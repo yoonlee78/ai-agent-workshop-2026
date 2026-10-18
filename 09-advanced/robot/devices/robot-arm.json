@@ -1,0 +1,25 @@
+{
+  "id": "robot-arm-1",
+  "name": "샘플 옮기는 로봇 팔 (실습용 가상 기기, ROS 2 방식)",
+  "owner": "최안전",
+  "ros": {
+    "joint_states": "/robot_arm_1/joint_states",
+    "message": "sensor_msgs/JointState",
+    "trajectory_action": "/robot_arm_1/follow_joint_trajectory"
+  },
+  "properties": {
+    "base": {"unit": "°", "access": "read-write", "description": "몸통 회전. -45는 시료 쟁반 쪽, 45는 인큐베이터 쪽", "min": -90, "max": 90, "max_step": 45},
+    "shoulder": {"unit": "°", "access": "read-write", "description": "어깨. 0은 위로 든 자세, 30은 앞으로 내린 자세", "min": -10, "max": 60, "max_step": 30},
+    "elbow": {"unit": "°", "access": "read-write", "description": "팔꿈치. 90은 접은 자세, 45는 뻗은 자세", "min": 0, "max": 135, "max_step": 45},
+    "gripper": {"unit": "mm", "access": "read-write", "description": "집게 벌림. 0은 닫힘, 20은 시료판을 잡은 폭, 60은 활짝", "min": 0, "max": 60, "max_step": 60},
+    "zone": {"unit": "", "access": "read", "description": "작업 구역 안전 센서. clear면 사람 없음, occupied면 사람 있음"}
+  },
+  "interlock": {"*": {"zone": "clear"}},
+  "initial": {"base": 0, "shoulder": 0, "elbow": 90, "gripper": 0, "zone": "clear"},
+  "safety": [
+    "작업 구역에 사람이 있으면(zone=occupied) 어떤 관절도 움직이지 않는다. 드라이버가 거절한다.",
+    "관절마다 범위가 있고, 한 번에 움직이는 각도에도 한계가 있다(몸통·팔꿈치 45°, 어깨 30°). 크게 돌 때는 나눠서 움직인다.",
+    "시료판을 잡을 때 집게는 20mm로 닫는다. 그보다 좁히면 판이 깨진다.",
+    "인큐베이터에 넣기 전에 인큐베이터 문이 열려 있는지 확인한다. 넣은 뒤에는 팔을 접고 문을 닫는다."
+  ]
+}

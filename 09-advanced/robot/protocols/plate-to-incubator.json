@@ -1,0 +1,17 @@
+{
+  "description": "시료판 하나를 쟁반에서 집어 인큐베이터에 넣고 문을 닫는다 (ROS 의 FollowJointTrajectory 처럼 관절 목표를 차례로 보낸다)",
+  "steps": [
+    {"do": "write", "device": "incubator-1", "prop": "door", "value": "open"},
+    {"do": "move", "device": "robot-arm-1", "joints": {"gripper": 60, "base": -45}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"shoulder": 30, "elbow": 45}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"gripper": 20}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"shoulder": 0, "elbow": 90}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"base": 0}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"base": 45}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"shoulder": 30, "elbow": 45}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"gripper": 60}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"shoulder": 0, "elbow": 90, "gripper": 0}},
+    {"do": "move", "device": "robot-arm-1", "joints": {"base": 0}},
+    {"do": "write", "device": "incubator-1", "prop": "door", "value": "closed"}
+  ]
+}

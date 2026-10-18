@@ -1,0 +1,18 @@
+{
+  "id": "incubator-1",
+  "name": "세포 배양 인큐베이터 (실습용 가상 기기)",
+  "owner": "최안전",
+  "properties": {
+    "temperature": {"unit": "°C", "access": "read", "description": "지금 안쪽 온도"},
+    "setpoint": {"unit": "°C", "access": "read-write", "description": "맞출 온도", "min": 20, "max": 42, "max_step": 5},
+    "door": {"unit": "", "access": "read-write", "description": "문 열림(open) / 닫힘(closed)", "choices": ["open", "closed"]}
+  },
+  "interlock": {"setpoint": {"door": "closed"}},
+  "initial": {"temperature": 25.0, "setpoint": 25.0, "door": "closed"},
+  "safety": [
+    "맞출 온도는 20~42°C 사이만 된다. 드라이버가 범위 밖 값을 거절한다.",
+    "한 번에 5°C 넘게 바꾸지 않는다. 시료가 상한다. 크게 바꿀 때는 나눠서 바꾼다.",
+    "문이 열려 있으면 맞출 온도를 바꾸지 않는다. 문은 시료를 넣고 꺼낼 때만 연다.",
+    "40°C를 넘기는 실험은 최안전에게 먼저 알린다."
+  ]
+}

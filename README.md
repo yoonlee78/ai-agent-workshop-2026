@@ -2,11 +2,11 @@
 
 Hands-on workshop: build your own research assistant with Claude Code (skills, MCP, subagents)
 
-수업 당일 실습 안내서: [GUIDE.md](GUIDE.md)
+수업 당일 실습 안내서: [GUIDE.md](GUIDE.md) · 브라우저로 보려면 저장소 폴더에서 `open GUIDE.html` (Claude에게는 "GUIDE.html을 브라우저로 열어줘")
 
-## 수업 전 준비 · 15~30분
+## 수업 전 준비
 
-워크숍 당일 바로 실습할 수 있도록, 수업 전에 설치와 환경 점검을 마쳐 주세요. git·Homebrew·GitHub 계정이 이미 있으면 15분, 처음부터 설치하면 30분 정도 걸려요.
+워크숍 당일 바로 실습할 수 있도록, 수업 전에 설치와 환경 점검을 마쳐 주세요.
 
 강의와 실습은 주로 **Claude Code**와 **[Orca](https://github.com/stablyai/orca)**(여러 코딩 에이전트를 한 화면에서 쓰는 데스크톱 앱)로 진행합니다. 튜토리얼은 Codex 등 다른 모델로도 따라 할 수 있게 만들어 두었어요.
 
@@ -37,6 +37,9 @@ Hands-on workshop: build your own research assistant with Claude Code (skills, M
 | --- | --- |
 | Claude Code | Claude **Pro 이상** 구독 (Pro로 충분해요) |
 | Codex | **서울대 계정** (무료) |
+| Claude Code + OpenRouter | 구독 없이 쓴 만큼 결제 ($5 충전이면 충분). 설정은 [GUIDE.md 부록 B](GUIDE.md#부록-b--claude-구독-없이-하기-codex--openrouter) |
+
+Codex로 하는 사람은 GUIDE.md 0장 끝의 **Claude Code · Codex 대응표**를, OpenRouter로 하는 사람은 [GUIDE.md 부록 B](GUIDE.md#부록-b--claude-구독-없이-하기-codex--openrouter)를 참고해 주세요.
 
 > [!WARNING]
 > **무료 플랜은 안 돼요.** Claude 무료 플랜은 Claude Code에 로그인이 안 되고, 다른 개인 무료 플랜은 실습 도중 사용량 한도에 걸려 멈춰요.
@@ -184,9 +187,11 @@ Claude Code 또는 Codex 창에 아래 내용을 통째로 붙여 넣어 주세�
 5) push 테스트: 홈 폴더에 gh-test 폴더를 만들고 README.md 하나를 커밋한 뒤
    gh repo create gh-test --private --source . --push 로 올려. 같은 이름이 있으면 gh-test2 처럼 바꿔.
    성공하면 저장소 주소를 보여 주고, GitHub에서 지우는 방법(Settings → Delete this repository)을 알려 준 뒤 내 컴퓨터의 gh-test 폴더는 지워.
-6) 마지막 점검: git --version, node --version, gh --version, uvx --version, claude --version, codex --version,
+6) 그래프 도구 미리 받기: 수업 5장에서 그래프를 그릴 때 기다리지 않도록 아래를 한 번 실행해. 마지막에 ok가 나오면 돼.
+   uv run --with pandas --with matplotlib python -c "import pandas, matplotlib.pyplot; print('ok')"
+7) 마지막 점검: git --version, node --version, gh --version, uvx --version, claude --version, codex --version,
    gh auth status, git config user.name, git config user.email 을 실행하고 항목별 통과/실패 표로 보여줘.
-   claude와 codex는 하나만 있어도 통과야. gh repo view ai-agent-workshop-2026 으로 내 계정에 같은 이름 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
+   6번에서 ok가 나왔는지도 표에 넣어. claude와 codex는 하나만 있어도 통과야. gh repo view ai-agent-workshop-2026 으로 내 계정에 같은 이름 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
 ```
 
 > [!IMPORTANT]
@@ -255,7 +260,7 @@ git config --global user.email "GitHub 가입 이메일"
 gh repo clone yoonlee78/ai-agent-workshop-2026 ~/ai-agent-workshop-2026
 ```
 
-`Could not resolve to a Repository`가 나오면 주소에 오타가 없는지 확인해 주세요. 그래도 안 되면 강사·조교에게 알려 주세요.
+`Could not resolve to a Repository`가 나오면 주소에 오타가 없는지 확인해 주세요. 그래도 안 되면 강사·현장 조교에게 알려 주세요.
 
 </details>
 
@@ -318,7 +323,7 @@ git --version; node --version; gh --version; uvx --version; claude --version; co
 
 ## ❓ 자주 묻는 질문 (Q&A)
 
-에러가 나면 먼저 여기를 찾아보세요. 없으면 에러 문구를 통째로 Claude Code나 Codex에 붙여 넣고 "초보자인데 어떻게 해?"라고 물어보세요. 그래도 해결되지 않으면 강사·조교에게 편하게 연락 주세요.
+에러가 나면 먼저 여기를 찾아보세요. 없으면 에러 문구를 통째로 Claude Code나 Codex에 붙여 넣고 "초보자인데 어떻게 해?"라고 물어보세요. 그래도 해결되지 않으면 강사·현장 조교에게 편하게 연락 주세요.
 
 ### 공통
 
@@ -434,7 +439,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 A. 연구실 공용 컴퓨터처럼 관리자 계정이 아닌 경우예요. Homebrew 없이 진행하면 돼요. 3번 프롬프트를 Claude Code나 Codex에 붙여 넣으면 brew 없이 설치하는 방법으로 진행해 줘요. Node.js는 [nodejs.org](https://nodejs.org)에서 LTS 설치 파일을 받아도 돼요.
 
 **Q. `xcrun: error: invalid active developer path`가 나와요.**
-A. macOS를 업데이트한 뒤 자주 나와요. `xcode-select --install`을 실행하고, 뜨는 창에서 **설치**를 눌러 주세요 (5~15분).
+A. macOS를 업데이트한 뒤 자주 나와요. `xcode-select --install`을 실행하고, 뜨는 창에서 **설치**를 눌러 주세요.
 
 **Q. `xcode-select --install`에서 "이미 설치되어 있다"고 나와요.**
 A. 이미 준비된 상태예요. 다음 단계로 넘어가세요.
@@ -466,4 +471,4 @@ A. Node.js가 없는 경우예요. `winget install --id OpenJS.NodeJS.LTS -e`로
 A. Windows PowerShell은 `&&`를 지원하지 않아요. 명령을 한 줄씩 나눠서 붙여 넣어 주세요.
 
 **Q. Windows 사용자 이름이 한글이에요 (예: `C:\Users\홍길동`).**
-A. 대부분 문제없지만, 일부 도구가 한글 경로에서 에러를 낼 수 있어요. 설명하기 어려운 에러가 나면 사용자 이름이 한글이라는 점과 함께 강사·조교에게 알려 주세요.
+A. 대부분 문제없지만, 일부 도구가 한글 경로에서 에러를 낼 수 있어요. 설명하기 어려운 에러가 나면 사용자 이름이 한글이라는 점과 함께 강사·현장 조교에게 알려 주세요.

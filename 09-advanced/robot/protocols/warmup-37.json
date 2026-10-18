@@ -1,0 +1,10 @@
+{
+  "description": "배양 전 예열: 25°C에서 37°C까지 한 번에 5°C 이내로 올린다",
+  "steps": [
+    {"do": "write", "device": "incubator-1", "prop": "setpoint", "value": 30},
+    {"do": "wait", "seconds": 10},
+    {"do": "write", "device": "incubator-1", "prop": "setpoint", "value": 35},
+    {"do": "wait", "seconds": 10},
+    {"do": "write", "device": "incubator-1", "prop": "setpoint", "value": 37}
+  ]
+}
