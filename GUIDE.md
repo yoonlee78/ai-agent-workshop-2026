@@ -4,22 +4,24 @@
 
 ## 워크숍 소개
 
+- **강사**: 이윤경(Yoon Kyung Lee), Ph.D. · [yoonkyunglee.com](https://yoonkyunglee.com)<br>Vanderbilt University, Connected Computing 박사후연구원 (2026 부임 예정)<br>서울대학교 조형연구소 선임연구원 (2025–2026)<br>가천대학교 객원교수 (2025–2026)
 - **주최**: 서울대학교 심리학과 (이노에듀사업단 운영위원회)
-- **강사**: 이윤경(Yoon Kyung Lee), Ph.D. · [yoonkyunglee.com](https://yoonkyunglee.com)
 - **운영진**: 차지욱, 이윤경, 이은지, 안선우, 이성현, 이충현, 권혜수, 이재형
 
 **워크숍·강의 이력**
 
 | 연도 | 제목 | 내용 |
 | --- | --- | --- |
-| 2019 | [Introduction to Python](https://github.com/yoonlee78/pythonbootcamp) | 서울대 공과대학 SPLIT 프로그램 학생 · Python 기초 |
-| 2019 | [Python for Psychologists: NLP](https://github.com/yoonlee78/lab_workshop) | 연구실 구성원 · Python 데이터 분석, 텍스트 분석, 딥러닝 자연어 처리 |
-| 2020 | [2020 Spring Workshop](https://github.com/yoonlee78/2020_Spring_Workshop) | 연구실 구성원 · 자연어 처리, 마음 이론과 AI, 인간-로봇 상호작용 논문 읽기 |
+| 2019 | [Introduction to Python](https://github.com/yoonlee78/pythonbootcamp) | Python 기초 |
+| 2019 | [Python for Psychologists: NLP](https://github.com/yoonlee78/lab_workshop) | Python 데이터 분석, 텍스트 분석, 딥러닝 자연어 처리 |
+| 2020 | [2020 Spring Workshop](https://github.com/yoonlee78/2020_Spring_Workshop) | 자연어 처리, 마음 이론과 AI, 인간-로봇 상호작용 논문 읽기 |
 | 2023 | [Prompt Engineering 101](https://github.com/yoonlee78/llm_workshop_2023) | 프롬프트 엔지니어링, LangChain |
-| 2025 | [SNUIPS AI Workshop](https://github.com/yoonlee78/2025_SNUIPS_AI_Workshop) | 심리학과 대학원생 · LLM 프롬프팅과 추론, 텍스트 의미 분석, 특성 선택, 앱 프로토타이핑 |
-| 2025 | [AI 기반 심리과학 연구방법론](https://yoonlee78.github.io/ai4psych-course/) | 대학원생 · LLM으로 측정·실험·실습, 연구용 AI 에이전트, 과학적 글쓰기 (차지욱 교수 강의 공동 진행) |
+| 2025 | [SNUIPS AI Workshop](https://github.com/yoonlee78/2025_SNUIPS_AI_Workshop) | LLM 프롬프팅과 추론, 텍스트 의미 분석, 특성 선택, 앱 프로토타이핑 |
+| 2025 | [AI 기반 심리과학 연구방법론](https://yoonlee78.github.io/ai4psych-course/) | LLM으로 측정·실험·실습, 연구용 AI 에이전트, 과학적 글쓰기 · 공동 진행: 차지욱 교수 |
 | 2026 | [Build your own AI Co-Scientist](https://github.com/yoonlee78/2026_SNUIPS_AI_Workshop) | AI 에이전트, RAG, Claude Code |
-| 2026 | 나만의 연구 조교 만들기 (오늘) | 심리학과 구성원 · 스킬, MCP, 서브에이전트 |
+| 2026 | 나만의 연구 조교 만들기 (본 워크숍) | 스킬, MCP, 서브에이전트 |
+
+대상: 2024년까지 심리학과 구성원, 2025년부터 교내 구성원으로 확장
 
 ---
 
