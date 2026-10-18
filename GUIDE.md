@@ -245,7 +245,8 @@ ai-agent-workshop-2026/
 │   └── handbook/                      ← 연구실 핸드북 01~04장
 ├── 05-report/
 │   └── data/lab-help-2026-09.log      ← 연구실 질문방 로그 한 달치 (가상 자료)
-└── 07-more/                           ← 7. 추가 실습 자료
+├── 07-more/                           ← 7. 추가 실습 자료
+└── 09-advanced/                       ← 9. 심화 예시 자료
 -->
 
 **문제 해결**
@@ -1228,15 +1229,15 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 `#lab-work`에 오늘 실습 메모를 올린다. 예:
 
 ```text
-1장 스킬 만들기 10분. 저장소 이름 바꾸는 데서 헷갈렸다.
+1장 미팅 노트 스킬 완성. 미팅 메모 두 개로 시험함.
 ```
 
 ```text
-2장 arXiv 검색은 잘 됨. 커넥터는 시간이 없어서 못 해 봄.
+2장 arXiv MCP 연결, 관련 논문 5편 확인.
 ```
 
 ```text
-3장 onboarding-buddy가 TODO를 많이 남겼다. 우리 연구실 자료로 다시 해 보고 싶다.
+3장 서브에이전트 3개 생성, 핸드북 근거 답변 확인.
 ```
 
 같은 채널에 보낸다:
@@ -1244,7 +1245,7 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 <!-- run:opt slack -->
 
 ```text
-@Claude ai-agent-workshop-2026 저장소에 이 채널에 올린 메모를 정리한 notes/workshop-memo.md를 새로 만들고 PR 올려줘. 한국어로 "걸린 시간", "막힌 곳", "더 해 볼 것" 세 절로 써줘. 다른 파일은 건드리지 말고, 중간에 묻지 말고 끝까지 해. 끝나면 PR 링크만 남겨줘.
+@Claude ai-agent-workshop-2026 저장소에 이 채널에 올린 메모를 정리한 notes/workshop-memo.md를 새로 만들고 PR 올려줘. 한국어로 "진행 내용", "결과", "다음 단계" 세 절로 써줘. 다른 파일은 건드리지 말고, 중간에 묻지 말고 끝까지 해. 끝나면 PR 링크만 남겨줘.
 ```
 
 <!-- /mode -->
@@ -1606,12 +1607,12 @@ ai-agent-workshop-2026/
 
 1. 에이전트 없이 두 파일을 대조해 오류를 찾고 기록한다.
 2. 같은 과제를 에이전트에게 요청한다.
-3. `07-more/verify/answers.md`와 결과를 비교한다.
+3. `07-more/verify/answer/answers.md`와 결과를 비교한다.
 
 <!-- run:opt -->
 
 ```text
-07-more/verify/c-question-report.md 를 05-report/data/lab-help-2026-09.log 와 03-subagents/handbook/ 에 대조해서 틀린 곳을 모두 찾아줘. 07-more/verify/answers.md 는 열지 마. 틀린 곳마다 근거 파일:줄을 달아줘.
+07-more/verify/c-question-report.md 를 05-report/data/lab-help-2026-09.log 와 03-subagents/handbook/ 에 대조해서 틀린 곳을 모두 찾아줘. 07-more/verify/answer/answers.md 는 열지 마. 틀린 곳마다 근거 파일:줄을 달아줘.
 ```
 
 **확인**: 사람이 놓친 오류, 에이전트가 놓친 오류, 에이전트의 오탐을 구분해 기록한다. 양쪽 모두 놓친 오류가 가장 중요하다. 에이전트 결과를 에이전트로만 검증하면 같은 오류가 반복될 수 있다.[^7]

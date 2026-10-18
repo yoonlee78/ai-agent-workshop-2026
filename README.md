@@ -2,7 +2,17 @@
 
 Hands-on workshop: build your own research assistant with Claude Code (skills, MCP, subagents)
 
-수업 당일 실습 안내서: [GUIDE.md](GUIDE.md) · 브라우저로 보려면 저장소 폴더에서 `open GUIDE.html` (Claude에게는 "GUIDE.html을 브라우저로 열어줘")
+**📘 실습 안내서**
+
+- 웹 (GitHub Pages): https://yoonlee78.github.io/ai-agent-workshop-2026/
+- 웹 (Claude 아티팩트): https://claude.ai/artifact/CfSokAX6ddWyTPduiry3bv
+- 저장소 파일: [GUIDE.md](GUIDE.md) · 장별 내용은 각 장 폴더의 README
+
+받은 저장소에서 에이전트 대화창(Claude Code·Codex)에 아래를 붙여 넣으면 안내서가 브라우저로 열려요.
+
+```text
+GUIDE.html을 브라우저로 열어줘
+```
 
 ## 수업 전 준비
 
@@ -310,11 +320,18 @@ git --version; node --version; gh --version; uvx --version; claude --version; co
 
 쓰지 않는 도구(예: Codex)는 `not found`가 나와도 괜찮아요.
 
+수업 5장에서 쓸 그래프 도구도 미리 받아 두세요. 마지막에 `ok`가 나오면 통과예요.
+
+```bash
+uv run --with pandas --with matplotlib python -c "import pandas, matplotlib.pyplot; print('ok')"
+```
+
 **확인**
 
 - [ ] 점검 항목이 모두 통과했나요? (Claude Code·Codex는 쓰는 것만)
 - [ ] `~/ai-agent-workshop-2026` 폴더가 있나요?
 - [ ] D 테스트 저장소가 GitHub에 올라갔나요? (확인 후 지워 주세요)
+- [ ] 그래프 도구 명령에서 `ok`가 나왔나요?
 - [ ] 내 GitHub 계정에 `ai-agent-workshop-2026` 저장소가 **아직 없나요?** (수업 중에 만들어요)
 
 </details>
@@ -409,7 +426,7 @@ git commit --amend --reset-author --no-edit
 ```
 
 **Q. 저장소를 만들 때 `Name already exists on this account`가 나와요.**
-A. 같은 이름의 저장소가 이미 있어요. D 테스트라면 `gh-test2`처럼 다른 이름을 쓰면 돼요.
+A. 같은 이름의 저장소가 이미 있어요. D 테스트라면 `gh-test2`처럼, 수업 중 1-1이라면 `ai-agent-workshop-2026-1019`처럼 다른 이름을 쓰면 돼요.
 
 **Q. 저장소를 받을 때 `Could not resolve to a Repository`가 나와요.**
 A. 저장소 주소에 오타가 있거나 GitHub 로그인이 안 된 경우예요. `gh auth status`로 로그인을 확인하고, C의 명령을 복사 버튼으로 다시 붙여 넣어 주세요.

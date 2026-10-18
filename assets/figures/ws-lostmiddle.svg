@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 236" role="img" aria-label="관련 정보 위치에 따른 정확도"><rect width="100%" height="100%" fill="#ffffff"/><style>text{font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;fill:#1f2328}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+.quiet{fill:#636c76}
+.b{fill:#ffffff;stroke:#d8dee4;stroke-width:1.25}
+.b.hl{fill:#ddf4ff;stroke:#0969da;stroke-width:2}
+.frame{fill:none;stroke:#d8dee4;stroke-width:1.25}
+.tint{fill:#ddf4ff;stroke:none}
+.node.on .b{fill:#ddf4ff;stroke:#0969da;stroke-width:2}
+.node.on .tt{fill:#0969da}
+.wire{fill:none;stroke:#b0b8c1;stroke-width:1.5}
+.wire.dash{stroke-dasharray:5 4}
+.gbg{fill:#ddf4ff}.gfill{fill:#0969da}
+.arrow{fill:#b0b8c1}</style><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0 0L10 5L0 10z"></path></marker></defs><path class="wire" d="M90 30 V180 H700"></path><text class="quiet" x="60" y="108" font-size="12" text-anchor="middle" font-weight="600">정확도</text><text class="quiet" x="110" y="200" font-size="12" text-anchor="middle">처음</text><text class="quiet" x="395" y="200" font-size="12" text-anchor="middle">중간</text><text class="quiet" x="680" y="200" font-size="12" text-anchor="middle">끝</text><text class="quiet" x="395" y="224" font-size="12" text-anchor="middle" font-weight="600">입력 내 관련 문서의 위치</text><path class="wire" d="M110 48 C 230 150 560 150 680 78" stroke-width="3"></path><circle class="b" cx="110" cy="48" r="5"></circle><circle class="b" cx="395" cy="125" r="5"></circle><circle class="b" cx="680" cy="78" r="5"></circle><path class="wire dash" d="M100 112 H690"></path><text class="quiet" x="694" y="116" font-size="11">closed-book</text><text class="quiet" x="130" y="44" font-size="12">primacy</text><text class="quiet" x="600" y="70" font-size="12">recency</text><text class="" x="395" y="150" font-size="12" text-anchor="middle" font-weight="600">중간 위치 정보의 활용 저하</text></svg>
