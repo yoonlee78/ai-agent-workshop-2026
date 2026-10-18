@@ -351,7 +351,7 @@ sup[id^="fnref"] + sup[id^="fnref"]::before { content:","; }
 /* 한 페이지에 개념 하나: 장 이름 표시 */
 .crumb { margin:0 0 6px; font-size:12.5px; } .crumb a { color:var(--muted); text-decoration:none; } .crumb a::before { content:"↑ "; } .crumb a:hover { color:var(--accent); }
 section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; font-size:1.35em; }
-</style></head><body><main class="content"><div class="wrap"><aside class="side"><div class="side-in"><div class="side-head"><b>목차</b><button type="button" class="toc-x" title="목차 접기">⟨ 접기</button></div><ul class="toc-ul"><li><a href="#_2">워크숍 소개</a></li><li><a href="#_3">실습 개요</a></li><li><a href="#_6">에이전트 소개</a></li><li><a href="#0">0. 사전 준비</a><ul class="toc-sub"><li><a href="#0-1"><b>0-1</b> 터미널 열기</a></li><li><a href="#0-2-ai"><b>0-2</b> AI 코딩 도구 설치</a></li><li><a href="#0-3"><b>0-3</b> 에이전트를 통한 나머지 설치</a></li></ul></li><li><a href="#1">1. 스킬 만들기: 미팅 노트</a><ul class="toc-sub"><li><a href="#1-1"><b>1-1</b> 내 저장소 연결하기</a></li><li><a href="#1-2-meeting-notes"><b>1-2</b> 미팅 노트 스킬 meeting-notes</a></li><li><a href="#1-3"><b>1-3</b> 스킬 호출과 수정</a></li></ul></li><li><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a><ul class="toc-sub"><li><a href="#2-1-arxiv-mcp"><b>2-1</b> arXiv MCP 연결하기</a></li><li><a href="#2-2"><b>2-2</b> 논문 검색</a></li><li><a href="#2-3"><b>2-3</b> 커넥터 활용</a></li></ul></li><li><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a><ul class="toc-sub"><li><a href="#3-1-meeting-scribe"><b>3-1</b> 미팅 노트 담당 meeting-scribe</a></li><li><a href="#3-2-onboarding-buddy"><b>3-2</b> 온보딩 버디 onboarding-buddy</a></li><li><a href="#3-3-study-maker"><b>3-3</b> 학습자료 담당 study-maker</a></li></ul></li><li><a href="#4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</a></li><li><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a><ul class="toc-sub"><li><a href="#5-1"><b>5-1</b> 로그 확인</a></li><li><a href="#5-2-question-report"><b>5-2</b> 리포트 스킬 question-report</a></li><li><a href="#5-3-report-format"><b>5-3</b> 양식 스킬 report-format</a></li><li><a href="#5-4-ethics-checker"><b>5-4</b> 연구윤리 점검 서브에이전트 ethics-checker</a></li></ul></li><li><a href="#6">6. 정리</a></li><li><a href="#7">7. 추가 실습</a></li><li><a href="#8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</a><ul class="toc-sub"><li><a href="#8-1"><b>8-1</b> 실습과 연구 개념의 연결</a></li><li><a href="#8-2-coala"><b>8-2</b> 논문 소개: CoALA</a></li><li><a href="#8-3-harness"><b>8-3</b> Harness: 권고, 확인, 차단</a></li><li><a href="#8-4-prompt-injection-least-privilege"><b>8-4</b> Prompt injection과 least privilege</a></li><li><a href="#8-5-benchmark-alignment-auditing"><b>8-5</b> 평가: benchmark와 alignment auditing</a></li><li><a href="#8-6-alignment"><b>8-6</b> Alignment: 지시와 의도의 불일치</a></li><li><a href="#8-7"><b>8-7</b> 자기 개선 에이전트와 통제 지점</a></li><li><a href="#8-8-llm"><b>8-8</b> 연구 대상으로서의 LLM</a></li><li><a href="#8-9"><b>8-9</b> 업무 분담: 스크립트</a></li></ul></li><li><a href="#9">9. 심화 예시: 위키 · 영상 · 로봇</a><ul class="toc-sub"><li><a href="#9-1-llm"><b>9-1</b> LLM 위키: 분산된 메모의 지식 구조화</a></li><li><a href="#9-2"><b>9-2</b> 멀티모달: 인터뷰 영상 전사</a></li><li><a href="#9-3"><b>9-3</b> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</a></li></ul></li><li><a href="#a">부록 A · 완성본과 주요 명령</a></li><li><a href="#b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</a></li></ul><div class="modesw"><b>모드</b><label><input type="radio" name="md" value="direct" checked> 직접</label><label><input type="radio" name="md" value="tutor"> 자동 진행</label><label><input type="radio" name="md" value="both"> 둘 다(비교)</label></div><label class="all"><input type="checkbox" id="showall"> 한 페이지로 모두 보기</label><div class="prog"><span id="progtxt"></span> <button id="progreset" type="button">진행 초기화</button></div><p class="upd" style="font-size:11px;color:var(--muted);margin:8px 0 0">마지막 업데이트 10월 18일 20:30</p></div></aside><button type="button" class="toc-open" title="목차 펴기">☰ 목차</button><div class="main"><div class="intro"><h1 id="_1">나만의 연구 조교 만들기: 실습 안내서</h1>
+</style></head><body><main class="content"><div class="wrap"><aside class="side"><div class="side-in"><div class="side-head"><b>목차</b><button type="button" class="toc-x" title="목차 접기">⟨ 접기</button></div><ul class="toc-ul"><li><a href="#_2">워크숍 소개</a></li><li><a href="#_3">실습 개요</a></li><li><a href="#_6">에이전트 소개</a></li><li><a href="#0">0. 사전 준비</a><ul class="toc-sub"><li><a href="#0-1"><b>0-1</b> 터미널 열기</a></li><li><a href="#0-2-ai"><b>0-2</b> AI 코딩 도구 설치</a></li><li><a href="#0-3"><b>0-3</b> 에이전트를 통한 나머지 설치</a></li></ul></li><li><a href="#1">1. 스킬 만들기: 미팅 노트</a><ul class="toc-sub"><li><a href="#1-1"><b>1-1</b> 내 저장소 연결하기</a></li><li><a href="#1-2-meeting-notes"><b>1-2</b> 미팅 노트 스킬 meeting-notes</a></li><li><a href="#1-3"><b>1-3</b> 스킬 호출과 수정</a></li></ul></li><li><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a><ul class="toc-sub"><li><a href="#2-1-arxiv-mcp"><b>2-1</b> arXiv MCP 연결하기</a></li><li><a href="#2-2"><b>2-2</b> 논문 검색</a></li><li><a href="#2-3"><b>2-3</b> 커넥터 활용</a></li></ul></li><li><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a><ul class="toc-sub"><li><a href="#3-1-meeting-scribe"><b>3-1</b> 미팅 노트 담당 meeting-scribe</a></li><li><a href="#3-2-onboarding-buddy"><b>3-2</b> 온보딩 버디 onboarding-buddy</a></li><li><a href="#3-3-study-maker"><b>3-3</b> 학습자료 담당 study-maker</a></li></ul></li><li><a href="#4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</a></li><li><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a><ul class="toc-sub"><li><a href="#5-1"><b>5-1</b> 로그 확인</a></li><li><a href="#5-2-question-report"><b>5-2</b> 리포트 스킬 question-report</a></li><li><a href="#5-3-report-format"><b>5-3</b> 양식 스킬 report-format</a></li><li><a href="#5-4-ethics-checker"><b>5-4</b> 연구윤리 점검 서브에이전트 ethics-checker</a></li></ul></li><li><a href="#6">6. 정리</a></li><li><a href="#7">7. 추가 실습</a></li><li><a href="#8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</a><ul class="toc-sub"><li><a href="#8-1"><b>8-1</b> 실습과 연구 개념의 연결</a></li><li><a href="#8-2-coala"><b>8-2</b> 논문 소개: CoALA</a></li><li><a href="#8-3-harness"><b>8-3</b> Harness: 권고, 확인, 차단</a></li><li><a href="#8-4-prompt-injection-least-privilege"><b>8-4</b> Prompt injection과 least privilege</a></li><li><a href="#8-5-benchmark-alignment-auditing"><b>8-5</b> 평가: benchmark와 alignment auditing</a></li><li><a href="#8-6-alignment"><b>8-6</b> Alignment: 지시와 의도의 불일치</a></li><li><a href="#8-7"><b>8-7</b> 자기 개선 에이전트와 통제 지점</a></li><li><a href="#8-8-llm"><b>8-8</b> 연구 대상으로서의 LLM</a></li><li><a href="#8-9"><b>8-9</b> 업무 분담: 스크립트</a></li></ul></li><li><a href="#9">9. 심화 예시: 위키 · 영상 · 로봇</a><ul class="toc-sub"><li><a href="#9-1-llm"><b>9-1</b> LLM 위키: 분산된 메모의 지식 구조화</a></li><li><a href="#9-2"><b>9-2</b> 멀티모달: 인터뷰 영상 전사</a></li><li><a href="#9-3"><b>9-3</b> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</a></li></ul></li><li><a href="#a">부록 A · 완성본과 주요 명령</a></li><li><a href="#b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</a></li></ul><div class="modesw"><b>모드</b><label><input type="radio" name="md" value="direct" checked> 직접</label><label><input type="radio" name="md" value="tutor"> 자동 진행</label><label><input type="radio" name="md" value="both"> 둘 다(비교)</label></div><label class="all"><input type="checkbox" id="showall"> 한 페이지로 모두 보기</label><div class="prog"><span id="progtxt"></span> <button id="progreset" type="button">진행 초기화</button></div><p class="upd" style="font-size:11px;color:var(--muted);margin:8px 0 0">마지막 업데이트 10월 18일 20:35</p></div></aside><button type="button" class="toc-open" title="목차 펴기">☰ 목차</button><div class="main"><div class="intro"><h1 id="_1">나만의 연구 조교 만들기: 실습 안내서</h1>
 <hr />
 </div><section class="chap" data-id="_2" data-ch="_2" data-title="워크숍 소개"><h2 id="_2">워크숍 소개</h2>
 <ul>
@@ -709,36 +709,7 @@ npm install -g @openai/codex
 </table></div>
 <hr />
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 8 / 46</p></section><section class="chap" data-id="1" data-ch="1" data-title="1. 스킬 만들기: 미팅 노트"><h2 id="1">1. 스킬 만들기: 미팅 노트</h2>
-<h3 id="_9">작업 창</h3>
-<p>모든 실습은 <strong><code>~/ai-agent-workshop-2026</code>에서 연 Claude Code 창 하나</strong>(작업 창)에서 한다.<sup id="fnref:layout"><a class="footnote-ref" href="#fn:layout">1</a></sup> 직접 모드는 1-1에서 연다.</p>
-<div class="mode m-tutor">
-<p>1-1 전에 터미널에서 작업 창을 연다.</p>
-<p><span class="run req">필수 실행</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
-<pre class="paste req"><code class="language-bash">cd ~/ai-agent-workshop-2026
-git pull
-claude
-</code></pre>
-<p>"이 폴더를 신뢰하나요?" → <strong>Yes</strong>. 작업 창에:</p>
-<p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
-<pre class="paste req"><code class="language-text">자동 진행 모드로 워크숍 1장부터 같이 하자.
-</code></pre>
-<p class="chk"><strong>✅ 확인</strong>: <code>workshop-tutor</code> 스킬이 쓰이고, 에이전트가 1-1에서 할 일을 두 줄로 설명한 뒤 실행해도 되는지 묻는다.<sup id="fnref:0b"><a class="footnote-ref" href="#fn:0b">2</a></sup></p>
-<details class="scr-t">
-<summary>🖼 Claude Code 예시 · 자동 진행 모드를 부르면</summary>
-<div class="win sc-claude">
-<div class="bar"><i></i><i></i><i></i><span>자동 진행 모드를 부르면</span></div>
-<div class="scr"><span class="u">&gt; 자동 진행 모드로 워크숍 1장부터 같이 하자.</span><br><span class="c">● Skill(workshop-tutor)</span><br><span class="c">● 1-1. 내 저장소 연결하기</span><br><span class="c">  ⎿ 목표: 받아 둔 실습 저장소를 내 GitHub 비공개 저장소에 연결합니다.</span><br><span class="c">  ⎿ 지금 할 일: 강사 저장소와의 연결을 끊고, 내 저장소를 만든 뒤 CLAUDE.md를 만듭니다.</span><br><span class="c">  ⎿ 실행할 명령:</span><br><span class="c">  ⎿   git remote remove origin</span><br><span class="c">  ⎿   gh repo create ai-agent-workshop-2026 --private --source . --remote origin</span><br><span class="c">  ⎿ 실행해도 될까요?</span><br><span class="u">&gt; 응</span><br><span class="c">● Bash(git remote remove origin)</span><br><span class="c">● Bash(gh repo create ai-agent-workshop-2026 --private --source . --remote origin)</span><br><span class="c">  ⎿ ✓ Created repository &lt;아이디&gt;/ai-agent-workshop-2026 on GitHub</span><br><span class="c">● Write(CLAUDE.md)</span><br><span class="c">  ⎿ Wrote 7 lines to CLAUDE.md</span><br><span class="c">● 확인: git remote -v 에 내 아이디의 저장소만 보이면 통과입니다. 다음으로 가려면 &quot;다음&quot;이라고 해 주세요.</span></div>
-</div>
-</details>
-<details class="scr-t">
-<summary>🖼 파일 예시 · 이때 생기는 파일: CLAUDE.md</summary>
-<div class="win sc-file">
-<div class="bar"><i></i><i></i><i></i><span>이때 생기는 파일: CLAUDE.md</span></div>
-<div class="scr"># ai-agent-workshop-2026<br>워크숍 실습 저장소. 장마다 폴더가 있고(01-skill ~ 05-report), 스킬과 서브에이전트는 루트 .claude/ 에 만든다.<br>- 연구실 핸드북은 03-subagents/handbook/ 에 있다. 독자는 이번 학기에 들어온 신입이다. 전문용어는 처음 나올 때 한 줄로 풀어 쓴다.<br>- 사실이 확인되지 않은 내용(계정 담당자, 장비 위치 등)은 &quot;TODO: 팀장 확인&quot;으로 남긴다.<br>- 미팅이 끝나면 meeting-notes 양식으로 03-subagents/meetings/YYYY-MM-DD.md 에 저장한다. 같은 날 두 번째 미팅은 YYYY-MM-DD-2.md.<br>- 새 멤버의 질문은 onboarding-buddy 서브에이전트에게 맡긴다.<br>- 루트의 README.md, GUIDE.md 는 워크숍 안내서다. 핸드북 질문의 근거로 쓰지 않는다.</div>
-</div>
-</details>
-</div>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 9 / 46</p></section><section class="chap" data-id="_10" data-ch="1" data-title="스킬이란"><p class="crumb"><a href="#1">1. 스킬 만들기: 미팅 노트</a></p><h3 id="_10">스킬이란</h3>
+<h3 id="_9">스킬이란</h3>
 <p><strong>스킬</strong>은 반복 업무용 매뉴얼 파일 하나다(<code>.claude/skills/&lt;이름&gt;/SKILL.md</code>). 위쪽 <code>---</code> 사이(프런트매터)에는 <strong>언제 쓰는지</strong>, 아래 본문에는 <strong>어떻게 하는지</strong>를 쓴다. 더 알아보기: <a class="doclink" href="https://code.claude.com/docs/ko/skills" target="_blank" rel="noopener">공식 문서: 스킬</a></p>
 <figure class="fig" id="fig-skill-anatomy" data-fig="skill-anatomy"><figcaption><b>그림 4. SKILL.md 해부도</b> · 프런트매터와 본문</figcaption></figure>
 
@@ -784,6 +755,35 @@ claude
 
 <details class="scr-t"><summary>🖼 Claude Code 예시 · 스킬 고치기</summary><div class="win sc-claude"><div class="bar"><i></i><i></i><i></i><span>스킬 고치기</span></div><div class="scr"><span class="u">&gt; meeting-notes 스킬 규칙에 &quot;4. 마감이 없는 할 일은 표 맨 아래로 보낸다&quot;를 추가해줘.</span><br><span class="c">● Update(.claude/skills/meeting-notes/SKILL.md)</span><br><span class="c">  ⎿ Updated with 1 addition</span><br>      22   3. 마지막 줄에 &quot;담당자 미정 할 일 N개&quot;처럼 빠진 정보를 요약한다.<br>      23 + 4. 마감이 없는 할 일은 표 맨 아래로 보낸다.<br><span class="c">● 규칙 4번을 추가했습니다. 다음 미팅 노트부터 적용됩니다.</span></div></div></details>
 
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 9 / 46</p></section><section class="chap" data-id="_10" data-ch="1" data-title="작업 창"><p class="crumb"><a href="#1">1. 스킬 만들기: 미팅 노트</a></p><h3 id="_10">작업 창</h3>
+<p>모든 실습은 <strong><code>~/ai-agent-workshop-2026</code>에서 연 Claude Code 창 하나</strong>(작업 창)에서 한다.<sup id="fnref:layout"><a class="footnote-ref" href="#fn:layout">1</a></sup> 직접 모드는 1-1에서 연다.</p>
+<div class="mode m-tutor">
+<p>1-1 전에 터미널에서 작업 창을 연다.</p>
+<p><span class="run req">필수 실행</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
+<pre class="paste req"><code class="language-bash">cd ~/ai-agent-workshop-2026
+git pull
+claude
+</code></pre>
+<p>"이 폴더를 신뢰하나요?" → <strong>Yes</strong>. 작업 창에:</p>
+<p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
+<pre class="paste req"><code class="language-text">자동 진행 모드로 워크숍 1장부터 같이 하자.
+</code></pre>
+<p class="chk"><strong>✅ 확인</strong>: <code>workshop-tutor</code> 스킬이 쓰이고, 에이전트가 1-1에서 할 일을 두 줄로 설명한 뒤 실행해도 되는지 묻는다.<sup id="fnref:0b"><a class="footnote-ref" href="#fn:0b">2</a></sup></p>
+<details class="scr-t">
+<summary>🖼 Claude Code 예시 · 자동 진행 모드를 부르면</summary>
+<div class="win sc-claude">
+<div class="bar"><i></i><i></i><i></i><span>자동 진행 모드를 부르면</span></div>
+<div class="scr"><span class="u">&gt; 자동 진행 모드로 워크숍 1장부터 같이 하자.</span><br><span class="c">● Skill(workshop-tutor)</span><br><span class="c">● 1-1. 내 저장소 연결하기</span><br><span class="c">  ⎿ 목표: 받아 둔 실습 저장소를 내 GitHub 비공개 저장소에 연결합니다.</span><br><span class="c">  ⎿ 지금 할 일: 강사 저장소와의 연결을 끊고, 내 저장소를 만든 뒤 CLAUDE.md를 만듭니다.</span><br><span class="c">  ⎿ 실행할 명령:</span><br><span class="c">  ⎿   git remote remove origin</span><br><span class="c">  ⎿   gh repo create ai-agent-workshop-2026 --private --source . --remote origin</span><br><span class="c">  ⎿ 실행해도 될까요?</span><br><span class="u">&gt; 응</span><br><span class="c">● Bash(git remote remove origin)</span><br><span class="c">● Bash(gh repo create ai-agent-workshop-2026 --private --source . --remote origin)</span><br><span class="c">  ⎿ ✓ Created repository &lt;아이디&gt;/ai-agent-workshop-2026 on GitHub</span><br><span class="c">● Write(CLAUDE.md)</span><br><span class="c">  ⎿ Wrote 7 lines to CLAUDE.md</span><br><span class="c">● 확인: git remote -v 에 내 아이디의 저장소만 보이면 통과입니다. 다음으로 가려면 &quot;다음&quot;이라고 해 주세요.</span></div>
+</div>
+</details>
+<details class="scr-t">
+<summary>🖼 파일 예시 · 이때 생기는 파일: CLAUDE.md</summary>
+<div class="win sc-file">
+<div class="bar"><i></i><i></i><i></i><span>이때 생기는 파일: CLAUDE.md</span></div>
+<div class="scr"># ai-agent-workshop-2026<br>워크숍 실습 저장소. 장마다 폴더가 있고(01-skill ~ 05-report), 스킬과 서브에이전트는 루트 .claude/ 에 만든다.<br>- 연구실 핸드북은 03-subagents/handbook/ 에 있다. 독자는 이번 학기에 들어온 신입이다. 전문용어는 처음 나올 때 한 줄로 풀어 쓴다.<br>- 사실이 확인되지 않은 내용(계정 담당자, 장비 위치 등)은 &quot;TODO: 팀장 확인&quot;으로 남긴다.<br>- 미팅이 끝나면 meeting-notes 양식으로 03-subagents/meetings/YYYY-MM-DD.md 에 저장한다. 같은 날 두 번째 미팅은 YYYY-MM-DD-2.md.<br>- 새 멤버의 질문은 onboarding-buddy 서브에이전트에게 맡긴다.<br>- 루트의 README.md, GUIDE.md 는 워크숍 안내서다. 핸드북 질문의 근거로 쓰지 않는다.</div>
+</div>
+</details>
+</div>
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 10 / 46</p></section><section class="chap" data-id="1-1" data-ch="1" data-title="1-1 내 저장소 연결하기"><p class="crumb"><a href="#1">1. 스킬 만들기: 미팅 노트</a></p><h3 id="1-1"><span class="stepid">1-1</span> 내 저장소 연결하기</h3>
 <p class="goal"><strong>🎯 목표</strong>: 실습 저장소와 개인 GitHub 비공개 저장소의 연결</p>
 <div class="mode m-direct">

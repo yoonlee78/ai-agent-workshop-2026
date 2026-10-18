@@ -277,6 +277,52 @@ Codex 사용 시 상자 내용은 그대로 쓰고 아래 항목만 바꿔 읽�
 
 ## 1. 스킬 만들기: 미팅 노트
 
+### 스킬이란
+
+**스킬**은 반복 업무용 매뉴얼 파일 하나다(`.claude/skills/<이름>/SKILL.md`). 위쪽 `---` 사이(프런트매터)에는 **언제 쓰는지**, 아래 본문에는 **어떻게 하는지**를 쓴다. 더 알아보기: [공식 문서: 스킬](https://code.claude.com/docs/ko/skills)
+
+<!-- figure:skill-anatomy | SKILL.md 해부도 · 프런트매터와 본문 -->
+
+**별도 등록 불필요**: 등록 절차는 따로 없다. 폴더에 파일이 있으면 Claude Code가 열릴 때마다 자동으로 읽는다. 저장소의 `.claude/skills/`에 두면 그 저장소에서, 내 홈의 `~/.claude/skills/`에 두면 모든 프로젝트에서 쓴다. 스킬을 대신 만들어 주는 도우미(skill-creator)도 있지만 결과는 같은 파일이다.
+
+**자동 호출 조건**: Claude는 평소에 스킬마다 이름과 description 한 줄만 들고 있다가, 내 말과 맞는 description이 있으면 그 스킬의 본문을 읽어 쓴다. 예를 들어 "미팅 노트 정리해줘"라고 하면 description에 "'미팅 노트 정리해줘'라고 할 때 사용"이라고 적힌 `meeting-notes`가 불린다. 그래서 description에는 **무엇을 하는지와 언제 쓰는지**를 함께 쓴다.
+
+<!-- figure:skill | 스킬 로딩 3단계 -->
+
+**호출과 수정**
+
+| 작업 | Claude Code | Codex |
+| --- | --- | --- |
+| 스킬 목록 보기 | `/skills` | `/skills` |
+| 직접 부르기 | `/meeting-notes 메모…` | `$meeting-notes 메모…` |
+| 자동 호출 끄기 | 프런트매터에 `disable-model-invocation: true` | `agents/openai.yaml`에 `allow_implicit_invocation: false` |
+| 고치기 | "meeting-notes 스킬 규칙을 …로 바꿔줘" | 같다 |
+
+<!-- screen:claude | 스킬 목록
+> /skills
+  Skills
+  ⎿ meeting-notes · project · 미팅 메모를 팀 표준 미팅 노트로 정리한다…
+  ⎿ workshop-tutor · project · 워크숍 실습 자동 진행…
+-->
+
+<!-- screen:claude | 직접 부르기
+> /meeting-notes 금요일 미팅. 하늘 발표 연습, 다음주 화요일 리허설. 장소 미정
+● Skill(meeting-notes)
+  ⎿ 일시: 금요일(날짜 확인 필요) / 참석자: 확인 필요
+  ⎿ 결정 사항: 1. 하늘 발표 리허설은 다음 주 화요일
+  ⎿ 다음 미팅 안건: 리허설 장소
+  ⎿ 담당자 미정 할 일 0개
+-->
+
+<!-- screen:claude | 스킬 고치기
+> meeting-notes 스킬 규칙에 "4. 마감이 없는 할 일은 표 맨 아래로 보낸다"를 추가해줘.
+● Update(.claude/skills/meeting-notes/SKILL.md)
+  ⎿ Updated with 1 addition
+      22   3. 마지막 줄에 "담당자 미정 할 일 N개"처럼 빠진 정보를 요약한다.
+      23 + 4. 마감이 없는 할 일은 표 맨 아래로 보낸다.
+● 규칙 4번을 추가했습니다. 다음 미팅 노트부터 적용됩니다.
+-->
+
 ### 작업 창
 
 모든 실습은 **`~/ai-agent-workshop-2026`에서 연 Claude Code 창 하나**(작업 창)에서 한다.[^layout] 직접 모드는 1-1에서 연다.
@@ -336,53 +382,6 @@ claude
 
 [^layout]: 파일은 두 곳에 나눠 둔다. 스킬과 서브에이전트는 저장소 맨 위 `.claude/` 한 곳에 모아, 작업 창 하나에서 장과 상관없이 꺼내 쓴다(예: 3장의 `meeting-scribe`가 1장에서 만든 `meeting-notes` 스킬을 쓴다). 미팅 메모, 핸드북, 미팅 노트, 리포트 같은 자료와 결과물은 `03-subagents/`, `05-report/` 같은 장 폴더에 둔다.
 [^0b]: 자동 진행이 시작되지 않으면 `/workshop-tutor 1장부터`로 직접 부른다. 이후로는 "다음", "3-2 하자"처럼 말하면 된다. 에이전트가 파일을 만들고 명령을 실행해 주지만, 만든 스킬·에이전트를 시험하는 질문은 직접 입력한다.
-
-### 스킬이란
-
-**스킬**은 반복 업무용 매뉴얼 파일 하나다(`.claude/skills/<이름>/SKILL.md`). 위쪽 `---` 사이(프런트매터)에는 **언제 쓰는지**, 아래 본문에는 **어떻게 하는지**를 쓴다. 더 알아보기: [공식 문서: 스킬](https://code.claude.com/docs/ko/skills)
-
-<!-- figure:skill-anatomy | SKILL.md 해부도 · 프런트매터와 본문 -->
-
-**별도 등록 불필요**: 등록 절차는 따로 없다. 폴더에 파일이 있으면 Claude Code가 열릴 때마다 자동으로 읽는다. 저장소의 `.claude/skills/`에 두면 그 저장소에서, 내 홈의 `~/.claude/skills/`에 두면 모든 프로젝트에서 쓴다. 스킬을 대신 만들어 주는 도우미(skill-creator)도 있지만 결과는 같은 파일이다.
-
-**자동 호출 조건**: Claude는 평소에 스킬마다 이름과 description 한 줄만 들고 있다가, 내 말과 맞는 description이 있으면 그 스킬의 본문을 읽어 쓴다. 예를 들어 "미팅 노트 정리해줘"라고 하면 description에 "'미팅 노트 정리해줘'라고 할 때 사용"이라고 적힌 `meeting-notes`가 불린다. 그래서 description에는 **무엇을 하는지와 언제 쓰는지**를 함께 쓴다.
-
-<!-- figure:skill | 스킬 로딩 3단계 -->
-
-**호출과 수정**
-
-| 작업 | Claude Code | Codex |
-| --- | --- | --- |
-| 스킬 목록 보기 | `/skills` | `/skills` |
-| 직접 부르기 | `/meeting-notes 메모…` | `$meeting-notes 메모…` |
-| 자동 호출 끄기 | 프런트매터에 `disable-model-invocation: true` | `agents/openai.yaml`에 `allow_implicit_invocation: false` |
-| 고치기 | "meeting-notes 스킬 규칙을 …로 바꿔줘" | 같다 |
-
-<!-- screen:claude | 스킬 목록
-> /skills
-  Skills
-  ⎿ meeting-notes · project · 미팅 메모를 팀 표준 미팅 노트로 정리한다…
-  ⎿ workshop-tutor · project · 워크숍 실습 자동 진행…
--->
-
-<!-- screen:claude | 직접 부르기
-> /meeting-notes 금요일 미팅. 하늘 발표 연습, 다음주 화요일 리허설. 장소 미정
-● Skill(meeting-notes)
-  ⎿ 일시: 금요일(날짜 확인 필요) / 참석자: 확인 필요
-  ⎿ 결정 사항: 1. 하늘 발표 리허설은 다음 주 화요일
-  ⎿ 다음 미팅 안건: 리허설 장소
-  ⎿ 담당자 미정 할 일 0개
--->
-
-<!-- screen:claude | 스킬 고치기
-> meeting-notes 스킬 규칙에 "4. 마감이 없는 할 일은 표 맨 아래로 보낸다"를 추가해줘.
-● Update(.claude/skills/meeting-notes/SKILL.md)
-  ⎿ Updated with 1 addition
-      22   3. 마지막 줄에 "담당자 미정 할 일 N개"처럼 빠진 정보를 요약한다.
-      23 + 4. 마감이 없는 할 일은 표 맨 아래로 보낸다.
-● 규칙 4번을 추가했습니다. 다음 미팅 노트부터 적용됩니다.
--->
-
 
 ### 1-1. 내 저장소 연결하기
 
