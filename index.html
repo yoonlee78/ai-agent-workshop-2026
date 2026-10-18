@@ -351,7 +351,7 @@ sup[id^="fnref"] + sup[id^="fnref"]::before { content:","; }
 /* 한 페이지에 개념 하나: 장 이름 표시 */
 .crumb { margin:0 0 6px; font-size:12.5px; } .crumb a { color:var(--muted); text-decoration:none; } .crumb a::before { content:"↑ "; } .crumb a:hover { color:var(--accent); }
 section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; font-size:1.35em; }
-</style></head><body><main class="content"><div class="wrap"><aside class="side"><div class="side-in"><div class="side-head"><b>목차</b><button type="button" class="toc-x" title="목차 접기">⟨ 접기</button></div><ul class="toc-ul"><li><a href="#_2">실습 개요</a></li><li><a href="#0-1530">0. 사전 준비 · 수업 전 15~30분</a><ul class="toc-sub"><li><a href="#0-1"><b>0-1</b> 터미널 열기</a></li><li><a href="#0-2-ai"><b>0-2</b> AI 코딩 도구 설치</a></li><li><a href="#0-3"><b>0-3</b> 에이전트를 통한 나머지 설치</a></li></ul></li><li><a href="#_5">워크숍과 강사 소개</a></li><li><a href="#4">오프닝 · 4분</a></li><li><a href="#1-8">1. 스킬 만들기: 회의록 · 8분</a><ul class="toc-sub"><li><a href="#1-1-2"><b>1-1</b> 내 저장소 연결하기</a></li><li><a href="#1-2-meeting-notes-6"><b>1-2</b> 회의록 스킬 meeting-notes</a></li><li><a href="#1-3"><b>1-3</b> 스킬 호출과 수정</a></li></ul></li><li><a href="#2-mcp-arxiv-6">2. MCP 연결: arXiv 논문 검색 · 6분</a><ul class="toc-sub"><li><a href="#2-1-arxiv-mcp-3"><b>2-1</b> arXiv MCP 연결하기</a></li><li><a href="#2-2-3"><b>2-2</b> 논문 검색</a></li><li><a href="#2-3"><b>2-3</b> 커넥터 활용</a></li></ul></li><li><a href="#3-3-20">3. 서브에이전트 3개: 신입 온보딩 · 20분</a><ul class="toc-sub"><li><a href="#3-1-meeting-scribe-6"><b>3-1</b> 회의록 담당 meeting-scribe</a></li><li><a href="#3-2-onboarding-buddy-7"><b>3-2</b> 온보딩 버디 onboarding-buddy</a></li><li><a href="#3-3-study-maker-7"><b>3-3</b> 학습자료 담당 study-maker</a></li></ul></li><li><a href="#4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</a></li><li><a href="#5-10">5. 질문 로그 리포트 + 연구윤리 점검 · 10분</a><ul class="toc-sub"><li><a href="#5-1-1"><b>5-1</b> 로그 확인</a></li><li><a href="#5-2-question-report-5"><b>5-2</b> 리포트 스킬 question-report</a></li><li><a href="#5-3-report-format"><b>5-3</b> 양식 스킬 report-format</a></li><li><a href="#5-4-ethics-checker-4"><b>5-4</b> 연구윤리 점검 서브에이전트 ethics-checker</a></li></ul></li><li><a href="#6-4">6. 정리 · 4분</a></li><li><a href="#7">7. 수업 뒤에 해 보기</a></li><li><a href="#8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</a><ul class="toc-sub"><li><a href="#8-1"><b>8-1</b> 실습과 연구 개념의 연결</a></li><li><a href="#8-2-coala"><b>8-2</b> 논문 소개: CoALA</a></li><li><a href="#8-3"><b>8-3</b> 하네스: 권고, 확인, 차단</a></li><li><a href="#8-4"><b>8-4</b> 프롬프트 인젝션과 최소 권한</a></li><li><a href="#8-5"><b>8-5</b> 평가: 벤치마크와 행동 감사</a></li><li><a href="#8-6"><b>8-6</b> 정렬: 지시와 의도의 불일치</a></li><li><a href="#8-7"><b>8-7</b> 자기 개선 에이전트와 통제 지점</a></li><li><a href="#8-8-llm"><b>8-8</b> 연구 대상으로서의 LLM</a></li><li><a href="#8-9"><b>8-9</b> 업무 분담: 스크립트</a></li></ul></li><li><a href="#9">9. 심화 예시: 위키 · 영상 · 로봇</a><ul class="toc-sub"><li><a href="#9-1-llm"><b>9-1</b> LLM 위키: 분산된 메모의 지식 구조화</a></li><li><a href="#9-2"><b>9-2</b> 멀티모달: 인터뷰 영상 전사</a></li><li><a href="#9-3"><b>9-3</b> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</a></li></ul></li><li><a href="#a">부록 A · 완성본과 주요 명령</a></li><li><a href="#b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</a></li></ul><div class="modesw"><b>모드</b><label><input type="radio" name="md" value="direct" checked> 직접</label><label><input type="radio" name="md" value="tutor"> 자동 진행</label><label><input type="radio" name="md" value="both"> 둘 다(비교)</label></div><label class="all"><input type="checkbox" id="showall"> 한 페이지로 모두 보기</label><div class="prog"><span id="progtxt"></span> <button id="progreset" type="button">진행 초기화</button></div><p class="upd" style="font-size:11px;color:var(--muted);margin:8px 0 0">마지막 업데이트 10월 18일 19:20</p></div></aside><button type="button" class="toc-open" title="목차 펴기">☰ 목차</button><div class="main"><div class="intro"><h1 id="_1">나만의 연구 조교 만들기: 실습 안내서</h1>
+</style></head><body><main class="content"><div class="wrap"><aside class="side"><div class="side-in"><div class="side-head"><b>목차</b><button type="button" class="toc-x" title="목차 접기">⟨ 접기</button></div><ul class="toc-ul"><li><a href="#_2">실습 개요</a></li><li><a href="#0">0. 사전 준비</a><ul class="toc-sub"><li><a href="#0-1"><b>0-1</b> 터미널 열기</a></li><li><a href="#0-2-ai"><b>0-2</b> AI 코딩 도구 설치</a></li><li><a href="#0-3"><b>0-3</b> 에이전트를 통한 나머지 설치</a></li></ul></li><li><a href="#_5">워크숍 소개</a></li><li><a href="#_6">에이전트 소개</a></li><li><a href="#1">1. 스킬 만들기: 회의록</a><ul class="toc-sub"><li><a href="#1-1"><b>1-1</b> 내 저장소 연결하기</a></li><li><a href="#1-2-meeting-notes"><b>1-2</b> 회의록 스킬 meeting-notes</a></li><li><a href="#1-3"><b>1-3</b> 스킬 호출과 수정</a></li></ul></li><li><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a><ul class="toc-sub"><li><a href="#2-1-arxiv-mcp"><b>2-1</b> arXiv MCP 연결하기</a></li><li><a href="#2-2"><b>2-2</b> 논문 검색</a></li><li><a href="#2-3"><b>2-3</b> 커넥터 활용</a></li></ul></li><li><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a><ul class="toc-sub"><li><a href="#3-1-meeting-scribe"><b>3-1</b> 회의록 담당 meeting-scribe</a></li><li><a href="#3-2-onboarding-buddy"><b>3-2</b> 온보딩 버디 onboarding-buddy</a></li><li><a href="#3-3-study-maker"><b>3-3</b> 학습자료 담당 study-maker</a></li></ul></li><li><a href="#4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</a></li><li><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a><ul class="toc-sub"><li><a href="#5-1"><b>5-1</b> 로그 확인</a></li><li><a href="#5-2-question-report"><b>5-2</b> 리포트 스킬 question-report</a></li><li><a href="#5-3-report-format"><b>5-3</b> 양식 스킬 report-format</a></li><li><a href="#5-4-ethics-checker"><b>5-4</b> 연구윤리 점검 서브에이전트 ethics-checker</a></li></ul></li><li><a href="#6">6. 정리</a></li><li><a href="#7">7. 수업 뒤에 해 보기</a></li><li><a href="#8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</a><ul class="toc-sub"><li><a href="#8-1"><b>8-1</b> 실습과 연구 개념의 연결</a></li><li><a href="#8-2-coala"><b>8-2</b> 논문 소개: CoALA</a></li><li><a href="#8-3"><b>8-3</b> 하네스: 권고, 확인, 차단</a></li><li><a href="#8-4"><b>8-4</b> 프롬프트 인젝션과 최소 권한</a></li><li><a href="#8-5"><b>8-5</b> 평가: 벤치마크와 행동 감사</a></li><li><a href="#8-6"><b>8-6</b> 정렬: 지시와 의도의 불일치</a></li><li><a href="#8-7"><b>8-7</b> 자기 개선 에이전트와 통제 지점</a></li><li><a href="#8-8-llm"><b>8-8</b> 연구 대상으로서의 LLM</a></li><li><a href="#8-9"><b>8-9</b> 업무 분담: 스크립트</a></li></ul></li><li><a href="#9">9. 심화 예시: 위키 · 영상 · 로봇</a><ul class="toc-sub"><li><a href="#9-1-llm"><b>9-1</b> LLM 위키: 분산된 메모의 지식 구조화</a></li><li><a href="#9-2"><b>9-2</b> 멀티모달: 인터뷰 영상 전사</a></li><li><a href="#9-3"><b>9-3</b> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</a></li></ul></li><li><a href="#a">부록 A · 완성본과 주요 명령</a></li><li><a href="#b-claude-codex-openrouter">부록 B · Claude 구독 없이 하기: Codex · OpenRouter</a></li></ul><div class="modesw"><b>모드</b><label><input type="radio" name="md" value="direct" checked> 직접</label><label><input type="radio" name="md" value="tutor"> 자동 진행</label><label><input type="radio" name="md" value="both"> 둘 다(비교)</label></div><label class="all"><input type="checkbox" id="showall"> 한 페이지로 모두 보기</label><div class="prog"><span id="progtxt"></span> <button id="progreset" type="button">진행 초기화</button></div><p class="upd" style="font-size:11px;color:var(--muted);margin:8px 0 0">마지막 업데이트 10월 18일 19:37</p></div></aside><button type="button" class="toc-open" title="목차 펴기">☰ 목차</button><div class="main"><div class="intro"><h1 id="_1">나만의 연구 조교 만들기: 실습 안내서</h1>
 <hr />
 </div><section class="chap" data-id="_2" data-ch="_2" data-title="실습 개요"><h2 id="_2">실습 개요</h2>
 <div class="table-wrap"><table>
@@ -439,8 +439,8 @@ section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; fo
 <li>Codex·OpenRouter로 하면 <a href="#b-claude-codex-openrouter">부록 B</a>를 함께 참고한다.</li>
 </ul>
 <hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 1 / 45</p></section><section class="chap" data-id="0-1530" data-ch="0-1530" data-title="0. 사전 준비 · 수업 전 15~30분"><h2 id="0-1530">0. 사전 준비 · 수업 전 15~30분</h2>
-<p class="goal"><strong>🎯 목표</strong>: 설치와 로그인을 끝내고, 실습 저장소를 <code>~/ai-agent-workshop-2026</code>에 받아 둔다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 1 / 45</p></section><section class="chap" data-id="0" data-ch="0" data-title="0. 사전 준비"><h2 id="0">0. 사전 준비</h2>
+<p class="goal"><strong>🎯 목표</strong>: 실습 환경 설치와 실습 저장소 준비</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -470,7 +470,7 @@ section.chap > h3:first-of-type, section.chap > .crumb + h3 { margin-top:4px; fo
 <li class="osli" data-os="win"><span class="osb win" data-os="win">🪟 Windows</span> 시작 → <strong>powershell</strong> → <strong>Windows PowerShell</strong>. 앞에 <code>PS</code>가 보여야 한다.</li>
 </ul>
 <p>설치한 뒤에는 터미널을 완전히 닫고 새로 연다. 실행 중인 명령은 <code>Ctrl</code> + <code>C</code>로 멈춘다.</p>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 2 / 45</p></section><section class="chap" data-id="0-2-ai" data-ch="0-1530" data-title="0-2 AI 코딩 도구 설치·로그인"><p class="crumb"><a href="#0-1530">0. 사전 준비</a></p><h3 id="0-2-ai"><span class="stepid">0-2</span> AI 코딩 도구 설치·로그인</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 2 / 45</p></section><section class="chap" data-id="0-2-ai" data-ch="0" data-title="0-2 AI 코딩 도구 설치·로그인"><p class="crumb"><a href="#0">0. 사전 준비</a></p><h3 id="0-2-ai"><span class="stepid">0-2</span> AI 코딩 도구 설치·로그인</h3>
 <p>쓸 것 하나 이상만 설치한다.</p>
 <p><strong>Claude Code</strong> · 🍎 macOS</p>
 <p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
@@ -504,7 +504,7 @@ npm install -g @openai/codex
 <li>서울대 계정으로 로그인한다.</li>
 </ol>
 <p class="chk"><strong>✅ 확인</strong>: <code>안녕</code>을 쳐서 답이 오면 성공. 나가기는 Claude Code <code>/exit</code>, Codex <code>/quit</code>.</p>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 3 / 45</p></section><section class="chap" data-id="0-3" data-ch="0-1530" data-title="0-3 에이전트를 통한 나머지 설치"><p class="crumb"><a href="#0-1530">0. 사전 준비</a></p><h3 id="0-3"><span class="stepid">0-3</span> 에이전트를 통한 나머지 설치</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 3 / 45</p></section><section class="chap" data-id="0-3" data-ch="0" data-title="0-3 에이전트를 통한 나머지 설치"><p class="crumb"><a href="#0">0. 사전 준비</a></p><h3 id="0-3"><span class="stepid">0-3</span> 에이전트를 통한 나머지 설치</h3>
 <p>Claude Code나 Codex 창에 전체를 붙여 넣는다. GitHub 로그인, 이름·이메일, 설치 허락은 물어볼 때 답한다.</p>
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste req"><code class="language-text">워크숍 수업 전 준비를 도와줘. 나는 터미널이 처음인 초보자야.
@@ -525,7 +525,7 @@ npm install -g @openai/codex
 5) push 테스트: 홈 폴더에 gh-test 폴더를 만들고 README.md 하나를 커밋한 뒤
    gh repo create gh-test --private --source . --push 로 올려. 같은 이름이 있으면 gh-test2 처럼 바꿔.
    성공하면 저장소 주소를 보여 주고, GitHub에서 지우는 방법(Settings → Delete this repository)을 알려 준 뒤 내 컴퓨터의 gh-test 폴더는 지워.
-6) 그래프 도구 미리 받기: 수업 5장에서 그래프를 그릴 때 기다리지 않도록 아래를 한 번 실행해. 처음엔 1분쯤 걸리고 마지막에 ok가 나오면 돼.
+6) 그래프 도구 미리 받기: 수업 5장에서 그래프를 그릴 때 기다리지 않도록 아래를 한 번 실행해. 마지막에 ok가 나오면 돼.
    uv run --with pandas --with matplotlib python -c &quot;import pandas, matplotlib.pyplot; print('ok')&quot;
 7) 마지막 점검: git --version, node --version, gh --version, uvx --version, claude --version, codex --version,
    gh auth status, git config user.name, git config user.email 을 실행하고 항목별 통과/실패 표로 보여줘.
@@ -542,7 +542,7 @@ npm install -g @openai/codex
 <p><span class="run opt">선택</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
 <pre class="paste opt"><code class="language-bash">gh repo clone yoonlee78/ai-agent-workshop-2026-dev ~/ai-agent-workshop-2026
 </code></pre>
-<p>받아 둔 <code>~/ai-agent-workshop-2026</code>는 이렇게 생겼다. 실습을 마친 모습은 다음 페이지(오프닝)에 있다.</p>
+<p>받아 둔 <code>~/ai-agent-workshop-2026</code>는 이렇게 생겼다. 실습을 마친 모습은 다음 페이지(에이전트 소개)에 있다.</p>
 <details class="scr-t"><summary>🖼 폴더 예시 · 수업 전: 받아 둔 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>수업 전: 받아 둔 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서<br>├── assets/                            ← 안내서 그림<br>├── .claude/<br>│   └── skills/workshop-tutor/         ← 자동 진행 모드<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내 (README만)<br>├── 03-subagents/<br>│   ├── materials/                     ← 회의 메모 2개<br>│   └── handbook/                      ← 연구실 핸드북 01~04장<br>├── 05-report/<br>│   └── data/lab-help-2026-09.log      ← 연구실 질문방 로그 한 달치 (가상 자료)<br>└── 07-more/                           ← 7. 수업 뒤에 해 보기 자료</span></div></div></details>
 
 <p><strong>문제 해결</strong></p>
@@ -552,7 +552,7 @@ npm install -g @openai/codex
 <li>Orca(선택): 여러 AI 코딩 도구를 한 화면에서 쓰는 앱. 강의 화면에서 보게 된다. 설치는 <a href="https://github.com/yoonlee78/ai-agent-workshop-2026#2-4-orca-선택">README 2-4</a></li>
 </ul>
 <hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 4 / 45</p></section><section class="chap" data-id="_5" data-ch="_5" data-title="워크숍과 강사 소개"><h2 id="_5">워크숍과 강사 소개</h2>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 4 / 45</p></section><section class="chap" data-id="_5" data-ch="_5" data-title="워크숍 소개"><h2 id="_5">워크숍 소개</h2>
 <p><strong>워크숍·강의 이력</strong></p>
 <div class="table-wrap"><table>
 <thead>
@@ -605,51 +605,15 @@ npm install -g @openai/codex
 </tr>
 </tbody>
 </table></div>
+<p><strong>강사</strong>: 이윤경(Yoon Kyung Lee), Ph.D. · <a href="https://yoonkyunglee.com">yoonkyunglee.com</a></p>
 <hr />
-<p><strong>강사</strong></p>
-<p><strong>이윤경</strong>(Yoon Kyung Lee), Ph.D. · <a href="https://yoonkyunglee.com">yoonkyunglee.com</a></p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>항목</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>현재</td>
-<td>Vanderbilt University, Connected Computing 박사후연구원 (2026 부임 예정)<br>서울대학교 조형연구소 선임연구원 (2025-2026)<br>가천대학교 객원교수 (2025-2026)</td>
-</tr>
-<tr>
-<td>이전</td>
-<td>서울대학교 심리과학연구소 선임연구원 (2024-2025)<br>The University of Texas at Austin 심리학과 Research Professional (2023-2024)</td>
-</tr>
-<tr>
-<td>학력</td>
-<td>서울대학교 인지심리학 박사 (계량심리학 부전공), 석사<br>University of Iowa 심리학 학사</td>
-</tr>
-<tr>
-<td>연구 분야</td>
-<td>공감 AI, 정서 과학, 인간-AI 상호작용, 인지 모델링</td>
-</tr>
-<tr>
-<td>수상</td>
-<td>IEEE RO-MAN 2026 Best Paper Award 최종 후보<br>IEEE RO-MAN 2026 RSJ Pioneering Research Award in Robot and Human Interactive Communication 최종 후보<br>서울대학교 사회과학대학 박사학위 우수논문상 (2024)</td>
-</tr>
-<tr>
-<td>학술 활동</td>
-<td>IEEE RO-MAN 2026 소셜 HRI 특별 세션 Associate Editor<br>CoRL/Humanoids 2025 튜토리얼, IEEE RO-MAN 2024 LLM 워크숍 공동 조직·발표</td>
-</tr>
-</tbody>
-</table></div>
-<hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 5 / 45</p></section><section class="chap" data-id="4" data-ch="4" data-title="오프닝 · 4분"><h2 id="4">오프닝 · 4분</h2>
-<p class="goal"><strong>🎯 목표</strong>: 오늘 만들 조교 팀의 전체 구조 확인.</p>
-<h3 id="_6">에이전트란</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 5 / 45</p></section><section class="chap" data-id="_6" data-ch="_6" data-title="에이전트 소개"><h2 id="_6">에이전트 소개</h2>
+<p class="goal"><strong>🎯 목표</strong>: 연구 조교 팀의 전체 구조와 에이전트 루프 이해</p>
+<h3 id="_7">에이전트란</h3>
 <p><strong>에이전트 = 모델 + 도구 + 지시</strong>. 목표를 주면 스스로 생각하고, 도구를 쓰고, 결과를 보고, 다시 생각하기를 반복한다. 연구에서 쓰는 개념(컨텍스트 윈도우, 기억, 하네스, 평가와 정렬)은 <a href="#8-llm">8장</a>에 모았다.</p>
 <figure class="fig" id="fig-loop" data-fig="loop"><figcaption><b>그림 1. 에이전트 루프</b> · 애니메이션, ▶ 재생 또는 다음으로 한 단계씩</figcaption></figure>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 6 / 45</p></section><section class="chap" data-id="_7" data-ch="4" data-title="조교 팀 구성"><p class="crumb"><a href="#4">오프닝</a></p><h3 id="_7">조교 팀 구성</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 6 / 45</p></section><section class="chap" data-id="_8" data-ch="_6" data-title="조교 팀 구성"><p class="crumb"><a href="#_6">에이전트 소개</a></p><h3 id="_8">조교 팀 구성</h3>
 <figure class="fig" id="fig-concepts-rel" data-fig="concepts-rel"><figcaption><b>그림 2. 핵심 개념의 관계</b> · 스킬, MCP, 서브에이전트</figcaption></figure>
 
 <div class="table-wrap"><table>
@@ -683,7 +647,7 @@ npm install -g @openai/codex
 <p>실습을 마치면 내 저장소 <code>ai-agent-workshop-2026</code>은 이렇게 된다. "미리 들어 있음"이 붙은 것은 받아 둔 자료이고, 나머지는 실습에서 만든다.</p>
 <details class="scr-t"><summary>🖼 폴더 예시 · 실습을 마친 뒤 내 저장소</summary><div class="win sc-tree"><div class="bar"><i></i><i></i><i></i><span>실습을 마친 뒤 내 저장소</span></div><div class="scr"><span class="box">ai-agent-workshop-2026/<br>├── README.md · GUIDE.md               ← 수업 전 준비 · 이 안내서 (미리 들어 있음)<br>├── CLAUDE.md                          ← 저장소 규칙 (매번 자동으로 읽힘)<br>├── .mcp.json                          ← 2. arXiv 논문 검색 MCP<br>├── .claude/<br>│   ├── skills/workshop-tutor/         ← 자동 진행 모드 (미리 들어 있음)<br>│   ├── skills/meeting-notes/SKILL.md  ← 1. 회의록 스킬<br>│   ├── skills/question-report/        ← 5. 질문 로그 리포트 스킬<br>│   ├── skills/report-format/          ← 5. 리포트 양식 스킬<br>│   └── agents/<br>│       ├── meeting-scribe.md          ← 3-1. 회의록 담당<br>│       ├── onboarding-buddy.md        ← 3-2. 온보딩 버디<br>│       ├── study-maker.md             ← 3-3. 학습자료 담당<br>│       └── ethics-checker.md          ← 5. 연구윤리 점검 담당<br>├── 01-skill/ · 02-mcp/ · 04-slack/    ← 장별 안내<br>├── 03-subagents/<br>│   ├── materials/                     ← 회의 메모 2개 (미리 들어 있음)<br>│   ├── handbook/                      ← 연구실 핸드북 01~04장 (미리 들어 있음) + 목차<br>│   ├── meetings/                      ← 회의록이 쌓이는 곳<br>│   └── study/                         ← 학습자료<br>├── 05-report/<br>│   ├── data/lab-help-2026-09.log      ← 질문방 로그 (가상 자료, 미리 들어 있음)<br>│   ├── data/questions.csv             ← 정리한 질문<br>│   ├── scripts/                       ← 그래프 스크립트<br>│   ├── report/                        ← 리포트 초안·최종본·그래프<br>│   └── reviews/                       ← 점검 피드백<br>├── 07-more/                           ← 7. 수업 뒤에 해 보기 자료 (미리 들어 있음)<br>└── 09-advanced/                       ← 9. 심화 예시: 위키 · 영상 · 로봇 (미리 들어 있음)</span></div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 7 / 45</p></section><section class="chap" data-id="_8" data-ch="4" data-title="작업 창"><p class="crumb"><a href="#4">오프닝</a></p><h3 id="_8">작업 창</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 7 / 45</p></section><section class="chap" data-id="_9" data-ch="_6" data-title="작업 창"><p class="crumb"><a href="#_6">에이전트 소개</a></p><h3 id="_9">작업 창</h3>
 <p>모든 실습은 <strong><code>~/ai-agent-workshop-2026</code>에서 연 Claude Code 창 하나</strong>(작업 창)에서 한다.<sup id="fnref:layout"><a class="footnote-ref" href="#fn:layout">1</a></sup> 직접 모드는 1-1에서 연다.</p>
 <div class="mode m-tutor">
 <p>1-1 전에 터미널에서 작업 창을 연다.</p>
@@ -713,8 +677,8 @@ claude
 </details>
 </div>
 <hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 8 / 45</p></section><section class="chap" data-id="1-8" data-ch="1-8" data-title="1. 스킬 만들기: 회의록 · 8분"><h2 id="1-8">1. 스킬 만들기: 회의록 · 8분</h2>
-<h3 id="_9">스킬이란</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 8 / 45</p></section><section class="chap" data-id="1" data-ch="1" data-title="1. 스킬 만들기: 회의록"><h2 id="1">1. 스킬 만들기: 회의록</h2>
+<h3 id="_10">스킬이란</h3>
 <p><strong>스킬</strong>은 반복 업무용 매뉴얼 파일 하나다(<code>.claude/skills/&lt;이름&gt;/SKILL.md</code>). 위쪽 <code>---</code> 사이(프런트매터)에는 <strong>언제 쓰는지</strong>, 아래 본문에는 <strong>어떻게 하는지</strong>를 쓴다. 더 알아보기: <a class="doclink" href="https://code.claude.com/docs/ko/skills" target="_blank" rel="noopener">공식 문서: 스킬</a></p>
 <figure class="fig" id="fig-skill-anatomy" data-fig="skill-anatomy"><figcaption><b>그림 4. SKILL.md 해부도</b> · 프런트매터와 본문</figcaption></figure>
 
@@ -752,11 +716,6 @@ claude
 <td>"meeting-notes 스킬 규칙을 …로 바꿔줘"</td>
 <td>같다</td>
 </tr>
-<tr>
-<td>수정 반영 시점</td>
-<td>재시작 없이 즉시</td>
-<td>대개 즉시, 미반영 시 재시작</td>
-</tr>
 </tbody>
 </table></div>
 <details class="scr-t"><summary>🖼 Claude Code 예시 · 스킬 목록 (예시)</summary><div class="win sc-claude"><div class="bar"><i></i><i></i><i></i><span>스킬 목록 (예시)</span></div><div class="scr"><span class="u">&gt; /skills</span><br>  Skills<br><span class="c">  ⎿ meeting-notes · project · 회의 메모를 팀 표준 회의록으로 정리한다…</span><br><span class="c">  ⎿ workshop-tutor · project · 워크숍 실습 자동 진행…</span></div></div></details>
@@ -765,8 +724,8 @@ claude
 
 <details class="scr-t"><summary>🖼 Claude Code 예시 · 스킬 고치기 (예시)</summary><div class="win sc-claude"><div class="bar"><i></i><i></i><i></i><span>스킬 고치기 (예시)</span></div><div class="scr"><span class="u">&gt; meeting-notes 스킬 규칙에 &quot;4. 마감이 없는 할 일은 표 맨 아래로 보낸다&quot;를 추가해줘.</span><br><span class="c">● Update(.claude/skills/meeting-notes/SKILL.md)</span><br><span class="c">  ⎿ Updated with 1 addition</span><br>      22   3. 마지막 줄에 &quot;담당자 미정 할 일 N개&quot;처럼 빠진 정보를 요약한다.<br>      23 + 4. 마감이 없는 할 일은 표 맨 아래로 보낸다.<br><span class="c">● 규칙 4번을 추가했습니다. 다음 회의록부터 적용됩니다.</span></div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 9 / 45</p></section><section class="chap" data-id="1-1-2" data-ch="1-8" data-title="1-1 내 저장소 연결하기"><p class="crumb"><a href="#1-8">1. 스킬 만들기: 회의록</a></p><h3 id="1-1-2"><span class="stepid">1-1</span> 내 저장소 연결하기 · 2분</h3>
-<p class="goal"><strong>🎯 목표</strong>: 받아 둔 실습 저장소를 내 GitHub의 비공개 저장소 <code>ai-agent-workshop-2026</code>에 연결한다. 오늘 결과는 모두 여기에 쌓인다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 9 / 45</p></section><section class="chap" data-id="1-1" data-ch="1" data-title="1-1 내 저장소 연결하기"><p class="crumb"><a href="#1">1. 스킬 만들기: 회의록</a></p><h3 id="1-1"><span class="stepid">1-1</span> 내 저장소 연결하기</h3>
+<p class="goal"><strong>🎯 목표</strong>: 실습 저장소와 개인 GitHub 비공개 저장소의 연결</p>
 <div class="mode m-direct">
 <p>터미널(Claude Code 밖)에 붙여 넣는다.</p>
 <p><span class="run req">필수 실행</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
@@ -802,8 +761,8 @@ claude
 </ul></div>
 <details class="scr-t"><summary>🖼 터미널 예시 · 내 저장소가 연결된 화면</summary><div class="win sc-terminal"><div class="bar"><i></i><i></i><i></i><span>내 저장소가 연결된 화면</span></div><div class="scr">이름@컴퓨터 ~ % cd ~/ai-agent-workshop-2026<br>이름@컴퓨터 ai-agent-workshop-2026 % git pull<br>Already up to date.<br>이름@컴퓨터 ai-agent-workshop-2026 % git remote remove origin<br>이름@컴퓨터 ai-agent-workshop-2026 % gh repo create ai-agent-workshop-2026 --private --source . --remote origin<br>✓ Created repository &lt;아이디&gt;/ai-agent-workshop-2026 on GitHub<br>  https://github.com/&lt;아이디&gt;/ai-agent-workshop-2026<br>✓ Added remote https://github.com/&lt;아이디&gt;/ai-agent-workshop-2026.git</div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 10 / 45</p></section><section class="chap" data-id="1-2-meeting-notes-6" data-ch="1-8" data-title="1-2 회의록 스킬 meeting-notes"><p class="crumb"><a href="#1-8">1. 스킬 만들기: 회의록</a></p><h3 id="1-2-meeting-notes-6"><span class="stepid">1-2</span> 회의록 스킬 <code>meeting-notes</code> · 6분</h3>
-<p class="goal"><strong>🎯 목표</strong>: 정리되지 않은 회의 메모를 양식(결정 사항, 할 일, 담당자, 마감)으로 바꾸는 스킬을 만든다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 10 / 45</p></section><section class="chap" data-id="1-2-meeting-notes" data-ch="1" data-title="1-2 회의록 스킬 meeting-notes"><p class="crumb"><a href="#1">1. 스킬 만들기: 회의록</a></p><h3 id="1-2-meeting-notes"><span class="stepid">1-2</span> 회의록 스킬 <code>meeting-notes</code></h3>
+<p class="goal"><strong>🎯 목표</strong>: 회의 메모를 정해진 양식(결정 사항, 할 일, 담당자, 마감)으로 정리하는 스킬 작성</p>
 <div class="mode m-direct">
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste req"><code class="language-text">.claude/skills/meeting-notes/SKILL.md 를 아래 내용 그대로 만들어줘.
@@ -866,7 +825,7 @@ description: 회의 메모를 팀 표준 회의록으로 정리한다. 사용자
 
 <details class="scr-t"><summary>🖼 Claude Code 예시 · 스킬이 쓰이는 모습</summary><div class="win sc-claude"><div class="bar"><i></i><i></i><i></i><span>스킬이 쓰이는 모습</span></div><div class="scr"><span class="u">&gt; 회의록 정리해줘: 오늘 민수 지영 참석, 서버 계정은 지영이 금요일까지 만들기로, 세미나 요일은 아직 못 정함</span><br><span class="c">● Skill(meeting-notes)</span><br><span class="c">● 회의록으로 정리했습니다.</span><br><span class="c">  ⎿ 일시: 확인 필요 / 참석자: 민수, 지영</span><br><span class="c">  ⎿ 결정 사항: 1. 서버 계정은 지영이 만든다</span><br><span class="c">  ⎿ 할 일 | 서버 계정 생성 | 지영 | 금요일</span><br><span class="c">  ⎿ 다음 회의 안건: 세미나 요일</span><br><span class="c">  ⎿ 담당자 미정 할 일 0개</span></div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 11 / 45</p></section><section class="chap" data-id="1-3" data-ch="1-8" data-title="1-3 스킬 호출과 수정"><p class="crumb"><a href="#1-8">1. 스킬 만들기: 회의록</a></p><h3 id="1-3"><span class="stepid">1-3</span> 스킬 호출과 수정 · 선택</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 11 / 45</p></section><section class="chap" data-id="1-3" data-ch="1" data-title="1-3 스킬 호출과 수정"><p class="crumb"><a href="#1">1. 스킬 만들기: 회의록</a></p><h3 id="1-3"><span class="stepid">1-3</span> 스킬 호출과 수정 · 선택</h3>
 <p>시간이 남으면 1-2에서 만든 <code>meeting-notes</code>로 해 본다. 화면 예시는 위 "호출과 수정" 참고.</p>
 <p><strong>① 목록 보기</strong></p>
 <p><span class="run opt">선택</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
@@ -883,10 +842,10 @@ description: 회의 메모를 팀 표준 회의록으로 정리한다. 사용자
 <p><strong>④ 재시험</strong>: 1-2의 시험 문장을 다시 보내 바뀐 규칙이 반영됐는지 본다. 재시작은 필요 없다.</p>
 <p class="chk"><strong>✅ 확인</strong>: <code>/skills</code>에 <code>meeting-notes</code>가 보이고, 직접 부르기에서 <code>Skill(meeting-notes)</code> 줄이 나온다. 고친 규칙이 다음 결과에 반영된다.</p>
 <hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 12 / 45</p></section><section class="chap" data-id="2-mcp-arxiv-6" data-ch="2-mcp-arxiv-6" data-title="2. MCP 연결: arXiv 논문 검색 · 6분"><h2 id="2-mcp-arxiv-6">2. MCP 연결: arXiv 논문 검색 · 6분</h2>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 12 / 45</p></section><section class="chap" data-id="2-mcp-arxiv" data-ch="2-mcp-arxiv" data-title="2. MCP 연결: arXiv 논문 검색"><h2 id="2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</h2>
 <h3 id="mcp">MCP란</h3>
-<p><strong>MCP</strong>(Model Context Protocol)는 AI 앱을 바깥의 데이터와 도구(파일, 데이터베이스, 검색 등)에 연결하는 오픈 표준이다. 흔히 <strong>AI 앱의 USB-C 포트</strong>에 비유한다. 기기마다 전용 케이블이 필요 없듯, 도구를 MCP 서버로 한 번 만들어 두면 MCP를 지원하는 어느 AI 앱에서든 꽂아 쓸 수 있다. 오늘은 arXiv 논문 검색 서버를 꽂는다.</p>
-<figure class="fig" id="fig-mcp-what" data-fig="mcp-what"><figcaption><b>그림 6. MCP란</b> · AI 앱과 데이터·도구 사이의 표준 연결 (MCP 공식 문서 그림을 바탕으로 다시 그림)</figcaption></figure>
+<p><strong>MCP</strong>(Model Context Protocol)는 AI 앱과 외부 데이터·도구(파일, 데이터베이스, 검색 등)를 연결하는 공개 표준 규격이다. 흔히 <strong>AI 앱의 USB-C 포트</strong>에 비유한다. 기기마다 전용 케이블이 필요 없듯, 도구를 MCP 서버로 한 번 만들어 두면 MCP를 지원하는 어느 AI 앱에서든 꽂아 쓸 수 있다. 오늘은 arXiv 논문 검색 서버를 꽂는다.</p>
+<figure class="fig" id="fig-mcp-what" data-fig="mcp-what"><figcaption><b>그림 6. MCP란</b> · AI 앱과 데이터·도구 사이의 표준 연결</figcaption></figure>
 
 <p>더 알아보기: <a class="doclink" href="https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro" target="_blank" rel="noopener">공식 문서: MCP 소개</a> <a class="doclink" href="https://code.claude.com/docs/ko/mcp" target="_blank" rel="noopener">공식 문서: Claude Code에서 MCP 쓰기</a></p>
 <p><strong>사용 이유</strong>: 에이전트는 기본적으로 내 컴퓨터의 파일과 학습한 지식만 안다. MCP를 붙이면 바깥 서비스의 지금 데이터를 읽고, 그 서비스에서 직접 일할 수 있다. 내가 복사해 붙여 넣던 일을 에이전트가 대신한다.</p>
@@ -937,8 +896,8 @@ description: 회의 메모를 팀 표준 회의록으로 정리한다. 사용자
 
 <figure class="fig" id="fig-mcp" data-fig="mcp"><figcaption><b>그림 8. MCP 호출 한 번</b> · 애니메이션</figcaption></figure>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 13 / 45</p></section><section class="chap" data-id="2-1-arxiv-mcp-3" data-ch="2-mcp-arxiv-6" data-title="2-1 arXiv MCP 연결하기"><p class="crumb"><a href="#2-mcp-arxiv-6">2. MCP 연결: arXiv 논문 검색</a></p><h3 id="2-1-arxiv-mcp-3"><span class="stepid">2-1</span> arXiv MCP 연결하기 · 3분</h3>
-<p class="goal"><strong>🎯 목표</strong>: arXiv 논문을 검색하고 읽는 MCP 서버를 저장소에 연결한다.<sup id="fnref:mcp"><a class="footnote-ref" href="#fn:mcp">1</a></sup></p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 13 / 45</p></section><section class="chap" data-id="2-1-arxiv-mcp" data-ch="2-mcp-arxiv" data-title="2-1 arXiv MCP 연결하기"><p class="crumb"><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a></p><h3 id="2-1-arxiv-mcp"><span class="stepid">2-1</span> arXiv MCP 연결하기</h3>
+<p class="goal"><strong>🎯 목표</strong>: arXiv 논문 검색용 MCP 서버 연결<sup id="fnref:mcp"><a class="footnote-ref" href="#fn:mcp">1</a></sup></p>
 <div class="mode m-direct">
 <p><code>/exit</code>로 나가서 <strong>터미널</strong>에 붙여 넣는다.<sup id="fnref:mcpcmd"><a class="footnote-ref" href="#fn:mcpcmd">2</a></sup></p>
 <p><span class="run req">필수 실행</span> <span class="where">→ 터미널에 붙여 넣기</span></p>
@@ -970,8 +929,8 @@ codex mcp list
 <li>저장소에 <code>.mcp.json</code>이 생겼다</li>
 <li>Claude Code 안에서 <code>/mcp</code>를 치면 arxiv와 도구 목록(<code>search_papers</code> 등)이 보인다</li>
 </ul></div>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 14 / 45</p></section><section class="chap" data-id="2-2-3" data-ch="2-mcp-arxiv-6" data-title="2-2 논문 검색"><p class="crumb"><a href="#2-mcp-arxiv-6">2. MCP 연결: arXiv 논문 검색</a></p><h3 id="2-2-3"><span class="stepid">2-2</span> 논문 검색 · 3분</h3>
-<p class="goal"><strong>🎯 목표</strong>: 연결한 MCP 도구로 논문을 찾고 읽는다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 14 / 45</p></section><section class="chap" data-id="2-2" data-ch="2-mcp-arxiv" data-title="2-2 논문 검색"><p class="crumb"><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a></p><h3 id="2-2"><span class="stepid">2-2</span> 논문 검색</h3>
+<p class="goal"><strong>🎯 목표</strong>: MCP 도구를 활용한 논문 검색과 읽기</p>
 <p>하나씩 보낸다.</p>
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste req"><code class="language-text">arxiv에서 &quot;large language model agents psychology research&quot; 최근 논문 5편 찾아서 제목, 저자, 한 줄 요약을 표로 보여줘
@@ -982,7 +941,7 @@ codex mcp list
 <p class="chk"><strong>✅ 확인</strong>: <code>arxiv - search_papers (MCP)</code> 호출 줄이 보이고, arXiv 번호가 달린 표가 나온다.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup></p>
 <details class="scr-t"><summary>🖼 Claude Code 예시 · 논문 검색 결과</summary><div class="win sc-claude"><div class="bar"><i></i><i></i><i></i><span>논문 검색 결과</span></div><div class="scr"><span class="u">&gt; arxiv에서 &quot;large language model agents psychology research&quot; 최근 논문 5편 찾아서 제목, 저자, 한 줄 요약을 표로 보여줘</span><br><span class="c">● arxiv - search_papers (MCP)(query: &quot;large language model agents psychology research&quot;, max_results: 5)</span><br><span class="c">  ⎿ Found 5 papers</span><br><span class="c">● 최근 논문 5편입니다.</span><br><span class="c">  ⎿ | arXiv | 제목 | 저자 | 한 줄 요약 |</span><br><span class="c">  ⎿ | 2501.0xxxx | (논문 제목 1) | Kim et al. | LLM 에이전트로 실험 참가자 응답을 모사 |</span><br><span class="c">  ⎿ | 2502.1xxxx | (논문 제목 2) | Lee et al. | 상담 대화 에이전트의 공감 반응 평가 |</span><br><span class="c">  ⎿ | ... (5행)</span></div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 15 / 45</p></section><section class="chap" data-id="2-3" data-ch="2-mcp-arxiv-6" data-title="2-3 커넥터 활용"><p class="crumb"><a href="#2-mcp-arxiv-6">2. MCP 연결: arXiv 논문 검색</a></p><h3 id="2-3"><span class="stepid">2-3</span> 커넥터 활용 · 선택</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 15 / 45</p></section><section class="chap" data-id="2-3" data-ch="2-mcp-arxiv" data-title="2-3 커넥터 활용"><p class="crumb"><a href="#2-mcp-arxiv">2. MCP 연결: arXiv 논문 검색</a></p><h3 id="2-3"><span class="stepid">2-3</span> 커넥터 활용 · 선택</h3>
 <p>수업 시간에는 같이 하지 않는다. 필요한 사람만 수업 뒤에 각자 해 본다. Codex나 Windows에서는 Gmail 같은 구글 서비스 연결이 되지 않는 경우가 있다.</p>
 <p><strong>로그인 기반 커넥터</strong></p>
 <p>arXiv처럼 서버를 직접 붙이는 방법 말고도, Claude와 Codex는 자주 쓰는 서비스를 커넥터(Codex에서는 플러그인)로 제공한다.</p>
@@ -1107,18 +1066,18 @@ codex mcp list
 <p>커넥터로 올리는 글은 <strong>내 이름으로</strong> 올라간다. 에이전트가 쓴 글에는 항상 작성자 표시를 붙여서, 읽는 사람이 내가 직접 쓴 글로 오해하지 않게 한다.</p>
 <p><strong>Codex에서는</strong>: <code>codex</code>에서 <code>/plugins</code> → <strong>Gmail</strong> 설치 → 로그인 → 새 대화. 프롬프트는 같다. <code>@</code>를 치면 플러그인을 직접 고를 수 있다.</p>
 <hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 16 / 45</p></section><section class="chap" data-id="3-3-20" data-ch="3-3-20" data-title="3. 서브에이전트 3개: 신입 온보딩 · 20분"><h2 id="3-3-20">3. 서브에이전트 3개: 신입 온보딩 · 20분</h2>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 16 / 45</p></section><section class="chap" data-id="3-3" data-ch="3-3" data-title="3. 서브에이전트 3개: 신입 온보딩"><h2 id="3-3">3. 서브에이전트 3개: 신입 온보딩</h2>
 <p><strong>서브에이전트</strong>는 일을 맡기면 따로 처리하고 결과만 짧게 보고하는 담당자다. 더 알아보기: <a class="doclink" href="https://code.claude.com/docs/ko/sub-agents" target="_blank" rel="noopener">공식 문서: 서브에이전트</a><sup id="fnref:sub"><a class="footnote-ref" href="#fn:sub">1</a></sup></p>
 <p><strong>저장 위치 <code>.claude/agents/</code></strong>: 담당 하나당 파일 하나. 1장 스킬과 같은 <code>.claude/</code> 폴더 안에 생성된다(Codex는 <code>.codex/agents/&lt;이름&gt;.toml</code>).</p>
 <figure class="fig" id="fig-agents-folder" data-fig="agents-folder"><figcaption><b>그림 10. 서브에이전트 파일 위치</b> · 3장을 마친 뒤의 .claude/ 폴더</figcaption></figure>
 
 <figure class="fig" id="fig-subagent" data-fig="subagent"><figcaption><b>그림 11. 서브에이전트 위임</b> · 애니메이션</figcaption></figure>
 
-<p>시나리오: 신입(인턴) 정하늘이 왔다. ① 회의록 담당이 첫 회의를 기록 → ② 온보딩 버디가 핸드북으로 안내 → ③ 학습자료 담당이 첫 주 학습 카드를 만든다.<sup id="fnref:scenario"><a class="footnote-ref" href="#fn:scenario">2</a></sup></p>
+<p>시나리오: 신입(인턴) 정하늘 님 합류. ① 회의록 담당이 첫 회의를 기록 → ② 온보딩 버디가 핸드북으로 안내 → ③ 학습자료 담당이 첫 주 학습 카드를 만든다.<sup id="fnref:scenario"><a class="footnote-ref" href="#fn:scenario">2</a></sup></p>
 <figure class="fig" id="fig-roles" data-fig="roles"><figcaption><b>그림 12. 담당 3명의 역할</b> · 담당별 도구 권한</figcaption></figure>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 17 / 45</p></section><section class="chap" data-id="3-1-meeting-scribe-6" data-ch="3-3-20" data-title="3-1 회의록 담당 meeting-scribe"><p class="crumb"><a href="#3-3-20">3. 서브에이전트 3개: 신입 온보딩</a></p><h3 id="3-1-meeting-scribe-6"><span class="stepid">3-1</span> 회의록 담당 <code>meeting-scribe</code> · 6분</h3>
-<p class="goal"><strong>🎯 목표</strong>: 회의 메모를 1장 스킬(<code>meeting-notes</code>) 양식으로 정리해 <code>03-subagents/meetings/</code>에 저장하는 담당을 만든다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 17 / 45</p></section><section class="chap" data-id="3-1-meeting-scribe" data-ch="3-3" data-title="3-1 회의록 담당 meeting-scribe"><p class="crumb"><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a></p><h3 id="3-1-meeting-scribe"><span class="stepid">3-1</span> 회의록 담당 <code>meeting-scribe</code></h3>
+<p class="goal"><strong>🎯 목표</strong>: 회의 메모 정리·저장 담당 서브에이전트 작성</p>
 <div class="mode m-direct">
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste req"><code class="language-text">.claude/agents/meeting-scribe.md 를 아래 내용 그대로 만들어줘.
@@ -1172,8 +1131,8 @@ meeting-notes 스킬 양식을 따른다.
 
 <details class="scr-t"><summary>🖼 파일 예시 · 후: 03-subagents/meetings/2026-10-05.md</summary><div class="win sc-file"><div class="bar"><i></i><i></i><i></i><span>후: 03-subagents/meetings/2026-10-05.md</span></div><div class="scr">- 일시: 2026-10-05 / 참석자: 박회의, 김서버, 이살림, 정하늘(신입)<br>- 결정 사항: 1. 평일 낮 GPU는 1인 2장까지(메모에 물음표, 확인 필요), 밤·주말 제한 없음(관리 김서버) 2. 서버 계정은 김서버에게 메일 신청, 팀장 승인 메일 첨부 3. 세미나 발표 20분, 질문 10분<br>| 할 일 | 담당자 | 마감 |<br>| 노트북 준비 | 이살림 | 이번 주 금요일 |<br>| GPU 사용 규칙 핸드북 정리 | 김서버 | 미정 |<br>| 연구윤리 교육 신청 | 정하늘 | 미정 |<br>| 세미나 발표 순서 공유 | 박회의 | 다음 주부터 |<br>- 다음 회의 안건: 없음<br>담당자 미정 할 일 0개</div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 18 / 45</p></section><section class="chap" data-id="3-2-onboarding-buddy-7" data-ch="3-3-20" data-title="3-2 온보딩 버디 onboarding-buddy"><p class="crumb"><a href="#3-3-20">3. 서브에이전트 3개: 신입 온보딩</a></p><h3 id="3-2-onboarding-buddy-7"><span class="stepid">3-2</span> 온보딩 버디 <code>onboarding-buddy</code> · 7분</h3>
-<p class="goal"><strong>🎯 목표</strong>: 신입 질문에 핸드북만 보고 답하고, "어디서 시작해?"에 핸드북 순서로 안내하는 읽기 전용 담당을 만든다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 18 / 45</p></section><section class="chap" data-id="3-2-onboarding-buddy" data-ch="3-3" data-title="3-2 온보딩 버디 onboarding-buddy"><p class="crumb"><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a></p><h3 id="3-2-onboarding-buddy"><span class="stepid">3-2</span> 온보딩 버디 <code>onboarding-buddy</code></h3>
+<p class="goal"><strong>🎯 목표</strong>: 핸드북 근거 기반 질의응답 서브에이전트 작성(읽기 전용)</p>
 <div class="mode m-direct">
 <p>핸드북 01~04장은 <code>03-subagents/handbook/</code>에 미리 들어 있다. 목차만 만든다.</p>
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
@@ -1242,15 +1201,14 @@ developer_instructions = &quot;&quot;&quot;
 </code></pre>
 </div>
 <div class="chk"><p><strong>✅ 확인</strong></p><ul>
-<li>어디서 시작해? → README 목차 1→4 순서와 첫 주 체크리스트, 근거 <code>03-subagents/handbook/01-onboarding.md:줄</code></li>
-<li>서버 계정 → "팀장 승인 메일을 붙여 김서버에게 신청" + 근거</li>
-<li>연구윤리 교육 기한 → "문서에 없음, 팀장 확인 필요" (지어낸 날짜면 실패)<sup id="fnref:3-2"><a class="footnote-ref" href="#fn:3-2">1</a></sup></li>
-<li>세 질문 모두 <code>onboarding-buddy(...)</code> 위임 줄이 보인다<sup id="fnref:notfound"><a class="footnote-ref" href="#fn:notfound">2</a></sup></li>
+<li>답마다 근거 <code>파일:줄</code>이 붙는다.</li>
+<li>핸드북에 없는 연구윤리 교육 기한은 "문서에 없음, 팀장 확인 필요"로 답한다.<sup id="fnref:3-2"><a class="footnote-ref" href="#fn:3-2">1</a></sup></li>
+<li><code>onboarding-buddy(...)</code> 위임 줄이 보인다.<sup id="fnref:notfound"><a class="footnote-ref" href="#fn:notfound">2</a></sup></li>
 </ul></div>
 <details class="scr-t"><summary>🖼 Claude Code 예시 · 신입이 &quot;어디서 시작해?&quot;라고 물으면</summary><div class="win sc-claude"><div class="bar"><i></i><i></i><i></i><span>신입이 &quot;어디서 시작해?&quot;라고 물으면</span></div><div class="scr"><span class="u">&gt; 나는 이번 주에 들어온 인턴이야. onboarding-buddy에게 물어봐: 어디서부터 시작하면 돼?</span><br><span class="c">● onboarding-buddy(어디서 시작할지 안내)</span><br><span class="c">  ⎿ Done</span><br><span class="c">● README 목차 1→4 순서로 읽으세요. 먼저 01장 첫 주 체크리스트부터 하세요.</span><br><span class="c">  ⎿ ① 팀장에게 승인 메일 받기 ② 김서버에게 계정 신청 메일 보내기</span><br><span class="c">  ⎿ ③ 노트북 받기(이살림, 10/9까지) ④ 연구윤리 교육 신청(담당 최안전)</span><br><span class="c">  ⎿ ⑤ GPU 서버·세미나 규칙 읽기 (모두 확인 전)</span><br><span class="c">  ⎿ 근거: 03-subagents/handbook/01-onboarding.md:9-14, handbook/README.md:5-8</span></div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 19 / 45</p></section><section class="chap" data-id="3-3-study-maker-7" data-ch="3-3-20" data-title="3-3 학습자료 담당 study-maker"><p class="crumb"><a href="#3-3-20">3. 서브에이전트 3개: 신입 온보딩</a></p><h3 id="3-3-study-maker-7"><span class="stepid">3-3</span> 학습자료 담당 <code>study-maker</code> · 7분</h3>
-<p class="goal"><strong>🎯 목표</strong>: 핸드북과 회의록으로 첫 주 학습 카드와 퀴즈를 만드는 담당을 만들고, 처음으로 GitHub에 올린다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 19 / 45</p></section><section class="chap" data-id="3-3-study-maker" data-ch="3-3" data-title="3-3 학습자료 담당 study-maker"><p class="crumb"><a href="#3-3">3. 서브에이전트 3개: 신입 온보딩</a></p><h3 id="3-3-study-maker"><span class="stepid">3-3</span> 학습자료 담당 <code>study-maker</code></h3>
+<p class="goal"><strong>🎯 목표</strong>: 핸드북·회의록 기반 학습 카드·퀴즈 생성 서브에이전트 작성과 첫 GitHub 반영</p>
 <div class="mode m-direct">
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste req"><code class="language-text">.claude/agents/study-maker.md 를 아래 내용 그대로 만들어줘.
@@ -1309,8 +1267,7 @@ developer_instructions = &quot;&quot;&quot;
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 20 / 45</p></section><section class="chap" data-id="4-slack" data-ch="4-slack" data-title="4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택"><h2 id="4-slack">4. Slack 연결: 채널 대화 정리와 저장소 반영 · 선택</h2>
 <figure class="fig" id="fig-slack-flow" data-fig="slack-flow"><figcaption><b>그림 13. Slack에서 @Claude에 작업 위임</b> · 애니메이션</figcaption></figure>
 
-<p class="goal"><strong>🎯 목표</strong>: Slack 채널에 쌓인 메모를 <code>@Claude</code> 한 번으로 정리해 내 저장소에 새 파일로 올리고, PR 링크를 받는다.</p>
-<p>준비에 약 30분 걸린다.<sup id="fnref:slackwhy"><a class="footnote-ref" href="#fn:slackwhy">1</a></sup></p>
+<p class="goal"><strong>🎯 목표</strong>: Slack 채널 메모의 정리와 저장소 반영(PR) 위임<sup id="fnref:slackwhy"><a class="footnote-ref" href="#fn:slackwhy">1</a></sup></p>
 <figure class="fig" id="fig-slack-setup" data-fig="slack-setup"><figcaption><b>그림 14. Slack 연결 준비 순서</b> · 워크스페이스, 저장소 연결, Claude 앱</figcaption></figure>
 
 <p>링크: <a href="https://slack.com/get-started#/createnew">워크스페이스 만들기</a> · <a href="https://claude.ai/code">claude.ai/code</a> · <a href="https://slack.com/marketplace/A08SF47R6P4">Slack용 Claude 앱</a><sup id="fnref:slacksteps"><a class="footnote-ref" href="#fn:slacksteps">2</a></sup><sup id="fnref:ws"><a class="footnote-ref" href="#fn:ws">3</a></sup></p>
@@ -1351,7 +1308,7 @@ developer_instructions = &quot;&quot;&quot;
 </tr>
 <tr>
 <td>"한국어로"</td>
-<td>리허설 중 작성 언어를 되물음</td>
+<td>작성 언어 재질문 방지</td>
 </tr>
 <tr>
 <td>"다른 파일은 건드리지 말고"</td>
@@ -1359,19 +1316,19 @@ developer_instructions = &quot;&quot;&quot;
 </tr>
 <tr>
 <td>"중간에 묻지 말고 끝까지 해"</td>
-<td>리허설 중 확인 질문 후 중단</td>
+<td>작업 중단 방지</td>
 </tr>
 <tr>
 <td>"PR 링크만 남겨줘"</td>
-<td>리허설 중 스레드에 긴 미리 보기 출력</td>
+<td>스레드 내 긴 출력 방지</td>
 </tr>
 </tbody>
 </table></div>
-<details class="scr-t"><summary>🖼 Slack 예시 · #lab-work (리허설에서 온 답, 계정·파일 이름만 바꿈)</summary><div class="win sc-slack"><div class="bar"><i></i><i></i><i></i><span>#lab-work (리허설에서 온 답, 계정·파일 이름만 바꿈)</span></div><div class="scr"><b>나</b>: @Claude ai-agent-workshop-2026 저장소에 이 채널에 올린 메모를 정리한 notes/workshop-memo.md를 새로 만들고 PR 올려줘. … 끝나면 PR 링크만 남겨줘<br><b>Claude</b>: ℹ️ Using the legacy Claude in Slack bot. …<br><b>Claude</b>: Working in &lt;내 계정&gt;/ai-agent-workshop-2026 · PR 링크입니다: github.com/&lt;내 계정&gt;/ai-agent-workshop-2026/pull/1<br><b>Claude</b>: [View session] [Create PR]</div></div></details>
+<details class="scr-t"><summary>🖼 Slack 예시 · #lab-work</summary><div class="win sc-slack"><div class="bar"><i></i><i></i><i></i><span>#lab-work</span></div><div class="scr"><b>나</b>: @Claude ai-agent-workshop-2026 저장소에 이 채널에 올린 메모를 정리한 notes/workshop-memo.md를 새로 만들고 PR 올려줘. … 끝나면 PR 링크만 남겨줘<br><b>Claude</b>: ℹ️ Using the legacy Claude in Slack bot. …<br><b>Claude</b>: Working in &lt;내 계정&gt;/ai-agent-workshop-2026 · PR 링크입니다: github.com/&lt;내 계정&gt;/ai-agent-workshop-2026/pull/1<br><b>Claude</b>: [View session] [Create PR]</div></div></details>
 
 <hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 21 / 45</p></section><section class="chap" data-id="5-10" data-ch="5-10" data-title="5. 질문 로그 리포트 + 연구윤리 점검 · 10분"><h2 id="5-10">5. 질문 로그 리포트 + 연구윤리 점검 · 10분</h2>
-<p class="goal"><strong>🎯 목표</strong>: 연구실 질문방의 지저분한 로그를 정리해 그래프가 든 리포트로 만들고, 양식을 다듬은 뒤, <code>ethics-checker</code>의 한 번 점검을 받아 사람이 고칠지 정한다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 21 / 45</p></section><section class="chap" data-id="5" data-ch="5" data-title="5. 질문 로그 리포트 + 연구윤리 점검"><h2 id="5">5. 질문 로그 리포트 + 연구윤리 점검</h2>
+<p class="goal"><strong>🎯 목표</strong>: 질문 로그의 리포트 작성, 양식 적용, 연구윤리 점검과 사람의 최종 판단</p>
 <p>시나리오: 9월 한 달 동안 <code>#lab-help</code> 채널에 신입들이 올린 질문을 모았다. 무엇을 가장 많이 묻는지, 핸드북에 없는 질문은 무엇인지 리포트로 정리해 핸드북을 보완한다.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -1404,7 +1361,7 @@ developer_instructions = &quot;&quot;&quot;
 </tbody>
 </table></div>
 <p>작성은 스킬, 점검은 독립된 서브에이전트가 맡는다. 작성 주체와 점검 주체를 분리해야 점검이 실효성을 갖는다.</p>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 22 / 45</p></section><section class="chap" data-id="5-1-1" data-ch="5-10" data-title="5-1 로그 확인"><p class="crumb"><a href="#5-10">5. 질문 로그 리포트 + 연구윤리 점검</a></p><h3 id="5-1-1"><span class="stepid">5-1</span> 로그 확인 · 1분</h3>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 22 / 45</p></section><section class="chap" data-id="5-1" data-ch="5" data-title="5-1 로그 확인"><p class="crumb"><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a></p><h3 id="5-1"><span class="stepid">5-1</span> 로그 확인</h3>
 <div class="mode m-direct">
 <p>실습용 가상 로그가 <code>05-report/data/lab-help-2026-09.log</code>에 미리 들어 있다.</p>
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
@@ -1420,8 +1377,8 @@ developer_instructions = &quot;&quot;&quot;
 <p class="chk"><strong>✅ 확인</strong>: 봇 메시지, 답글(<code>ㄴ</code>), 이모지만 있는 줄, 중복 줄, 날짜 형식이 다른 줄이 섞여 있다. 이 정리가 다음 단계다.</p>
 <details class="scr-t"><summary>🖼 파일 예시 · 05-report/data/lab-help-2026-09.log (일부)</summary><div class="win sc-file"><div class="bar"><i></i><i></i><i></i><span>05-report/data/lab-help-2026-09.log (일부)</span></div><div class="scr">[2026-09-01 09:02] (bot) jungsky 님이 채널에 들어왔습니다<br>[2026-09-01 10:14] jungsky: 서버 계정 어떻게 받아요?? 메일 누구한테 보내는지..<br>[2026-09-01 10:31] leesalim: ㄴ 김서버님한테! 승인메일 같이 붙여서<br>[2026-09-01 10:32] jungsky: :pray:<br>[2026-09-02 09:48] newbie02: 아 그리고 프린터 어디있어요<br>[2026-09-02 09:48] newbie02: 아 그리고 프린터 어디있어요<br>2026/09/15 14:03 newbie03 - 실험실 PC 2번 모니터 계속 깜빡여요 누구한테 말해야 하나요</div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 23 / 45</p></section><section class="chap" data-id="5-2-question-report-5" data-ch="5-10" data-title="5-2 리포트 스킬 question-report"><p class="crumb"><a href="#5-10">5. 질문 로그 리포트 + 연구윤리 점검</a></p><h3 id="5-2-question-report-5"><span class="stepid">5-2</span> 리포트 스킬 <code>question-report</code> · 5분</h3>
-<p class="goal"><strong>🎯 목표</strong>: 로그를 정리하고(전처리), 주제별로 세고, 그래프를 그려 리포트 초안을 쓰는 스킬을 만든다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 23 / 45</p></section><section class="chap" data-id="5-2-question-report" data-ch="5" data-title="5-2 리포트 스킬 question-report"><p class="crumb"><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a></p><h3 id="5-2-question-report"><span class="stepid">5-2</span> 리포트 스킬 <code>question-report</code></h3>
+<p class="goal"><strong>🎯 목표</strong>: 로그 전처리·주제 분류·시각화·리포트 초안 작성 스킬</p>
 <div class="mode m-direct">
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste req"><code class="language-text">.claude/skills/question-report/SKILL.md 를 아래 내용 그대로 만들어줘.
@@ -1468,8 +1425,8 @@ topic은 계정 · 장비 · 회의 · 연구윤리 · 기타 중 하나.
 </ul></div>
 <details class="scr-t"><summary>🖼 파일 예시 · 05-report/report/questions-draft.md (예시)</summary><div class="win sc-file"><div class="bar"><i></i><i></i><i></i><span>05-report/report/questions-draft.md (예시)</span></div><div class="scr"># 9월 #lab-help 질문 정리 (초안)<br><br>기간 2026-09-01 ~ 09-30 · 질문 16개<br><br>| 주제 | 질문 수 |<br>| 장비 | 5 |<br>| 기타 | 4 |<br>| 회의 | 3 |<br>| 계정 | 2 |<br>| 연구윤리 | 2 |<br><br>![주제별 질문 수](questions-by-topic.png)<br><br>핸드북에 없는 질문: 프린터 위치, 와이파이, 계정 발급 기간, 세미나 요일, GPU 서버 접속, 모니터 고장 신고, IRB 문의처 …<br>처리: 봇 5줄, 답글 7줄, 이모지 2줄, 중복 1줄 제외</div></div></details>
 
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 24 / 45</p></section><section class="chap" data-id="5-3-report-format" data-ch="5-10" data-title="5-3 양식 스킬 report-format"><p class="crumb"><a href="#5-10">5. 질문 로그 리포트 + 연구윤리 점검</a></p><h3 id="5-3-report-format"><span class="stepid">5-3</span> 양식 스킬 <code>report-format</code> · 선택</h3>
-<p class="goal"><strong>🎯 목표</strong>: 내용은 그대로 두고 연구실 리포트 양식만 입히는 스킬을 따로 만든다. 다른 리포트에도 다시 쓸 수 있다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 24 / 45</p></section><section class="chap" data-id="5-3-report-format" data-ch="5" data-title="5-3 양식 스킬 report-format"><p class="crumb"><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a></p><h3 id="5-3-report-format"><span class="stepid">5-3</span> 양식 스킬 <code>report-format</code> · 선택</h3>
+<p class="goal"><strong>🎯 목표</strong>: 내용과 분리된 리포트 양식 적용 스킬</p>
 <p>시간이 남으면 해 본다. 건너뛰면 5-4에서 <code>questions.md</code> 대신 <code>questions-draft.md</code>를 점검한다.</p>
 <div class="mode m-direct">
 <p><span class="run opt">선택</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
@@ -1495,8 +1452,8 @@ description: 리포트 초안을 연구실 리포트 양식으로 다듬어 최�
 </code></pre>
 </div>
 <p class="chk"><strong>✅ 확인</strong>: <code>05-report/report/questions.md</code>가 생겼고, 맨 위 요약 세 줄과 "표 1.", "그림 1." 캡션이 있다. 숫자는 초안과 같다.</p>
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 25 / 45</p></section><section class="chap" data-id="5-4-ethics-checker-4" data-ch="5-10" data-title="5-4 연구윤리 점검 서브에이전트 ethics-checker"><p class="crumb"><a href="#5-10">5. 질문 로그 리포트 + 연구윤리 점검</a></p><h3 id="5-4-ethics-checker-4"><span class="stepid">5-4</span> 연구윤리 점검 서브에이전트 <code>ethics-checker</code> · 4분</h3>
-<p class="goal"><strong>🎯 목표</strong>: 리포트를 한 번 점검받고(고치지 않음), "가장 먼저 고칠 것" 하나만 반영한다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 25 / 45</p></section><section class="chap" data-id="5-4-ethics-checker" data-ch="5" data-title="5-4 연구윤리 점검 서브에이전트 ethics-checker"><p class="crumb"><a href="#5">5. 질문 로그 리포트 + 연구윤리 점검</a></p><h3 id="5-4-ethics-checker"><span class="stepid">5-4</span> 연구윤리 점검 서브에이전트 <code>ethics-checker</code></h3>
+<p class="goal"><strong>🎯 목표</strong>: 연구윤리 점검 결과 검토와 최우선 수정 사항 반영</p>
 <div class="mode m-direct">
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste req"><code class="language-text">.claude/agents/ethics-checker.md 를 아래 내용 그대로 만들어줘.
@@ -1541,8 +1498,8 @@ model: sonnet
 <details class="scr-t"><summary>🖼 파일 예시 · 05-report/reviews/questions-review.md (예시)</summary><div class="win sc-file"><div class="bar"><i></i><i></i><i></i><span>05-report/reviews/questions-review.md (예시)</span></div><div class="scr">| 기준 | 판정 | 근거 | 고칠 제안 |<br>| 1 숫자 | 통과 | questions.md:9-14, questions.csv | 없음 |<br>| 2 처리 절차 | 통과 | questions.md:30-33 | 없음 |<br>| 3 과장·일반화 | 주의 | questions.md:5 | &quot;신입들은 장비를 가장 어려워한다&quot; → &quot;9월 질문 중 장비가 가장 많았다&quot; |<br>| 4 개인정보 | 위반 | questions.csv:7, lab-help-2026-09.log:16-17 | 아이디를 &quot;신입 A&quot;처럼 가리고, 전화번호·메일 줄 삭제 |<br>| 5 출처 | 통과 | questions.md:31 | 없음 |<br>| 6 AI 사용 표기 | 위반 | questions.md 전체 | AI 도움을 밝히는 문장 추가 |<br>가장 먼저 고칠 것: 아이디와 연락처 가리기</div></div></details>
 
 <hr />
-<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 26 / 45</p></section><section class="chap" data-id="6-4" data-ch="6-4" data-title="6. 정리 · 4분"><h2 id="6-4">6. 정리 · 4분</h2>
-<p class="goal"><strong>🎯 목표</strong>: 오늘 결과를 GitHub에 올린다.</p>
+<nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 26 / 45</p></section><section class="chap" data-id="6" data-ch="6" data-title="6. 정리"><h2 id="6">6. 정리</h2>
+<p class="goal"><strong>🎯 목표</strong>: 실습 결과의 GitHub 반영</p>
 <div class="mode m-direct">
 <p><span class="run req">필수 실행</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste req"><code class="language-text">오늘 만든 것을 커밋하고 push해줘. 커밋 메시지는 &quot;질문 로그 리포트와 연구윤리 점검&quot;. push 전에 올라갈 파일 목록을 보여주고, 끝나면 저장소 구조를 트리로 보여줘.
@@ -1564,7 +1521,7 @@ model: sonnet
 </ol>
 <hr />
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 27 / 45</p></section><section class="chap" data-id="7" data-ch="7" data-title="7. 수업 뒤에 해 보기"><h2 id="7">7. 수업 뒤에 해 보기</h2>
-<p class="goal"><strong>🎯 목표</strong>: 시간이 남거나 수업이 끝난 뒤, 원하는 것을 골라 해 본다. 순서는 상관없다.</p>
+<p class="goal"><strong>🎯 목표</strong>: 실습 결과의 검증과 개인 연구 업무 적용</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1669,7 +1626,7 @@ model: sonnet
 </table></div>
 <hr />
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 28 / 45</p></section><section class="chap" data-id="8-llm" data-ch="8-llm" data-title="8. 개념 정리: 연구로 보는 LLM 에이전트"><h2 id="8-llm">8. 개념 정리: 연구로 보는 LLM 에이전트</h2>
-<p class="goal"><strong>🎯 목표</strong>: 오늘 만든 것을 LLM 에이전트 연구의 개념과 잇는다. 읽을거리이고 실습은 없다.</p>
+<p class="goal"><strong>🎯 목표</strong>: 실습 내용과 LLM 에이전트 연구 개념의 연결</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -1732,7 +1689,7 @@ model: sonnet
 <tr>
 <td>에이전트 루프</td>
 <td>추론 → 도구 호출 → 결과 관찰의 반복</td>
-<td>오프닝 그림, 모든 장</td>
+<td>에이전트 소개 그림, 모든 장</td>
 <td><a href="https://arxiv.org/abs/2210.03629">ReAct (Yao 외, 2023)</a></td>
 </tr>
 <tr>
@@ -2007,7 +1964,7 @@ model: sonnet
 </code></pre>
 <hr />
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 38 / 45</p></section><section class="chap" data-id="9" data-ch="9" data-title="9. 심화 예시: 위키 · 영상 · 로봇"><h2 id="9">9. 심화 예시: 위키 · 영상 · 로봇</h2>
-<p class="goal"><strong>🎯 목표</strong>: 오늘 만든 스킬·서브에이전트·MCP를 연구실의 더 큰 일에 붙여 본다. 수업이 끝난 뒤 골라서 한다. 자료는 <code>09-advanced/</code>에 있다.</p>
+<p class="goal"><strong>🎯 목표</strong>: 스킬·서브에이전트·MCP의 연구실 업무 확장 적용(자료: <code>09-advanced/</code>)</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -2035,7 +1992,7 @@ model: sonnet
 </tbody>
 </table></div>
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 39 / 45</p></section><section class="chap" data-id="9-1-llm" data-ch="9" data-title="9-1 LLM 위키: 분산된 메모의 지식 구조화"><p class="crumb"><a href="#9">9. 심화 예시: 위키</a></p><h3 id="9-1-llm"><span class="stepid">9-1</span> LLM 위키: 분산된 메모의 지식 구조화</h3>
-<p class="goal"><strong>🎯 목표</strong>: 회의 메모를 OKF 형식의 위키로 정리해 GitHub에 올리고, 위키에 물어 답을 받고, 사람이 확인한 페이지를 표시한다.</p>
+<p class="goal"><strong>🎯 목표</strong>: 회의 메모의 OKF 위키화, 위키 기반 질의응답, 사람 검증 표시</p>
 <p><strong>LLM 위키</strong>는 사람이 원자료를 넣으면 LLM이 서로 링크된 위키 페이지로 정리해 두는 방식이다. 질문할 때마다 원자료를 다시 뒤지지 않고 위키를 읽고 답한다. 더 알아보기: <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">Karpathy: LLM Wiki (2026-04)</a></p>
 <div class="table-wrap"><table>
 <thead>
@@ -2178,7 +2135,7 @@ claude --continue
 <li><strong>Slack과 잇기</strong>: 4장의 Slack 스레드를 <code>09-advanced/raw/</code>에 원자료로 저장한 뒤 넣으면, 채널에서 합의한 것이 위키가 된다.</li>
 </ul>
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 40 / 45</p></section><section class="chap" data-id="9-2" data-ch="9" data-title="9-2 멀티모달: 인터뷰 영상 전사"><p class="crumb"><a href="#9">9. 심화 예시: 위키</a></p><h3 id="9-2"><span class="stepid">9-2</span> 멀티모달: 인터뷰 영상 전사</h3>
-<p class="goal"><strong>🎯 목표</strong>: 인터뷰 영상을 내 컴퓨터에서 받아 적고, 전사 담당이 읽기 좋은 전사록으로 정리하게 한다.</p>
+<p class="goal"><strong>🎯 목표</strong>: 인터뷰 영상의 로컬 전사와 전사록 정리</p>
 <p>글, 소리, 이미지, 영상처럼 종류가 다른 자료를 <strong>모달리티</strong>라고 하고, 여러 종류를 함께 다루는 것을 <strong>멀티모달</strong>이라고 한다. 여기서는 일을 나눠 맡긴다.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -2240,7 +2197,7 @@ claude --continue
 <li>녹취 내용에 AI에게 내리는 지시문이 섞일 수 있다(프롬프트 인젝션, 8-4). 전사 담당은 이런 문장을 따르지 않고 "확인할 것"에 기록하도록 설정했다.</li>
 </ul>
 <nav class="pn"></nav><p class="pgno" style="text-align:center;font-size:12px;color:var(--muted);margin:12px 0 0">p. 41 / 45</p></section><section class="chap" data-id="9-3" data-ch="9" data-title="9-3 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터"><p class="crumb"><a href="#9">9. 심화 예시: 위키</a></p><h3 id="9-3"><span class="stepid">9-3</span> 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터</h3>
-<p class="goal"><strong>🎯 목표</strong>: 가상 인큐베이터와 가상 로봇 팔을 MCP로 Claude에 붙여 말로 다루고, 절차 파일로 실행하고, 에이전트가 새 절차를 짜서 시뮬레이터로 먼저 돌려 본 뒤 사람 허락을 받아 실행하게 한다.</p>
+<p class="goal"><strong>🎯 목표</strong>: MCP 기반 가상 장비 제어, 절차 실행, 시뮬레이터 검증 후 사람 승인 실행</p>
 <p><strong>MHS</strong>(Model Hardware Standard)는 AI 에이전트가 현미경, 액체 분주기, 로봇 팔 같은 장비를 찾고, 지켜보고, 다루게 하는 공통 규격이다. Anthropic이 2026년 8월 연구 미리보기로 발표했다. MCP가 "AI와 도구를 잇는 규격"이라면 MHS는 "AI와 장비를 잇는 규격"이다. 아직 일부 연구실과 제조사에만 열려 있어서(2026년 10월 기준, 대기자 신청) 여기서는 MHS가 공개한 <strong>설계</strong>를 따라 만든 작은 드라이버를 2장의 MCP로 Claude에 붙인다. 장비는 실습용 <strong>가상 인큐베이터</strong>와 <strong>가상 로봇 팔</strong> 두 대다. 진짜 장비는 없다. 더 알아보기: <a href="https://www.anthropic.com/news/model-hardware-standard-research-preview">Anthropic: MHS 발표</a></p>
 <figure class="fig" id="fig-hardware-mhs" data-fig="hardware-mhs"><figcaption><b>그림 24. 기기 제어</b> · 애니메이션, 기기 설명 → 드라이버(읽기·쓰기, 안전 한계) → MCP · 명령줄 · 절차 파일 → 사람 승인</figcaption></figure>
 
@@ -2409,12 +2366,12 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 <p><span class="run opt">선택</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste opt"><code class="language-text">인큐베이터를 37도로 맞춰줘
 </code></pre>
-<p class="chk"><strong>✅ 확인</strong>: Claude가 먼저 <code>list_devices</code> → <code>describe_device</code>로 설명서를 읽고, 지금 맞출 온도(25)와 문(닫힘)을 확인한다. 그다음 <code>write_value</code>를 30 → 35 → 37로 <strong>나눠서</strong> 부른다. 한 번에 5°C까지라는 안전 문맥을 읽고 스스로 나눈 것이다. 쓰기마다 허락 창이 뜨니 값을 보고 <strong>Yes</strong>를 고른다(실측 22초). 시험해 보니 "단계 사이에 실제 온도가 따라오기를 기다리지 않았다"고 스스로 짚기도 했다. 이런 보고를 읽고 절차로 고정할지 사람이 정한다(아래 절차 파일).</p>
+<p class="chk"><strong>✅ 확인</strong>: Claude가 먼저 <code>list_devices</code> → <code>describe_device</code>로 설명서를 읽고, 지금 맞출 온도(25)와 문(닫힘)을 확인한다. 그다음 <code>write_value</code>를 30 → 35 → 37로 <strong>나눠서</strong> 부른다. 한 번에 5°C까지라는 안전 문맥을 읽고 스스로 나눈 것이다. 쓰기마다 허락 창이 나타나면 값을 보고 <strong>Yes</strong>를 고른다. 시험해 보니 "단계 사이에 실제 온도가 따라오기를 기다리지 않았다"고 스스로 짚기도 했다. 이런 보고를 읽고 절차로 고정할지 사람이 정한다(아래 절차 파일).</p>
 <p>이번에는 위험한 요청이다.</p>
 <p><span class="run opt">선택</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste opt"><code class="language-text">인큐베이터를 45도로 올려줘. 급해
 </code></pre>
-<p class="chk"><strong>✅ 확인</strong>: 쓰기를 시도하지 않고 멈춘다(실측 14초). 범위(20~42°C) 밖이라는 것과 "40°C를 넘기는 실험은 최안전에게 먼저 알린다"를 이유로 들고, 42°C로 할지 되묻는다. Claude가 설명서를 읽고 멈추지 않았더라도 드라이버가 45를 거절한다(명령줄에서 본 것). <strong>설명서(권고) → 허락 창(확인) → 드라이버(차단)</strong>의 세 겹이다(8-3).</p>
+<p class="chk"><strong>✅ 확인</strong>: 쓰기를 시도하지 않고 멈춘다. 범위(20~42°C) 밖이라는 것과 "40°C를 넘기는 실험은 최안전에게 먼저 알린다"를 이유로 들고, 42°C로 할지 되묻는다. Claude가 설명서를 읽고 멈추지 않았더라도 드라이버가 45를 거절한다(명령줄에서 본 것). <strong>설명서(권고) → 허락 창(확인) → 드라이버(차단)</strong>의 세 겹이다(8-3).</p>
 <p><strong>절차 파일 실행</strong> — 단계가 많은 실험은 에이전트가 단계마다 생각하며 명령을 보내기보다 <strong>절차 파일</strong>로 적어 두고 장비가 그대로 수행하게 한다. MHS의 "코드 파일" 길이다. 사람이 미리 읽고 검토할 수 있고, 매번 같은 순서로 돈다. <code>09-advanced/robot/protocols/warmup-37.json</code>:</p>
 <pre><code class="language-json">{
   &quot;description&quot;: &quot;배양 전 예열: 25°C에서 37°C까지 한 번에 5°C 이내로 올린다&quot;,
@@ -2431,7 +2388,7 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 <p><span class="run opt">선택</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste opt"><code class="language-text">protocols 폴더의 warmup-37 절차를 인큐베이터에 실행하고 결과를 알려줘
 </code></pre>
-<p class="chk"><strong>✅ 확인</strong>: 실행 전에 문과 온도를 확인하고, <code>run_protocol</code> 허락 창이 나타난다. 허락하면 단계마다 진행이 올라오고 <code>1. setpoint → 30 / 2. 10초 기다림 (온도 30.0) / … / 5. setpoint → 37 / 완료</code>로 끝난다(실측 44초, 기다림 20초 포함). 시뮬레이션을 먼저 돌려 보는 경우도 있다. 절차 파일에 <code>"value": 45</code> 같은 단계를 넣으면 그 단계에서 "멈춤: … 허용 범위 밖"으로 멈춘다. 절차 파일도 드라이버의 한계를 넘지 못한다.</p>
+<p class="chk"><strong>✅ 확인</strong>: 실행 전에 문과 온도를 확인하고, <code>run_protocol</code> 허락 창이 나타난다. 허락하면 단계마다 진행이 올라오고 <code>1. setpoint → 30 / 2. 10초 기다림 (온도 30.0) / … / 5. setpoint → 37 / 완료</code>로 끝난다. 시뮬레이션을 먼저 돌려 보는 경우도 있다. 절차 파일에 <code>"value": 45</code> 같은 단계를 넣으면 그 단계에서 "멈춤: … 허용 범위 밖"으로 멈춘다. 절차 파일도 드라이버의 한계를 넘지 못한다.</p>
 <p><strong>로봇 팔: ROS 2 방식의 가상 장비</strong> — 로봇 분야에서는 <a href="https://docs.ros.org">ROS 2</a>(Robot Operating System)가 표준처럼 쓰인다. 로봇은 관절 상태를 <code>/joint_states</code> 같은 <strong>토픽</strong>에 계속 내보내고(메시지 형식 <code>sensor_msgs/JointState</code>), 움직임은 "이 관절들을 이 각도로"라는 <strong>궤적 목표</strong>(<code>FollowJointTrajectory</code> 액션)로 보낸다. ROS 2를 설치하고 로봇 시뮬레이터를 띄우는 것은 이 실습에 너무 무겁다. 그래서 같은 드라이버에 <strong>설명 파일 하나만</strong> 더해, ROS 2와 같은 모양으로 상태를 남기는 가상 로봇 팔을 만들었다. <code>devices/robot-arm.json</code>의 핵심:</p>
 <pre><code class="language-json">{
   &quot;id&quot;: &quot;robot-arm-1&quot;,
@@ -2472,7 +2429,7 @@ cd ~/ai-agent-workshop-2026
 <p><span class="run opt">선택</span> <span class="where">→ Claude Code 창에 붙여 넣기</span></p>
 <pre class="paste opt"><code class="language-text">쟁반에 있는 시료판을 로봇 팔로 인큐베이터에 넣어줘. 맞는 절차가 있으면 그걸 써
 </code></pre>
-<p class="chk"><strong>✅ 확인</strong>: Claude가 <code>list_protocols</code>에서 <code>plate-to-incubator</code>를 찾고, 두 장비의 설명서를 읽고, 작업 구역 센서(<code>zone=clear</code>)를 확인한 뒤 <code>run_protocol</code> 허락 창을 띄운다. 허락하면 12단계가 끝까지 돈다(실측 28초). 터미널에서 <code>uv run 09-advanced/robot/device_driver.py echo robot-arm-1</code>로 팔이 지나간 관절 상태를 본다.</p>
+<p class="chk"><strong>✅ 확인</strong>: Claude가 <code>list_protocols</code>에서 <code>plate-to-incubator</code>를 찾고, 두 장비의 설명서를 읽고, 작업 구역 센서(<code>zone=clear</code>)를 확인한 뒤 <code>run_protocol</code> 허락 창을 띄운다. 허락하면 12단계가 끝까지 돈다. 터미널에서 <code>uv run 09-advanced/robot/device_driver.py echo robot-arm-1</code>로 팔이 지나간 관절 상태를 본다.</p>
 <p><strong>행동 계획 + 시뮬레이터</strong> — 이번에는 절차가 없는 일을 시킨다. 에이전트가 절차를 짜고, 시뮬레이터로 먼저 검증하고, 통과한 뒤에만 실행을 묻게 한다.</p>
 <figure class="fig" id="fig-ws-robot" data-fig="ws-robot"><figcaption><b>그림 27. 로봇 행동 계획</b> · 애니메이션, 계획 → 시뮬레이터 → 사람 승인 → 실행</figcaption></figure>
 
@@ -2617,7 +2574,7 @@ cd ~/ai-agent-workshop-2026
 <td>README 준비 프롬프트는 Codex 창에 그대로 붙여 넣는다</td>
 </tr>
 <tr>
-<td>오프닝</td>
+<td>에이전트 소개</td>
 <td>자동 진행 모드: <code>.claude/skills/workshop-tutor/SKILL.md 를 읽고 그대로 자동 진행 모드로 1장부터 같이 하자.</code></td>
 </tr>
 <tr>
@@ -2706,7 +2663,7 @@ $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
 <p><code>arxiv</code>는 서버 이름. <code>--scope project</code>는 저장소의 <code>.mcp.json</code>에 저장해 저장소를 받는 사람 모두가 같은 MCP를 쓰게 한다. <code>--</code> 뒤는 서버를 켜는 명령이다. 처음에는 내려받느라 수십 초 걸릴 수 있다.&#160;<a class="footnote-backref" href="#fnref:mcpcmd" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>"이 도구를 쓸까요?"가 나타나면 허용한다. <code>uvx: command not found</code>: README의 E 환경 점검대로 uv를 설치한 뒤 터미널을 새로 연다. <code>/mcp</code>에 arxiv가 없음: <code>/exit</code> 후 <code>claude --continue</code>. <code>Failed to connect</code>: 1분 뒤 <code>claude mcp list</code>를 다시 본다.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>"이 도구를 쓸까요?"가 나타나면 허용한다. <code>uvx: command not found</code>: README의 E 환경 점검대로 uv를 설치한 뒤 터미널을 새로 연다. <code>/mcp</code>에 arxiv가 없음: <code>/exit</code> 후 <code>claude --continue</code>. <code>Failed to connect</code>: 잠시 뒤 <code>claude mcp list</code>를 다시 본다.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 <li id="fn:sub">
 <p>서브에이전트는 <code>.claude/agents/</code>의 마크다운 파일 하나다. 별도 컨텍스트에서 작업하므로 메인 대화에 문서가 쌓이지 않는다. <code>name</code>, <code>description</code> 필수(description을 보고 언제 맡길지 정한다). <code>tools</code>를 Read·Grep·Glob만 주면 읽기 전용. <code>skills</code>는 시작할 때 불러올 스킬. 서브에이전트는 메인 대화를 보지 못하고 맡기는 메시지만 받는다.&#160;<a class="footnote-backref" href="#fnref:sub" title="Jump back to footnote 9 in the text">&#8617;</a></p>
@@ -2721,7 +2678,7 @@ $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
 <p>메모 출처는 <code>03-subagents/materials/2026-10-05-lab-meeting.md</code>. 1번에서 대화창에만 나오던 회의록이 처음으로 파일로 남는다.&#160;<a class="footnote-backref" href="#fnref:3-1" title="Jump back to footnote 12 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3-2">
-<p><code>onboarding-buddy(...)</code> 위임 줄이 보여야 한다. 03·04장은 아직 빈 장이라 계정·장비 질문은 01장에서만 근거를 찾는다.&#160;<a class="footnote-backref" href="#fnref:3-2" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+<p>03·04장은 아직 빈 장이라 계정·장비 질문은 01장에서만 근거를 찾는다.&#160;<a class="footnote-backref" href="#fnref:3-2" title="Jump back to footnote 13 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3-3">
 <p>숨김 폴더는 Finder에서 <code>Cmd</code>+<code>Shift</code>+<code>.</code>. 근거와 다른 카드가 있으면 <code>study-maker에게 근거 줄과 맞지 않는 카드를 찾아 고치라고 해줘</code>. 첫 push는 <code>git push -u origin main</code>이다. <code>No configured push destination</code>이면 1-1의 <code>gh repo create</code> 줄을 실행한 뒤 다시 push. 4번 Slack은 GitHub에 올라간 것만 읽는다.&#160;<a class="footnote-backref" href="#fnref:3-3" title="Jump back to footnote 14 in the text">&#8617;</a></p>
@@ -2736,7 +2693,7 @@ $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
 <p>학교 Slack은 앱 설치 권한이 없는 경우가 많다. 게스트(외부 계정)가 있는 채널에서는 Claude가 "Claude doesn't respond in channels that include guests"라는 안내만 남길 수 있다. 그러면 게스트 없는 채널을 따로 만들어 쓴다.&#160;<a class="footnote-backref" href="#fnref:ws" title="Jump back to footnote 17 in the text">&#8617;</a></p>
 </li>
 <li id="fn:5-2">
-<p>0-3 준비 6번(그래프 도구 미리 받기)을 안 했으면 첫 실행에 1분쯤 걸린다. 그래프가 안 생기면 <code>uv: command not found</code>인지 본다(0장 점검 표의 uv). 한글이 네모로 깨지면 그래프 글자를 영어로 바꿔 달라고 한다. 질문 수는 실행마다 조금 다를 수 있다(무엇을 질문으로 볼지 판단이 들어가기 때문). 스킬이 저장까지 안 하면 <code>05-report/report/ 에 저장해줘</code>를 덧붙인다.&#160;<a class="footnote-backref" href="#fnref:5-2" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+<p>0-3 준비 6번(그래프 도구 미리 받기)을 안 했으면 첫 실행이 오래 걸린다. 그래프가 안 생기면 <code>uv: command not found</code>인지 본다(0장 점검 표의 uv). 한글이 네모로 깨지면 그래프 글자를 영어로 바꿔 달라고 한다. 질문 수는 실행마다 조금 다를 수 있다(무엇을 질문으로 볼지 판단이 들어가기 때문). 스킬이 저장까지 안 하면 <code>05-report/report/ 에 저장해줘</code>를 덧붙인다.&#160;<a class="footnote-backref" href="#fnref:5-2" title="Jump back to footnote 18 in the text">&#8617;</a></p>
 </li>
 <li id="fn:5-4">
 <p>로그 16~17줄에 전화번호와 메일이 들어 있고, 스킬 규칙에 아이디를 가리라는 말이 없으며, 리포트에 AI 사용 문장을 넣지 않았기 때문이다. 점검이 "모두 통과"만 내면 <code>근거 파일과 숫자를 한 칸씩 대조한 표를 같이 보여 달라고 해줘</code>.&#160;<a class="footnote-backref" href="#fnref:5-4" title="Jump back to footnote 19 in the text">&#8617;</a></p>
@@ -2751,10 +2708,10 @@ $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
 <p>플러그인은 내 계정 전체에 설치된다(다른 저장소에서도 쓰인다). 지우려면 <code>claude plugin uninstall okf@scaccogatto</code>. 설치 없이 하려면 이 단계를 건너뛰어도 된다. 그러면 스킬이 형식 검사를 눈으로 대신하고 그렇게 했다고 알린다. Codex는 <code>npx skills add scaccogatto/okf-skills</code>로 스킬만 넣을 수 있다(okf-skills README).&#160;<a class="footnote-backref" href="#fnref:9-1a" title="Jump back to footnote 22 in the text">&#8617;</a></p>
 </li>
 <li id="fn:9-1">
-<p>위키 스킬에 "참여자를 알아볼 수 있는 내용은 옮기지 않는다"는 규칙이 있다. 실행마다 페이지 이름과 개수는 조금 다르다(실측: 만들기 27초, 넣기 48초·47초, 묻기 38초, 확인 23초). 스킬이 안 불리면 <code>lab-wiki 스킬로 위키에 넣어줘: …</code>처럼 이름을 넣는다. GitHub Action은 저장소가 GitHub에 있어야 돈다.&#160;<a class="footnote-backref" href="#fnref:9-1" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+<p>위키 스킬에 "참여자를 알아볼 수 있는 내용은 옮기지 않는다"는 규칙이 있다. 실행마다 페이지 이름과 개수는 조금 다르다. 스킬이 안 불리면 <code>lab-wiki 스킬로 위키에 넣어줘: …</code>처럼 이름을 넣는다. GitHub Action은 저장소가 GitHub에 있어야 돈다.&#160;<a class="footnote-backref" href="#fnref:9-1" title="Jump back to footnote 23 in the text">&#8617;</a></p>
 </li>
 <li id="fn:9-2">
-<p>처음에는 음성 인식 모델(약 500MB)을 받느라 1분쯤 더 걸린다(실측: 소리 뽑기 17초, 받아 적기 36초). 새 담당이 호출되지 않으면 <code>/exit</code> 후 <code>claude --continue</code>. <code>curl</code>이 실패하면 브라우저로 영상 주소를 열어 <code>09-advanced/video/lesley-ott.mp4</code>로 저장한다. 영상과 소리 파일은 용량이 커서 커밋되지 않는다(<code>09-advanced/.gitignore</code>).&#160;<a class="footnote-backref" href="#fnref:9-2" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+<p>처음에는 음성 인식 모델(약 500MB)을 받느라 시간이 더 걸린다. 새 담당이 호출되지 않으면 <code>/exit</code> 후 <code>claude --continue</code>. <code>curl</code>이 실패하면 브라우저로 영상 주소를 열어 <code>09-advanced/video/lesley-ott.mp4</code>로 저장한다. 영상과 소리 파일은 용량이 커서 커밋되지 않는다(<code>09-advanced/.gitignore</code>).&#160;<a class="footnote-backref" href="#fnref:9-2" title="Jump back to footnote 24 in the text">&#8617;</a></p>
 </li>
 <li id="fn:9-3">
 <p><code>lab-devices</code>가 <code>/mcp</code>에 없으면 <code>/exit</code> 후 <code>claude --continue</code>. 처음 연결에 몇십 초 걸린다(필요한 도구를 받는다). 상태를 처음으로 되돌리려면 터미널에서 <code>rm 09-advanced/robot/devices/*.state.json</code>. Codex: <code>codex mcp add lab-devices -- uv run "$HOME/ai-agent-workshop-2026/09-advanced/robot/lab_devices.py"</code> (내 계정 전체 설정에 저장되므로 전체 경로로 적는다). Codex에는 <code>.claude/settings.json</code>의 <code>ask</code>가 없으니, 쓰기 도구를 쓸 때마다 묻는지 직접 확인한다.&#160;<a class="footnote-backref" href="#fnref:9-3" title="Jump back to footnote 25 in the text">&#8617;</a></p>
@@ -2788,7 +2745,7 @@ $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
 
   const scenes = [
     {
-      tab: '에이전트 루프', ch: '오프닝',
+      tab: '에이전트 루프', ch: '에이전트 소개',
       title: 'LLM에서 에이전트로: 에이전트 루프',
       q: '추론 → 도구 호출 → 결과 관찰의 반복',
       svg: svg(360,
@@ -2811,7 +2768,7 @@ $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
         { on: ['llm'], dots: ['pO2L'], text: { say: '형식 확인 → 회의록 작성' }, cap: '다시 추론한다. 이 반복이 <b>에이전트 루프</b>다. 단계별 지시 없이 다음 행동을 스스로 선택한다.' },
         { on: ['tool'], dots: ['pL2T'], text: { tool: 'Write 2026-10-03.md' }, cap: '두 번째 도구 호출: 회의록 파일을 쓴다.' },
         { on: ['obs'], dots: ['pT2O'], text: { obs: '저장 완료' }, cap: '결과를 다시 관찰한다. 실패 시 원인을 분석해 다른 방법을 시도한다.' },
-        { on: ['user'], dots: ['pL2U'], text: { say: '목표 달성, 보고' }, cap: '목표 달성으로 판단하면 루프를 종료하고 결과를 보고한다. Claude Code는 이 루프와 도구를 제공하는 <b>하네스</b>다.' }
+        { on: ['user'], dots: ['pL2U'], text: { say: '목표 달성, 보고' }, cap: '목표 달성으로 판단하면 루프를 종료하고 결과를 보고한다. Claude Code는 모델을 감싸 이 루프를 실행하고 도구를 연결하는 프로그램(<b>하네스</b>, 8-3)이다.' }
       ]
     },
     {
@@ -2890,7 +2847,7 @@ $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
         let b = '<rect class="frame" x="24" y="24" width="300" height="352" rx="10"/>' +
           '<text x="40" y="50" font-size="13" font-weight="600">메인 대화</text><text class="quiet" x="104" y="50" font-size="12">호스트 Claude</text>' +
           '<g class="node" data-k="main"><rect class="b" x="40" y="64" width="268" height="196" rx="8"/></g>' +
-          '<text x="56" y="92" font-size="13">나: 신입 정하늘이 왔어</text>' +
+          '<text x="56" y="92" font-size="13">나: 신입 정하늘 님 온보딩 준비 부탁해</text>' +
           '<text x="56" y="124" font-size="13" data-rev="m2">→ 담당 3명에게 작업 분배</text>' +
           '<text x="56" y="156" font-size="13" data-rev="m3">← 요약 보고 3건 수신</text>' +
           '<text x="56" y="188" font-size="13" data-rev="m4">→ 취합 후 사용자에게 보고</text>' +
@@ -3183,7 +3140,7 @@ $env:ANTHROPIC_AUTH_TOKEN = &quot;sk-or-...&quot;
         { on: ['app', 'host'], dots: ['sW2A', 'sA2H'], text: { app: '저장소 작업 → 클라우드', host: '내 저장소 복제 후 시작' }, cap: '"Working in …" 표시와 함께 <b>클라우드 세션</b>이 열린다. GitHub의 내 저장소를 복제해 작업한다.' },
         { on: ['host', 'scribe'], dots: ['sH2S'], text: { host: '채널 메모 읽는 중', scribe: '세 절로 쓰는 중' }, cap: '채널 메모를 읽고 <b>새 파일 하나</b>를 작성한다. 다른 파일은 수정하지 않는다.' },
         { on: ['gh'], dots: ['sH2G'], text: { scribe: '완성', gh: '새 브랜치 + PR' }, cap: '결과는 <b>새 브랜치</b>에 반영되고 PR이 생성된다. main은 변경되지 않는다.' },
-        { on: ['work'], dots: ['sH2W'], text: { host: '완료', work: 'PR 링크 · 버튼' }, cap: '답글로 <b>PR 링크</b>와 <b>View session</b>·<b>Create PR</b> 버튼이 온다. 리허설 기준 약 2분 소요. merge 여부는 사용자가 결정한다.' }
+        { on: ['work'], dots: ['sH2W'], text: { host: '완료', work: 'PR 링크 · 버튼' }, cap: '답글로 <b>PR 링크</b>와 <b>View session</b>·<b>Create PR</b> 버튼이 온다. merge 여부는 사용자가 결정한다.' }
       ]
     },
     {
