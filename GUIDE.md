@@ -119,7 +119,7 @@ ai-agent-workshop-2026/
 | 준비물 | |
 | --- | --- |
 | GitHub 계정 | 없으면 [github.com/signup](https://github.com/signup), 이메일 인증까지 |
-| AI 코딩 도구 (하나 이상) | Claude Code: Claude **Pro 이상** · Codex: **서울대 계정**(무료) · OpenRouter: 쓴 만큼 결제([부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter)) |
+| AI 코딩 도구 | **Claude Code (기준)**: Claude **Pro 이상** · Codex: 개인 계정 또는 서울대 재학생 `snu.ac.kr` 계정(학생용 계정은 일부 기능 제한 가능) · OpenRouter: 사용량 과금, 5장까지 실습 시 약 $5 예상([부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter)) |
 | 노트북 | macOS 또는 Windows |
 
 Claude 무료 플랜은 Claude Code를 지원하지 않는다.
@@ -133,7 +133,7 @@ Claude 무료 플랜은 Claude Code를 지원하지 않는다.
 
 ### 0-2. AI 코딩 도구 설치·로그인
 
-쓸 것 하나 이상만 설치한다.
+가이드북은 Claude Code를 기준으로 한다. 사용할 도구만 설치한다.
 
 **Claude Code** · 🍎 macOS
 
@@ -180,7 +180,7 @@ npm install -g @openai/codex
 
 1. 새 터미널에서 `codex`를 입력한다.
 2. **Sign in with ChatGPT**를 고른다.
-3. 서울대 계정으로 로그인한다.
+3. 개인 계정 또는 서울대 `snu.ac.kr` 계정으로 로그인한다.
 
 **확인**: `안녕`을 쳐서 답이 오면 성공. 나가기는 Claude Code `/exit`, Codex `/quit`.
 
@@ -2140,7 +2140,7 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 
 ## 부록 B · Claude 구독 없이 하기: Codex · OpenRouter
 
-### Codex 사용 시 (서울대 계정)
+### Codex 사용 시
 
 명령·파일 대응은 가이드북 앞부분의 **Claude Code · Codex 대응** 표를 따른다.
 
@@ -2161,7 +2161,7 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 
 ### OpenRouter 사용 시 (사용량 과금)
 
-Claude 구독 없이 Claude Code를 쓰는 방법이다. [openrouter.ai](https://openrouter.ai)에서 가입 → **Credits** 충전($5 정도면 오늘 실습에 충분) → **Keys**에서 키(`sk-or-`로 시작)를 만든다. 키는 채팅이나 파일에 붙이지 않는다.
+Claude 구독 없이 Claude Code를 쓰는 방법이다. [openrouter.ai](https://openrouter.ai)에서 가입 → **Credits** 충전(5장까지 모두 실습할 경우 약 $5 예상) → **Keys**에서 키(`sk-or-`로 시작)를 만든다. 키는 채팅이나 파일에 붙이지 않는다.
 
 Claude Code를 열기 전에 터미널에 붙여 넣는다. `sk-or-...` 자리에 내 키를 넣는다.
 

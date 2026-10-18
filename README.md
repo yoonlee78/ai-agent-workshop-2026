@@ -41,13 +41,13 @@ GUIDE.html을 브라우저로 열어줘
 1. 없으면 [github.com/signup](https://github.com/signup)에서 만들기
 2. 이메일 인증까지 마치기
 
-**② AI 코딩 도구 (둘 중 하나 이상)**
+**② AI 코딩 도구** (실습은 **Claude Code**를 기준으로 진행해요)
 
 | 도구 | 필요한 것 |
 | --- | --- |
-| Claude Code | Claude **Pro 이상** 구독 (Pro로 충분해요) |
-| Codex | **서울대 계정** (무료) |
-| Claude Code + OpenRouter | 구독 없이 쓴 만큼 결제 ($5 충전이면 충분). 설정은 [GUIDE.md 부록 B](GUIDE.md#부록-b--claude-구독-없이-하기-codex--openrouter) |
+| Claude Code (기준) | Claude **Pro 이상** 구독 (Pro로 충분해요) |
+| Codex | 개인 계정 또는 서울대 재학생 `snu.ac.kr` 계정 (학생용 계정은 일부 기능이 제한될 수 있어요) |
+| Claude Code + OpenRouter | 구독 없이 쓴 만큼 결제 (5장까지 모두 실습하면 $5 정도 예상). 설정은 [GUIDE.md 부록 B](GUIDE.md#부록-b--claude-구독-없이-하기-codex--openrouter) |
 
 Codex로 하는 사람은 GUIDE.md 0장 끝의 **Claude Code · Codex 대응표**를, OpenRouter로 하는 사람은 [GUIDE.md 부록 B](GUIDE.md#부록-b--claude-구독-없이-하기-codex--openrouter)를 참고해 주세요.
 
@@ -139,7 +139,7 @@ npm install -g @openai/codex
 
 1. 새 터미널을 열고 `codex` 입력
 2. **Sign in with ChatGPT** 선택
-3. 서울대 계정으로 로그인
+3. 개인 계정 또는 서울대 `snu.ac.kr` 계정으로 로그인
 
 <br>
 
@@ -358,7 +358,7 @@ A. 학교 와이파이에서 자주 생겨요. `Ctrl` + `C`로 멈추고 휴대�
 ### Claude Code · Codex
 
 **Q. Claude Code 로그인이 안 되거나 구독이 필요하다고 나와요.**
-A. Claude 무료 플랜으로는 Claude Code를 쓸 수 없어요. Pro 이상을 구독하거나 Codex(서울대 계정)를 써 주세요. 구독 상태는 claude.ai 왼쪽 아래 이름 → 설정에서 확인할 수 있어요.
+A. Claude 무료 플랜으로는 Claude Code를 쓸 수 없어요. Pro 이상을 구독하거나 Codex(개인 계정 또는 `snu.ac.kr` 계정) 또는 OpenRouter를 써 주세요. 구독 상태는 claude.ai 왼쪽 아래 이름 → 설정에서 확인할 수 있어요.
 
 **Q. 로그인할 때 "API 키를 쓸까요?"라고 물어요.**
 A. 거절해 주세요. API 키로 쓰면 구독과 별도로 요금이 나가요.
