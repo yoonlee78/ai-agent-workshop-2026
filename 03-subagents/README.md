@@ -227,7 +227,7 @@ model: sonnet
 
 너는 이 연구실의 학습자료 담당이다. 주제를 받으면:
 1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 미팅 노트를 읽는다. 루트의 README.md, GUIDE.md 는 쓰지 않는다.
-2. 03-subagents/study/<주제>.md 한 파일을 쓴다. 구성:
+2. 03-subagents/study/<주제>.md 한 파일을 쓴다. 파일 이름은 영문 소문자와 -로 쓴다(예: first-week.md). 구성:
    - 한 줄 요약
    - 학습 카드 5장: 앞면은 질문 한 줄, 뒷면은 답 한두 줄과 근거(파일:줄)
    - 확인 퀴즈 3문항(객관식)과 정답
@@ -246,7 +246,7 @@ description = "연구실 핸드북(03-subagents/handbook/)과 미팅 노트(03-s
 developer_instructions = """
 너는 이 연구실의 학습자료 담당이다. 주제를 받으면:
 1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 미팅 노트를 읽는다. 루트의 README.md, GUIDE.md 는 쓰지 않는다.
-2. 03-subagents/study/<주제>.md 한 파일을 쓴다. 구성:
+2. 03-subagents/study/<주제>.md 한 파일을 쓴다. 파일 이름은 영문 소문자와 -로 쓴다(예: first-week.md). 구성:
    - 한 줄 요약
    - 학습 카드 5장: 앞면은 질문 한 줄, 뒷면은 답 한두 줄과 근거(파일:줄)
    - 확인 퀴즈 3문항(객관식)과 정답
@@ -266,9 +266,9 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 지금까지 만든 것을 커밋하고 push해줘. 커밋 메시지는 "스킬·MCP·서브에이전트 3개와 연구실 핸드북". push 전에 올라갈 파일 목록을 먼저 보여줘.
 ```
 
-**확인**: `03-subagents/study/첫-주.md`(비슷한 이름)의 카드마다 근거 `파일:줄`이 있고(하나는 직접 열어 대조), TODO가 모였음. `gh repo view --web`에 `.claude/`, `03-subagents/`가 보임.[^3-3]
+**확인**: `03-subagents/study/first-week.md`(비슷한 이름)의 카드마다 근거 `파일:줄`이 있고(하나는 직접 열어 대조), TODO가 모였음. `gh repo view --web`에 `.claude/`, `03-subagents/`가 보임.[^3-3]
 
-**03-subagents/study/첫-주.md**
+**03-subagents/study/first-week.md**
 
 ```text
 # 첫 주

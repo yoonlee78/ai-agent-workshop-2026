@@ -1134,7 +1134,7 @@ model: sonnet
 
 너는 이 연구실의 학습자료 담당이다. 주제를 받으면:
 1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 미팅 노트를 읽는다. 루트의 README.md, GUIDE.md 는 쓰지 않는다.
-2. 03-subagents/study/<주제>.md 한 파일을 쓴다. 구성:
+2. 03-subagents/study/<주제>.md 한 파일을 쓴다. 파일 이름은 영문 소문자와 -로 쓴다(예: first-week.md). 구성:
    - 한 줄 요약
    - 학습 카드 5장: 앞면은 질문 한 줄, 뒷면은 답 한두 줄과 근거(파일:줄)
    - 확인 퀴즈 3문항(객관식)과 정답
@@ -1153,7 +1153,7 @@ description = "연구실 핸드북(03-subagents/handbook/)과 미팅 노트(03-s
 developer_instructions = """
 너는 이 연구실의 학습자료 담당이다. 주제를 받으면:
 1. 03-subagents/handbook/ 의 README.md 와 01~04장, 03-subagents/meetings/ 미팅 노트를 읽는다. 루트의 README.md, GUIDE.md 는 쓰지 않는다.
-2. 03-subagents/study/<주제>.md 한 파일을 쓴다. 구성:
+2. 03-subagents/study/<주제>.md 한 파일을 쓴다. 파일 이름은 영문 소문자와 -로 쓴다(예: first-week.md). 구성:
    - 한 줄 요약
    - 학습 카드 5장: 앞면은 질문 한 줄, 뒷면은 답 한두 줄과 근거(파일:줄)
    - 확인 퀴즈 3문항(객관식)과 정답
@@ -1189,9 +1189,9 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 
 <!-- /mode -->
 
-**확인**: `03-subagents/study/첫-주.md`(비슷한 이름)의 카드마다 근거 `파일:줄`이 있고(하나는 직접 열어 대조), TODO가 모였음. `gh repo view --web`에 `.claude/`, `03-subagents/`가 보임.[^3-3]
+**확인**: `03-subagents/study/first-week.md`(비슷한 이름)의 카드마다 근거 `파일:줄`이 있고(하나는 직접 열어 대조), TODO가 모였음. `gh repo view --web`에 `.claude/`, `03-subagents/`가 보임.[^3-3]
 
-<!-- screen:file | 03-subagents/study/첫-주.md
+<!-- screen:file | 03-subagents/study/first-week.md
 # 첫 주
 한 줄 요약: 서버 계정 신청, 노트북 받기, 연구윤리 교육 신청, GPU·세미나 규칙 읽기 (확인 전)
 
@@ -1561,7 +1561,7 @@ ai-agent-workshop-2026/
 ├── .claude/agents/   meeting-scribe  onboarding-buddy  study-maker  ethics-checker
 ├── 03-subagents/handbook/README.md, 01-onboarding.md ~ 04-ethics-and-security.md
 ├── 03-subagents/meetings/2026-10-05.md
-├── 03-subagents/study/첫-주.md
+├── 03-subagents/study/first-week.md
 ├── 05-report/data/lab-help-2026-09.log, questions.csv
 ├── 05-report/report/questions.md, questions-by-topic.png
 └── 05-report/reviews/questions-review.md
