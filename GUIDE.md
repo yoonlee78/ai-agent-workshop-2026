@@ -1640,7 +1640,7 @@ ai-agent-workshop-2026/
 | | 주제 |
 | --- | --- |
 | 8-1 | 실습과 연구 개념의 연결 |
-| 8-2 | 논문 소개: CoALA |
+| 8-2 | Recommended reading: CoALA |
 | 8-3 | Harness: 권고, 확인, 차단 |
 | 8-4 | Prompt injection과 least privilege |
 | 8-5 | 평가: benchmark와 alignment auditing |
@@ -1665,7 +1665,7 @@ ai-agent-workshop-2026/
 
 <!-- figure:ws-lostmiddle | Context window: 관련 정보 위치에 따른 정확도 · Liu et al. (2024) Fig. 1의 경향 재구성(수치 생략) -->
 
-### 8-2. 논문 소개: CoALA
+### 8-2. Recommended reading: CoALA
 
 [Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427)(Sumers, Yao, Narasimhan, Griffiths, 2024, TMLR)
 
