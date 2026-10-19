@@ -260,6 +260,15 @@ ai-agent-workshop-2026/
 
 이름이 점(`.`)으로 시작하는 폴더는 macOS와 Linux에서 숨김 폴더로 처리되어 Finder나 `ls`에는 보이지 않는다. `ls -a`로 확인함. GitHub 웹 화면에서는 일반 폴더처럼 보인다.
 
+스킬·서브에이전트를 두는 위치는 두 가지다. 실습에서는 모두 Project 위치에 만든다.
+
+| 구분 | 위치 | 쓰이는 곳 | GitHub 반영 | 클라우드 세션 |
+| --- | --- | --- | --- | --- |
+| Personal | `~/.claude/skills/`, `~/.claude/agents/` (내 홈 폴더) | 이 컴퓨터의 모든 프로젝트 | 안 됨 | 사용 불가 |
+| Project (실습) | `.claude/skills/`, `.claude/agents/` (저장소 안) | 이 저장소를 연 세션 | 커밋·push 시 반영 | 사용 가능 |
+
+**클라우드 세션**은 내 노트북이 아닌 Anthropic 서버에서 실행되는 Claude Code 세션이다. GitHub에서 저장소를 복제해 그 안에서 작업하므로 저장소에 든 Project 스킬·서브에이전트만 쓰인다. 4장 Slack의 `@Claude`가 클라우드 세션이며, 1~3장에서 저장소에 만든 스킬·서브에이전트를 그대로 쓴다.
+
 **문제 해결**
 
 - 에러가 나면: [README의 자주 묻는 질문](https://github.com/yoonlee78/ai-agent-workshop-2026#-자주-묻는-질문-qa)
