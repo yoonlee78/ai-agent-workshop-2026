@@ -250,6 +250,16 @@ ai-agent-workshop-2026/
 └── 09-advanced/                       ← 9. 심화 예시 자료
 -->
 
+**`.claude/` 폴더**: Claude Code가 이 저장소에서 쓰는 설정 폴더다. 이 폴더의 파일은 Claude Code가 저장소를 열 때마다 자동으로 읽는다.
+
+| 하위 폴더·파일 | 내용 | 실습에서 |
+| --- | --- | --- |
+| `.claude/skills/` | 스킬(반복 업무 매뉴얼) | `workshop-tutor`(자동 진행 모드)가 미리 들어 있음. 1·5장에서 `meeting-notes`, `question-report`, `report-format`를 만들어 넣음 |
+| `.claude/agents/` | 서브에이전트(일을 따로 맡는 담당자) | 3·5장에서 `meeting-scribe`, `onboarding-buddy`, `study-maker`, `ethics-checker`를 만들어 넣음 |
+| `.claude/settings.json` | 권한 설정(허락·차단 규칙) | 9-3에서 장비 쓰기 전에 매번 허락을 받도록 만듦 |
+
+이름이 점(`.`)으로 시작하는 폴더는 macOS와 Linux에서 숨김 폴더로 처리되어 Finder나 `ls`에는 보이지 않는다. `ls -a`로 확인함. GitHub 웹 화면에서는 일반 폴더처럼 보인다.
+
 **문제 해결**
 
 - 에러가 나면: [README의 자주 묻는 질문](https://github.com/yoonlee78/ai-agent-workshop-2026#-자주-묻는-질문-qa)
