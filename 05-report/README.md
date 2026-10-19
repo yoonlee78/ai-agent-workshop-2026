@@ -22,7 +22,7 @@
 05-report/data/lab-help-2026-09.log 를 처음 15줄만 보여줘.
 ```
 
-**확인**: 봇 메시지, 답글(`ㄴ`), 이모지만 있는 줄, 중복 줄, 날짜 형식이 다른 줄이 섞여 있다. 이 정리가 다음 단계다.
+**확인**: 봇 메시지, 답글(`ㄴ`), 이모지만 있는 줄, 중복 줄, 날짜 형식이 다른 줄이 섞여 있음. 이 정리가 다음 단계다.
 
 **05-report/data/lab-help-2026-09.log**
 
@@ -82,9 +82,9 @@ topic은 계정 · 장비 · 미팅 · 연구윤리 · 기타 중 하나.
 
 **확인**
 
-- `05-report/data/questions.csv`, `05-report/report/questions-by-topic.png`, `05-report/report/questions-draft.md`가 생겼다
-- 그래프 파일을 열어 막대 다섯 개가 보인다
-- 초안에 "핸드북에 없는 질문" 목록과 뺀 줄 수가 있다[^5-2]
+- `05-report/data/questions.csv`, `05-report/report/questions-by-topic.png`, `05-report/report/questions-draft.md`가 생겼음
+- 그래프 파일을 열어 막대 다섯 개가 보임
+- 초안에 "핸드북에 없는 질문" 목록과 뺀 줄 수가 있음[^5-2]
 
 **05-report/report/questions-draft.md**
 
@@ -110,7 +110,7 @@ topic은 계정 · 장비 · 미팅 · 연구윤리 · 기타 중 하나.
 
 **목표**: 내용과 분리된 리포트 양식 적용 스킬
 
-시간이 남으면 해 본다. 건너뛰면 5-4에서 `questions.md` 대신 `questions-draft.md`를 점검한다.
+시간이 남으면 해 봄. 건너뛰면 5-4에서 `questions.md` 대신 `questions-draft.md`를 점검함.
 
 ````text
 .claude/skills/report-format/SKILL.md 를 아래 내용 그대로 만들어줘.
@@ -135,13 +135,13 @@ description: 리포트 초안을 연구실 리포트 양식으로 다듬어 최�
 05-report/report/questions-draft.md 를 리포트 양식으로 맞춰줘.
 ```
 
-**확인**: `05-report/report/questions.md`가 생겼고, 맨 위 요약 세 줄과 "표 1.", "그림 1." 캡션이 있다. 숫자는 초안과 같다.
+**확인**: `05-report/report/questions.md`가 생겼고, 맨 위 요약 세 줄과 "표 1.", "그림 1." 캡션이 있음. 숫자는 초안과 같음.
 
 ## 5-4. 연구윤리 점검 서브에이전트 `ethics-checker`
 
 **목표**: 연구윤리 점검 결과 검토와 최우선 수정 사항 반영
 
-Codex 사용자는 3장 도입부의 Codex 변환 상자로 만든다.
+Codex 사용자는 3장 도입부의 Codex 변환 상자로 만듦.
 
 ````text
 .claude/agents/ethics-checker.md 를 아래 내용 그대로 만들어줘.
@@ -170,13 +170,13 @@ model: sonnet
 - 판단할 근거가 없으면 지어내지 말고 "판단 불가: <이유>"라고 쓴다.
 ````
 
-점검을 위임하고, 피드백은 파일로 저장한다.
+점검을 위임하고, 피드백은 파일로 저장함.
 
 ```text
 ethics-checker에게 05-report/report/questions.md 를 점검하게 해줘. 근거 자료는 05-report/data/lab-help-2026-09.log 와 05-report/data/questions.csv 야. 피드백은 05-report/reviews/questions-review.md 로 저장해줘.
 ```
 
-하나만 고친다.
+하나만 고침.
 
 ```text
 05-report/reviews/questions-review.md 의 "가장 먼저 고칠 것"만 반영해서 리포트를 고쳐줘. 무엇을 바꿨는지 전후를 보여줘.
@@ -184,9 +184,9 @@ ethics-checker에게 05-report/report/questions.md 를 점검하게 해줘. 근�
 
 **확인**
 
-- `ethics-checker(...)` 위임 줄과 기준 6개 표가 오고, 점검 중에는 리포트가 바뀌지 않았다
-- 4번(개인정보)이나 6번(AI 사용 표기)에서 "주의"/"위반"이 나오는 것이 정상이다[^5-4]
-- 고친 결과가 맞는지는 사람이 판단한다
+- `ethics-checker(...)` 위임 줄과 기준 6개 표가 오고, 점검 중에는 리포트가 바뀌지 않았음
+- 4번(개인정보)이나 6번(AI 사용 표기)에서 "주의"/"위반"이 나오는 것이 정상임[^5-4]
+- 고친 결과가 맞는지는 사람이 판단함
 
 **05-report/reviews/questions-review.md**
 
@@ -201,7 +201,7 @@ ethics-checker에게 05-report/report/questions.md 를 점검하게 해줘. 근�
 가장 먼저 고칠 것: 아이디와 연락처 가리기
 ```
 
-[^5-2]: 0-3 준비 6번(그래프 도구 미리 받기)을 안 했으면 첫 실행이 오래 걸린다. 그래프가 안 생기면 `uv: command not found`인지 본다(0장 점검 표의 uv). 한글이 네모로 깨지면 그래프 글자를 영어로 바꿔 달라고 한다. 질문 수는 실행마다 조금 다를 수 있다(무엇을 질문으로 볼지 판단이 들어가기 때문). 스킬이 저장까지 안 하면 `05-report/report/ 에 저장해줘`를 덧붙인다.
+[^5-2]: 0-3 준비 6번(그래프 도구 미리 받기)을 안 했으면 첫 실행이 오래 걸림. 그래프가 안 생기면 `uv: command not found`인지 봄(0장 점검 표의 uv). 한글이 네모로 깨지면 그래프 글자를 영어로 바꿔 달라고 함. 질문 수는 실행마다 조금 다를 수 있음(무엇을 질문으로 볼지 판단이 들어가기 때문). 스킬이 저장까지 안 하면 `05-report/report/ 에 저장해줘`를 덧붙임.
 [^5-4]: 로그 16~17줄에 전화번호와 메일이 들어 있고, 스킬 규칙에 아이디를 가리라는 말이 없으며, 리포트에 AI 사용 문장을 넣지 않았기 때문이다. 점검이 "모두 통과"만 내면 `근거 파일과 숫자를 한 칸씩 대조한 표를 같이 보여 달라고 해줘`.
 
 ## 폴더 구성

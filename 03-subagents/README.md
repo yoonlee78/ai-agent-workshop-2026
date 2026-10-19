@@ -6,7 +6,7 @@
 
 **저장 위치 `.claude/agents/`**: 담당 하나당 파일 하나. 1장 스킬과 같은 `.claude/` 폴더 안에 생성된다(Codex는 `.codex/agents/<이름>.toml`).
 
-**Codex 사용자**: 3장의 담당 3개는 각 절의 Codex 상자를 쓴다. 그 밖의 서브에이전트(5-4 `ethics-checker`, 9-2 `interview-transcriber`)는 아래 상자 끝에 해당 상자 내용을 붙여 변환한다. Codex 에이전트 파일에는 `tools` 제한이 없으므로 읽기 전용 담당은 "파일을 고치지 않는다"는 지시로만 제한되며, 결과 확인 시 `git status`로 파일 변경 여부를 점검한다.
+**Codex 사용자**: 3장의 담당 3개는 각 절의 Codex 상자를 씀. 그 밖의 서브에이전트(5-4 `ethics-checker`, 9-2 `interview-transcriber`)는 아래 상자 끝에 해당 상자 내용을 붙여 변환함. Codex 에이전트 파일에는 `tools` 제한이 없으므로 읽기 전용 담당은 "파일을 고치지 않는다"는 지시로만 제한되며, 결과 확인 시 `git status`로 파일 변경 여부를 점검함.
 
 ```text
 아래 Claude Code 서브에이전트를 Codex 형식으로 바꿔서 .codex/agents/<이름>.toml 로 만들어줘.
@@ -50,7 +50,7 @@ skills: [meeting-notes]
 3. 끝나면 저장한 파일 경로와 "담당자 미정 할 일 N개"만 보고한다.
 ````
 
-**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣는다. Codex는 `.codex/agents/`에서 에이전트를 찾는다. 만든 뒤 `/quit`, `codex resume --last`로 다시 연다.
+**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣음. Codex는 `.codex/agents/`에서 에이전트를 찾는다. 만든 뒤 `/quit`, `codex resume --last`로 다시 엶.
 
 ````text
 .codex/agents/meeting-scribe.toml 을 아래 내용 그대로 만들어줘.
@@ -72,7 +72,7 @@ meeting-notes 스킬 양식을 따른다.
 meeting-scribe에게 03-subagents/materials/2026-10-05-lab-meeting.md 메모를 맡겨줘.
 ```
 
-선택: 성격이 다른 메모로 재시험. 파일럿 실험 뒤 디브리핑 메모다. 결론이 안 난 이야기가 "다음 미팅 안건"으로 가는지 본다.
+선택: 성격이 다른 메모로 재시험. 파일럿 실험 뒤 디브리핑 메모다. 결론이 안 난 이야기가 "다음 미팅 안건"으로 가는지 봄.
 
 ```text
 meeting-scribe에게 03-subagents/materials/2026-10-08-pilot-debrief.md 메모를 맡겨줘.
@@ -80,9 +80,9 @@ meeting-scribe에게 03-subagents/materials/2026-10-08-pilot-debrief.md 메모�
 
 **확인**
 
-- `meeting-scribe(...)` 위임 줄이 보인다[^notfound]
-- `03-subagents/meetings/2026-10-05.md`가 생겼다[^3-1]
-- 메모에서 불확실했던 것("이번주 금욜", "2장까지??")이 확정된 것처럼 바뀌지 않았다. 그대로 있거나 "확인 필요"로 남아 있으면 통과
+- `meeting-scribe(...)` 위임 줄이 보임[^notfound]
+- `03-subagents/meetings/2026-10-05.md`가 생겼음[^3-1]
+- 메모에서 불확실했던 것("이번주 금욜", "2장까지??")이 확정된 것처럼 바뀌지 않았음. 그대로 있거나 "확인 필요"로 남아 있으면 통과
 
 **전: 03-subagents/materials/2026-10-05-lab-meeting.md**
 
@@ -118,7 +118,7 @@ gpu 서버 얘기 - 평일 낮엔 1인당 2장까지?? 밤이랑 주말은 상�
 
 **목표**: 핸드북 근거 기반 질의응답 서브에이전트 작성(읽기 전용)
 
-핸드북 01~04장은 `03-subagents/handbook/`에 미리 들어 있다. 목차만 만든다.
+핸드북 01~04장은 `03-subagents/handbook/`에 미리 들어 있다. 목차만 만듦.
 
 ````text
 03-subagents/handbook/README.md 를 아래 내용 그대로 만들어줘.
@@ -155,7 +155,7 @@ model: sonnet
 5. "어디서 시작해?"처럼 막연한 질문이면 03-subagents/handbook/README.md 목차 순서대로 무엇부터 읽을지 알려 주고, 01-onboarding.md 의 첫 주 체크리스트를 한 항목씩 짚어 준다.
 ````
 
-**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣는다. Codex 에이전트 파일에는 도구 제한(`tools`)이 없어서 "파일을 고치지 않는다"를 지시로 넣었다. 답을 받은 뒤 `git status`로 파일이 바뀌지 않았는지 본다. 만든 뒤 `/quit`, `codex resume --last`로 다시 연다.
+**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣음. Codex 에이전트 파일에는 도구 제한(`tools`)이 없어서 "파일을 고치지 않는다"를 지시로 넣었다. 답을 받은 뒤 `git status`로 파일이 바뀌지 않았는지 봄. 만든 뒤 `/quit`, `codex resume --last`로 다시 엶.
 
 ````text
 .codex/agents/onboarding-buddy.toml 을 아래 내용 그대로 만들어줘.
@@ -172,7 +172,7 @@ developer_instructions = """
 """
 ````
 
-신입 역할로 하나씩 질문한다.
+신입 역할로 하나씩 질문함.
 
 ```text
 나는 이번 주에 들어온 인턴이야. onboarding-buddy에게 물어봐: 어디서부터 시작하면 돼?
@@ -186,7 +186,7 @@ onboarding-buddy에게 물어봐: 서버 계정은 어떻게 받아?
 @"onboarding-buddy (agent)" 연구윤리 교육은 언제까지 신청해야 해?
 ```
 
-**Codex 사용자**는 세 번째 질문을 이렇게 보낸다.
+**Codex 사용자**는 세 번째 질문을 이렇게 보냄.
 
 ```text
 onboarding-buddy 에이전트를 띄워서 물어봐: 연구윤리 교육은 언제까지 신청해야 해?
@@ -194,9 +194,9 @@ onboarding-buddy 에이전트를 띄워서 물어봐: 연구윤리 교육은 언
 
 **확인**
 
-- 답마다 근거 `파일:줄`이 붙는다.
-- 핸드북에 없는 연구윤리 교육 기한은 "문서에 없음, 팀장 확인 필요"로 답한다.[^3-2]
-- `onboarding-buddy(...)` 위임 줄이 보인다.[^notfound]
+- 답마다 근거 `파일:줄`이 붙음.
+- 핸드북에 없는 연구윤리 교육 기한은 "문서에 없음, 팀장 확인 필요"로 답함.[^3-2]
+- `onboarding-buddy(...)` 위임 줄이 보임.[^notfound]
 
 **신입이 "어디서 시작해?"라고 물으면**
 
@@ -236,7 +236,7 @@ model: sonnet
 4. 끝나면 파일 경로, 카드 수, TODO 개수만 보고한다.
 ````
 
-**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣는다. 만든 뒤 `/quit`, `codex resume --last`로 다시 연다.
+**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣음. 만든 뒤 `/quit`, `codex resume --last`로 다시 엶.
 
 ````text
 .codex/agents/study-maker.toml 을 아래 내용 그대로 만들어줘.
@@ -256,7 +256,7 @@ developer_instructions = """
 """
 ````
 
-위임 후 GitHub에 올린다.
+위임 후 GitHub에 올림.
 
 ```text
 study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
@@ -266,7 +266,7 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 지금까지 만든 것을 커밋하고 push해줘. 커밋 메시지는 "스킬·MCP·서브에이전트 3개와 연구실 핸드북". push 전에 올라갈 파일 목록을 먼저 보여줘.
 ```
 
-**확인**: `03-subagents/study/첫-주.md`(비슷한 이름)의 카드마다 근거 `파일:줄`이 있고(하나는 직접 열어 대조), TODO가 모였다. `gh repo view --web`에 `.claude/`, `03-subagents/`가 보인다.[^3-3]
+**확인**: `03-subagents/study/첫-주.md`(비슷한 이름)의 카드마다 근거 `파일:줄`이 있고(하나는 직접 열어 대조), TODO가 모였음. `gh repo view --web`에 `.claude/`, `03-subagents/`가 보임.[^3-3]
 
 **03-subagents/study/첫-주.md**
 
@@ -286,10 +286,10 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 
 [^sub]: 서브에이전트는 `.claude/agents/`의 마크다운 파일 하나다. 별도 컨텍스트에서 작업하므로 메인 대화에 문서가 쌓이지 않는다. `name`, `description` 필수(description을 보고 언제 맡길지 정한다). `tools`를 Read·Grep·Glob만 주면 읽기 전용. `skills`는 시작할 때 불러올 스킬. 서브에이전트는 메인 대화를 보지 못하고 맡기는 메시지만 받는다.
 [^scenario]: 미팅 메모와 핸드북은 가상 연구실 자료로, `03-subagents/materials/`와 `03-subagents/handbook/`에 미리 들어 있다.
-[^notfound]: 에이전트가 `not found`면 `/exit` 후 `claude --continue`로 다시 열고 같은 말을 보낸다. 메인 Claude가 직접 하면 `@"<이름> (agent)"`로 지정한다.
+[^notfound]: 에이전트가 `not found`면 `/exit` 후 `claude --continue`로 다시 열고 같은 말을 보냄. 메인 Claude가 직접 하면 `@"<이름> (agent)"`로 지정함.
 [^3-1]: 메모 출처는 `03-subagents/materials/2026-10-05-lab-meeting.md`. 1번에서 대화창에만 나오던 미팅 노트가 처음으로 파일로 남는다.
 [^3-2]: 03·04장은 아직 빈 장이라 계정·장비 질문은 01장에서만 근거를 찾는다.
-[^3-3]: 숨김 폴더는 Finder에서 `Cmd`+`Shift`+`.`. 근거와 다른 카드가 있으면 `study-maker에게 근거 줄과 맞지 않는 카드를 찾아 고치라고 해줘`. 첫 push는 `git push -u origin main`이다. `No configured push destination`이면 1-1의 `gh repo create` 줄을 실행한 뒤 다시 push. 4번 Slack은 GitHub에 올라간 것만 읽는다.
+[^3-3]: 숨김 폴더는 Finder에서 `Cmd`+`Shift`+`.`. 근거와 다른 카드가 있으면 `study-maker에게 근거 줄과 맞지 않는 카드를 찾아 고치라고 해줘`. 첫 push는 `git push -u origin main`임. `No configured push destination`이면 1-1의 `gh repo create` 줄을 실행한 뒤 다시 push. 4번 Slack은 GitHub에 올라간 것만 읽는다.
 
 ## 폴더 구성
 

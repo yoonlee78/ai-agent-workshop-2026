@@ -47,9 +47,9 @@
 
 <!-- legend -->
 
-- 단계마다 **목표 → 상자 → 확인** 순서다. 상자 내용은 전체를 붙여 넣는다.[^paste]
-- 오류가 나면 각주(작은 숫자)를 참고한다.
-- Codex 사용자는 0장 끝의 Claude Code · Codex 대응표, OpenRouter 사용자는 [부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter)를 참고한다.
+- 단계마다 **목표 → 상자 → 확인** 순서다. 상자 내용은 전체를 붙여 넣음.[^paste]
+- 오류가 나면 각주(작은 숫자)를 참고함.
+- Codex 사용자는 0장 끝의 Claude Code · Codex 대응표, OpenRouter 사용자는 [부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter)를 참고함.
 
 [^paste]: 붙여 넣기: macOS `Cmd` + `V`, Windows `Ctrl` + `V` 또는 마우스 오른쪽 클릭.
 
@@ -122,18 +122,18 @@ ai-agent-workshop-2026/
 | AI 코딩 도구 | **Claude Code (기준)**: Claude **Pro 이상** · Codex: 개인 계정 또는 서울대 재학생 `snu.ac.kr` 계정(학생용 계정은 일부 기능 제한 가능) · OpenRouter: 사용량 과금, 5장까지 실습 시 약 $5 예상([부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter)) |
 | 노트북 | macOS 또는 Windows |
 
-Claude 무료 플랜은 Claude Code를 지원하지 않는다.
+Claude 무료 플랜은 Claude Code를 지원하지 않음.
 
 ### 0-1. 터미널 열기
 
-- macOS: `Cmd` + `Space` → **터미널**. `이름@컴퓨터 ~ %`가 보이면 된다.
-- Windows: 시작 → **powershell** → **Windows PowerShell**. 앞에 `PS`가 보여야 한다.
+- macOS: `Cmd` + `Space` → **터미널**. `이름@컴퓨터 ~ %`가 보이면 됨.
+- Windows: 시작 → **powershell** → **Windows PowerShell**. 앞에 `PS`가 보여야 함.
 
-설치한 뒤에는 터미널을 완전히 닫고 새로 연다. 실행 중인 명령은 `Ctrl` + `C`로 멈춘다.
+설치한 뒤에는 터미널을 완전히 닫고 새로 엶. 실행 중인 명령은 `Ctrl` + `C`로 멈춤.
 
 ### 0-2. AI 코딩 도구 설치·로그인
 
-가이드북은 Claude Code를 기준으로 한다. 사용할 도구만 설치한다.
+가이드북은 Claude Code를 기준으로 한다. 사용할 도구만 설치함.
 
 **Claude Code** · 🍎 macOS
 
@@ -154,8 +154,8 @@ irm https://claude.ai/install.ps1 | iex
 
 **Claude Code 로그인**
 
-1. 새 터미널에서 `claude`를 입력한다.
-2. 브라우저가 열리면 claude.ai에 로그인하고 **승인**을 누른다.
+1. 새 터미널에서 `claude`를 입력함.
+2. 브라우저가 열리면 claude.ai에 로그인하고 **승인**을 누름.
 3. "Do you trust the files in this folder?" → **Yes**
 4. "API 키를 쓸까요?" → **거절** (요금이 따로 나간다)
 
@@ -178,15 +178,15 @@ npm install -g @openai/codex
 
 **Codex 로그인**
 
-1. 새 터미널에서 `codex`를 입력한다.
-2. **Sign in with ChatGPT**를 고른다.
-3. 개인 계정 또는 서울대 `snu.ac.kr` 계정으로 로그인한다.
+1. 새 터미널에서 `codex`를 입력함.
+2. **Sign in with ChatGPT**를 고름.
+3. 개인 계정 또는 서울대 `snu.ac.kr` 계정으로 로그인함.
 
 **확인**: `안녕`을 쳐서 답이 오면 성공. 나가기는 Claude Code `/exit`, Codex `/quit`.
 
 ### 0-3. 에이전트를 통한 나머지 설치
 
-Claude Code나 Codex 창에 전체를 붙여 넣는다. GitHub 로그인, 이름·이메일, 설치 허락은 물어볼 때 답한다.
+Claude Code나 Codex 창에 전체를 붙여 넣음. GitHub 로그인, 이름·이메일, 설치 허락은 물어볼 때 답함.
 
 <!-- run:req -->
 
@@ -216,15 +216,15 @@ Claude Code나 Codex 창에 전체를 붙여 넣는다. GitHub 로그인, 이름
    6번에서 ok가 나왔는지도 표에 넣어. claude와 codex는 하나만 있어도 통과야. gh repo view ai-agent-workshop-2026 으로 내 계정에 같은 이름 저장소가 아직 없는지도 확인해 줘(수업 중에 만들어).
 ```
 
-**확인**: 에이전트가 마지막에 이런 점검 표를 보여 준다.
+**확인**: 에이전트가 마지막에 이런 점검 표를 보여 줌.
 
 ![점검 표 예시: 항목별 통과, 마지막 줄은 아직 없음](assets/check-table-example.svg)
 
-- [ ] 점검 표가 모두 통과했다 (Claude Code·Codex는 쓰는 것만)
-- [ ] `~/ai-agent-workshop-2026` 폴더가 있다
-- [ ] 내 GitHub 계정에 `ai-agent-workshop-2026` 저장소가 **아직 없다** (1-1에서 만든다)
+- [ ] 점검 표가 모두 통과했음 (Claude Code·Codex는 쓰는 것만)
+- [ ] `~/ai-agent-workshop-2026` 폴더가 있음
+- [ ] 내 GitHub 계정에 `ai-agent-workshop-2026` 저장소가 **아직 없음** (1-1에서 만듦)
 
-`~/ai-agent-workshop-2026` 폴더가 없으면 터미널에서 직접 받는다. 같은 이름의 폴더가 이미 있으면 이름을 바꿔 두고 받는다.
+`~/ai-agent-workshop-2026` 폴더가 없으면 터미널에서 직접 받음. 같은 이름의 폴더가 이미 있으면 이름을 바꿔 두고 받음.
 
 <!-- run:opt -->
 
@@ -258,7 +258,7 @@ ai-agent-workshop-2026/
 
 ### Claude Code · Codex 대응
 
-Codex 사용 시 상자 내용은 그대로 쓰고 아래 항목만 바꿔 읽는다. 파일을 만드는 상자는 맨 앞에 **"Codex 형식으로 바꿔서"** 한 줄을 붙이면 Codex가 위치와 형식을 맞춘다. 장별 차이와 OpenRouter 사용법은 [부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter).
+Codex 사용 시 상자 내용은 그대로 쓰고 아래 항목만 바꿔 읽음. 파일을 만드는 상자는 맨 앞에 **"Codex 형식으로 바꿔서"** 한 줄을 붙이면 Codex가 위치와 형식을 맞춘다. 장별 차이와 OpenRouter 사용법은 [부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter).
 
 | 가이드북 (Claude Code) | Codex에서 |
 | --- | --- |
@@ -286,7 +286,7 @@ Codex 사용 시 상자 내용은 그대로 쓰고 아래 항목만 바꿔 읽�
 
 **별도 등록 불필요**: 등록 절차는 따로 없다. 폴더에 파일이 있으면 Claude Code가 열릴 때마다 자동으로 읽는다. 저장소의 `.claude/skills/`에 두면 그 저장소에서, 내 홈의 `~/.claude/skills/`에 두면 모든 프로젝트에서 쓴다. 스킬을 대신 만들어 주는 도우미(skill-creator)도 있지만 결과는 같은 파일이다.
 
-**자동 호출 조건**: Claude는 평소에 스킬마다 이름과 description 한 줄만 들고 있다가, 내 말과 맞는 description이 있으면 그 스킬의 본문을 읽어 쓴다. 예를 들어 "미팅 노트 정리해줘"라고 하면 description에 "'미팅 노트 정리해줘'라고 할 때 사용"이라고 적힌 `meeting-notes`가 불린다. 그래서 description에는 **무엇을 하는지와 언제 쓰는지**를 함께 쓴다.
+**자동 호출 조건**: Claude는 평소에 스킬마다 이름과 description 한 줄만 들고 있다가, 내 말과 맞는 description이 있으면 그 스킬의 본문을 읽어 쓴다. 예를 들어 "미팅 노트 정리해줘"라고 하면 description에 "'미팅 노트 정리해줘'라고 할 때 사용"이라고 적힌 `meeting-notes`가 불린다. 그래서 description에는 **무엇을 하는지와 언제 쓰는지**를 함께 씀.
 
 <!-- figure:skill | 스킬 로딩 3단계 -->
 
@@ -326,11 +326,11 @@ Codex 사용 시 상자 내용은 그대로 쓰고 아래 항목만 바꿔 읽�
 
 ### 작업 창
 
-모든 실습은 **`~/ai-agent-workshop-2026`에서 연 Claude Code 창 하나**(작업 창)에서 한다.[^layout] 직접 모드는 1-1에서 연다.
+모든 실습은 **`~/ai-agent-workshop-2026`에서 연 Claude Code 창 하나**(작업 창)에서 함.[^layout] 직접 모드는 1-1에서 엶.
 
 <!-- mode:tutor -->
 
-1-1 전에 터미널에서 작업 창을 연다.
+1-1 전에 터미널에서 작업 창을 엶.
 
 <!-- run:req -->
 
@@ -348,7 +348,7 @@ claude
 자동 진행 모드로 워크숍 1장부터 같이 하자.
 ```
 
-**확인**: `workshop-tutor` 스킬이 쓰이고, 에이전트가 1-1에서 할 일을 두 줄로 설명한 뒤 실행해도 되는지 묻는다.[^0b]
+**확인**: `workshop-tutor` 스킬이 쓰이고, 에이전트가 1-1에서 할 일을 두 줄로 설명한 뒤 실행해도 되는지 물음.[^0b]
 
 <!-- screen:claude | 자동 진행 모드를 부르면
 > 자동 진행 모드로 워크숍 1장부터 같이 하자.
@@ -382,7 +382,7 @@ claude
 <!-- /mode -->
 
 [^layout]: 파일은 두 곳에 나눠 둔다. 스킬과 서브에이전트는 저장소 맨 위 `.claude/` 한 곳에 모아, 작업 창 하나에서 장과 상관없이 꺼내 쓴다(예: 3장의 `meeting-scribe`가 1장에서 만든 `meeting-notes` 스킬을 쓴다). 미팅 메모, 핸드북, 미팅 노트, 리포트 같은 자료와 결과물은 `03-subagents/`, `05-report/` 같은 장 폴더에 둔다.
-[^0b]: 자동 진행이 시작되지 않으면 `/workshop-tutor 1장부터`로 직접 부른다. 이후로는 "다음", "3-2 하자"처럼 말하면 된다. 에이전트가 파일을 만들고 명령을 실행해 주지만, 만든 스킬·에이전트를 시험하는 질문은 직접 입력한다.
+[^0b]: 자동 진행이 시작되지 않으면 `/workshop-tutor 1장부터`로 직접 부름. 이후로는 "다음", "3-2 하자"처럼 말하면 됨. 에이전트가 파일을 만들고 명령을 실행해 주지만, 만든 스킬·에이전트를 시험하는 질문은 직접 입력함.
 
 ### 1-1. 내 저장소 연결하기
 
@@ -390,7 +390,7 @@ claude
 
 <!-- mode:direct -->
 
-터미널(Claude Code 밖)에 붙여 넣는다.
+터미널(Claude Code 밖)에 붙여 넣음.
 
 <!-- run:req -->
 
@@ -402,9 +402,9 @@ gh repo create ai-agent-workshop-2026 --private --source . --remote origin
 claude
 ```
 
-Codex 사용자는 마지막 줄 `claude` 대신 `codex`를 입력한다. 아래 프롬프트의 `CLAUDE.md`도 `AGENTS.md`로 바꿔서 붙여 넣는다. 내용은 같다([부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter)).
+Codex 사용자는 마지막 줄 `claude` 대신 `codex`를 입력함. 아래 프롬프트의 `CLAUDE.md`도 `AGENTS.md`로 바꿔서 붙여 넣음. 내용은 같다([부록 B](#부록-b--claude-구독-없이-하기-codex--openrouter)).
 
-"이 폴더를 신뢰하나요?" → **Yes**. 이제 `CLAUDE.md`를 만든다. Claude가 이 저장소에서 일할 때마다 먼저 읽는 규칙 파일이다([공식 문서: CLAUDE.md](https://code.claude.com/docs/ko/memory)). 작업 창에:
+"이 폴더를 신뢰하나요?" → **Yes**. 이제 `CLAUDE.md`를 만듦. Claude가 이 저장소에서 일할 때마다 먼저 읽는 규칙 파일이다([공식 문서: CLAUDE.md](https://code.claude.com/docs/ko/memory)). 작업 창에:
 
 <!-- run:req -->
 
@@ -434,9 +434,9 @@ Codex 사용자는 마지막 줄 `claude` 대신 `codex`를 입력한다. 아래
 
 **확인**
 
-- `git remote -v`에 내 아이디의 `ai-agent-workshop-2026`만 보인다
-- `gh repo view --web`으로 내 비공개 저장소가 열린다 (아직 비어 있다. 첫 push는 3-3)
-- 폴더에 `CLAUDE.md`가 있다 (Codex 사용자는 `AGENTS.md`)[^1-1]
+- `git remote -v`에 내 아이디의 `ai-agent-workshop-2026`만 보임
+- `gh repo view --web`으로 내 비공개 저장소가 열림 (아직 비어 있음. 첫 push는 3-3)
+- 폴더에 `CLAUDE.md`가 있음 (Codex 사용자는 `AGENTS.md`)[^1-1]
 
 <!-- screen:terminal | 내 저장소가 연결된 화면
 이름@컴퓨터 ~ % cd ~/ai-agent-workshop-2026
@@ -481,7 +481,7 @@ description: 미팅 메모를 팀 표준 미팅 노트로 정리한다. 사용�
 3. 마지막 줄에 "담당자 미정 할 일 N개"처럼 빠진 정보를 요약한다.
 ````
 
-**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣는다. Codex는 `.agents/skills/`에서 스킬을 찾는다.
+**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣음. Codex는 `.agents/skills/`에서 스킬을 찾는다.
 
 ````text
 .agents/skills/meeting-notes/SKILL.md 를 아래 내용 그대로 만들어줘.
@@ -527,7 +527,7 @@ description: 미팅 메모를 팀 표준 미팅 노트로 정리한다. 사용�
 
 <!-- /mode -->
 
-**확인**: 결정 사항, 할 일 표, 다음 안건, 마지막 줄 "담당자 미정 할 일 N개"가 나온다. 메모에 없는 날짜나 사람은 없다.[^1-2]
+**확인**: 결정 사항, 할 일 표, 다음 안건, 마지막 줄 "담당자 미정 할 일 N개"가 나옴. 메모에 없는 날짜나 사람은 없음.[^1-2]
 
 <!-- screen:file | .claude/skills/meeting-notes/SKILL.md
 ---
@@ -554,7 +554,7 @@ description: 미팅 메모를 팀 표준 미팅 노트로 정리한다. 사용�
 
 ### 1-3. 스킬 호출과 수정 · 선택
 
-시간이 남으면 1-2에서 만든 `meeting-notes`로 해 본다. 화면 예시는 위 "호출과 수정" 참고.
+시간이 남으면 1-2에서 만든 `meeting-notes`로 해 봄. 화면 예시는 위 "호출과 수정" 참고.
 
 **① 목록 보기**
 
@@ -564,7 +564,7 @@ description: 미팅 메모를 팀 표준 미팅 노트로 정리한다. 사용�
 /skills
 ```
 
-**② 직접 부르기**: 말이 애매해서 자동으로 안 불릴 때 쓴다.
+**② 직접 부르기**: 말이 애매해서 자동으로 안 불릴 때 씀.
 
 <!-- run:opt -->
 
@@ -572,7 +572,7 @@ description: 미팅 메모를 팀 표준 미팅 노트로 정리한다. 사용�
 /meeting-notes 금요일 미팅. 하늘 발표 연습, 다음주 화요일 리허설. 장소 미정
 ```
 
-**③ 고치기**: 파일을 직접 열지 않고 말로 고친다.
+**③ 고치기**: 파일을 직접 열지 않고 말로 고침.
 
 <!-- run:opt -->
 
@@ -580,12 +580,12 @@ description: 미팅 메모를 팀 표준 미팅 노트로 정리한다. 사용�
 meeting-notes 스킬 규칙에 "4. 마감이 없는 할 일은 표 맨 아래로 보낸다"를 추가해줘.
 ```
 
-**④ 재시험**: 1-2의 시험 문장을 다시 보내 바뀐 규칙이 반영됐는지 본다. 재시작은 필요 없다.
+**④ 재시험**: 1-2의 시험 문장을 다시 보내 바뀐 규칙이 반영됐는지 봄. 재시작은 필요 없음.
 
-**확인**: `/skills`에 `meeting-notes`가 보이고, 직접 부르기에서 `Skill(meeting-notes)` 줄이 나온다. 고친 규칙이 다음 결과에 반영된다.
+**확인**: `/skills`에 `meeting-notes`가 보이고, 직접 부르기에서 `Skill(meeting-notes)` 줄이 나옴. 고친 규칙이 다음 결과에 반영됨.
 
-[^1-1]: `git pull`은 강사가 고친 최신 자료를 받는 것이라 연결을 바꾸기 전에 한다. `remove origin`은 강사 저장소와의 연결만 끊는다(파일은 그대로). `Name already exists`: 마지막 줄의 이름을 `ai-agent-workshop-2026-1019`처럼 바꿔 다시 실행한다. gh 오류: README의 E 환경 점검. 시간이 없으면 `gh repo create` 줄만 빼고 진행해도 5번까지 할 수 있다(push만 못 한다).
-[^1-2]: 스킬이 안 쓰이면 `/skills`로 `meeting-notes`가 있는지 본다(1-3 참고). 없으면 `~/ai-agent-workshop-2026`이 아닌 곳에서 연 것이다. 미팅 노트를 파일로 남기는 일은 3-1에서 한다.
+[^1-1]: `git pull`은 강사가 고친 최신 자료를 받는 것이라 연결을 바꾸기 전에 한다. `remove origin`은 강사 저장소와의 연결만 끊는다(파일은 그대로). `Name already exists`: 마지막 줄의 이름을 `ai-agent-workshop-2026-1019`처럼 바꿔 다시 실행함. gh 오류: README의 E 환경 점검. 시간이 없으면 `gh repo create` 줄만 빼고 진행해도 5번까지 할 수 있음(push만 못 함).
+[^1-2]: 스킬이 안 쓰이면 `/skills`로 `meeting-notes`가 있는지 봄(1-3 참고). 없으면 `~/ai-agent-workshop-2026`이 아닌 곳에서 연 것이다. 미팅 노트를 파일로 남기는 일은 3-1에서 함.
 
 ---
 
@@ -593,7 +593,7 @@ meeting-notes 스킬 규칙에 "4. 마감이 없는 할 일은 표 맨 아래로
 
 ### MCP란
 
-**MCP**(Model Context Protocol)는 AI 앱과 외부 데이터·도구(파일, 데이터베이스, 검색 등)를 연결하는 공개 표준 규격이다. 흔히 **AI 앱의 USB-C 포트**에 비유한다. 기기마다 전용 케이블이 필요 없듯, 도구를 MCP 서버로 한 번 만들어 두면 MCP를 지원하는 어느 AI 앱에서든 꽂아 쓸 수 있다. 오늘은 arXiv 논문 검색 서버를 꽂는다.
+**MCP**(Model Context Protocol)는 AI 앱과 외부 데이터·도구(파일, 데이터베이스, 검색 등)를 연결하는 공개 표준 규격이다. 흔히 **AI 앱의 USB-C 포트**에 비유한다. 기기마다 전용 케이블이 필요 없듯, 도구를 MCP 서버로 한 번 만들어 두면 MCP를 지원하는 어느 AI 앱에서든 꽂아 쓸 수 있다. 오늘은 arXiv 논문 검색 서버를 꽂는다. 더 알아보기: [Understanding MCP: The USB‑C Interface for AI Agents](https://modelcontextprotocol.info/blog/understanding-mcp-protocol/)
 
 <!-- figure:mcp-what | MCP란 · AI 앱과 데이터·도구 사이의 표준 연결 -->
 
@@ -615,7 +615,7 @@ meeting-notes 스킬 규칙에 "4. 마감이 없는 할 일은 표 맨 아래로
 - 검색에서 끝나지 않는다. 논문을 내려받아 절별로 읽고, BibTeX 인용을 뽑고, 관심 주제의 새 논문을 확인하는 데까지 이어진다.
 - 한 번 붙여 두면 Claude Code, Codex 등 다른 AI 앱에서도 같은 도구를 쓴다.
 
-MCP를 붙이는 것은 그 서비스에 대한 권한을 에이전트에게 주는 일이다. 무엇이 밖으로 나가는지, 읽기만 하는지 쓰기도 하는지를 보고 고른다.
+MCP를 붙이는 것은 그 서비스에 대한 권한을 에이전트에게 주는 일이다. 무엇이 밖으로 나가는지, 읽기만 하는지 쓰기도 하는지를 보고 고름.
 
 <!-- figure:mcp-map | MCP 구조 · 질의와 응답의 경로 -->
 <!-- figure:mcp | MCP 호출 한 번 -->
@@ -626,7 +626,7 @@ MCP를 붙이는 것은 그 서비스에 대한 권한을 에이전트에게 주
 
 <!-- mode:direct -->
 
-`/exit`로 나가서 **터미널**에 붙여 넣는다.[^mcpcmd]
+`/exit`로 나가서 **터미널**에 붙여 넣음.[^mcpcmd]
 
 <!-- run:req -->
 
@@ -636,7 +636,7 @@ claude mcp add --transport stdio --scope project arxiv -- uvx arxiv-mcp-server
 claude mcp list
 ```
 
-Claude Code를 다시 연다(MCP는 시작할 때 연결된다).
+Claude Code를 다시 엶(MCP는 시작할 때 연결된다).
 
 <!-- run:req -->
 
@@ -644,9 +644,9 @@ Claude Code를 다시 연다(MCP는 시작할 때 연결된다).
 claude --continue
 ```
 
-`New MCP server found in .mcp.json: arxiv`가 나타나면 **Use this and all future MCP servers in this project**를 고른다.
+`New MCP server found in .mcp.json: arxiv`가 나타나면 **Use this and all future MCP servers in this project**를 고름.
 
-**Codex 사용자**는 위 두 상자 대신 아래를 쓴다. `/quit`로 나가서 터미널에 붙여 넣는다. Codex는 MCP를 저장소가 아니라 내 계정 설정(`~/.codex/config.toml`)에 저장하므로 `.mcp.json`은 생기지 않는다.
+**Codex 사용자**는 위 두 상자 대신 아래를 씀. `/quit`로 나가서 터미널에 붙여 넣음. Codex는 MCP를 저장소가 아니라 내 계정 설정(`~/.codex/config.toml`)에 저장하므로 `.mcp.json`은 생기지 않는다.
 
 ```bash
 cd ~/ai-agent-workshop-2026
@@ -654,7 +654,7 @@ codex mcp add arxiv -- uvx arxiv-mcp-server
 codex mcp list
 ```
 
-Codex를 다시 열고, `/mcp`에서 `arxiv: connected`를 확인한다.
+Codex를 다시 열고, `/mcp`에서 `arxiv: connected`를 확인함.
 
 ```bash
 codex resume --last
@@ -674,15 +674,15 @@ codex resume --last
 
 **확인**
 
-- `claude mcp list`에 `arxiv ... ✓ Connected`가 보인다
-- 저장소에 `.mcp.json`이 생겼다
-- Claude Code 안에서 `/mcp`를 치면 arxiv와 도구 목록(`search_papers` 등)이 보인다
+- `claude mcp list`에 `arxiv ... ✓ Connected`가 보임
+- 저장소에 `.mcp.json`이 생겼음
+- Claude Code 안에서 `/mcp`를 치면 arxiv와 도구 목록(`search_papers` 등)이 보임
 
 ### 2-2. 논문 검색
 
 **목표**: MCP 도구를 활용한 논문 검색과 읽기
 
-하나씩 보낸다.
+하나씩 보냄.
 
 <!-- run:req -->
 
@@ -696,7 +696,7 @@ arxiv에서 "large language model agents psychology research" 최근 논문 5편
 그중 첫 번째 논문을 내려받아서 방법론 부분만 요약해줘
 ```
 
-**확인**: `arxiv - search_papers (MCP)` 호출 줄이 보이고, arXiv 번호가 달린 표가 나온다.[^2]
+**확인**: `arxiv - search_papers (MCP)` 호출 줄이 보이고, arXiv 번호가 달린 표가 나옴.[^2]
 
 <!-- screen:claude | 논문 검색 결과
 > arxiv에서 "large language model agents psychology research" 최근 논문 5편 찾아서 제목, 저자, 한 줄 요약을 표로 보여줘
@@ -711,7 +711,7 @@ arxiv에서 "large language model agents psychology research" 최근 논문 5편
 
 ### 2-3. 커넥터 활용 · 선택
 
-수업 시간에는 같이 하지 않는다. 필요한 사람만 수업 뒤에 각자 해 본다. Codex나 Windows에서는 Gmail 같은 구글 서비스 연결이 되지 않는 경우가 있다.
+수업 시간에는 같이 하지 않음. 필요한 사람만 수업 뒤에 각자 해 봄. Codex나 Windows에서는 Gmail 같은 구글 서비스 연결이 되지 않는 경우가 있음.
 
 **로그인 기반 커넥터**
 
@@ -727,7 +727,7 @@ arXiv처럼 서버를 직접 붙이는 방법 말고도, Claude와 Codex는 자�
 | 그 밖에 (Notion, Figma 등) | — | 커넥터 목록에서 찾기 | `/plugins`에서 찾기 |
 | 목록에 없는 것 (Google Cloud, 데이터베이스 등) | — | 그 서비스가 제공하는 MCP 서버를 `claude mcp add` | `codex mcp add` |
 
-연결은 Claude는 [claude.ai/customize/connectors](https://claude.ai/customize/connectors)에서, Codex는 `/plugins`에서 한다. 연결하면 Claude Code의 `/mcp`에 `claude.ai` 이름을 달고 자동으로 보인다. 더 알아보기: [공식 문서: Codex 플러그인](https://learn.chatgpt.com/docs/plugins)
+연결은 Claude는 [claude.ai/customize/connectors](https://claude.ai/customize/connectors)에서, Codex는 `/plugins`에서 함. 연결하면 Claude Code의 `/mcp`에 `claude.ai` 이름을 달고 자동으로 보인다. 더 알아보기: [공식 문서: Codex 플러그인](https://learn.chatgpt.com/docs/plugins)
 
 <!-- screen:web | claude.ai · 커넥터 설정
 커넥터
@@ -768,19 +768,19 @@ arXiv처럼 서버를 직접 붙이는 방법 말고도, Claude와 Codex는 자�
 
 **연결 전 유의 사항**
 
-- 권한을 어떻게 주느냐에 따라 에이전트가 메일을 읽기만 할 수도, 내 이름으로 실제 메일을 보낼 수도 있다. 무엇을 연결하고 어디까지 허락할지는 본인이 판단하고 책임진다.
-- 커넥터는 내 계정 권한 그대로 메일·문서에 접근한다. 보내기·삭제처럼 바깥에 영향을 주는 일은 허락 창에서 매번 확인한다. "don't ask again"은 읽기 도구에만 쓴다.
-- 학교·기관 계정은 관리자가 막아 둔 경우가 있다. 이때는 개인 계정으로 먼저 시험한다.
-- 참여자 정보가 든 메일함이나 드라이브는 연결하지 않는다.
+- 권한을 어떻게 주느냐에 따라 에이전트가 메일을 읽기만 할 수도, 내 이름으로 실제 메일을 보낼 수도 있음. 무엇을 연결하고 어디까지 허락할지는 본인이 판단하고 책임짐.
+- 커넥터는 내 계정 권한 그대로 메일·문서에 접근함. 보내기·삭제처럼 바깥에 영향을 주는 일은 허락 창에서 매번 확인함. "don't ask again"은 읽기 도구에만 씀.
+- 학교·기관 계정은 관리자가 막아 둔 경우가 있음. 이때는 개인 계정으로 먼저 시험함.
+- 참여자 정보가 든 메일함이나 드라이브는 연결하지 않음.
 
 **① claude.ai에서 연결** (브라우저)
 
-1. [claude.ai/customize/connectors](https://claude.ai/customize/connectors)를 연다.
-2. **Gmail** 옆 **연결** → Google 계정 선택 → 권한 **허용**. Calendar, Drive도 같은 방법이다.
+1. [claude.ai/customize/connectors](https://claude.ai/customize/connectors)를 엶.
+2. **Gmail** 옆 **연결** → Google 계정 선택 → 권한 **허용**. Calendar, Drive도 같은 방법임.
 
 **② Claude Code에서 `/mcp`로 확인**
 
-작업 창에서 `/mcp`를 입력한다. claude.ai에서 연결한 것이 `claude.ai` 이름을 달고 자동으로 보인다. 따로 설치하지 않는다. 목록에 없으면 `/exit` 후 `claude --continue`로 다시 연다.
+작업 창에서 `/mcp`를 입력함. claude.ai에서 연결한 것이 `claude.ai` 이름을 달고 자동으로 보임. 따로 설치하지 않음. 목록에 없으면 `/exit` 후 `claude --continue`로 다시 엶.
 
 <!-- run:opt -->
 
@@ -788,11 +788,11 @@ arXiv처럼 서버를 직접 붙이는 방법 말고도, Claude와 Codex는 자�
 /mcp
 ```
 
-연결 후 채널·메일이 보이지 않으면, 다른 계정이나 워크스페이스에 연결된 경우가 많다. claude.ai에서 연결을 해제하고 다시 연결한다. Slack은 허용 화면 오른쪽 위에서 워크스페이스를 고른다. 다시 연결한 뒤에는 Claude Code를 다시 연다. 커넥터는 **내 계정**으로 움직이므로 Claude를 채널에 초대할 필요는 없다(4장의 Claude 앱과 다르다).
+연결 후 채널·메일이 보이지 않으면, 다른 계정이나 워크스페이스에 연결된 경우가 많다. claude.ai에서 연결을 해제하고 다시 연결함. Slack은 허용 화면 오른쪽 위에서 워크스페이스를 고름. 다시 연결한 뒤에는 Claude Code를 다시 엶. 커넥터는 **내 계정**으로 움직이므로 Claude를 채널에 초대할 필요는 없음(4장의 Claude 앱과 다르다).
 
 **③ 읽기 기능부터 시험**
 
-처음에는 바꾸는 일 없이 읽기만 시킨다. 도구를 처음 쓸 때 Claude Code가 허락을 묻는다.
+처음에는 바꾸는 일 없이 읽기만 시킴. 도구를 처음 쓸 때 Claude Code가 허락을 물음.
 
 <!-- run:opt -->
 
@@ -814,7 +814,7 @@ Google Drive에서 "핸드북"이 들어간 문서를 찾아 제목과 마지막
 
 **④ 미팅 노트 기반 메일 초안 작성**
 
-3장에서 만든 미팅 노트로 미팅 안내 메일 **초안**을 만든다. 보내지는 않는다.
+3장에서 만든 미팅 노트로 미팅 안내 메일 **초안**을 만듦. 보내지는 않음.
 
 <!-- run:opt -->
 
@@ -827,11 +827,11 @@ Google Drive에서 "핸드북"이 들어간 문서를 찾아 제목과 마지막
 보내지 말고 초안만 만들어.
 ```
 
-**확인**: Gmail 웹의 **임시보관함**에 초안이 있다. 받는 사람이 비어 있고, 내용이 미팅 노트와 맞다. 보내기는 내가 직접 한다.
+**확인**: Gmail 웹의 **임시보관함**에 초안이 있음. 받는 사람이 비어 있고, 내용이 미팅 노트와 맞음. 보내기는 내가 직접 함.
 
 **⑤ Slack 질문에 대한 온보딩 버디 답변** (3장 이후)
 
-MCP 커넥터와 3장 서브에이전트를 한 흐름으로 잇는다. 테스트용 채널을 하나 만들고, 신입 역할로 질문을 올린다.
+MCP 커넥터와 3장 서브에이전트를 한 흐름으로 잇는다. 테스트용 채널을 하나 만들고, 신입 역할로 질문을 올림.
 
 ```text
 안녕하세요, 이번 주에 들어온 인턴입니다! 연구윤리 교육은 언제까지 신청해야 하나요? 누구한테 신청하면 되는지도 궁금해요
@@ -859,15 +859,15 @@ Slack #<테스트 채널> 의 가장 최근 질문을 읽고 onboarding-buddy에
   이 답은 Claude Code의 온보딩 버디가 연구실 핸드북만 근거로 작성했습니다.
 -->
 
-**확인**: 스레드에 초안이 생겼다. 작성자 표시가 맨 위에 있고, 기한은 지어내지 않고 "문서에 없음, 팀장 확인 필요"다. 근거 줄 하나를 직접 열어 대조한 뒤 보낸다.
+**확인**: 스레드에 초안이 생겼음. 작성자 표시가 맨 위에 있고, 기한은 지어내지 않고 "문서에 없음, 팀장 확인 필요"임. 근거 줄 하나를 직접 열어 대조한 뒤 보냄.
 
-커넥터로 올리는 글은 **내 이름으로** 올라간다. 에이전트가 쓴 글에는 항상 작성자 표시를 붙여서, 읽는 사람이 내가 직접 쓴 글로 오해하지 않게 한다.
+커넥터로 올리는 글은 **내 이름으로** 올라감. 에이전트가 쓴 글에는 항상 작성자 표시를 붙여서, 읽는 사람이 내가 직접 쓴 글로 오해하지 않게 함.
 
-**Codex에서는**: `codex`에서 `/plugins` → **Gmail** 설치 → 로그인 → 새 대화. 프롬프트는 같다. `@`를 치면 플러그인을 직접 고를 수 있다.
+**Codex에서는**: `codex`에서 `/plugins` → **Gmail** 설치 → 로그인 → 새 대화. 프롬프트는 같음. `@`를 치면 플러그인을 직접 고를 수 있음.
 
 [^mcp]: [arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server)는 로그인도 API 키도 필요 없다. 바깥으로는 검색어만 나가고, 논문은 `~/.arxiv-mcp-server/papers`에 저장된다. MCP 선택 기준은 사용자 규모, 로그인·키 필요 여부, 외부 전송 데이터다.
-[^mcpcmd]: `arxiv`는 서버 이름. `--scope project`는 저장소의 `.mcp.json`에 저장해 저장소를 받는 사람 모두가 같은 MCP를 쓰게 한다. `--` 뒤는 서버를 켜는 명령이다. 처음에는 내려받느라 수십 초 걸릴 수 있다.
-[^2]: "이 도구를 쓸까요?"가 나타나면 허용한다. `uvx: command not found`: README의 E 환경 점검대로 uv를 설치한 뒤 터미널을 새로 연다. `/mcp`에 arxiv가 없음: `/exit` 후 `claude --continue`. `Failed to connect`: 잠시 뒤 `claude mcp list`를 다시 본다.
+[^mcpcmd]: `arxiv`는 서버 이름. `--scope project`는 저장소의 `.mcp.json`에 저장해 저장소를 받는 사람 모두가 같은 MCP를 쓰게 한다. `--` 뒤는 서버를 켜는 명령이다. 처음에는 내려받느라 수십 초 걸릴 수 있음.
+[^2]: "이 도구를 쓸까요?"가 나타나면 허용함. `uvx: command not found`: README의 E 환경 점검대로 uv를 설치한 뒤 터미널을 새로 엶. `/mcp`에 arxiv가 없음: `/exit` 후 `claude --continue`. `Failed to connect`: 잠시 뒤 `claude mcp list`를 다시 봄.
 
 ---
 
@@ -877,7 +877,7 @@ Slack #<테스트 채널> 의 가장 최근 질문을 읽고 onboarding-buddy에
 
 **저장 위치 `.claude/agents/`**: 담당 하나당 파일 하나. 1장 스킬과 같은 `.claude/` 폴더 안에 생성된다(Codex는 `.codex/agents/<이름>.toml`).
 
-**Codex 사용자**: 3장의 담당 3개는 각 절의 Codex 상자를 쓴다. 그 밖의 서브에이전트(5-4 `ethics-checker`, 9-2 `interview-transcriber`)는 아래 상자 끝에 해당 상자 내용을 붙여 변환한다. Codex 에이전트 파일에는 `tools` 제한이 없으므로 읽기 전용 담당은 "파일을 고치지 않는다"는 지시로만 제한되며, 결과 확인 시 `git status`로 파일 변경 여부를 점검한다.
+**Codex 사용자**: 3장의 담당 3개는 각 절의 Codex 상자를 씀. 그 밖의 서브에이전트(5-4 `ethics-checker`, 9-2 `interview-transcriber`)는 아래 상자 끝에 해당 상자 내용을 붙여 변환함. Codex 에이전트 파일에는 `tools` 제한이 없으므로 읽기 전용 담당은 "파일을 고치지 않는다"는 지시로만 제한되며, 결과 확인 시 `git status`로 파일 변경 여부를 점검함.
 
 ```text
 아래 Claude Code 서브에이전트를 Codex 형식으로 바꿔서 .codex/agents/<이름>.toml 로 만들어줘.
@@ -919,7 +919,7 @@ skills: [meeting-notes]
 3. 끝나면 저장한 파일 경로와 "담당자 미정 할 일 N개"만 보고한다.
 ````
 
-**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣는다. Codex는 `.codex/agents/`에서 에이전트를 찾는다. 만든 뒤 `/quit`, `codex resume --last`로 다시 연다.
+**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣음. Codex는 `.codex/agents/`에서 에이전트를 찾는다. 만든 뒤 `/quit`, `codex resume --last`로 다시 엶.
 
 ````text
 .codex/agents/meeting-scribe.toml 을 아래 내용 그대로 만들어줘.
@@ -943,7 +943,7 @@ meeting-notes 스킬 양식을 따른다.
 meeting-scribe에게 03-subagents/materials/2026-10-05-lab-meeting.md 메모를 맡겨줘.
 ```
 
-선택: 성격이 다른 메모로 재시험. 파일럿 실험 뒤 디브리핑 메모다. 결론이 안 난 이야기가 "다음 미팅 안건"으로 가는지 본다.
+선택: 성격이 다른 메모로 재시험. 파일럿 실험 뒤 디브리핑 메모다. 결론이 안 난 이야기가 "다음 미팅 안건"으로 가는지 봄.
 
 <!-- run:opt -->
 
@@ -965,9 +965,9 @@ meeting-scribe에게 03-subagents/materials/2026-10-08-pilot-debrief.md 메모�
 
 **확인**
 
-- `meeting-scribe(...)` 위임 줄이 보인다[^notfound]
-- `03-subagents/meetings/2026-10-05.md`가 생겼다[^3-1]
-- 메모에서 불확실했던 것("이번주 금욜", "2장까지??")이 확정된 것처럼 바뀌지 않았다. 그대로 있거나 "확인 필요"로 남아 있으면 통과
+- `meeting-scribe(...)` 위임 줄이 보임[^notfound]
+- `03-subagents/meetings/2026-10-05.md`가 생겼음[^3-1]
+- 메모에서 불확실했던 것("이번주 금욜", "2장까지??")이 확정된 것처럼 바뀌지 않았음. 그대로 있거나 "확인 필요"로 남아 있으면 통과
 
 <!-- screen:file | 전: 03-subagents/materials/2026-10-05-lab-meeting.md
 10/5 미팅 메모
@@ -1001,7 +1001,7 @@ gpu 서버 얘기 - 평일 낮엔 1인당 2장까지?? 밤이랑 주말은 상�
 
 <!-- mode:direct -->
 
-핸드북 01~04장은 `03-subagents/handbook/`에 미리 들어 있다. 목차만 만든다.
+핸드북 01~04장은 `03-subagents/handbook/`에 미리 들어 있다. 목차만 만듦.
 
 <!-- run:req -->
 
@@ -1042,7 +1042,7 @@ model: sonnet
 5. "어디서 시작해?"처럼 막연한 질문이면 03-subagents/handbook/README.md 목차 순서대로 무엇부터 읽을지 알려 주고, 01-onboarding.md 의 첫 주 체크리스트를 한 항목씩 짚어 준다.
 ````
 
-**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣는다. Codex 에이전트 파일에는 도구 제한(`tools`)이 없어서 "파일을 고치지 않는다"를 지시로 넣었다. 답을 받은 뒤 `git status`로 파일이 바뀌지 않았는지 본다. 만든 뒤 `/quit`, `codex resume --last`로 다시 연다.
+**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣음. Codex 에이전트 파일에는 도구 제한(`tools`)이 없어서 "파일을 고치지 않는다"를 지시로 넣었다. 답을 받은 뒤 `git status`로 파일이 바뀌지 않았는지 봄. 만든 뒤 `/quit`, `codex resume --last`로 다시 엶.
 
 ````text
 .codex/agents/onboarding-buddy.toml 을 아래 내용 그대로 만들어줘.
@@ -1059,7 +1059,7 @@ developer_instructions = """
 """
 ````
 
-신입 역할로 하나씩 질문한다.
+신입 역할로 하나씩 질문함.
 
 <!-- run:req -->
 
@@ -1079,7 +1079,7 @@ onboarding-buddy에게 물어봐: 서버 계정은 어떻게 받아?
 @"onboarding-buddy (agent)" 연구윤리 교육은 언제까지 신청해야 해?
 ```
 
-**Codex 사용자**는 세 번째 질문을 이렇게 보낸다.
+**Codex 사용자**는 세 번째 질문을 이렇게 보냄.
 
 ```text
 onboarding-buddy 에이전트를 띄워서 물어봐: 연구윤리 교육은 언제까지 신청해야 해?
@@ -1099,9 +1099,9 @@ onboarding-buddy 에이전트를 띄워서 물어봐: 연구윤리 교육은 언
 
 **확인**
 
-- 답마다 근거 `파일:줄`이 붙는다.
-- 핸드북에 없는 연구윤리 교육 기한은 "문서에 없음, 팀장 확인 필요"로 답한다.[^3-2]
-- `onboarding-buddy(...)` 위임 줄이 보인다.[^notfound]
+- 답마다 근거 `파일:줄`이 붙음.
+- 핸드북에 없는 연구윤리 교육 기한은 "문서에 없음, 팀장 확인 필요"로 답함.[^3-2]
+- `onboarding-buddy(...)` 위임 줄이 보임.[^notfound]
 
 <!-- screen:claude | 신입이 "어디서 시작해?"라고 물으면
 > 나는 이번 주에 들어온 인턴이야. onboarding-buddy에게 물어봐: 어디서부터 시작하면 돼?
@@ -1143,7 +1143,7 @@ model: sonnet
 4. 끝나면 파일 경로, 카드 수, TODO 개수만 보고한다.
 ````
 
-**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣는다. 만든 뒤 `/quit`, `codex resume --last`로 다시 연다.
+**Codex 사용자**는 위 상자 대신 아래 상자를 붙여 넣음. 만든 뒤 `/quit`, `codex resume --last`로 다시 엶.
 
 ````text
 .codex/agents/study-maker.toml 을 아래 내용 그대로 만들어줘.
@@ -1163,7 +1163,7 @@ developer_instructions = """
 """
 ````
 
-위임 후 GitHub에 올린다.
+위임 후 GitHub에 올림.
 
 <!-- run:req -->
 
@@ -1189,7 +1189,7 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 
 <!-- /mode -->
 
-**확인**: `03-subagents/study/첫-주.md`(비슷한 이름)의 카드마다 근거 `파일:줄`이 있고(하나는 직접 열어 대조), TODO가 모였다. `gh repo view --web`에 `.claude/`, `03-subagents/`가 보인다.[^3-3]
+**확인**: `03-subagents/study/첫-주.md`(비슷한 이름)의 카드마다 근거 `파일:줄`이 있고(하나는 직접 열어 대조), TODO가 모였음. `gh repo view --web`에 `.claude/`, `03-subagents/`가 보임.[^3-3]
 
 <!-- screen:file | 03-subagents/study/첫-주.md
 # 첫 주
@@ -1207,10 +1207,10 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 
 [^sub]: 서브에이전트는 `.claude/agents/`의 마크다운 파일 하나다. 별도 컨텍스트에서 작업하므로 메인 대화에 문서가 쌓이지 않는다. `name`, `description` 필수(description을 보고 언제 맡길지 정한다). `tools`를 Read·Grep·Glob만 주면 읽기 전용. `skills`는 시작할 때 불러올 스킬. 서브에이전트는 메인 대화를 보지 못하고 맡기는 메시지만 받는다.
 [^scenario]: 미팅 메모와 핸드북은 가상 연구실 자료로, `03-subagents/materials/`와 `03-subagents/handbook/`에 미리 들어 있다.
-[^notfound]: 에이전트가 `not found`면 `/exit` 후 `claude --continue`로 다시 열고 같은 말을 보낸다. 메인 Claude가 직접 하면 `@"<이름> (agent)"`로 지정한다.
+[^notfound]: 에이전트가 `not found`면 `/exit` 후 `claude --continue`로 다시 열고 같은 말을 보냄. 메인 Claude가 직접 하면 `@"<이름> (agent)"`로 지정함.
 [^3-1]: 메모 출처는 `03-subagents/materials/2026-10-05-lab-meeting.md`. 1번에서 대화창에만 나오던 미팅 노트가 처음으로 파일로 남는다.
 [^3-2]: 03·04장은 아직 빈 장이라 계정·장비 질문은 01장에서만 근거를 찾는다.
-[^3-3]: 숨김 폴더는 Finder에서 `Cmd`+`Shift`+`.`. 근거와 다른 카드가 있으면 `study-maker에게 근거 줄과 맞지 않는 카드를 찾아 고치라고 해줘`. 첫 push는 `git push -u origin main`이다. `No configured push destination`이면 1-1의 `gh repo create` 줄을 실행한 뒤 다시 push. 4번 Slack은 GitHub에 올라간 것만 읽는다.
+[^3-3]: 숨김 폴더는 Finder에서 `Cmd`+`Shift`+`.`. 근거와 다른 카드가 있으면 `study-maker에게 근거 줄과 맞지 않는 카드를 찾아 고치라고 해줘`. 첫 push는 `git push -u origin main`임. `No configured push destination`이면 1-1의 `gh repo create` 줄을 실행한 뒤 다시 push. 4번 Slack은 GitHub에 올라간 것만 읽는다.
 
 ---
 
@@ -1226,7 +1226,7 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 
 <!-- mode:direct -->
 
-`#lab-work`에 오늘 실습 메모를 올린다. 예:
+`#lab-work`에 오늘 실습 메모를 올림. 예:
 
 ```text
 1장 미팅 노트 스킬 완성. 미팅 메모 두 개로 시험함.
@@ -1240,7 +1240,7 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 3장 서브에이전트 3개 생성, 핸드북 근거 답변 확인.
 ```
 
-같은 채널에 보낸다:
+같은 채널에 보냄:
 
 <!-- run:opt slack -->
 
@@ -1260,7 +1260,7 @@ study-maker에게 "첫 주" 주제로 학습자료를 만들라고 해줘.
 
 <!-- /mode -->
 
-Slack에서는 `@Claude`를 부를 때마다 새로 일을 시작한다. 고칠 말을 나중에 덧붙이면 처음부터 다시 하거나 같은 질문을 되풀이한다. 그래서 필요한 것을 **한 번에** 넣는다.
+Slack에서는 `@Claude`를 부를 때마다 새로 일을 시작한다. 고칠 말을 나중에 덧붙이면 처음부터 다시 하거나 같은 질문을 되풀이한다. 그래서 필요한 것을 **한 번에** 넣음.
 
 | 프롬프트 요소 | 이유 |
 | --- | --- |
@@ -1278,9 +1278,9 @@ Claude: Working in <내 계정>/ai-agent-workshop-2026 · PR 링크입니다: gi
 Claude: [View session] [Create PR]
 -->
 
-[^slackwhy]: Slack에서 시킨 일은 Anthropic 서버의 클라우드 세션에서 돌아 노트북을 닫아도 계속된다. 비용은 쓰던 Pro·Max 구독에서 나가고 API 키는 필요 없다. Team·Enterprise 계정은 이 절차를 적용할 수 없다.
-[^slacksteps]: 자주 막히는 단계. ② 저장소 접근 허락: GitHub **Settings** → **Applications** → **Installed GitHub Apps** → **Claude** → **Configure** → **Only select repositories**에 `ai-agent-workshop-2026` 추가 → **Save**. claude.ai/code 저장소 목록에 내 저장소가 안 보이면 이 단계가 빠진 것이다. ② 연결 확인: 새 세션에 `이 저장소에서 쓸 수 있는 서브에이전트 이름만 알려줘. 파일은 바꾸지 마.`를 보내 세 담당 이름이 보이면 성공. ③ 앱 홈 탭의 **Connect to Slack MCP**는 2-3의 커넥터라 누르지 않는다. **Routing Mode**는 ②를 마친 뒤에 보인다.
-[^ws]: 학교 Slack은 앱 설치 권한이 없는 경우가 많다. 게스트(외부 계정)가 있는 채널에서는 Claude가 "Claude doesn't respond in channels that include guests"라는 안내만 남길 수 있다. 그러면 게스트 없는 채널을 따로 만들어 쓴다.
+[^slackwhy]: Slack에서 시킨 일은 Anthropic 서버의 클라우드 세션에서 돌아 노트북을 닫아도 계속된다. 비용은 쓰던 Pro·Max 구독에서 나가고 API 키는 필요 없다. Team·Enterprise 계정은 이 절차를 적용할 수 없음.
+[^slacksteps]: 자주 막히는 단계. ② 저장소 접근 허락: GitHub **Settings** → **Applications** → **Installed GitHub Apps** → **Claude** → **Configure** → **Only select repositories**에 `ai-agent-workshop-2026` 추가 → **Save**. claude.ai/code 저장소 목록에 내 저장소가 안 보이면 이 단계가 빠진 것이다. ② 연결 확인: 새 세션에 `이 저장소에서 쓸 수 있는 서브에이전트 이름만 알려줘. 파일은 바꾸지 마.`를 보내 세 담당 이름이 보이면 성공. ③ 앱 홈 탭의 **Connect to Slack MCP**는 2-3의 커넥터라 누르지 않음. **Routing Mode**는 ②를 마친 뒤에 보임.
+[^ws]: 학교 Slack은 앱 설치 권한이 없는 경우가 많음. 게스트(외부 계정)가 있는 채널에서는 Claude가 "Claude doesn't respond in channels that include guests"라는 안내만 남길 수 있음. 그러면 게스트 없는 채널을 따로 만들어 씀.
 
 ---
 
@@ -1324,7 +1324,7 @@ Claude: [View session] [Create PR]
 
 <!-- /mode -->
 
-**확인**: 봇 메시지, 답글(`ㄴ`), 이모지만 있는 줄, 중복 줄, 날짜 형식이 다른 줄이 섞여 있다. 이 정리가 다음 단계다.
+**확인**: 봇 메시지, 답글(`ㄴ`), 이모지만 있는 줄, 중복 줄, 날짜 형식이 다른 줄이 섞여 있음. 이 정리가 다음 단계다.
 
 <!-- screen:file | 05-report/data/lab-help-2026-09.log
 [2026-09-01 09:02] (bot) jungsky 님이 채널에 들어왔습니다
@@ -1390,9 +1390,9 @@ topic은 계정 · 장비 · 미팅 · 연구윤리 · 기타 중 하나.
 
 **확인**
 
-- `05-report/data/questions.csv`, `05-report/report/questions-by-topic.png`, `05-report/report/questions-draft.md`가 생겼다
-- 그래프 파일을 열어 막대 다섯 개가 보인다
-- 초안에 "핸드북에 없는 질문" 목록과 뺀 줄 수가 있다[^5-2]
+- `05-report/data/questions.csv`, `05-report/report/questions-by-topic.png`, `05-report/report/questions-draft.md`가 생겼음
+- 그래프 파일을 열어 막대 다섯 개가 보임
+- 초안에 "핸드북에 없는 질문" 목록과 뺀 줄 수가 있음[^5-2]
 
 <!-- screen:file | 05-report/report/questions-draft.md
 # 9월 #lab-help 질문 정리 (초안)
@@ -1416,7 +1416,7 @@ topic은 계정 · 장비 · 미팅 · 연구윤리 · 기타 중 하나.
 
 **목표**: 내용과 분리된 리포트 양식 적용 스킬
 
-시간이 남으면 해 본다. 건너뛰면 5-4에서 `questions.md` 대신 `questions-draft.md`를 점검한다.
+시간이 남으면 해 봄. 건너뛰면 5-4에서 `questions.md` 대신 `questions-draft.md`를 점검함.
 
 <!-- mode:direct -->
 
@@ -1449,13 +1449,13 @@ description: 리포트 초안을 연구실 리포트 양식으로 다듬어 최�
 
 <!-- /mode -->
 
-**확인**: `05-report/report/questions.md`가 생겼고, 맨 위 요약 세 줄과 "표 1.", "그림 1." 캡션이 있다. 숫자는 초안과 같다.
+**확인**: `05-report/report/questions.md`가 생겼고, 맨 위 요약 세 줄과 "표 1.", "그림 1." 캡션이 있음. 숫자는 초안과 같음.
 
 ### 5-4. 연구윤리 점검 서브에이전트 `ethics-checker`
 
 **목표**: 연구윤리 점검 결과 검토와 최우선 수정 사항 반영
 
-Codex 사용자는 3장 도입부의 Codex 변환 상자로 만든다.
+Codex 사용자는 3장 도입부의 Codex 변환 상자로 만듦.
 
 <!-- mode:direct -->
 
@@ -1488,7 +1488,7 @@ model: sonnet
 - 판단할 근거가 없으면 지어내지 말고 "판단 불가: <이유>"라고 쓴다.
 ````
 
-점검을 위임하고, 피드백은 파일로 저장한다.
+점검을 위임하고, 피드백은 파일로 저장함.
 
 <!-- run:req -->
 
@@ -1496,7 +1496,7 @@ model: sonnet
 ethics-checker에게 05-report/report/questions.md 를 점검하게 해줘. 근거 자료는 05-report/data/lab-help-2026-09.log 와 05-report/data/questions.csv 야. 피드백은 05-report/reviews/questions-review.md 로 저장해줘.
 ```
 
-하나만 고친다.
+하나만 고침.
 
 <!-- run:req -->
 
@@ -1508,9 +1508,9 @@ ethics-checker에게 05-report/report/questions.md 를 점검하게 해줘. 근�
 
 **확인**
 
-- `ethics-checker(...)` 위임 줄과 기준 6개 표가 오고, 점검 중에는 리포트가 바뀌지 않았다
-- 4번(개인정보)이나 6번(AI 사용 표기)에서 "주의"/"위반"이 나오는 것이 정상이다[^5-4]
-- 고친 결과가 맞는지는 사람이 판단한다
+- `ethics-checker(...)` 위임 줄과 기준 6개 표가 오고, 점검 중에는 리포트가 바뀌지 않았음
+- 4번(개인정보)이나 6번(AI 사용 표기)에서 "주의"/"위반"이 나오는 것이 정상임[^5-4]
+- 고친 결과가 맞는지는 사람이 판단함
 
 <!-- screen:file | 05-report/reviews/questions-review.md
 | 기준 | 판정 | 근거 | 고칠 제안 |
@@ -1523,7 +1523,7 @@ ethics-checker에게 05-report/report/questions.md 를 점검하게 해줘. 근�
 가장 먼저 고칠 것: 아이디와 연락처 가리기
 -->
 
-[^5-2]: 0-3 준비 6번(그래프 도구 미리 받기)을 안 했으면 첫 실행이 오래 걸린다. 그래프가 안 생기면 `uv: command not found`인지 본다(0장 점검 표의 uv). 한글이 네모로 깨지면 그래프 글자를 영어로 바꿔 달라고 한다. 질문 수는 실행마다 조금 다를 수 있다(무엇을 질문으로 볼지 판단이 들어가기 때문). 스킬이 저장까지 안 하면 `05-report/report/ 에 저장해줘`를 덧붙인다.
+[^5-2]: 0-3 준비 6번(그래프 도구 미리 받기)을 안 했으면 첫 실행이 오래 걸림. 그래프가 안 생기면 `uv: command not found`인지 봄(0장 점검 표의 uv). 한글이 네모로 깨지면 그래프 글자를 영어로 바꿔 달라고 함. 질문 수는 실행마다 조금 다를 수 있음(무엇을 질문으로 볼지 판단이 들어가기 때문). 스킬이 저장까지 안 하면 `05-report/report/ 에 저장해줘`를 덧붙임.
 [^5-4]: 로그 16~17줄에 전화번호와 메일이 들어 있고, 스킬 규칙에 아이디를 가리라는 말이 없으며, 리포트에 AI 사용 문장을 넣지 않았기 때문이다. 점검이 "모두 통과"만 내면 `근거 파일과 숫자를 한 칸씩 대조한 표를 같이 보여 달라고 해줘`.
 
 ---
@@ -1552,7 +1552,7 @@ ethics-checker에게 05-report/report/questions.md 를 점검하게 해줘. 근�
 
 <!-- /mode -->
 
-**확인**: GitHub의 내 `ai-agent-workshop-2026`에 스킬 3, 서브에이전트 4, `.mcp.json`, 핸드북, 미팅 노트, 학습자료, 질문 리포트와 그래프, 점검 피드백이 모두 있다.[^6]
+**확인**: GitHub의 내 `ai-agent-workshop-2026`에 스킬 3, 서브에이전트 4, `.mcp.json`, 핸드북, 미팅 노트, 학습자료, 질문 리포트와 그래프, 점검 피드백이 모두 있음.[^6]
 
 <!-- screen:tree | 완성된 ai-agent-workshop-2026
 ai-agent-workshop-2026/
@@ -1569,9 +1569,9 @@ ai-agent-workshop-2026/
 
 **핵심 요약**
 
-1. 반복 업무는 스킬로, 외부 도구는 MCP로, 일은 서브에이전트에게 나눠 맡긴다.
-2. 에이전트가 "완료했다"고 해도 틀릴 수 있다. 근거 줄과 원자료를 직접 열어 본다.
-3. 근거에 없는 숫자를 만들지 않고, 처리 절차를 남기고, 개인을 알아볼 수 있는 정보는 가린다.
+1. 반복 업무는 스킬로, 외부 도구는 MCP로, 일은 서브에이전트에게 나눠 맡김.
+2. 에이전트가 "완료했다"고 해도 틀릴 수 있다. 근거 줄과 원자료를 직접 열어 봄.
+3. 근거에 없는 숫자를 만들지 않고, 처리 절차를 남기고, 개인을 알아볼 수 있는 정보는 가림.
 
 [^6]: push에 실패해도 `~/ai-agent-workshop-2026`에는 모두 남아 있다. 나중에 Claude에게 "push 안 된 이유 찾아서 올려줘".
 
@@ -1605,9 +1605,9 @@ ai-agent-workshop-2026/
 
 **진행 순서**
 
-1. 에이전트 없이 두 파일을 대조해 오류를 찾고 기록한다.
-2. 같은 과제를 에이전트에게 요청한다.
-3. `07-more/verify/answer/answers.md`와 결과를 비교한다.
+1. 에이전트 없이 두 파일을 대조해 오류를 찾고 기록함.
+2. 같은 과제를 에이전트에게 요청함.
+3. `07-more/verify/answer/answers.md`와 결과를 비교함.
 
 <!-- run:opt -->
 
@@ -1615,11 +1615,11 @@ ai-agent-workshop-2026/
 07-more/verify/c-question-report.md 를 05-report/data/lab-help-2026-09.log 와 03-subagents/handbook/ 에 대조해서 틀린 곳을 모두 찾아줘. 07-more/verify/answer/answers.md 는 열지 마. 틀린 곳마다 근거 파일:줄을 달아줘.
 ```
 
-**확인**: 사람이 놓친 오류, 에이전트가 놓친 오류, 에이전트의 오탐을 구분해 기록한다. 양쪽 모두 놓친 오류가 가장 중요하다. 에이전트 결과를 에이전트로만 검증하면 같은 오류가 반복될 수 있다.[^7]
+**확인**: 사람이 놓친 오류, 에이전트가 놓친 오류, 에이전트의 오탐을 구분해 기록함. 양쪽 모두 놓친 오류가 가장 중요함. 에이전트 결과를 에이전트로만 검증하면 같은 오류가 반복될 수 있음.[^7]
 
 #### 7-2. 연구 업무 맞춤 수정
 
-실습에서 만든 스킬·서브에이전트를 개인 연구 업무에 맞게 수정한다. 수정은 자연어 요청으로 한다(1-3 참고).
+실습에서 만든 스킬·서브에이전트를 개인 연구 업무에 맞게 수정함. 수정은 자연어 요청으로 함(1-3 참고).
 
 | 대상 | 요청 예시 |
 | --- | --- |
@@ -1629,7 +1629,7 @@ ai-agent-workshop-2026/
 | 점검 기준 | "ethics-checker 기준에 생명윤리법(보건복지부)의 '연구 기록 보관' 항목을 추가해줘" |
 | 논문 검색 (선택) | 2-3의 유의 사항 확인 후 Google Drive·Gmail 커넥터 연결, "이번 주 공유된 논문 PDF 목록을 정리해줘" |
 
-[^7]: 정답 파일이 저장소 안에 있어 에이전트가 열람할 수 있으므로 프롬프트에 "열지 마"를 넣었다. 열람 여부는 화면의 `Read(...)` 줄로 확인한다.
+[^7]: 정답 파일이 저장소 안에 있어 에이전트가 열람할 수 있으므로 프롬프트에 "열지 마"를 넣었다. 열람 여부는 화면의 `Read(...)` 줄로 확인함.
 
 ---
 
@@ -1699,7 +1699,7 @@ arXiv에서 ReAct, Reflexion, CoALA 논문을 찾아서 각각 한 줄로 요약
 
 <!-- figure:ws-harness | Harness 단계 · guardrail 단계별 차단 지점 -->
 
-중요도가 높은 규칙일수록 하위 단계에 배치한다. Instructions에만 명시한 규칙에는 강제력이 없다. 더 알아보기: [공식 문서: 권한 설정](https://code.claude.com/docs/ko/permissions) [공식 문서: 훅](https://code.claude.com/docs/ko/hooks)
+중요도가 높은 규칙일수록 하위 단계에 배치함. Instructions에만 명시한 규칙에는 강제력이 없다. 더 알아보기: [공식 문서: 권한 설정](https://code.claude.com/docs/ko/permissions) [공식 문서: 훅](https://code.claude.com/docs/ko/hooks)
 
 ### 8-4. Prompt injection과 least privilege
 
@@ -1853,7 +1853,7 @@ status: draft                      # 사람 검토 전
 - `generated`와 `verified`로 **LLM 작성 내용과 사람 확인 내용을 구분**한다. 사람 확인 시 `verified: [{by: "human:<아이디>", …}]` 추가, `status: stable`로 변경.
 - 상대 경로 마크다운 링크를 사용하므로 별도 위키 사이트 없이 GitHub 저장소 화면에서 바로 탐색할 수 있다.
 
-**okf plugin 설치** — OKF 형식 검사, 그래프 생성, OKF 작성 skill을 포함한 오픈소스 plugin [okf-skills](https://github.com/scaccogatto/okf-skills)(MIT). `/exit` 후 **터미널**에 붙여 넣는다.[^9-1a]
+**okf plugin 설치** — OKF 형식 검사, 그래프 생성, OKF 작성 skill을 포함한 오픈소스 plugin [okf-skills](https://github.com/scaccogatto/okf-skills)(MIT). `/exit` 후 **터미널**에 붙여 넣음.[^9-1a]
 
 <!-- run:opt -->
 
@@ -1890,7 +1890,7 @@ claude --continue
 위키 만들어줘
 ```
 
-첫 실행 시 허브 저장소 생성 여부("GitHub에 비공개 저장소 lab-wikis를 만들까요?")를 묻는다. **허브**는 연구실 전체 프로젝트 위키의 목록이다. 생성하지 않으려면 "허브는 만들지 마"라고 답한다.
+첫 실행 시 허브 저장소 생성 여부("GitHub에 비공개 저장소 lab-wikis를 만들까요?")를 묻는다. **허브**는 연구실 전체 프로젝트 위키의 목록이다. 생성하지 않으려면 "허브는 만들지 마"라고 답함.
 
 **확인**: `09-advanced/raw/`, `09-advanced/wiki/index.md`, `09-advanced/wiki/log.md`, `CLAUDE.md` 끝의 `## LLM 위키` 규칙, `.github/workflows/wiki.yml` 생성 후 커밋·push. 허브 생성 시 `https://github.com/<내 아이디>/lab-wikis` 목차에서 이 위키로 이동 가능.
 
@@ -1941,7 +1941,7 @@ okf_version: "0.2"
 위키에 물어봐: 본실험은 언제 시작해? 그리고 신입이 서버 계정을 받으려면 뭘 해야 해? 답은 위키에 저장해줘.
 ```
 
-**확인**: 시작일은 "미정"으로 답변(10/20 단정 시 오류). 계정 답변에 근거 페이지 링크와 "(사람 확인 전)" 표시, 답변은 `answers/`에 `type: Answer` 페이지로 저장·push. 이후 같은 질문에는 이 페이지를 먼저 참조한다.
+**확인**: 시작일은 "미정"으로 답변(10/20 단정 시 오류). 계정 답변에 근거 페이지 링크와 "(사람 확인 전)" 표시, 답변은 `answers/`에 `type: Answer` 페이지로 저장·push. 이후 같은 질문에는 이 페이지를 먼저 참조함.
 
 <!-- screen:claude | 위키에 묻기
 > 위키에 물어봐: 본실험은 언제 시작해? 그리고 신입이 서버 계정을 받으려면 뭘 해야 해? 답은 위키에 저장해줘.
@@ -1996,7 +1996,7 @@ okf_version: "0.2"
 
 <!-- figure:ws-video | 영상 전사의 데이터 처리 흐름 · 로컬 처리와 AI 서버 처리의 경계 -->
 
-`/exit`로 나가서 **터미널**에 붙여 넣는다.
+`/exit`로 나가서 **터미널**에 붙여 넣음.
 
 <!-- run:opt -->
 
@@ -2020,7 +2020,7 @@ claude --continue
 interview-transcriber에게 09-advanced/video/lesley-ott.mp4 를 맡겨줘. 이름은 lesley-ott.
 ```
 
-**확인**: `09-advanced/video/lesley-ott.md`에 요약 세 줄, 시각별 원문과 번역, "확인할 것" 목록 생성. "확인할 것"의 `OCO2`(1:00)는 NASA의 탄소 관측 위성 OCO-2이며, 해당 시각을 직접 청취해 확인한다.[^9-2]
+**확인**: `09-advanced/video/lesley-ott.md`에 요약 세 줄, 시각별 원문과 번역, "확인할 것" 목록 생성. "확인할 것"의 `OCO2`(1:00)는 NASA의 탄소 관측 위성 OCO-2이며, 해당 시각을 직접 청취해 확인함.[^9-2]
 
 <!-- screen:file | 09-advanced/video/lesley-ott.md
 # 인터뷰 전사: lesley-ott
@@ -2047,8 +2047,8 @@ interview-transcriber에게 09-advanced/video/lesley-ott.mp4 를 맡겨줘. 이�
 
 **유의점**
 
-- 녹음·전사 동의와 IRB 승인 범위 안에서, 식별 정보를 제거한 전사록만 에이전트에 제공한다.
-- 녹취 속 AI 대상 지시문(prompt injection, 8-4)은 따르지 않고 "확인할 것"에 기록하도록 전사 담당에 설정되어 있다.
+- 녹음·전사 동의와 IRB 승인 범위 안에서, 식별 정보를 제거한 전사록만 에이전트에 제공함.
+- 녹취 속 AI 대상 지시문(prompt injection, 8-4)은 따르지 않고 "확인할 것"에 기록하도록 전사 담당에 설정되어 있음.
 
 ### 9-3. 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터
 
@@ -2082,7 +2082,7 @@ interview-transcriber에게 09-advanced/video/lesley-ott.mp4 를 맡겨줘. 이�
 
 <!-- figure:ws-robot | 로봇 행동 계획 · 계획 → simulator → 사람 승인 → 실행 -->
 
-선택: 직접 실행. **터미널**에서 MCP를 등록하고, write와 절차 실행에 매번 승인을 요구하도록 `.claude/settings.json`을 만든다(기존 파일이 있으면 `permissions.ask`에 두 줄 추가).[^9-3]
+선택: 직접 실행. **터미널**에서 MCP를 등록하고, write와 절차 실행에 매번 승인을 요구하도록 `.claude/settings.json`을 만듦(기존 파일이 있으면 `permissions.ask`에 두 줄 추가).[^9-3]
 
 <!-- run:opt -->
 
@@ -2108,23 +2108,23 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 
 **실제 장비 적용 시 유의점**
 
-- 실제 장비는 제조사 통신 방식(serial, SCPI, OPC UA, [SiLA 2](https://sila-standard.com) 등)으로 driver의 `read`·`write`를 구현한다.
-- 안전 한계는 에이전트 지시문이 아닌 driver·장비 firmware·로봇 controller에 둔다.
-- 장시간 무인 실험은 사람이 검토·커밋한 절차 파일만 실행한다.
-- 실제 로봇 팔은 simulator([Gazebo](https://gazebosim.org) 등)에서 절차를 먼저 검증한다. ROS 2 로봇은 [ros-mcp-server](https://github.com/robotmcp/ros-mcp-server)(Apache-2.0) 등 오픈소스 MCP 서버로 Claude에 연결할 수 있다.
+- 실제 장비는 제조사 통신 방식(serial, SCPI, OPC UA, [SiLA 2](https://sila-standard.com) 등)으로 driver의 `read`·`write`를 구현함.
+- 안전 한계는 에이전트 지시문이 아닌 driver·장비 firmware·로봇 controller에 둠.
+- 장시간 무인 실험은 사람이 검토·커밋한 절차 파일만 실행함.
+- 실제 로봇 팔은 simulator([Gazebo](https://gazebosim.org) 등)에서 절차를 먼저 검증함. ROS 2 로봇은 [ros-mcp-server](https://github.com/robotmcp/ros-mcp-server)(Apache-2.0) 등 오픈소스 MCP 서버로 Claude에 연결할 수 있음.
 
 참고: [Anthropic (2026). Model Hardware Standard research preview](https://www.anthropic.com/news/model-hardware-standard-research-preview) · [ROS 2 Documentation](https://docs.ros.org)
 
-[^9-1a]: Plugin은 계정 전체에 설치된다(다른 저장소에도 적용). 제거: `claude plugin uninstall okf@scaccogatto`. 설치를 생략하면 skill이 형식 검사를 직접 수행하고 그 사실을 보고한다. Codex는 `npx skills add scaccogatto/okf-skills`로 스킬만 넣을 수 있다(okf-skills README).
-[^9-1]: 위키 skill에 "참여자를 알아볼 수 있는 내용은 옮기지 않는다" 규칙이 있다. 페이지 이름과 개수는 실행마다 다를 수 있다. Skill이 호출되지 않으면 `lab-wiki 스킬로 위키에 넣어줘: …`처럼 이름을 명시한다. GitHub Action은 저장소가 GitHub에 있을 때만 실행된다.
-[^9-2]: 첫 실행 시 음성 인식 모델(약 500MB) 다운로드로 시간이 더 걸린다. 새 담당이 호출되지 않으면 `/exit` 후 `claude --continue`. `curl` 실패 시 브라우저로 영상 주소를 열어 `09-advanced/video/lesley-ott.mp4`로 저장한다. 영상·음성 파일은 용량 문제로 커밋에서 제외된다(`09-advanced/.gitignore`).
+[^9-1a]: Plugin은 계정 전체에 설치됨(다른 저장소에도 적용). 제거: `claude plugin uninstall okf@scaccogatto`. 설치를 생략하면 skill이 형식 검사를 직접 수행하고 그 사실을 보고함. Codex는 `npx skills add scaccogatto/okf-skills`로 스킬만 넣을 수 있음(okf-skills README).
+[^9-1]: 위키 skill에 "참여자를 알아볼 수 있는 내용은 옮기지 않는다" 규칙이 있다. 페이지 이름과 개수는 실행마다 다를 수 있음. Skill이 호출되지 않으면 `lab-wiki 스킬로 위키에 넣어줘: …`처럼 이름을 명시함. GitHub Action은 저장소가 GitHub에 있을 때만 실행됨.
+[^9-2]: 첫 실행 시 음성 인식 모델(약 500MB) 다운로드로 시간이 더 걸림. 새 담당이 호출되지 않으면 `/exit` 후 `claude --continue`. `curl` 실패 시 브라우저로 영상 주소를 열어 `09-advanced/video/lesley-ott.mp4`로 저장함. 영상·음성 파일은 용량 문제로 커밋에서 제외됨(`09-advanced/.gitignore`).
 [^9-3]: `lab-devices`가 `/mcp`에 없으면 `/exit` 후 `claude --continue`. 초기 상태 복원: 터미널에서 `rm 09-advanced/robot/devices/*.state.json`. 명령줄 확인: `cd 09-advanced/robot && uv run device_driver.py list`. Codex: `codex mcp add lab-devices -- uv run "$HOME/ai-agent-workshop-2026/09-advanced/robot/lab_devices.py"` (Codex에는 `ask` 설정이 없으므로 write 시 승인 요청 여부를 직접 확인).
 
 ---
 
 ## 부록 A · 완성본과 주요 명령
 
-오류가 나면 이 가이드북의 상자 내용과 `.claude/`에 만든 파일을 나란히 놓고 비교한다.
+오류가 나면 이 가이드북의 상자 내용과 `.claude/`에 만든 파일을 나란히 놓고 비교함.
 
 | 기능 | 명령 |
 | --- | --- |
@@ -2142,30 +2142,30 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 
 ### Codex 사용 시
 
-명령·파일 대응은 가이드북 앞부분의 **Claude Code · Codex 대응** 표를 따른다.
+명령·파일 대응은 가이드북 앞부분의 **Claude Code · Codex 대응** 표를 따름.
 
 **장별 차이**
 
 | 장 | Codex에서 |
 | --- | --- |
-| 0 | README 준비 프롬프트는 Codex 창에 그대로 붙여 넣는다 |
+| 0 | README 준비 프롬프트는 Codex 창에 그대로 붙여 넣음 |
 | 에이전트 소개 | 자동 진행 모드: `.claude/skills/workshop-tutor/SKILL.md 를 읽고 그대로 자동 진행 모드로 1장부터 같이 하자.` |
-| 1 | `CLAUDE.md` 대신 `AGENTS.md`로 만든다. 스킬은 `.agents/skills/`에. 1-3은 위 표대로 |
-| 2 | MCP가 저장소가 아니라 내 계정 설정에 저장된다. 2-3 커넥터는 `/plugins` |
-| 3 | 각 절의 Codex 상자로 만든다. 새 에이전트를 찾지 못하면 `/quit` 후 `codex resume --last` |
-| 4 | Slack은 Claude 앱 기준이라 Codex로는 할 수 없다 |
-| 5 | 스킬 2개(`question-report`, `report-format`)는 `.agents/skills/`에, `ethics-checker`는 3장 도입부의 Codex 변환 상자로. 그래프 명령(`uv run …`)은 같다 |
-| 6 | `.mcp.json`이 없으니 확인 목록에서 뺀다. 커밋·push는 같다 |
-| 7 | 같다. 에이전트 이름만 위 표대로 부른다 |
-| 9 | 스킬은 `.agents/skills/lab-wiki/`에, 전사 담당은 3장 도입부의 Codex 변환 상자로 만든다. 9-3 MCP는 9-3 각주의 Codex 줄 |
+| 1 | `CLAUDE.md` 대신 `AGENTS.md`로 만듦. 스킬은 `.agents/skills/`에. 1-3은 위 표대로 |
+| 2 | MCP가 저장소가 아니라 내 계정 설정에 저장됨. 2-3 커넥터는 `/plugins` |
+| 3 | 각 절의 Codex 상자로 만듦. 새 에이전트를 찾지 못하면 `/quit` 후 `codex resume --last` |
+| 4 | Slack은 Claude 앱 기준이라 Codex로는 할 수 없음 |
+| 5 | 스킬 2개(`question-report`, `report-format`)는 `.agents/skills/`에, `ethics-checker`는 3장 도입부의 Codex 변환 상자로. 그래프 명령(`uv run …`)은 같음 |
+| 6 | `.mcp.json`이 없으니 확인 목록에서 뺌. 커밋·push는 같음 |
+| 7 | 같음. 에이전트 이름만 위 표대로 부름 |
+| 9 | 스킬은 `.agents/skills/lab-wiki/`에, 전사 담당은 3장 도입부의 Codex 변환 상자로 만듦. 9-3 MCP는 9-3 각주의 Codex 줄 |
 
 ### OpenRouter 사용 시 (사용량 과금)
 
-Claude 구독 없이 Claude Code를 쓰는 방법이다. [openrouter.ai](https://openrouter.ai)에서 가입 → **Credits** 충전(5장까지 모두 실습할 경우 약 $5 예상) → **Keys**에서 키(`sk-or-`로 시작)를 만든다. 키는 채팅이나 파일에 붙이지 않는다.
+Claude 구독 없이 Claude Code를 쓰는 방법이다. [openrouter.ai](https://openrouter.ai)에서 가입 → **Credits** 충전(5장까지 모두 실습할 경우 약 $5 예상) → **Keys**에서 키(`sk-or-`로 시작)를 만듦. 키는 채팅이나 파일에 붙이지 않음.
 
-Claude Code를 열기 전에 터미널에 붙여 넣는다. `sk-or-...` 자리에 내 키를 넣는다.
+Claude Code를 열기 전에 터미널에 붙여 넣음. `sk-or-...` 자리에 내 키를 넣음.
 
-🍎 macOS (터미널을 새로 열 때마다 다시 붙여 넣는다)
+🍎 macOS (터미널을 새로 열 때마다 다시 붙여 넣음)
 
 ```bash
 export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
@@ -2173,17 +2173,17 @@ export ANTHROPIC_AUTH_TOKEN="sk-or-..."
 export ANTHROPIC_API_KEY=""
 ```
 
-🪟 Windows PowerShell (창을 새로 열 때마다 다시 붙여 넣는다)
+🪟 Windows PowerShell (창을 새로 열 때마다 다시 붙여 넣음)
 
 ```powershell
 $env:ANTHROPIC_BASE_URL = "https://openrouter.ai/api"
 $env:ANTHROPIC_AUTH_TOKEN = "sk-or-..."
 ```
 
-`claude`를 열고 `/status`에 `https://openrouter.ai/api`가 보이면 성공이다. 그 뒤는 가이드북 그대로 한다.[^or]
+`claude`를 열고 `/status`에 `https://openrouter.ai/api`가 보이면 성공임. 그 뒤는 가이드북 그대로 함.[^or]
 
-- 전에 Claude 계정으로 로그인한 적이 있으면 `/logout` 후 다시 연다.
-- 요금은 OpenRouter 크레딧에서 나간다. **Activity**에서 쓴 금액을 본다.
-- **4장 Slack**과 **2-3 claude.ai 커넥터**는 claude.ai 계정 로그인이 필요해서 쓸 수 없다. 필요한 서비스는 `claude mcp add`로 MCP 서버를 직접 붙인다.
+- 전에 Claude 계정으로 로그인한 적이 있으면 `/logout` 후 다시 엶.
+- 요금은 OpenRouter 크레딧에서 나감. **Activity**에서 쓴 금액을 봄.
+- **4장 Slack**과 **2-3 claude.ai 커넥터**는 claude.ai 계정 로그인이 필요해서 쓸 수 없음. 필요한 서비스는 `claude mcp add`로 MCP 서버를 직접 붙임.
 
 [^or]: 출처: [OpenRouter · Claude Code 연동](https://openrouter.ai/docs/guides/guides/claude-code-integration), [Codex 서브에이전트](https://learn.chatgpt.com/docs/agent-configuration/subagents), [Codex 스킬](https://learn.chatgpt.com/docs/build-skills), [Codex MCP](https://learn.chatgpt.com/docs/extend/mcp?surface=cli), [Codex 플러그인](https://learn.chatgpt.com/docs/plugins). 2026-10-15 기준.

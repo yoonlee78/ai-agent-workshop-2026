@@ -52,7 +52,7 @@ status: draft                      # 사람 검토 전
 - `generated`와 `verified`로 **LLM 작성 내용과 사람 확인 내용을 구분**한다. 사람 확인 시 `verified: [{by: "human:<아이디>", …}]` 추가, `status: stable`로 변경.
 - 상대 경로 마크다운 링크를 사용하므로 별도 위키 사이트 없이 GitHub 저장소 화면에서 바로 탐색할 수 있다.
 
-**okf plugin 설치** — OKF 형식 검사, 그래프 생성, OKF 작성 skill을 포함한 오픈소스 plugin [okf-skills](https://github.com/scaccogatto/okf-skills)(MIT). `/exit` 후 **터미널**에 붙여 넣는다.[^9-1a]
+**okf plugin 설치** — OKF 형식 검사, 그래프 생성, OKF 작성 skill을 포함한 오픈소스 plugin [okf-skills](https://github.com/scaccogatto/okf-skills)(MIT). `/exit` 후 **터미널**에 붙여 넣음.[^9-1a]
 
 ```bash
 claude plugin marketplace add scaccogatto/okf-skills
@@ -83,7 +83,7 @@ claude --continue
 위키 만들어줘
 ```
 
-첫 실행 시 허브 저장소 생성 여부("GitHub에 비공개 저장소 lab-wikis를 만들까요?")를 묻는다. **허브**는 연구실 전체 프로젝트 위키의 목록이다. 생성하지 않으려면 "허브는 만들지 마"라고 답한다.
+첫 실행 시 허브 저장소 생성 여부("GitHub에 비공개 저장소 lab-wikis를 만들까요?")를 묻는다. **허브**는 연구실 전체 프로젝트 위키의 목록이다. 생성하지 않으려면 "허브는 만들지 마"라고 답함.
 
 **확인**: `09-advanced/raw/`, `09-advanced/wiki/index.md`, `09-advanced/wiki/log.md`, `CLAUDE.md` 끝의 `## LLM 위키` 규칙, `.github/workflows/wiki.yml` 생성 후 커밋·push. 허브 생성 시 `https://github.com/<내 아이디>/lab-wikis` 목차에서 이 위키로 이동 가능.
 
@@ -130,7 +130,7 @@ okf_version: "0.2"
 위키에 물어봐: 본실험은 언제 시작해? 그리고 신입이 서버 계정을 받으려면 뭘 해야 해? 답은 위키에 저장해줘.
 ```
 
-**확인**: 시작일은 "미정"으로 답변(10/20 단정 시 오류). 계정 답변에 근거 페이지 링크와 "(사람 확인 전)" 표시, 답변은 `answers/`에 `type: Answer` 페이지로 저장·push. 이후 같은 질문에는 이 페이지를 먼저 참조한다.
+**확인**: 시작일은 "미정"으로 답변(10/20 단정 시 오류). 계정 답변에 근거 페이지 링크와 "(사람 확인 전)" 표시, 답변은 `answers/`에 `type: Answer` 페이지로 저장·push. 이후 같은 질문에는 이 페이지를 먼저 참조함.
 
 **위키에 묻기**
 
@@ -185,7 +185,7 @@ okf_version: "0.2"
 
 *그림: 영상 전사의 데이터 처리 흐름 · 로컬 처리와 AI 서버 처리의 경계 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-ws-video)*
 
-`/exit`로 나가서 **터미널**에 붙여 넣는다.
+`/exit`로 나가서 **터미널**에 붙여 넣음.
 
 ```bash
 cd ~/ai-agent-workshop-2026
@@ -203,7 +203,7 @@ claude --continue
 interview-transcriber에게 09-advanced/video/lesley-ott.mp4 를 맡겨줘. 이름은 lesley-ott.
 ```
 
-**확인**: `09-advanced/video/lesley-ott.md`에 요약 세 줄, 시각별 원문과 번역, "확인할 것" 목록 생성. "확인할 것"의 `OCO2`(1:00)는 NASA의 탄소 관측 위성 OCO-2이며, 해당 시각을 직접 청취해 확인한다.[^9-2]
+**확인**: `09-advanced/video/lesley-ott.md`에 요약 세 줄, 시각별 원문과 번역, "확인할 것" 목록 생성. "확인할 것"의 `OCO2`(1:00)는 NASA의 탄소 관측 위성 OCO-2이며, 해당 시각을 직접 청취해 확인함.[^9-2]
 
 **09-advanced/video/lesley-ott.md**
 
@@ -230,8 +230,8 @@ interview-transcriber에게 09-advanced/video/lesley-ott.mp4 를 맡겨줘. 이�
 
 **유의점**
 
-- 녹음·전사 동의와 IRB 승인 범위 안에서, 식별 정보를 제거한 전사록만 에이전트에 제공한다.
-- 녹취 속 AI 대상 지시문(prompt injection, 8-4)은 따르지 않고 "확인할 것"에 기록하도록 전사 담당에 설정되어 있다.
+- 녹음·전사 동의와 IRB 승인 범위 안에서, 식별 정보를 제거한 전사록만 에이전트에 제공함.
+- 녹취 속 AI 대상 지시문(prompt injection, 8-4)은 따르지 않고 "확인할 것"에 기록하도록 전사 담당에 설정되어 있음.
 
 ## 9-3. 장비 제어: 인큐베이터, 로봇 팔, 행동 계획 + 시뮬레이터
 
@@ -273,7 +273,7 @@ interview-transcriber에게 09-advanced/video/lesley-ott.mp4 를 맡겨줘. 이�
 
 *그림: 로봇 행동 계획 · 계획 → simulator → 사람 승인 → 실행 · [애니메이션은 웹 가이드북에서 재생](https://yoonlee78.github.io/ai-agent-workshop-2026/#fig-ws-robot)*
 
-선택: 직접 실행. **터미널**에서 MCP를 등록하고, write와 절차 실행에 매번 승인을 요구하도록 `.claude/settings.json`을 만든다(기존 파일이 있으면 `permissions.ask`에 두 줄 추가).[^9-3]
+선택: 직접 실행. **터미널**에서 MCP를 등록하고, write와 절차 실행에 매번 승인을 요구하도록 `.claude/settings.json`을 만듦(기존 파일이 있으면 `permissions.ask`에 두 줄 추가).[^9-3]
 
 ```bash
 cd ~/ai-agent-workshop-2026
@@ -295,16 +295,16 @@ claude mcp add --transport stdio --scope project lab-devices -- uv run 09-advanc
 
 **실제 장비 적용 시 유의점**
 
-- 실제 장비는 제조사 통신 방식(serial, SCPI, OPC UA, [SiLA 2](https://sila-standard.com) 등)으로 driver의 `read`·`write`를 구현한다.
-- 안전 한계는 에이전트 지시문이 아닌 driver·장비 firmware·로봇 controller에 둔다.
-- 장시간 무인 실험은 사람이 검토·커밋한 절차 파일만 실행한다.
-- 실제 로봇 팔은 simulator([Gazebo](https://gazebosim.org) 등)에서 절차를 먼저 검증한다. ROS 2 로봇은 [ros-mcp-server](https://github.com/robotmcp/ros-mcp-server)(Apache-2.0) 등 오픈소스 MCP 서버로 Claude에 연결할 수 있다.
+- 실제 장비는 제조사 통신 방식(serial, SCPI, OPC UA, [SiLA 2](https://sila-standard.com) 등)으로 driver의 `read`·`write`를 구현함.
+- 안전 한계는 에이전트 지시문이 아닌 driver·장비 firmware·로봇 controller에 둠.
+- 장시간 무인 실험은 사람이 검토·커밋한 절차 파일만 실행함.
+- 실제 로봇 팔은 simulator([Gazebo](https://gazebosim.org) 등)에서 절차를 먼저 검증함. ROS 2 로봇은 [ros-mcp-server](https://github.com/robotmcp/ros-mcp-server)(Apache-2.0) 등 오픈소스 MCP 서버로 Claude에 연결할 수 있음.
 
 참고: [Anthropic (2026). Model Hardware Standard research preview](https://www.anthropic.com/news/model-hardware-standard-research-preview) · [ROS 2 Documentation](https://docs.ros.org)
 
-[^9-1a]: Plugin은 계정 전체에 설치된다(다른 저장소에도 적용). 제거: `claude plugin uninstall okf@scaccogatto`. 설치를 생략하면 skill이 형식 검사를 직접 수행하고 그 사실을 보고한다. Codex는 `npx skills add scaccogatto/okf-skills`로 스킬만 넣을 수 있다(okf-skills README).
-[^9-1]: 위키 skill에 "참여자를 알아볼 수 있는 내용은 옮기지 않는다" 규칙이 있다. 페이지 이름과 개수는 실행마다 다를 수 있다. Skill이 호출되지 않으면 `lab-wiki 스킬로 위키에 넣어줘: …`처럼 이름을 명시한다. GitHub Action은 저장소가 GitHub에 있을 때만 실행된다.
-[^9-2]: 첫 실행 시 음성 인식 모델(약 500MB) 다운로드로 시간이 더 걸린다. 새 담당이 호출되지 않으면 `/exit` 후 `claude --continue`. `curl` 실패 시 브라우저로 영상 주소를 열어 `09-advanced/video/lesley-ott.mp4`로 저장한다. 영상·음성 파일은 용량 문제로 커밋에서 제외된다(`09-advanced/.gitignore`).
+[^9-1a]: Plugin은 계정 전체에 설치됨(다른 저장소에도 적용). 제거: `claude plugin uninstall okf@scaccogatto`. 설치를 생략하면 skill이 형식 검사를 직접 수행하고 그 사실을 보고함. Codex는 `npx skills add scaccogatto/okf-skills`로 스킬만 넣을 수 있음(okf-skills README).
+[^9-1]: 위키 skill에 "참여자를 알아볼 수 있는 내용은 옮기지 않는다" 규칙이 있다. 페이지 이름과 개수는 실행마다 다를 수 있음. Skill이 호출되지 않으면 `lab-wiki 스킬로 위키에 넣어줘: …`처럼 이름을 명시함. GitHub Action은 저장소가 GitHub에 있을 때만 실행됨.
+[^9-2]: 첫 실행 시 음성 인식 모델(약 500MB) 다운로드로 시간이 더 걸림. 새 담당이 호출되지 않으면 `/exit` 후 `claude --continue`. `curl` 실패 시 브라우저로 영상 주소를 열어 `09-advanced/video/lesley-ott.mp4`로 저장함. 영상·음성 파일은 용량 문제로 커밋에서 제외됨(`09-advanced/.gitignore`).
 [^9-3]: `lab-devices`가 `/mcp`에 없으면 `/exit` 후 `claude --continue`. 초기 상태 복원: 터미널에서 `rm 09-advanced/robot/devices/*.state.json`. 명령줄 확인: `cd 09-advanced/robot && uv run device_driver.py list`. Codex: `codex mcp add lab-devices -- uv run "$HOME/ai-agent-workshop-2026/09-advanced/robot/lab_devices.py"` (Codex에는 `ask` 설정이 없으므로 write 시 승인 요청 여부를 직접 확인).
 
 ## 폴더 구성

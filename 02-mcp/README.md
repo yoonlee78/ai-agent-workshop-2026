@@ -4,7 +4,7 @@
 
 ## MCP란
 
-**MCP**(Model Context Protocol)는 AI 앱과 외부 데이터·도구(파일, 데이터베이스, 검색 등)를 연결하는 공개 표준 규격이다. 흔히 **AI 앱의 USB-C 포트**에 비유한다. 기기마다 전용 케이블이 필요 없듯, 도구를 MCP 서버로 한 번 만들어 두면 MCP를 지원하는 어느 AI 앱에서든 꽂아 쓸 수 있다. 오늘은 arXiv 논문 검색 서버를 꽂는다.
+**MCP**(Model Context Protocol)는 AI 앱과 외부 데이터·도구(파일, 데이터베이스, 검색 등)를 연결하는 공개 표준 규격이다. 흔히 **AI 앱의 USB-C 포트**에 비유한다. 기기마다 전용 케이블이 필요 없듯, 도구를 MCP 서버로 한 번 만들어 두면 MCP를 지원하는 어느 AI 앱에서든 꽂아 쓸 수 있다. 오늘은 arXiv 논문 검색 서버를 꽂는다. 더 알아보기: [Understanding MCP: The USB‑C Interface for AI Agents](https://modelcontextprotocol.info/blog/understanding-mcp-protocol/)
 
 ![MCP란 · AI 앱과 데이터·도구 사이의 표준 연결](../assets/figures/mcp-what.svg)
 
@@ -28,7 +28,7 @@
 - 검색에서 끝나지 않는다. 논문을 내려받아 절별로 읽고, BibTeX 인용을 뽑고, 관심 주제의 새 논문을 확인하는 데까지 이어진다.
 - 한 번 붙여 두면 Claude Code, Codex 등 다른 AI 앱에서도 같은 도구를 쓴다.
 
-MCP를 붙이는 것은 그 서비스에 대한 권한을 에이전트에게 주는 일이다. 무엇이 밖으로 나가는지, 읽기만 하는지 쓰기도 하는지를 보고 고른다.
+MCP를 붙이는 것은 그 서비스에 대한 권한을 에이전트에게 주는 일이다. 무엇이 밖으로 나가는지, 읽기만 하는지 쓰기도 하는지를 보고 고름.
 
 ![MCP 구조 · 질의와 응답의 경로](../assets/figures/mcp-map.svg)
 
@@ -41,7 +41,7 @@ MCP를 붙이는 것은 그 서비스에 대한 권한을 에이전트에게 주
 
 **목표**: arXiv 논문 검색용 MCP 서버 연결[^mcp]
 
-`/exit`로 나가서 **터미널**에 붙여 넣는다.[^mcpcmd]
+`/exit`로 나가서 **터미널**에 붙여 넣음.[^mcpcmd]
 
 ```bash
 cd ~/ai-agent-workshop-2026
@@ -49,15 +49,15 @@ claude mcp add --transport stdio --scope project arxiv -- uvx arxiv-mcp-server
 claude mcp list
 ```
 
-Claude Code를 다시 연다(MCP는 시작할 때 연결된다).
+Claude Code를 다시 엶(MCP는 시작할 때 연결된다).
 
 ```bash
 claude --continue
 ```
 
-`New MCP server found in .mcp.json: arxiv`가 나타나면 **Use this and all future MCP servers in this project**를 고른다.
+`New MCP server found in .mcp.json: arxiv`가 나타나면 **Use this and all future MCP servers in this project**를 고름.
 
-**Codex 사용자**는 위 두 상자 대신 아래를 쓴다. `/quit`로 나가서 터미널에 붙여 넣는다. Codex는 MCP를 저장소가 아니라 내 계정 설정(`~/.codex/config.toml`)에 저장하므로 `.mcp.json`은 생기지 않는다.
+**Codex 사용자**는 위 두 상자 대신 아래를 씀. `/quit`로 나가서 터미널에 붙여 넣음. Codex는 MCP를 저장소가 아니라 내 계정 설정(`~/.codex/config.toml`)에 저장하므로 `.mcp.json`은 생기지 않는다.
 
 ```bash
 cd ~/ai-agent-workshop-2026
@@ -65,7 +65,7 @@ codex mcp add arxiv -- uvx arxiv-mcp-server
 codex mcp list
 ```
 
-Codex를 다시 열고, `/mcp`에서 `arxiv: connected`를 확인한다.
+Codex를 다시 열고, `/mcp`에서 `arxiv: connected`를 확인함.
 
 ```bash
 codex resume --last
@@ -73,15 +73,15 @@ codex resume --last
 
 **확인**
 
-- `claude mcp list`에 `arxiv ... ✓ Connected`가 보인다
-- 저장소에 `.mcp.json`이 생겼다
-- Claude Code 안에서 `/mcp`를 치면 arxiv와 도구 목록(`search_papers` 등)이 보인다
+- `claude mcp list`에 `arxiv ... ✓ Connected`가 보임
+- 저장소에 `.mcp.json`이 생겼음
+- Claude Code 안에서 `/mcp`를 치면 arxiv와 도구 목록(`search_papers` 등)이 보임
 
 ## 2-2. 논문 검색
 
 **목표**: MCP 도구를 활용한 논문 검색과 읽기
 
-하나씩 보낸다.
+하나씩 보냄.
 
 ```text
 arxiv에서 "large language model agents psychology research" 최근 논문 5편 찾아서 제목, 저자, 한 줄 요약을 표로 보여줘
@@ -91,7 +91,7 @@ arxiv에서 "large language model agents psychology research" 최근 논문 5편
 그중 첫 번째 논문을 내려받아서 방법론 부분만 요약해줘
 ```
 
-**확인**: `arxiv - search_papers (MCP)` 호출 줄이 보이고, arXiv 번호가 달린 표가 나온다.[^2]
+**확인**: `arxiv - search_papers (MCP)` 호출 줄이 보이고, arXiv 번호가 달린 표가 나옴.[^2]
 
 **논문 검색 결과**
 
@@ -108,7 +108,7 @@ arxiv에서 "large language model agents psychology research" 최근 논문 5편
 
 ## 2-3. 커넥터 활용 · 선택
 
-수업 시간에는 같이 하지 않는다. 필요한 사람만 수업 뒤에 각자 해 본다. Codex나 Windows에서는 Gmail 같은 구글 서비스 연결이 되지 않는 경우가 있다.
+수업 시간에는 같이 하지 않음. 필요한 사람만 수업 뒤에 각자 해 봄. Codex나 Windows에서는 Gmail 같은 구글 서비스 연결이 되지 않는 경우가 있음.
 
 **로그인 기반 커넥터**
 
@@ -124,7 +124,7 @@ arXiv처럼 서버를 직접 붙이는 방법 말고도, Claude와 Codex는 자�
 | 그 밖에 (Notion, Figma 등) | — | 커넥터 목록에서 찾기 | `/plugins`에서 찾기 |
 | 목록에 없는 것 (Google Cloud, 데이터베이스 등) | — | 그 서비스가 제공하는 MCP 서버를 `claude mcp add` | `codex mcp add` |
 
-연결은 Claude는 [claude.ai/customize/connectors](https://claude.ai/customize/connectors)에서, Codex는 `/plugins`에서 한다. 연결하면 Claude Code의 `/mcp`에 `claude.ai` 이름을 달고 자동으로 보인다. 더 알아보기: [공식 문서: Codex 플러그인](https://learn.chatgpt.com/docs/plugins)
+연결은 Claude는 [claude.ai/customize/connectors](https://claude.ai/customize/connectors)에서, Codex는 `/plugins`에서 함. 연결하면 Claude Code의 `/mcp`에 `claude.ai` 이름을 달고 자동으로 보인다. 더 알아보기: [공식 문서: Codex 플러그인](https://learn.chatgpt.com/docs/plugins)
 
 **claude.ai · 커넥터 설정**
 
@@ -173,29 +173,29 @@ arXiv처럼 서버를 직접 붙이는 방법 말고도, Claude와 Codex는 자�
 
 **연결 전 유의 사항**
 
-- 권한을 어떻게 주느냐에 따라 에이전트가 메일을 읽기만 할 수도, 내 이름으로 실제 메일을 보낼 수도 있다. 무엇을 연결하고 어디까지 허락할지는 본인이 판단하고 책임진다.
-- 커넥터는 내 계정 권한 그대로 메일·문서에 접근한다. 보내기·삭제처럼 바깥에 영향을 주는 일은 허락 창에서 매번 확인한다. "don't ask again"은 읽기 도구에만 쓴다.
-- 학교·기관 계정은 관리자가 막아 둔 경우가 있다. 이때는 개인 계정으로 먼저 시험한다.
-- 참여자 정보가 든 메일함이나 드라이브는 연결하지 않는다.
+- 권한을 어떻게 주느냐에 따라 에이전트가 메일을 읽기만 할 수도, 내 이름으로 실제 메일을 보낼 수도 있음. 무엇을 연결하고 어디까지 허락할지는 본인이 판단하고 책임짐.
+- 커넥터는 내 계정 권한 그대로 메일·문서에 접근함. 보내기·삭제처럼 바깥에 영향을 주는 일은 허락 창에서 매번 확인함. "don't ask again"은 읽기 도구에만 씀.
+- 학교·기관 계정은 관리자가 막아 둔 경우가 있음. 이때는 개인 계정으로 먼저 시험함.
+- 참여자 정보가 든 메일함이나 드라이브는 연결하지 않음.
 
 **① claude.ai에서 연결** (브라우저)
 
-1. [claude.ai/customize/connectors](https://claude.ai/customize/connectors)를 연다.
-2. **Gmail** 옆 **연결** → Google 계정 선택 → 권한 **허용**. Calendar, Drive도 같은 방법이다.
+1. [claude.ai/customize/connectors](https://claude.ai/customize/connectors)를 엶.
+2. **Gmail** 옆 **연결** → Google 계정 선택 → 권한 **허용**. Calendar, Drive도 같은 방법임.
 
 **② Claude Code에서 `/mcp`로 확인**
 
-작업 창에서 `/mcp`를 입력한다. claude.ai에서 연결한 것이 `claude.ai` 이름을 달고 자동으로 보인다. 따로 설치하지 않는다. 목록에 없으면 `/exit` 후 `claude --continue`로 다시 연다.
+작업 창에서 `/mcp`를 입력함. claude.ai에서 연결한 것이 `claude.ai` 이름을 달고 자동으로 보임. 따로 설치하지 않음. 목록에 없으면 `/exit` 후 `claude --continue`로 다시 엶.
 
 ```text
 /mcp
 ```
 
-연결 후 채널·메일이 보이지 않으면, 다른 계정이나 워크스페이스에 연결된 경우가 많다. claude.ai에서 연결을 해제하고 다시 연결한다. Slack은 허용 화면 오른쪽 위에서 워크스페이스를 고른다. 다시 연결한 뒤에는 Claude Code를 다시 연다. 커넥터는 **내 계정**으로 움직이므로 Claude를 채널에 초대할 필요는 없다(4장의 Claude 앱과 다르다).
+연결 후 채널·메일이 보이지 않으면, 다른 계정이나 워크스페이스에 연결된 경우가 많다. claude.ai에서 연결을 해제하고 다시 연결함. Slack은 허용 화면 오른쪽 위에서 워크스페이스를 고름. 다시 연결한 뒤에는 Claude Code를 다시 엶. 커넥터는 **내 계정**으로 움직이므로 Claude를 채널에 초대할 필요는 없음(4장의 Claude 앱과 다르다).
 
 **③ 읽기 기능부터 시험**
 
-처음에는 바꾸는 일 없이 읽기만 시킨다. 도구를 처음 쓸 때 Claude Code가 허락을 묻는다.
+처음에는 바꾸는 일 없이 읽기만 시킴. 도구를 처음 쓸 때 Claude Code가 허락을 물음.
 
 ```text
 Gmail에서 최근 일주일 동안 받은 메일 중 "세미나"가 들어간 메일 3개를 찾아서 보낸 사람과 제목만 표로 보여줘. 본문은 옮기지 마.
@@ -211,7 +211,7 @@ Google Drive에서 "핸드북"이 들어간 문서를 찾아 제목과 마지막
 
 **④ 미팅 노트 기반 메일 초안 작성**
 
-3장에서 만든 미팅 노트로 미팅 안내 메일 **초안**을 만든다. 보내지는 않는다.
+3장에서 만든 미팅 노트로 미팅 안내 메일 **초안**을 만듦. 보내지는 않음.
 
 ```text
 03-subagents/meetings/ 의 가장 최근 미팅 노트를 읽고, 다음 미팅 안내 메일 초안을 Gmail에 만들어줘.
@@ -222,11 +222,11 @@ Google Drive에서 "핸드북"이 들어간 문서를 찾아 제목과 마지막
 보내지 말고 초안만 만들어.
 ```
 
-**확인**: Gmail 웹의 **임시보관함**에 초안이 있다. 받는 사람이 비어 있고, 내용이 미팅 노트와 맞다. 보내기는 내가 직접 한다.
+**확인**: Gmail 웹의 **임시보관함**에 초안이 있음. 받는 사람이 비어 있고, 내용이 미팅 노트와 맞음. 보내기는 내가 직접 함.
 
 **⑤ Slack 질문에 대한 온보딩 버디 답변** (3장 이후)
 
-MCP 커넥터와 3장 서브에이전트를 한 흐름으로 잇는다. 테스트용 채널을 하나 만들고, 신입 역할로 질문을 올린다.
+MCP 커넥터와 3장 서브에이전트를 한 흐름으로 잇는다. 테스트용 채널을 하나 만들고, 신입 역할로 질문을 올림.
 
 ```text
 안녕하세요, 이번 주에 들어온 인턴입니다! 연구윤리 교육은 언제까지 신청해야 하나요? 누구한테 신청하면 되는지도 궁금해요
@@ -254,12 +254,12 @@ Slack #<테스트 채널> 의 가장 최근 질문을 읽고 onboarding-buddy에
   이 답은 Claude Code의 온보딩 버디가 연구실 핸드북만 근거로 작성했습니다.
 ```
 
-**확인**: 스레드에 초안이 생겼다. 작성자 표시가 맨 위에 있고, 기한은 지어내지 않고 "문서에 없음, 팀장 확인 필요"다. 근거 줄 하나를 직접 열어 대조한 뒤 보낸다.
+**확인**: 스레드에 초안이 생겼음. 작성자 표시가 맨 위에 있고, 기한은 지어내지 않고 "문서에 없음, 팀장 확인 필요"임. 근거 줄 하나를 직접 열어 대조한 뒤 보냄.
 
-커넥터로 올리는 글은 **내 이름으로** 올라간다. 에이전트가 쓴 글에는 항상 작성자 표시를 붙여서, 읽는 사람이 내가 직접 쓴 글로 오해하지 않게 한다.
+커넥터로 올리는 글은 **내 이름으로** 올라감. 에이전트가 쓴 글에는 항상 작성자 표시를 붙여서, 읽는 사람이 내가 직접 쓴 글로 오해하지 않게 함.
 
-**Codex에서는**: `codex`에서 `/plugins` → **Gmail** 설치 → 로그인 → 새 대화. 프롬프트는 같다. `@`를 치면 플러그인을 직접 고를 수 있다.
+**Codex에서는**: `codex`에서 `/plugins` → **Gmail** 설치 → 로그인 → 새 대화. 프롬프트는 같음. `@`를 치면 플러그인을 직접 고를 수 있음.
 
 [^mcp]: [arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server)는 로그인도 API 키도 필요 없다. 바깥으로는 검색어만 나가고, 논문은 `~/.arxiv-mcp-server/papers`에 저장된다. MCP 선택 기준은 사용자 규모, 로그인·키 필요 여부, 외부 전송 데이터다.
-[^mcpcmd]: `arxiv`는 서버 이름. `--scope project`는 저장소의 `.mcp.json`에 저장해 저장소를 받는 사람 모두가 같은 MCP를 쓰게 한다. `--` 뒤는 서버를 켜는 명령이다. 처음에는 내려받느라 수십 초 걸릴 수 있다.
-[^2]: "이 도구를 쓸까요?"가 나타나면 허용한다. `uvx: command not found`: README의 E 환경 점검대로 uv를 설치한 뒤 터미널을 새로 연다. `/mcp`에 arxiv가 없음: `/exit` 후 `claude --continue`. `Failed to connect`: 잠시 뒤 `claude mcp list`를 다시 본다.
+[^mcpcmd]: `arxiv`는 서버 이름. `--scope project`는 저장소의 `.mcp.json`에 저장해 저장소를 받는 사람 모두가 같은 MCP를 쓰게 한다. `--` 뒤는 서버를 켜는 명령이다. 처음에는 내려받느라 수십 초 걸릴 수 있음.
+[^2]: "이 도구를 쓸까요?"가 나타나면 허용함. `uvx: command not found`: README의 E 환경 점검대로 uv를 설치한 뒤 터미널을 새로 엶. `/mcp`에 arxiv가 없음: `/exit` 후 `claude --continue`. `Failed to connect`: 잠시 뒤 `claude mcp list`를 다시 봄.
